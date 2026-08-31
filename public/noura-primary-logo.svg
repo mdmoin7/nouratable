@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" fill="none">
+  <g>
+    <circle cx="285" cy="58" r="28" fill="#E57C43"/>
+    <path d="M112 266V103c0-15 19-22 30-11l128 128V126" stroke="#2F4B3A" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M270 207c17-42 47-72 91-86-8 45-33 76-75 92" fill="#7C9A7A"/>
+    <path d="M303 185c-19 8-34 22-47 43" stroke="#F7F2E8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M247 216c-8 22-6 42 4 59" stroke="#2F4B3A" stroke-width="24" stroke-linecap="round"/>
+    <path d="M82 290c54 48 182 53 263 0-10 69-61 101-132 101S93 359 82 290Z" fill="#7C9A7A"/>
+    <path d="M106 309c53 24 132 29 201 0" stroke="#F7F2E8" stroke-width="8" stroke-linecap="round"/>
+    <path d="M126 336c48 19 101 20 153 3" stroke="#F7F2E8" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+  </g>
+  <text x="210" y="452" text-anchor="middle" fill="#2F4B3A" font-family="Georgia, 'Times New Roman', serif" font-size="66" letter-spacing="13">NOURA</text>
+  <text x="210" y="486" text-anchor="middle" fill="#E57C43" font-family="Arial, sans-serif" font-size="15" letter-spacing="3.2">NOURISH YOUR EVERYDAY.</text>
+  <path d="M111 505h60M249 505h60" stroke="#7C9A7A" stroke-width="3" stroke-linecap="round"/>
+  <path d="M203 499c-9 4-15 11-17 21 10-2 17-8 20-18" fill="#7C9A7A"/>
+  <path d="M204 519c4-7 9-13 18-17" stroke="#7C9A7A" stroke-width="2.5" stroke-linecap="round"/>
+</svg>
