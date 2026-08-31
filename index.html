@@ -3,13 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#18351f" />
+    <meta name="theme-color" content="#2F4B3A" />
     <meta name="description" content="NOURA — wholesome meals, nourishing snacks and treats made fresh every day." />
     <title>NOURA — Nourish Your Everyday</title>
     <style>
-      /* Final NOURA brand mark: organic N + bowl + leaf + terracotta sun. */
-      .brand-mark{background:url('/noura-logo.svg') center/contain no-repeat!important;}
+      /* Final NOURA horizontal lockup from the approved brand identity. */
+      .brand{min-width:290px!important;padding:0!important;background:transparent!important;border:0!important;}
+      .brand-mark{width:0!important;height:0!important;background:none!important;}
       .brand-mark>*{display:none!important;}
+      .brand-name,.tagline{display:none!important;}
+      .brand::before{content:"";display:block;width:245px;height:79px;background:url('/noura-header-logo.svg') center/contain no-repeat;}
+      @media(max-width:900px){.brand{min-width:0!important}.brand::before{width:185px;height:66px}}
     </style>
   </head>
   <body>
