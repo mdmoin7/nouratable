@@ -1,0 +1,12 @@
+{
+  "name": "NOURA — Nourish Your Everyday",
+  "short_name": "NOURA",
+  "description": "Wholesome meals, nourishing snacks and treats made fresh every day.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f5ec",
+  "theme_color": "#34553b",
+  "icons": [
+    {"src":"/noura-header-logo.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
