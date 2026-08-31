@@ -1,0 +1,67 @@
+/* NOURA final brand system — extracted from the approved identity board */
+:root{
+  --noura-green:#2F4B3A;
+  --noura-sage:#7C9A7A;
+  --noura-orange:#E57C43;
+  --noura-beige:#EADCC6;
+  --noura-cream:#FAF7F1;
+  --noura-ink:#243128;
+  --forest:var(--noura-green);
+  --forest-2:#405D49;
+  --cream:var(--noura-cream);
+  --paper:#FFFCF7;
+  --sage:#DDE5D8;
+  --sage-2:var(--noura-sage);
+  --terracotta:var(--noura-orange);
+  --ink:var(--noura-ink);
+  --line:#DDD5C8;
+  --muted:#687168;
+}
+body{background:var(--noura-cream);color:var(--noura-ink)}
+.announcement{background:var(--noura-green);color:var(--noura-cream)}
+.header{background:rgba(250,247,241,.96);border-bottom-color:#E7DED1}
+.brand{color:var(--noura-green)}
+.brand-name{color:var(--noura-green)}
+.tagline{color:var(--noura-orange)}
+.nav-links button{color:var(--noura-ink);background:transparent;border:0;font:inherit;font-size:11px;font-weight:600;cursor:pointer;height:94px;position:relative;white-space:nowrap;padding:0}
+.nav-links button:hover{color:var(--noura-orange)}
+.nav-links button.active:after{content:'';height:2px;background:var(--noura-orange);position:absolute;left:0;right:0;bottom:23px}
+.header-actions button{color:var(--noura-green)}
+.cart-button b{background:var(--noura-orange)}
+.hero{background:var(--noura-cream)}
+.hero h1{color:var(--noura-green)}
+.hero h1 em{color:var(--noura-orange)}
+.eyebrow{color:var(--noura-green)}
+.btn.primary{background:var(--noura-green);border-color:var(--noura-green)}
+.btn.secondary{border-color:var(--noura-green);color:var(--noura-green)}
+.category-strip{background:#F1ECE2;border-bottom-color:#E4DCCF}
+.mind-prompt{background:#D3DDCC;color:var(--noura-green)}
+.category{background:#FFFDF8;color:var(--noura-green)}
+.category svg{color:var(--noura-sage)}
+.category.selected{background:var(--noura-green);color:#fff}
+.category.selected svg{color:#fff}
+.next-category{background:var(--noura-green)}
+.today-section{background:#FFFCF7}
+.product-card,.menu-card{background:#FFFCF7;border-color:#DDD5C8}
+.product-image>span,.card-image>span{background:#E2E9DD;color:var(--noura-green)}
+.add,.round{background:var(--noura-green);color:#fff}
+.story-strip{background:var(--noura-green)}
+.hero-note,.cart-summary{background:var(--noura-green)}
+.hero-note strong{color:#EADCC6}
+.table-panel{background:#FFFCF7;border-color:#E2D9CC}
+.table-title h2{color:var(--noura-green)}
+.table-title svg,.promise-row svg,.service-badges svg{color:var(--noura-sage)}
+.add-more>svg:first-child{color:var(--noura-orange)}
+.cart-summary>button{background:var(--noura-orange)}
+.help{background:var(--noura-green);border-color:var(--noura-sage)}
+.help>svg{color:#B9D1A9}
+.fresh-stamp{background:var(--noura-orange)}
+.text-link,.story-copy a{color:var(--noura-orange)}
+.page-shell{background:var(--noura-cream)}
+.menu-hero h1,.product-detail h1,.checkout-head h1,.confirmation h1{color:var(--noura-green)}
+.menu-hero h1 em,.product-detail h1 em,.checkout-head h1 em,.confirmation h1 em{color:var(--noura-orange)}
+.menu-toolbar,.checkout-form fieldset,.order-summary{border-color:#DDD5C8}
+.category-tabs button.selected,.choice.selected{background:var(--noura-green);border-color:var(--noura-green);color:#fff}
+.detail-price,.summary-total b{color:var(--noura-green)}
+.confirm-mark{background:#DDE5D8;color:var(--noura-green)}
+@media(max-width:900px){.nav-links button{height:auto}.header{background:rgba(250,247,241,.98)}}
