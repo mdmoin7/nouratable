@@ -1,18 +1,25 @@
 {
   "categories": [
-    {"id":"meals","label":"Meals","icon":"bowl"},
-    {"id":"bowls","label":"Bowls","icon":"salad"},
-    {"id":"snacks","label":"Snacks","icon":"cookie"},
-    {"id":"treats","label":"Treats","icon":"cake"},
-    {"id":"drinks","label":"Drinks","icon":"cup"},
-    {"id":"combos","label":"Combos","icon":"sparkles"},
-    {"id":"gifts","label":"Gift Packs","icon":"gift"}
+    {"id":"meals","label":"Meals","icon":"bowl","description":"Wholesome everyday plates"},
+    {"id":"bowls","label":"Bowls","icon":"salad","description":"Balanced, filling bowls"},
+    {"id":"snacks","label":"Snacks","icon":"cookie","description":"Better little bites"},
+    {"id":"treats","label":"Treats","icon":"cake","description":"Sweet without the fuss"},
+    {"id":"drinks","label":"Drinks","icon":"cup","description":"Fresh sips"},
+    {"id":"combos","label":"Combos","icon":"sparkles","description":"A little of everything"},
+    {"id":"gifts","label":"Gift Packs","icon":"gift","description":"Thoughtful food gifts"}
   ],
   "items": [
-    {"id":"quinoa-power-bowl","name":"Quinoa Power Bowl","category":"meals","price":349,"tag":"Bestseller","description":"Quinoa, roasted veggies, chickpeas, avocado, seeds & our house dressing.","time":"25 min","image":"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80"},
-    {"id":"protein-packed-bowl","name":"Protein Packed Bowl","category":"bowls","price":349,"tag":"High protein","description":"Brown rice, grilled paneer, edamame, broccoli, pumpkin & tahini.","time":"30 min","image":"https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80"},
-    {"id":"oats-seed-crunch","name":"Oats & Seed Crunch","category":"snacks","price":199,"tag":"Fresh batch","description":"Rolled oats, seeds, nuts, honey & cinnamon.","time":"Ready to eat","image":"https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=900&q=80"},
-    {"id":"dates-cocoa-bites","name":"Dates & Cocoa Energy Bites","category":"treats","price":249,"tag":"No refined sugar","description":"Dates, nuts, cocoa, seeds & a touch of sea salt.","time":"Ready to eat","image":"https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=900&q=80"},
-    {"id":"millet-veg-bowl","name":"Millet Veg Bowl","category":"bowls","price":329,"tag":"Light & comforting","description":"Foxtail millet, roasted vegetables, greens, hummus & lemon tahini.","time":"25 min","image":"https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?auto=format&fit=crop&w=900&q=80"}
+    {"id":"quinoa-power-bowl","name":"Quinoa Power Bowl","category":"meals","price":349,"tag":"Bestseller","description":"Quinoa, roasted veggies, chickpeas, avocado, seeds & our house dressing.","time":"25 min","diet":"Vegetarian","badges":["High fibre","Protein rich"],"image":"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80"},
+    {"id":"protein-packed-bowl","name":"Protein Packed Bowl","category":"bowls","price":349,"tag":"High protein","description":"Brown rice, grilled paneer, edamame, broccoli, pumpkin & tahini.","time":"30 min","diet":"Vegetarian","badges":["High protein","Filling"],"image":"https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80"},
+    {"id":"millet-veg-bowl","name":"Millet Veg Bowl","category":"bowls","price":329,"tag":"Light & comforting","description":"Foxtail millet, roasted vegetables, greens, hummus & lemon tahini.","time":"25 min","diet":"Vegetarian","badges":["Whole grains","Light"],"image":"https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?auto=format&fit=crop&w=900&q=80"},
+    {"id":"oats-seed-crunch","name":"Oats & Seed Crunch","category":"snacks","price":199,"tag":"Fresh batch","description":"Rolled oats, seeds, nuts, honey & cinnamon.","time":"Ready to eat","diet":"Vegetarian","badges":["No artificial flavours"],"image":"https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=900&q=80"},
+    {"id":"dates-cocoa-bites","name":"Dates & Cocoa Energy Bites","category":"treats","price":249,"tag":"No refined sugar","description":"Dates, nuts, cocoa, seeds & a touch of sea salt.","time":"Ready to eat","diet":"Vegetarian","badges":["No refined sugar","Naturally sweetened"],"image":"https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=900&q=80"},
+    {"id":"banana-oat-loaf","name":"Banana Oat Loaf","category":"treats","price":279,"tag":"Baked today","description":"Ripe bananas, oats, nuts and warm cinnamon in a tender everyday loaf.","time":"Baked fresh","diet":"Vegetarian","badges":["Small batch"],"image":"https://images.unsplash.com/photo-1606101273945-e9eba8fa1c27?auto=format&fit=crop&w=900&q=80"},
+    {"id":"savory-granola","name":"Savoury Seed Granola","category":"snacks","price":229,"tag":"Kitchen favourite","description":"Roasted seeds, oats, herbs and spices for a crisp savoury crunch.","time":"Ready to eat","diet":"Vegetarian","badges":["High fibre"],"image":"https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=900&q=80"},
+    {"id":"cocoa-almond-bake","name":"Cocoa Almond Bake","category":"treats","price":299,"tag":"Baked today","description":"Almonds, cocoa and a little sweetness baked into a soft, rich slice.","time":"Baked fresh","diet":"Vegetarian","badges":["Small batch"],"image":"https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"},
+    {"id":"ginger-lemon-cooler","name":"Ginger Lemon Cooler","category":"drinks","price":149,"tag":"Freshly mixed","description":"Bright lemon, fresh ginger and a gentle touch of sweetness, served chilled.","time":"Made to order","diet":"Vegetarian","badges":["Fresh ingredients"],"image":"https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=80"},
+    {"id":"coconut-date-bake","name":"Coconut Date Bake","category":"treats","price":269,"tag":"Noura bake","description":"Coconut, dates and oats baked together for a naturally rich little treat.","time":"Baked fresh","diet":"Vegetarian","badges":["No refined sugar"],"image":"https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80"},
+    {"id":"noura-lunch-combo","name":"Noura Lunch Combo","category":"combos","price":449,"tag":"Everyday favourite","description":"A wholesome bowl, crunchy side and fresh cooler bundled for an easy lunch.","time":"25–30 min","diet":"Vegetarian","badges":["Best value"],"image":"https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80"},
+    {"id":"noura-snack-box","name":"Noura Snack Box","category":"gifts","price":599,"tag":"Giftable","description":"A curated box of energy bites, seed crunch and fresh-baked treats.","time":"Pre-order","diet":"Vegetarian","badges":["Gift ready"],"image":"https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80"}
   ]
 }
