@@ -1,0 +1,32 @@
+{
+  "brand": {
+    "name": "NOURA",
+    "tagline": "NOURISH YOUR EVERYDAY.",
+    "positioning": "Wholesome meals, nourishing snacks and treats made fresh in small batches.",
+    "promise": [
+      {"title":"REAL INGREDIENTS","text":"Nothing artificial."},
+      {"title":"MADE FRESH DAILY","text":"Small batches."},
+      {"title":"MADE WITH CARE","text":"For you. Always."}
+    ]
+  },
+  "location": {"city":"Bengaluru","country":"India","deliveryNote":"Delivering to Bengaluru"},
+  "delivery": {"freeAbove":499,"standardFee":40,"slots":["10:00 AM – 12:00 PM","12:00 PM – 2:00 PM","5:00 PM – 7:00 PM"]},
+  "kitchen": {
+    "headline":"Freshly made this morning.",
+    "batches":[{"time":"08:15","label":"Bakes"},{"time":"09:00","label":"Meals"},{"time":"10:30","label":"Snacks"}],
+    "note":"Our menu is intentionally focused. We would rather make fewer things really well."
+  },
+  "story": {
+    "eyebrow":"THE NOURA WAY",
+    "headline":"Thoughtful in every bite.",
+    "body":"NOURA is a home-kitchen food venture built around simple ingredients, small-batch cooking and food that fits naturally into everyday life.",
+    "values":[
+      {"title":"SUSTAINABLE PACKAGING","text":"Recyclable and plastic-free wherever practical."},
+      {"title":"HONEST INGREDIENTS","text":"Clean, responsibly sourced ingredients."},
+      {"title":"MADE WITH CARE","text":"Crafted fresh in small batches."}
+    ]
+  },
+  "checkout": {"paymentMethods":["UPI","CARD","COD"],"demoMode":true},
+  "orderStatuses":["received","preparing","packed","out_for_delivery","delivered"],
+  "footer": {"copyright":"NOURA","serviceArea":"Bengaluru","supportLabel":"Need help? Chat with us"}
+}
