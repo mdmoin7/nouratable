@@ -1,0 +1,91 @@
+/* NOURA storefront polish — intentionally additive so the existing visual system remains intact. */
+:root{
+  --noura-green:#7f9b78;
+  --noura-green-deep:#34553b;
+  --noura-cream:#f8f5ec;
+  --noura-ink:#1d2a20;
+  --noura-line:#dfe3d8;
+}
+
+/* Make the storefront feel calmer and more editorial on large screens. */
+.header{box-shadow:0 1px 0 rgba(52,85,59,.04)}
+.hero-copy{max-width:650px}
+.btn{transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary:hover{box-shadow:0 8px 22px rgba(24,53,31,.16)}
+.category:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(52,85,59,.09)}
+.category{transition:transform .18s ease,box-shadow .18s ease,background .18s ease}
+.menu-card{transition:transform .2s ease,box-shadow .2s ease}
+.menu-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(52,85,59,.09)}
+.card-image img,.detail-image img{transition:transform .45s ease}
+.menu-card:hover .card-image img,.detail-image:hover img{transform:scale(1.025)}
+
+/* Better keyboard visibility. */
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--noura-green);outline-offset:3px}
+
+/* Touch-friendly mobile controls. */
+@media(max-width:900px){
+  body{padding-bottom:68px}
+  .header{padding:0 16px}
+  .header-actions{gap:5px}
+  .header-actions button{min-width:40px;min-height:40px}
+  .hero-copy>p{font-size:14px}
+  .hero-actions{flex-wrap:wrap}
+  .promise-row{overflow-x:auto;gap:16px;padding-bottom:4px}
+  .promise-row span{min-width:145px}
+  .menu-toolbar{position:sticky;top:76px;z-index:12;background:rgba(255,253,248,.96);backdrop-filter:blur(10px)}
+  .menu-controls{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .search-field{grid-column:1/-1}
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .menu-card .card-body{padding:12px}
+  .card-image{height:150px}
+  .card-body h3{font-size:15px}
+  .card-body p{font-size:10px;line-height:1.45}
+  .menu-aside{display:none}
+  .product-detail{grid-template-columns:1fr}
+  .detail-image{max-height:430px}
+  .checkout-grid{grid-template-columns:1fr}
+  .order-summary{order:-1}
+  .table-panel{top:auto;right:0;bottom:0;width:100%;max-height:88vh;border-radius:24px 24px 0 0;transform:translateY(105%);transition:transform .25s ease}
+  .table-panel.open{transform:translateY(0)}
+  .close-table{display:grid;place-items:center}
+}
+
+@media(max-width:560px){
+  .announcement{height:34px;padding:0 14px}
+  .announcement span:first-child{font-size:10px}
+  .announcement span:last-child{display:none}
+  .header{top:0;height:68px}
+  .brand::before{width:175px!important;height:58px!important}
+  .hero h1{font-size:46px}
+  .hero-art{height:310px;min-height:310px}
+  .hero-note{font-size:15px;padding:17px 22px}
+  .category-strip{gap:8px}
+  .category{min-width:68px;height:68px}
+  .mind-prompt{min-width:112px;height:68px;font-size:10px}
+  .today-section{padding-left:16px;padding-right:16px}
+  .product-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .product-image{height:125px}
+  .product-info{padding:10px}
+  .product-info p{min-height:50px}
+  .story-strip{grid-template-columns:1fr;padding:0}
+  .story-image{height:180px}
+  .story-copy{padding:28px 20px}
+  .values{grid-template-columns:1fr}
+  .value{min-height:auto;padding:16px 20px}
+  .menu-page,.product-page,.checkout-page{padding-left:16px;padding-right:16px}
+  .menu-hero{padding-top:30px}
+  .menu-hero h1{font-size:44px}
+  .menu-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .card-image{height:135px}
+  .card-body h3{font-size:14px}
+  .card-body p{min-height:54px}
+  .card-badges{display:none}
+  .card-footer{gap:6px}
+  .card-footer small{font-size:8px}
+  .round{width:34px;height:34px}
+  .checkout-head h1{font-size:42px}
+}
+
+/* Prevent remote food imagery from causing layout shift. */
+img{font-size:10px}
