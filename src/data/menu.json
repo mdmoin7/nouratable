@@ -1,0 +1,18 @@
+{
+  "categories": [
+    {"id":"meals","label":"Meals","icon":"bowl"},
+    {"id":"bowls","label":"Bowls","icon":"salad"},
+    {"id":"snacks","label":"Snacks","icon":"cookie"},
+    {"id":"treats","label":"Treats","icon":"cake"},
+    {"id":"drinks","label":"Drinks","icon":"cup"},
+    {"id":"combos","label":"Combos","icon":"sparkles"},
+    {"id":"gifts","label":"Gift Packs","icon":"gift"}
+  ],
+  "items": [
+    {"id":"quinoa-power-bowl","name":"Quinoa Power Bowl","category":"meals","price":349,"tag":"Bestseller","description":"Quinoa, roasted veggies, chickpeas, avocado, seeds & our house dressing.","time":"25 min","image":"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80"},
+    {"id":"protein-packed-bowl","name":"Protein Packed Bowl","category":"bowls","price":349,"tag":"High protein","description":"Brown rice, grilled paneer, edamame, broccoli, pumpkin & tahini.","time":"30 min","image":"https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80"},
+    {"id":"oats-seed-crunch","name":"Oats & Seed Crunch","category":"snacks","price":199,"tag":"Fresh batch","description":"Rolled oats, seeds, nuts, honey & cinnamon.","time":"Ready to eat","image":"https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=900&q=80"},
+    {"id":"dates-cocoa-bites","name":"Dates & Cocoa Energy Bites","category":"treats","price":249,"tag":"No refined sugar","description":"Dates, nuts, cocoa, seeds & a touch of sea salt.","time":"Ready to eat","image":"https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=900&q=80"},
+    {"id":"millet-veg-bowl","name":"Millet Veg Bowl","category":"bowls","price":329,"tag":"Light & comforting","description":"Foxtail millet, roasted vegetables, greens, hummus & lemon tahini.","time":"25 min","image":"https://images.unsplash.com/photo-1543352634-a1c51d9f1fa7?auto=format&fit=crop&w=900&q=80"}
+  ]
+}
