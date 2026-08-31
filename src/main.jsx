@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { createRoot } from 'react-dom/client';
 import { ArrowLeft, ArrowRight, Check, ChevronDown, Clock3, Heart, Leaf, Minus, Plus, Search, ShoppingBag, Truck, UserRound, X } from 'lucide-react';
 import menuData from './data/menu.json';
 import './styles.css';
@@ -30,4 +31,5 @@ function Checkout({cart,total,delivery,onBack,onPlace}){const [form,setForm]=use
 function OrderSummary({cart,total,delivery}){return <aside className="order-summary"><h2>Your table</h2>{cart.map(i=><div className="summary-item" key={i.id}><span>{i.name} × {i.qty}</span><b>{money(i.price*i.qty)}</b></div>)}<div className="summary-line"><span>Subtotal</span><b>{money(total)}</b></div><div className="summary-line"><span>Delivery</span><b>{delivery?money(delivery):'FREE'}</b></div><div className="summary-total"><span>Total</span><b>{money(total+delivery)}</b></div><div className="summary-trust"><Leaf/> Freshly made · Carefully packed</div></aside>}
 function Confirmation({count,total}){return <main className="page-shell confirmation"><div className="confirm-mark"><Check size={34}/></div><span className="eyebrow">ORDER RECEIVED</span><h1>Thank you.<br/><em>Your table is set.</em></h1><p>We have received your demo order. Kitchen status will move from received → preparing → packed → out for delivery when the operations backend is connected.</p><div className="confirm-card"><span>{count} items</span><strong>{money(total)}</strong><small>Order NOU-{Date.now().toString().slice(-6)}</small></div><button className="btn primary" onClick={()=>navigate('/menu')}>CONTINUE EXPLORING <ArrowRight size={17}/></button></main>}
 function Value({title,text}){return <div className="value"><Leaf/><span><b>{title}</b><p>{text}</p></span></div>}
+
 createRoot(document.getElementById('root')).render(<App/>);
