@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Illustrated grain bowl">
+  <rect width="800" height="1000" fill="#e8dccb"/>
+  <ellipse cx="400" cy="540" rx="280" ry="70" fill="#c4b39a"/>
+  <ellipse cx="400" cy="500" rx="270" ry="250" fill="#9c3f24"/>
+  <ellipse cx="400" cy="490" rx="230" ry="210" fill="#c45c3a"/>
+  <ellipse cx="400" cy="485" rx="190" ry="170" fill="#d8c4a4"/>
+  <circle cx="330" cy="450" r="46" fill="#5c6b3a"/>
+  <circle cx="390" cy="420" r="38" fill="#3f4a2c"/>
+  <circle cx="460" cy="455" r="42" fill="#7a8f4a"/>
+  <ellipse cx="360" cy="520" rx="50" ry="28" fill="#e7a23a"/>
+  <ellipse cx="430" cy="530" rx="44" ry="24" fill="#f0c56e"/>
+  <circle cx="410" cy="490" r="18" fill="#2c241b"/>
+</svg>

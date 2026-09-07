@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4eee4;
+  --foreground: #2c241b;
+  --card: #fbf7f0;
+  --card-foreground: #2c241b;
+  --popover: #fbf7f0;
+  --popover-foreground: #2c241b;
+  --primary: #9c3f24;
+  --primary-foreground: #fbf7f0;
+  --secondary: #e7ddd0;
+  --secondary-foreground: #2c241b;
+  --muted: #e7ddd0;
+  --muted-foreground: #6b5d4f;
+  --accent: #5c6b3a;
+  --accent-foreground: #fbf7f0;
+  --destructive: #9c3f24;
+  --border: #d9cbb8;
+  --input: #d9cbb8;
+  --ring: #9c3f24;
+  --ink: #2c241b;
+  --paper: #f4eee4;
+  --olive: #3f4a2c;
+  --radius: 0.9rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-olive: var(--olive);
+  --font-sans: var(--font-outfit);
+  --font-display: var(--font-fraunces);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), ui-serif, Georgia, serif;
+}
+
+.wrap {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 72rem;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    padding-inline: 2rem;
+  }
+}
