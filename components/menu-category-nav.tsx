@@ -44,9 +44,7 @@ export function MenuCategoryNav() {
               href={`#${sectionId(category)}`}
               aria-current={isActive ? "page" : undefined}
               className={`whitespace-nowrap rounded-full px-4 py-2 text-xs font-semibold transition-colors ${
-                isActive
-                  ? "bg-[#8b2e1f] text-white"
-                  : "text-[#5c4033]/70 hover:bg-[#ebdcc8]"
+                isActive ? "menu-category-active" : "menu-category-link"
               }`}
             >
               {category}
