@@ -3,10 +3,12 @@
 import { useEffect, useState } from "react";
 import { categories } from "@/lib/menu";
 
+type Category = (typeof categories)[number];
+
 const sectionId = (category: string) => category.toLowerCase().replaceAll(" ", "-");
 
 export function MenuCategoryNav() {
-  const [active, setActive] = useState(categories[0]);
+  const [active, setActive] = useState<Category>(categories[0]);
 
   useEffect(() => {
     const sections = categories
