@@ -1,261 +1,95 @@
-import { EnquiryForm } from "@/components/enquiry-form";
-import { Button } from "@/components/ui/button";
-import { menuItems } from "@/lib/menu";
+import Link from "next/link";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
+import { menu } from "@/lib/menu";
 
-const nav = [
-  { href: "#menu", label: "Menu" },
-  { href: "#how", label: "How it works" },
-  { href: "#enquire", label: "Enquire" },
+const categoryCards = [
+  { title: "Desserts", text: "Sweeten the moment.", image: menu.Desserts[0].image },
+  { title: "Juices", text: "Fresh. Real. Refreshing.", image: menu.Juices[0].image },
+  { title: "Chaat", text: "Street flavours, always.", image: menu.Chaat[0].image },
+  { title: "North Indian", text: "Timeless favourites.", image: menu["North Indian"][0].image },
 ];
-
-function formatPrice(price: number) {
-  return new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    maximumFractionDigits: 0,
-  }).format(price);
-}
 
 export default function Home() {
   return (
-    <>
-      <header className="sticky top-0 z-40 border-b border-border/80 bg-background/90 backdrop-blur-md">
-        <div className="wrap flex h-16 items-center justify-between gap-4">
-          <a href="#top" className="font-display text-xl tracking-tight">
-            Noura
-          </a>
-          <nav aria-label="Primary" className="flex items-center gap-1 sm:gap-4">
-            {nav.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="hidden px-2 py-1 text-sm text-muted-foreground hover:text-foreground sm:inline"
-              >
-                {item.label}
-              </a>
-            ))}
-            <Button asChild size="sm">
-              <a href="#enquire">Enquire</a>
-            </Button>
-          </nav>
+    <div className="site-shell bg-[#f4e9e1]">
+      <section className="relative min-h-[720px] overflow-hidden bg-[#8b2e1f] text-white">
+        <SiteHeader />
+        <div className="absolute inset-0 opacity-75 hero-rotator">
+          <img src={menu["North Indian"][0].image} alt="A warm AZEVINA food setting" className="h-full w-full object-cover" />
         </div>
-      </header>
-
-      <main id="top">
-        <section className="wrap grid items-center gap-10 py-12 md:grid-cols-[1.05fr_0.95fr] md:py-20">
-          <div>
-            <p className="text-xs font-medium uppercase tracking-[0.22em] text-primary">
-              Made fresh · Ready to heat
-            </p>
-            <h1 className="mt-4 font-display text-[clamp(2.4rem,6vw,4.6rem)] leading-[0.95] tracking-tight">
-              Good food.
-              <span className="block italic text-primary">Better you.</span>
-              Everyday.
+        <div className="absolute inset-0 bg-gradient-to-r from-[#6f2419]/95 via-[#8b2e1f]/70 to-[#8b2e1f]/20" />
+        <div className="container relative z-10 flex min-h-[720px] items-end pb-20 pt-32">
+          <div className="max-w-[650px] reveal">
+            <p className="eyebrow text-white/75">Contemporary Indian food · Made with care</p>
+            <h1 className="font-display mt-5 text-[clamp(3.4rem,8vw,7.2rem)] leading-[.88] tracking-[-.045em]">
+              Good food<br />brings people<br /><em>together.</em>
             </h1>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              Wholesome meals made with real ingredients and lots of care.
-              Heat, eat, get on with your day.
+            <p className="mt-7 max-w-md text-base leading-7 text-white/80">
+              Freshly prepared food, inspired by the warmth of Indian hospitality.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Button asChild size="lg">
-                <a href="#enquire">Enquire</a>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <a href="#menu">See the menu</a>
-              </Button>
+              <Link href="/menu" className="btn-light">Explore Menu <span>→</span></Link>
+              <Link href="/order" className="rounded-full border border-white/35 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Order Now</Link>
             </div>
           </div>
-          <figure className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-secondary sm:aspect-[5/6]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/food/hero.svg"
-              alt="Illustrated grain bowl with vegetables and seeds"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-            <figcaption className="absolute bottom-4 left-4 right-4 rounded-2xl bg-background/90 px-4 py-3 text-sm leading-snug text-pretty backdrop-blur">
-              Small batches. Honest ingredients. No preservatives.
-            </figcaption>
-          </figure>
-        </section>
+        </div>
+        <div className="absolute bottom-7 right-8 hidden text-right md:block">
+          <p className="font-display text-xl italic">More than food.</p>
+          <p className="text-xs uppercase tracking-[.25em] text-white/65">A closer tomorrow.</p>
+        </div>
+      </section>
 
-        <section className="border-y border-border bg-card">
-          <ul className="wrap grid gap-8 py-10 sm:grid-cols-3">
+      <main>
+        <section className="container py-20 md:py-28">
+          <div className="max-w-2xl">
+            <p className="eyebrow text-[#8b2e1f]">Why AZEVINA</p>
+            <h2 className="font-display mt-4 text-4xl leading-tight text-[#5c4033] md:text-6xl">Made with attention. Served with care.</h2>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
             {[
-              {
-                title: "Made fresh",
-                body: "Cooked in small batches. Heat when you are ready.",
-              },
-              {
-                title: "Nothing artificial",
-                body: "Real ingredients. No preservatives.",
-              },
-              {
-                title: "Veg and non-veg",
-                body: "A mixed menu so the table can share.",
-              },
-            ].map((item) => (
-              <li key={item.title}>
-                <p className="font-display text-xl">{item.title}</p>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {item.body}
-                </p>
-              </li>
+              ["Freshly Prepared", "Made close to the moment you order, with freshness at the centre."],
+              ["Hygiene First", "Careful preparation and a clean, consistent food experience."],
+              ["Quality Always", "Thoughtful ingredients, preparation and presentation."],
+            ].map(([title, text]) => (
+              <article key={title} className="rounded-[28px] border border-[#5c4033]/10 bg-[#fffaf5] p-7 soft-shadow">
+                <div className="mb-8 h-2 w-12 rounded-full bg-[#8b2e1f]" />
+                <h3 className="font-display text-2xl text-[#5c4033]">{title}</h3>
+                <p className="mt-3 text-sm leading-6 text-[#5c4033]/70">{text}</p>
+              </article>
             ))}
-          </ul>
+          </div>
         </section>
 
-        <section id="menu" className="wrap scroll-mt-20 py-16 md:py-24">
-          <p className="text-xs font-medium uppercase tracking-[0.22em] text-primary">
-            Menu
-          </p>
-          <h2 className="mt-3 max-w-xl font-display text-4xl tracking-tight md:text-5xl">
-            What&apos;s on the table today.
-          </h2>
-          <p className="mt-4 max-w-lg text-muted-foreground">
-            Sample dishes — prices are placeholders. Meals, bowls and snacks.
-            Vegetarian and non-veg.
-          </p>
-          <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {menuItems.map((item) => (
-              <li
-                key={item.name}
-                className="overflow-hidden rounded-3xl border border-border bg-card"
-              >
-                <div className="relative aspect-[5/4] bg-secondary">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={item.image}
-                    alt={item.imageAlt}
-                    className="absolute inset-0 h-full w-full object-cover"
-                  />
-                </div>
-                <div className="p-5">
-                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">
-                    {item.category} · {item.diet}
-                  </p>
-                  <h3 className="mt-2 font-display text-2xl leading-tight">
-                    {item.name}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {item.description}
-                  </p>
-                  <p className="mt-3 text-xs text-muted-foreground">
-                    {item.tags.join(" · ")}
-                  </p>
-                  <div className="mt-4 flex items-baseline justify-between text-sm">
-                    <span className="font-medium">{formatPrice(item.price)}</span>
-                    <span className="text-muted-foreground">
-                      {item.minutes === "Ready"
-                        ? "Ready to eat"
-                        : `Heat · ${item.minutes} min`}
-                    </span>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section id="how" className="scroll-mt-20 bg-olive text-primary-foreground">
-          <div className="wrap py-16 md:py-24">
-            <p className="text-xs font-medium uppercase tracking-[0.22em] text-primary-foreground/70">
-              How it works
-            </p>
-            <h2 className="mt-3 font-display text-4xl tracking-tight md:text-5xl">
-              Browse. Enquire. We confirm.
-            </h2>
-            <ol className="mt-12 grid gap-10 md:grid-cols-3">
-              {[
-                {
-                  step: "01",
-                  title: "Browse",
-                  body: "Pick meals from the sample menu — or tell us what you need.",
-                },
-                {
-                  step: "02",
-                  title: "Enquire",
-                  body: "Leave your name and a way to reach you. No checkout yet.",
-                },
-                {
-                  step: "03",
-                  title: "We confirm",
-                  body: "We come back with availability, timing and how delivery will work.",
-                },
-              ].map((item) => (
-                <li key={item.step}>
-                  <p className="font-display text-sm tracking-[0.2em] text-primary-foreground/60">
-                    {item.step}
-                  </p>
-                  <h3 className="mt-3 font-display text-2xl">{item.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">
-                    {item.body}
-                  </p>
-                </li>
+        <section className="bg-[#fffaf5] py-20 md:py-28">
+          <div className="container">
+            <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+              <div><p className="eyebrow text-[#8b2e1f]">Explore our menu</p><h2 className="font-display mt-3 text-4xl text-[#5c4033] md:text-5xl">A taste for every occasion.</h2></div>
+              <Link href="/menu" className="text-sm font-semibold text-[#8b2e1f]">View full menu →</Link>
+            </div>
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {categoryCards.map((card) => (
+                <Link key={card.title} href={`/menu#${card.title.toLowerCase().replaceAll(" ", "-")}`} className="food-card rounded-[22px]">
+                  <div className="aspect-[4/3] overflow-hidden"><img src={card.image} alt="" className="h-full w-full object-cover" /></div>
+                  <div className="flex items-center justify-between p-5"><div><h3 className="font-display text-xl text-[#5c4033]">{card.title}</h3><p className="mt-1 text-xs text-[#5c4033]/60">{card.text}</p></div><span className="grid h-8 w-8 place-items-center rounded-full border border-[#8b2e1f]/30 text-[#8b2e1f]">→</span></div>
+                </Link>
               ))}
-            </ol>
-          </div>
-        </section>
-
-        <section className="wrap py-16 md:py-24">
-          <p className="text-xs font-medium uppercase tracking-[0.22em] text-primary">
-            The Noura way
-          </p>
-          <h2 className="mt-3 max-w-xl font-display text-4xl tracking-tight md:text-5xl">
-            Thoughtful in every bite.
-          </h2>
-          <ul className="mt-10 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                title: "Honest ingredients",
-                body: "Clean, responsibly sourced food. Nothing you cannot pronounce.",
-              },
-              {
-                title: "Made with care",
-                body: "Crafted fresh in small batches — not a factory line.",
-              },
-              {
-                title: "Packaging with care",
-                body: "Plastic-free wherever possible. Built for the journey home.",
-              },
-            ].map((item) => (
-              <li
-                key={item.title}
-                className="rounded-3xl border border-border bg-card p-6"
-              >
-                <h3 className="font-display text-2xl">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {item.body}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section id="enquire" className="scroll-mt-20 border-t border-border bg-card">
-          <div className="wrap grid gap-10 py-16 md:grid-cols-[0.9fr_1.1fr] md:py-24">
-            <div>
-              <p className="text-xs font-medium uppercase tracking-[0.22em] text-primary">
-                Enquire
-              </p>
-              <h2 className="mt-3 font-display text-4xl tracking-tight md:text-5xl">
-                Tell us what you need.
-              </h2>
-              <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-                Delivery area is still being decided. Share a few details and we
-                will be in touch.
-              </p>
             </div>
-            <EnquiryForm />
           </div>
+        </section>
+
+        <section className="relative overflow-hidden bg-[#8b2e1f] text-white">
+          <div className="container grid min-h-[520px] items-center gap-10 py-16 md:grid-cols-2 md:py-20">
+            <div><p className="eyebrow text-white/60">From our kitchen to your table</p><h2 className="font-display mt-4 text-5xl leading-tight md:text-6xl">Food prepared with attention, made to bring people closer.</h2><Link href="/about" className="btn-light mt-8">Our Story →</Link></div>
+            <div className="overflow-hidden rounded-[32px]"><img src={menu["North Indian"][1].image} alt="Fresh food prepared with care" className="h-[360px] w-full object-cover" /></div>
+          </div>
+        </section>
+
+        <section className="bg-[#fffaf5] py-20 md:py-24">
+          <div className="container text-center"><p className="eyebrow text-[#8b2e1f]">Good food brings people together</p><h2 className="font-display mx-auto mt-4 max-w-3xl text-5xl leading-tight text-[#5c4033] md:text-6xl">Discover AZEVINA.</h2><Link href="/order" className="btn-primary mt-8">Order Now →</Link></div>
         </section>
       </main>
-
-      <footer className="border-t border-border">
-        <div className="wrap flex flex-col gap-3 py-8 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-display text-lg text-foreground">Nouratable</p>
-          <p>Ready-to-heat meals. hello@nouratable.com</p>
-        </div>
-      </footer>
-    </>
+      <SiteFooter />
+    </div>
   );
 }

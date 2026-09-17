@@ -1,85 +1,35 @@
 export type MenuItem = {
   name: string;
-  category: "Meals" | "Bowls" | "Snacks";
-  diet: "Vegetarian" | "Non-veg";
   description: string;
-  tags: string[];
   price: number;
-  minutes: number | "Ready";
   image: string;
-  imageAlt: string;
 };
 
-export const menuItems: MenuItem[] = [
-  {
-    name: "Quinoa Power Bowl",
-    category: "Bowls",
-    diet: "Vegetarian",
-    description:
-      "Quinoa, roasted vegetables, chickpeas, avocado, seeds and house lemon dressing.",
-    tags: ["High fibre", "Protein rich"],
-    price: 349,
-    minutes: 8,
-    image: "/food/quinoa.svg",
-    imageAlt: "Colourful vegetarian grain bowl with greens and roasted vegetables",
-  },
-  {
-    name: "Millet Veg Bowl",
-    category: "Bowls",
-    diet: "Vegetarian",
-    description:
-      "Foxtail millet, roasted vegetables, greens, hummus and lemon tahini.",
-    tags: ["Whole grains", "Light"],
-    price: 329,
-    minutes: 8,
-    image: "/food/millet.svg",
-    imageAlt: "Bowl of vegetables and grains with herbs",
-  },
-  {
-    name: "Oats & Seed Crunch",
-    category: "Snacks",
-    diet: "Vegetarian",
-    description: "Rolled oats, seeds, nuts, honey and cinnamon. Ready to eat.",
-    tags: ["No artificial flavours"],
-    price: 199,
-    minutes: "Ready",
-    image: "/food/oats.svg",
-    imageAlt: "Oat and seed snack on a plate",
-  },
-  {
-    name: "Chicken Millet Bowl",
-    category: "Bowls",
-    diet: "Non-veg",
-    description:
-      "Slow-cooked chicken, foxtail millet, greens, pickled onion and yoghurt dressing.",
-    tags: ["High protein", "Filling"],
-    price: 399,
-    minutes: 10,
-    image: "/food/chicken-bowl.svg",
-    imageAlt: "Chicken grain bowl with greens",
-  },
-  {
-    name: "Herb Grilled Fish Plate",
-    category: "Meals",
-    diet: "Non-veg",
-    description:
-      "Grilled fish, herbed millet, sautéed greens and a citrus yoghurt sauce.",
-    tags: ["Light", "High protein"],
-    price: 449,
-    minutes: 12,
-    image: "/food/fish.svg",
-    imageAlt: "Grilled fish plate with vegetables",
-  },
-  {
-    name: "Pepper Chicken Meal",
-    category: "Meals",
-    diet: "Non-veg",
-    description:
-      "Black pepper chicken, brown rice, beans and a fresh cucumber salad.",
-    tags: ["Comforting", "Made fresh"],
-    price: 379,
-    minutes: 10,
-    image: "/food/pepper-chicken.svg",
-    imageAlt: "Chicken meal with rice and salad",
-  },
-];
+export const categories = ["Desserts", "Juices", "Chaat", "North Indian"] as const;
+
+export const menu: Record<(typeof categories)[number], MenuItem[]> = {
+  Desserts: [
+    { name: "Gulab Jamun", description: "Soft, rich and timeless.", price: 80, image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85" },
+    { name: "Rasmalai", description: "Delicately sweet.", price: 90, image: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=900&q=85" },
+    { name: "Moong Dal Halwa", description: "A royal classic.", price: 100, image: "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=85" },
+    { name: "Gajar Ka Halwa", description: "Traditional and comforting.", price: 90, image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=85" },
+  ],
+  Juices: [
+    { name: "Mango Juice", description: "Fresh. Real. Refreshing.", price: 70, image: "https://images.unsplash.com/photo-1546173159-315724a31696?auto=format&fit=crop&w=900&q=85" },
+    { name: "Masala Chaas", description: "Cool and flavourful.", price: 50, image: "https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=900&q=85" },
+    { name: "Sweet Lime Juice", description: "Naturally uplifting.", price: 60, image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?auto=format&fit=crop&w=900&q=85" },
+    { name: "Watermelon Juice", description: "Cool. Crisp. Natural.", price: 60, image: "https://images.unsplash.com/photo-1523677011781-c91d1bbe2f2f?auto=format&fit=crop&w=900&q=85" },
+  ],
+  Chaat: [
+    { name: "Pani Puri", description: "A burst of flavours.", price: 60, image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=85" },
+    { name: "Aloo Tikki", description: "Crispy. Spicy. Irresistible.", price: 70, image: "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=85" },
+    { name: "Dahi Puri", description: "Cool, creamy and tangy.", price: 70, image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=900&q=85" },
+    { name: "Papdi Chaat", description: "Crunchy, bright and layered.", price: 80, image: "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=85" },
+  ],
+  "North Indian": [
+    { name: "Chole Bhature", description: "Comforting, hearty and fresh.", price: 140, image: "https://images.unsplash.com/photo-1626132647523-66f5bf380027?auto=format&fit=crop&w=900&q=85" },
+    { name: "Paneer Butter Masala", description: "Rich, creamy and aromatic.", price: 180, image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=900&q=85" },
+    { name: "Dal Makhani", description: "Slow-cooked comfort.", price: 160, image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=85" },
+    { name: "Butter Naan", description: "Soft, warm and freshly made.", price: 45, image: "https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=900&q=85" },
+  ],
+};
