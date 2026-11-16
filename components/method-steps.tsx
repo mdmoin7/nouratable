@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/language-provider";
+import { TranslatedText } from "@/components/translated-text";
 
 type Step = { title: string; body: string };
 const quickTimers = [1, 3, 5, 10, 15, 20];
@@ -82,8 +83,8 @@ export function MethodSteps({ steps, recipeSlug }: { steps: Step[]; recipeSlug: 
     return <div className={`flex items-start gap-4 ${large ? "md:gap-6" : ""}`}>
       <span className={`display leading-none text-ember/70 ${large ? "text-4xl" : "text-2xl"}`}>{String(active + 1).padStart(2, "0")}</span>
       <div className="min-w-0 flex-1">
-        <h3 className={`display leading-snug text-ink ${large ? "text-3xl md:text-5xl" : "text-[23px]"}`}>{steps[active]?.title}</h3>
-        <p className={`mt-4 leading-8 text-ink-soft ${large ? "text-base md:text-lg" : "text-[13.5px]"}`}>{steps[active]?.body}</p>
+        <h3 className={`display leading-snug text-ink ${large ? "text-3xl md:text-5xl" : "text-[23px]"}`}><TranslatedText text={steps[active]?.title ?? ""} /></h3>
+        <p className={`mt-4 leading-8 text-ink-soft ${large ? "text-base md:text-lg" : "text-[13.5px]"}`}><TranslatedText text={steps[active]?.body ?? ""} /></p>
       </div>
     </div>;
   }
