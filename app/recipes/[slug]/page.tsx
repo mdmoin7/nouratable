@@ -121,7 +121,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
 
       <section className="wrap grid gap-12 py-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:py-16">
         <div className="md:sticky md:top-24 md:self-start">
-          <IngredientList groups={recipe.ingredients} baseServes={recipe.serves} />
+          <IngredientList groups={recipe.ingredients} baseServes={recipe.serves} recipeSlug={recipe.slug} />
 
           <div className="mt-8 border-t border-line pt-5">
             <h2 className="eyebrow text-ember">Serve with</h2>
@@ -136,7 +136,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
         </div>
 
         <div>
-          <MethodSteps steps={recipe.steps} />
+          <MethodSteps steps={recipe.steps} recipeSlug={recipe.slug} />
 
           <aside className="mt-10 rounded-[6px] border border-line bg-card p-6 md:p-7">
             <h2 className="eyebrow text-ember">Cook&apos;s notes</h2>
