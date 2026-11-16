@@ -169,7 +169,7 @@ export function RecipeBrowser({
       {filtered.length === 0 ? (
         <div className="mt-10 rounded-[6px] border border-dashed border-line bg-card px-6 py-16 text-center">
           <p className="display text-2xl text-ink">{t("noResults")}</p>
-          <p className="mt-2 text-[13px] text-ink-soft">{t("tryAnotherFilter")}</p>
+          <p className="mt-2 text-[13px] text-ink-soft">Try another region, ingredient or heat level.</p>
         </div>
       ) : (
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
