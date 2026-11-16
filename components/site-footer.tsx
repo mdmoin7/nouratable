@@ -60,7 +60,7 @@ export function SiteFooter() {
       <div className="border-t border-line/70">
         <div className="wrap flex flex-col gap-2 py-6 text-[11px] text-ink-soft/80 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Murgh. Cook it and change it to your taste.</p>
-          <p>Weights are in grams and liquids in millilitres.</p>
+          <p className="flex gap-4"><Link href="/image-credits" className="link-underline hover:text-ember">Photo credits</Link><span>Weights are in grams and liquids in millilitres.</span></p>
         </div>
       </div>
     </footer>
