@@ -6,7 +6,14 @@ import { getRecipe, recipes, regions } from "@/lib/recipes";
 export const metadata: Metadata = {
   title: "About this book",
   description:
-    "Why twelve Indian chicken recipes, how the book is arranged, and how to buy and cook chicken at home.",
+    "Learn about Murgh, a modern Indian chicken cookbook: regional cooking traditions, practical methods, ingredients and how to cook chicken at home.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Murgh | Indian Chicken Cookbook",
+    description: "The story and cooking philosophy behind Murgh's regional Indian chicken recipes.",
+    url: "/about",
+    type: "website",
+  },
 };
 
 const korma = getRecipe("awadhi-chicken-korma")!;
