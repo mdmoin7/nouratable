@@ -57,10 +57,10 @@ export function RecipeTools({ recipeSlug, recipeName, speechText }: Props) {
 
   return (
     <section aria-label="Recipe actions" className="my-7 flex flex-wrap items-center gap-3 border-y border-line py-4 print:hidden">
-      <button type="button" onClick={shareRecipe} className="btn btn-ghost">Share recipe</button>
-      <button type="button" onClick={() => window.print()} className="btn btn-ghost">Print recipe</button>
+      <button type="button" onClick={shareRecipe} className="btn btn-ghost">{t("share")} recipe</button>
+      <button type="button" onClick={() => window.print()} className="btn btn-ghost">{t("print")} recipe</button>
       <button type="button" onClick={toggleSpeech} className="btn btn-ghost">{speaking ? t("stopReading") : t("readAloud")}</button>
-      <button type="button" onClick={toggleSaved} className="btn btn-ghost">{saved ? t("save") : t("save")}</button>
+      <button type="button" onClick={toggleSaved} className="btn btn-ghost">{saved ? "Saved ✓" : t("save")}</button>
       <div className="flex items-center gap-1 text-sm" aria-label="Rate this recipe">
         <span className="mr-1 text-xs text-ink-soft">{t("rating")}</span>
         {[1, 2, 3, 4, 5].map((value) => (
