@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import { recipes, regions, regionSlug } from "@/lib/recipes";
+import { useLanguage } from "@/components/language-provider";
 
 export function SiteFooter() {
+  const { t } = useLanguage();
   return (
     <footer className="border-t border-line bg-paper">
       <div className="wrap grid gap-12 py-14 md:grid-cols-[1.3fr_1fr_1fr] md:gap-8 md:py-16">
@@ -18,7 +22,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="eyebrow text-ink-soft/70">Start here</p>
+          <p className="eyebrow text-ink-soft/70">{t("startCooking")}</p>
           <ul className="mt-4 space-y-2 text-[13px] text-ink-soft">
             {recipes.slice(0, 5).map((recipe) => (
               <li key={recipe.slug}>
@@ -60,7 +64,7 @@ export function SiteFooter() {
       <div className="border-t border-line/70">
         <div className="wrap flex flex-col gap-2 py-6 text-[11px] text-ink-soft/80 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Murgh. Cook it and change it to your taste.</p>
-          <p className="flex gap-4"><Link href="/image-credits" className="link-underline hover:text-ember">Photo credits</Link><span>Weights are in grams and liquids in millilitres.</span></p>
+          <p className="flex gap-4"><Link href="/image-credits" className="link-underline hover:text-ember">{t("photoCredits")}</Link><span>Weights are in grams and liquids in millilitres.</span></p>
         </div>
       </div>
     </footer>
