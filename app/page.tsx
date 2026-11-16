@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { DishArt } from "@/components/dish-art";
 import { RecipeCard } from "@/components/recipe-card";
-import { featured, getRecipe, method, pantry, recipes, regions } from "@/lib/recipes";
+import { featured, getRecipe, method, pantry, recipes, regions, regionSlug } from "@/lib/recipes";
 
 const hero = getRecipe("murgh-makhani")!;
 const featuredRecipes = featured.map((slug) => getRecipe(slug)!).filter(Boolean);
@@ -102,7 +102,7 @@ export default function HomePage() {
             {regions.map((region, index) => (
               <Link
                 key={region.name}
-                href={`/recipes?region=${encodeURIComponent(region.name)}`}
+                href={`/regions/${regionSlug(region.name)}`}
                 className="group flex items-start gap-5 border-t border-paper/15 py-5 transition-colors hover:border-paper/40"
               >
                 <span className="mt-1 w-6 text-[10px] font-medium tracking-[0.14em] text-paper/40">

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { recipes, regions } from "@/lib/recipes";
+import { recipes, regions, regionSlug } from "@/lib/recipes";
 
 export function SiteFooter() {
   return (
@@ -10,7 +10,7 @@ export function SiteFooter() {
             Murgh
           </Link>
           <p className="mt-3 max-w-[28ch] text-[13px] leading-6 text-ink-soft">
-            Twelve Indian chicken recipes from eight regions, written and tested for home kitchens.
+            Regional Indian chicken recipes from across the country, written for home kitchens.
           </p>
           <p className="eyebrow mt-8 text-ember">
             {recipes.length} recipes · {regions.length} regions
