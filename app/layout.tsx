@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Outfit } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { PwaRegister } from "@/components/pwa-register";
 import "./globals.css";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\/$/, "");
@@ -14,6 +15,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  manifest: "/manifest.webmanifest",
   title: {
     default: "Murgh — a modern Indian chicken cookbook",
     template: "%s · Murgh",
@@ -42,6 +44,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${outfit.variable} ${fraunces.variable}`}>
       <body>
+        <PwaRegister />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
