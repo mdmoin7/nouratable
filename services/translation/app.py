@@ -8,10 +8,11 @@ import torch
 from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel, Field
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
-from IndicTransToolkit.processor import IndicProcessor
+from IndicTransToolkit import IndicProcessor
 
 MODEL_NAME = os.getenv("INDICTRANS_MODEL", "ai4bharat/indictrans2-en-indic-dist-200M")
 SERVICE_TOKEN = os.getenv("TRANSLATION_SERVICE_TOKEN", "")
+HF_TOKEN = os.getenv("HF_TOKEN") or None
 DEVICE = "cuda" if torch.cuda.is_available() else ("mps" if torch.backends.mps.is_available() else "cpu")
 
 LANGUAGES = {
@@ -49,8 +50,8 @@ class TranslationResponse(BaseModel):
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     global model, tokenizer, processor
-    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
-    model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME, trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True, token=HF_TOKEN)
+    model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME, trust_remote_code=True, token=HF_TOKEN)
     model.to(DEVICE)
     model.eval()
     processor = IndicProcessor(inference=True)
@@ -87,7 +88,7 @@ def translate(payload: TranslationRequest, authorization: str | None = Header(de
 
     target = LANGUAGES[payload.target_language]
     with model_lock, torch.inference_mode():
-        prepared = processor.preprocess_batch(payload.texts, src_lang="eng_Latn", tgt_lang=target)
+        prepared = processor.preprocess_batch(payload.texts, src_lang="eng_Latn", tgt_lang=target, visualize=False)
         inputs = tokenizer(
             prepared,
             truncation=True,
