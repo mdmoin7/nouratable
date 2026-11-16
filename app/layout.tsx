@@ -19,7 +19,11 @@ export const metadata: Metadata = {
     template: "%s · Murgh",
   },
   description:
-    "Regional Indian chicken recipes, from Delhi's butter chicken to Chettinad pepper chicken. Marinades, masalas, methods and cook's notes for home kitchens.",
+    "Discover regional Indian chicken recipes from across India. Explore curries, biryanis, roasts and grills with measured ingredients and step-by-step cooking instructions.",
+  applicationName: "Murgh",
+  authors: [{ name: "Murgh" }],
+  creator: "Murgh",
+  publisher: "Murgh",
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
@@ -37,6 +41,36 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${outfit.variable} ${fraunces.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Murgh",
+                url: siteUrl,
+                description: "A modern Indian chicken cookbook featuring regional recipes for home cooks.",
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "Murgh",
+                url: siteUrl,
+                description: "Regional Indian chicken recipes, cooking methods and kitchen guides.",
+                inLanguage: "en-IN",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: {
+                    "@type": "EntryPoint",
+                    urlTemplate: siteUrl + "/recipes?q={search_term_string}",
+                  },
+                  "query-input": "required name=search_term_string",
+                },
+              },
+            ]).replace(/</g, "\\u003c"),
+          }}
+        />
         <div className="flex min-h-screen flex-col">
           <SiteHeader />
           <main className="flex-1">{children}</main>
