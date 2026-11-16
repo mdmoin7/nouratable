@@ -181,3 +181,14 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+@media print {
+  body { background: #fff !important; color: #000 !important; }
+  header, footer, nav, button, [aria-label='Recipe actions'] { display: none !important; }
+  .wrap { width: 100% !important; max-width: none !important; }
+  article { color: #000 !important; }
+  .art-frame { break-inside: avoid; box-shadow: none !important; }
+  section, aside, li { break-inside: avoid; }
+  a { text-decoration: none !important; }
+}

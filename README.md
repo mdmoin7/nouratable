@@ -40,3 +40,26 @@ The App Router metadata API provides page titles, descriptions, canonical URLs a
 Add or edit recipes in `lib/recipes.ts`. Cards, the index, region counts, regional landing pages and detail pages all derive from that data, and
 `npm run build` generates a static page for each slug. Copy is written in simple Indian English for home cooks — see
 [AGENTS.md](AGENTS.md) for the full conventions and the development workflow.
+
+
+## Phase 4 — platform capabilities
+
+- Installable web app manifest and service worker shell caching. Previously visited recipe pages are cached for offline navigation; pages not visited online are not guaranteed to be available offline.
+- Share recipe links with the native share sheet where available, with clipboard fallback.
+- Print-friendly recipe layout.
+- Read-aloud controls using the browser speech synthesis engine.
+- Shared community reviews powered by Supabase Auth (email magic links) and Postgres Row Level Security. Users can publish one rating/review per recipe and edit it later; published reviews are readable publicly. The original local rating control remains a private quick rating.
+- Nutrition estimates remain gated on verified ingredient quantities and a traceable nutrient source. Ingredient strings mix household measures, variable product types and optional garnishes; deriving calories/macros from those strings alone would be misleading. Do not display generated nutrition figures until a per-recipe, per-serving dataset has been validated.
+
+The PWA service worker caches the app shell, visited HTML navigations, and same-origin static assets. Clear site data to remove the local cache and device-local ratings/saved markers.
+
+ 
+### Supabase community reviews
+
+1. Create a Supabase project and configure email authentication (magic-link sign-in).
+2. Run `supabase/migrations/202611160001_recipe_reviews.sql` in the Supabase SQL editor.
+3. Add `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` from Project Settings → API to `.env.local` and the Vercel project environment variables.
+4. Set the Supabase Auth site URL to the deployed Murgh origin and allow the recipe URL redirect path.
+5. Deploy the branch. Reviews are associated with the authenticated user and recipe slug; RLS restricts writes to the user's own row. Only published reviews are shown in the public list.
+
+The anon key is intended for browser use and is constrained by RLS. Never expose the Supabase service-role key in `NEXT_PUBLIC_*` variables or client code.

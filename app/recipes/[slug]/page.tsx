@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RecipePhoto } from "@/components/recipe-photo";
+import { RecipeTools } from "@/components/recipe-tools";
+import { RecipeReviews } from "@/components/recipe-reviews";
 import { IngredientList } from "@/components/ingredient-list";
 import { MethodSteps } from "@/components/method-steps";
 import { HeatDots, RecipeCard } from "@/components/recipe-card";
@@ -117,6 +119,11 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
             </div>
           ))}
         </dl>
+        <RecipeTools
+          recipeSlug={recipe.slug}
+          recipeName={recipe.name}
+          speechText={[recipe.name + ". " + recipe.subtitle, recipe.story, "Ingredients.", ...recipe.ingredients.flatMap((group) => [group.title, ...group.items]), "Method.", ...recipe.steps.map((step, index) => "Step " + (index + 1) + ". " + step.title + ". " + step.body)].join(" ")}
+        />
       </section>
 
       <section className="wrap grid gap-12 py-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:py-16">
@@ -153,6 +160,10 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
             </p>
           </aside>
         </div>
+      </section>
+
+      <section className="wrap pb-12">
+        <RecipeReviews recipeSlug={recipe.slug} />
       </section>
 
       <section className="border-t border-line bg-card py-14 md:py-20">
