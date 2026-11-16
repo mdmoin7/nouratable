@@ -26,15 +26,15 @@ export function RecipeTools({ recipeSlug, recipeName, speechText }: Props) {
       if (navigator.share) await navigator.share({ title: recipeName, text: `Cook ${recipeName} with Murgh`, url });
       else {
         await navigator.clipboard.writeText(url);
-        setShareMessage(t("linkCopied"));
+        setShareMessage("Recipe link copied");
       }
     } catch (error) {
-      if (error instanceof Error && error.name !== "AbortError") setShareMessage(t("shareFailed"));
+      if (error instanceof Error && error.name !== "AbortError") setShareMessage("Could not share this link");
     }
   }
 
   function toggleSpeech() {
-    if (!("speechSynthesis" in window)) { setShareMessage(t("speechUnsupported")); return; }
+    if (!("speechSynthesis" in window)) { setShareMessage("Text-to-speech is not supported in this browser"); return; }
     if (speaking) { window.speechSynthesis.cancel(); setSpeaking(false); return; }
     const utterance = new SpeechSynthesisUtterance(speechText);
     utterance.lang = "en-IN";
@@ -60,7 +60,7 @@ export function RecipeTools({ recipeSlug, recipeName, speechText }: Props) {
       <button type="button" onClick={shareRecipe} className="btn btn-ghost">Share recipe</button>
       <button type="button" onClick={() => window.print()} className="btn btn-ghost">Print recipe</button>
       <button type="button" onClick={toggleSpeech} className="btn btn-ghost">{speaking ? t("stopReading") : t("readAloud")}</button>
-      <button type="button" onClick={toggleSaved} className="btn btn-ghost">{saved ? t("saved") : t("save")}</button>
+      <button type="button" onClick={toggleSaved} className="btn btn-ghost">{saved ? t("save") : t("save")}</button>
       <div className="flex items-center gap-1 text-sm" aria-label="Rate this recipe">
         <span className="mr-1 text-xs text-ink-soft">{t("rating")}</span>
         {[1, 2, 3, 4, 5].map((value) => (
@@ -68,7 +68,7 @@ export function RecipeTools({ recipeSlug, recipeName, speechText }: Props) {
         ))}
       </div>
       {shareMessage && <p role="status" className="w-full text-xs text-ink-soft">{shareMessage}</p>}
-      <p className="w-full text-[10px] text-ink-soft/70">{t("localRatingNote")}</p>
+      <p className="w-full text-[10px] text-ink-soft/70">Ratings and saved status are stored only on this device. They are not public reviews.</p>
     </section>
   );
 }
