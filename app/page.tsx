@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DishArt } from "@/components/dish-art";
+import { RecipePhoto } from "@/components/recipe-photo";
 import { RecipeCard } from "@/components/recipe-card";
 import { featured, getRecipe, method, pantry, recipes, regions, regionSlug } from "@/lib/recipes";
 
@@ -50,7 +50,7 @@ export default function HomePage() {
 
           <div className="relative">
             <div className="art-frame aspect-[4/5] rounded-[8px] border border-line shadow-[0_30px_70px_rgba(27,25,23,0.10)]">
-              <DishArt slug={hero.slug} variant={hero.variant} palette={hero.palette} />
+              <RecipePhoto slug={hero.slug} priority />
             </div>
             <div className="absolute inset-x-5 -bottom-5 flex items-center justify-between gap-3 rounded-[5px] border border-line bg-card px-4 py-3 text-[11px]">
               <span className="eyebrow text-ember">Recipe 01 · {hero.region}</span>
