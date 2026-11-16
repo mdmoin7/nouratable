@@ -58,7 +58,7 @@ export function RecipeTools({ recipeSlug, recipeName, speechText }: Props) {
       <button type="button" onClick={shareRecipe} className="btn btn-ghost">Share recipe</button>
       <button type="button" onClick={() => window.print()} className="btn btn-ghost">Print recipe</button>
       <button type="button" onClick={toggleSpeech} className="btn btn-ghost">{speaking ? "Stop reading" : "Read aloud"}</button>
-      <button type="button" onClick={toggleSaved} className="btn btn-ghost">{saved ? "Saved offline list ✓" : "Save recipe"}</button>
+      <button type="button" onClick={toggleSaved} className="btn btn-ghost">{saved ? "Saved on this device ✓" : "Save recipe"}</button>
       <div className="flex items-center gap-1 text-sm" aria-label="Rate this recipe">
         <span className="mr-1 text-xs text-ink-soft">Your rating</span>
         {[1, 2, 3, 4, 5].map((value) => (
