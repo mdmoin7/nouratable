@@ -63,3 +63,10 @@ The PWA service worker caches the app shell, visited HTML navigations, and same-
 5. Deploy the branch. Reviews are associated with the authenticated user and recipe slug; RLS restricts writes to the user's own row. Only published reviews are shown in the public list.
 
 The anon key is intended for browser use and is constrained by RLS. Never expose the Supabase service-role key in `NEXT_PUBLIC_*` variables or client code.
+
+
+## Language support
+
+The language selector supports English plus 12 major Indian languages: Hindi, Bengali, Telugu, Marathi, Tamil, Gujarati, Kannada, Malayalam, Punjabi, Odia, Assamese and Urdu. The selected language is persisted in the browser and applied to the document language; Urdu also switches the document direction to right-to-left.
+
+The current translation catalog covers shared navigation and the cooking/discovery controls. Recipe editorial copy, ingredient names and quantities, method descriptions, regional stories, SEO metadata and community review content remain authored in English at this stage. Do not treat the current release as full recipe-content localization: those sections need a dedicated translation and culinary review pass before being presented as fully translated. Translation strings live in `lib/i18n.ts`.
