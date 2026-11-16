@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { RecipeCard } from "@/components/recipe-card";
-import { type Heat, type Recipe } from "@/lib/recipes";
+import { heatLabel, type Heat, type Recipe } from "@/lib/recipes";
 import { useLanguage } from "@/components/language-provider";
 
 type SortOrder = "featured" | "name" | "quickest" | "longest";
@@ -149,7 +149,7 @@ export function RecipeBrowser({
               <span className="eyebrow text-ink-soft/70">{t("sortBy")}</span>
               <select value={sort} onChange={(event) => setSort(event.target.value as SortOrder)}
                 className="rounded border border-line bg-card px-3 py-2 text-[12px] text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-ember">
-                {sortOptions.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
+                {sortOptions.map((option) => <option key={option.value} value={option.value}>{option.value === "featured" ? t("featured") : option.value === "quickest" ? t("quickest") : option.value === "longest" ? t("longest") : option.label}</option>)}
               </select>
             </label>
           </div>
