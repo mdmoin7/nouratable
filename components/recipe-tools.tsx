@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/components/language-provider";
 
 type Props = { recipeSlug: string; recipeName: string; speechText: string };
 
 export function RecipeTools({ recipeSlug, recipeName, speechText }: Props) {
+  const { t } = useLanguage();
   const [rating, setRating] = useState(0);
   const [saved, setSaved] = useState(false);
   const [speaking, setSpeaking] = useState(false);
@@ -24,15 +26,15 @@ export function RecipeTools({ recipeSlug, recipeName, speechText }: Props) {
       if (navigator.share) await navigator.share({ title: recipeName, text: `Cook ${recipeName} with Murgh`, url });
       else {
         await navigator.clipboard.writeText(url);
-        setShareMessage("Recipe link copied");
+        setShareMessage(t("linkCopied"));
       }
     } catch (error) {
-      if (error instanceof Error && error.name !== "AbortError") setShareMessage("Could not share this link");
+      if (error instanceof Error && error.name !== "AbortError") setShareMessage(t("shareFailed"));
     }
   }
 
   function toggleSpeech() {
-    if (!("speechSynthesis" in window)) { setShareMessage("Text-to-speech is not supported in this browser"); return; }
+    if (!("speechSynthesis" in window)) { setShareMessage(t("speechUnsupported")); return; }
     if (speaking) { window.speechSynthesis.cancel(); setSpeaking(false); return; }
     const utterance = new SpeechSynthesisUtterance(speechText);
     utterance.lang = "en-IN";
@@ -57,16 +59,16 @@ export function RecipeTools({ recipeSlug, recipeName, speechText }: Props) {
     <section aria-label="Recipe actions" className="my-7 flex flex-wrap items-center gap-3 border-y border-line py-4 print:hidden">
       <button type="button" onClick={shareRecipe} className="btn btn-ghost">Share recipe</button>
       <button type="button" onClick={() => window.print()} className="btn btn-ghost">Print recipe</button>
-      <button type="button" onClick={toggleSpeech} className="btn btn-ghost">{speaking ? "Stop reading" : "Read aloud"}</button>
-      <button type="button" onClick={toggleSaved} className="btn btn-ghost">{saved ? "Saved on this device ✓" : "Save recipe"}</button>
+      <button type="button" onClick={toggleSpeech} className="btn btn-ghost">{speaking ? t("stopReading") : t("readAloud")}</button>
+      <button type="button" onClick={toggleSaved} className="btn btn-ghost">{saved ? t("saved") : t("save")}</button>
       <div className="flex items-center gap-1 text-sm" aria-label="Rate this recipe">
-        <span className="mr-1 text-xs text-ink-soft">Your rating</span>
+        <span className="mr-1 text-xs text-ink-soft">{t("rating")}</span>
         {[1, 2, 3, 4, 5].map((value) => (
           <button key={value} type="button" onClick={() => setRecipeRating(value)} aria-label={`Rate ${value} out of 5`} aria-pressed={rating === value} className={`text-xl ${value <= rating ? "text-saffron" : "text-ink-soft/40"}`}>★</button>
         ))}
       </div>
       {shareMessage && <p role="status" className="w-full text-xs text-ink-soft">{shareMessage}</p>}
-      <p className="w-full text-[10px] text-ink-soft/70">Ratings and saved status are stored only on this device. They are not public reviews.</p>
+      <p className="w-full text-[10px] text-ink-soft/70">{t("localRatingNote")}</p>
     </section>
   );
 }
