@@ -46,21 +46,19 @@ export function MethodSteps({ steps, recipeSlug }: { steps: Step[]; recipeSlug: 
   useEffect(() => {
     if (!running) return;
     const interval = window.setInterval(() => {
-      setRemaining((current) => {
-        if (current <= 1) {
-          window.clearInterval(interval);
-          setRunning(false);
-          setTimerDone(true);
-          if ("Notification" in window && Notification.permission === "granted") {
-            new Notification("Murgh cooking timer", { body: `Timer finished: ${steps[active]?.title ?? "Cooking step"}` });
-          }
-          return 0;
-        }
-        return current - 1;
-      });
+      setRemaining((current) => Math.max(0, current - 1));
     }, 1000);
     return () => window.clearInterval(interval);
-  }, [active, running, steps]);
+  }, [running]);
+
+  useEffect(() => {
+    if (!running || remaining !== 0) return;
+    setRunning(false);
+    setTimerDone(true);
+    if ("Notification" in window && Notification.permission === "granted") {
+      new Notification("Murgh cooking timer", { body: `Timer finished: ${steps[active]?.title ?? "Cooking step"}` });
+    }
+  }, [active, remaining, running, steps]);
 
   function chooseDuration(minutes: number) {
     setDuration(minutes);
