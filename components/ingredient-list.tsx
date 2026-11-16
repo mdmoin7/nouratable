@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useLanguage } from "@/components/language-provider";
+import { TranslatedText } from "@/components/translated-text";
 
 type Group = { title: string; items: string[] };
 type PrepState = 0 | 1 | 2;
@@ -84,7 +85,7 @@ export function IngredientList({ groups, baseServes, recipeSlug }: { groups: Gro
       <div className="mt-5 space-y-7">
         {groups.map((group) => (
           <div key={group.title}>
-            <h3 className="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-ink-soft/80">{group.title}</h3>
+            <h3 className="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-ink-soft/80"><TranslatedText text={group.title} /></h3>
             <ul className="mt-3 space-y-2.5">
               {group.items.map((item) => {
                 const key = `${group.title}-${item}`;
@@ -92,7 +93,7 @@ export function IngredientList({ groups, baseServes, recipeSlug }: { groups: Gro
                 return <li key={key}>
                   <button type="button" onClick={() => advance(key)} aria-label={`${item}: ${t(prepLabels[state])}.`} aria-pressed={state === 2} className="group flex w-full items-start gap-3 text-left">
                     <span aria-hidden="true" className={`mt-0.5 grid h-5 min-w-5 place-items-center rounded-full border px-1 text-[9px] font-semibold ${prepStyles[state]}`}>{state === 2 ? "✓" : state === 1 ? "•" : "○"}</span>
-                    <span className={`flex-1 text-[13.5px] leading-6 ${state === 2 ? "text-ink-soft/55 line-through" : "text-ink"}`}>{scaleIngredient(item, factor)}</span>
+                    <span className={`flex-1 text-[13.5px] leading-6 ${state === 2 ? "text-ink-soft/55 line-through" : "text-ink"}`}><TranslatedText text={scaleIngredient(item, factor)} /></span>
                     <span className={`pt-1 text-[9px] uppercase tracking-wide ${state === 0 ? "text-ink-soft/50" : state === 1 ? "text-[#80551b]" : "text-moss"}`}>{t(prepLabels[state])}</span>
                   </button>
                 </li>;
