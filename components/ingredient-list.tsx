@@ -93,7 +93,7 @@ export function IngredientList({ groups, baseServes, recipeSlug }: { groups: Gro
                   <button type="button" onClick={() => advance(key)} aria-label={`${item}: ${t(prepLabels[state])}.`} aria-pressed={state === 2} className="group flex w-full items-start gap-3 text-left">
                     <span aria-hidden="true" className={`mt-0.5 grid h-5 min-w-5 place-items-center rounded-full border px-1 text-[9px] font-semibold ${prepStyles[state]}`}>{state === 2 ? "✓" : state === 1 ? "•" : "○"}</span>
                     <span className={`flex-1 text-[13.5px] leading-6 ${state === 2 ? "text-ink-soft/55 line-through" : "text-ink"}`}>{scaleIngredient(item, factor)}</span>
-                    <span className={`pt-1 text-[9px] uppercase tracking-wide ${state === 0 ? "text-ink-soft/50" : state === 1 ? "text-[#80551b]" : "text-moss"}`}>{prepLabels[state]}</span>
+                    <span className={`pt-1 text-[9px] uppercase tracking-wide ${state === 0 ? "text-ink-soft/50" : state === 1 ? "text-[#80551b]" : "text-moss"}`}>{t(prepLabels[state])}</span>
                   </button>
                 </li>;
               })}
