@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DishArt } from "@/components/dish-art";
+import { RecipePhoto } from "@/components/recipe-photo";
 import { formatTime, heatLabel, totalTime, type Recipe } from "@/lib/recipes";
 
 export function HeatDots({ heat, className = "" }: { heat: Recipe["heat"]; className?: string }) {
@@ -23,7 +23,7 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
       className="card-lift group flex flex-col overflow-hidden rounded-[6px] border border-line bg-card focus:outline-none focus-visible:ring-2 focus-visible:ring-ember"
     >
       <div className="art-frame aspect-[4/3] border-b border-line/70">
-        <DishArt slug={recipe.slug} variant={recipe.variant} palette={recipe.palette} />
+        <RecipePhoto slug={recipe.slug} />
       </div>
       <div className="flex flex-1 flex-col p-5">
         <div className="flex items-center justify-between gap-3">
