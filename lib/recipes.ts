@@ -1112,6 +1112,12 @@ export const regionNotes: Record<string, string> = {
   Chhattisgarh: "Seasonal greens, garlic and rice-friendly home cooking.",
   "West Bengal": "Light jhols, mustard oil and slow-cooked Mughlai favourites.",
   Gujarat: "Parsi community cooking, sweet-sour gravies and crisp sali.",
+  Telangana: "Country chicken, tamarind, chilli and roasted sesame masalas.",
+  "Uttar Pradesh": "Awadhi slow cooking, fragrant whole spices, curd and saffron.",
+  Odisha: "Mustard oil, roasted spices and slow-cooked kasa-style gravies.",
+  Sindh: "Greens, lentils and balanced home-style spice blends.",
+  Parsi: "Community cooking with layered spices and sweet-sour balance.",
+  "North India": "Tandoor-style grills, herb marinades and warming spice blends.",
 
 };
 
