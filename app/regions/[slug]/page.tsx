@@ -22,7 +22,8 @@ export default async function RegionPage({ params }: { params: Promise<{ slug: s
   const region = getRegionBySlug(slug);
   if (!region) notFound();
   const regionRecipes = recipes.filter((recipe) => recipe.region === region.name);
-  const jsonLd = { "@context": "https://schema.org", "@type": "CollectionPage", name: `${region.name} Chicken Recipes`, description: region.note, mainEntity: { "@type": "ItemList", numberOfItems: regionRecipes.length, itemListElement: regionRecipes.map((recipe, index) => ({ "@type": "ListItem", position: index + 1, url: `https://nouratable.com/recipes/${recipe.slug}`, name: recipe.name })) } };
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\\/$/, "");
+  const jsonLd = { "@context": "https://schema.org", "@type": "CollectionPage", name: `${region.name} Chicken Recipes`, description: region.note, mainEntity: { "@type": "ItemList", numberOfItems: regionRecipes.length, itemListElement: regionRecipes.map((recipe, index) => ({ "@type": "ListItem", position: index + 1, url: `${siteUrl}/recipes/${recipe.slug}`, name: recipe.name })) } };
   return <main>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
     <section className="border-b border-line"><div className="wrap py-12 md:py-16">
