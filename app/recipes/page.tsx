@@ -1,20 +1,26 @@
 import type { Metadata } from "next";
 import { RecipeBrowser } from "@/components/recipe-browser";
-import { recipes, regions } from "@/lib/recipes";
+import { recipes, regions, type Heat } from "@/lib/recipes";
 
 export const metadata: Metadata = {
   title: "The recipes",
   description: "Twelve Indian chicken recipes, browsable by region and heat.",
 };
 
+const isHeat = (value: number): value is Heat => value === 1 || value === 2 || value === 3;
+
 export default async function RecipesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ region?: string }>;
+  searchParams: Promise<{ region?: string; heat?: string; q?: string }>;
 }) {
   const params = await searchParams;
-  const requested = params.region;
-  const initialRegion = requested && regions.some((region) => region.name === requested) ? requested : "All";
+  const requestedRegion = params.region;
+  const requestedHeat = Number(params.heat);
+  const initialRegion =
+    requestedRegion && regions.some((region) => region.name === requestedRegion) ? requestedRegion : "All";
+  const initialHeat: Heat | 0 = isHeat(requestedHeat) ? requestedHeat : 0;
+  const initialQuery = params.q?.slice(0, 80) ?? "";
 
   return (
     <div>
@@ -36,7 +42,12 @@ export default async function RecipesPage({
       </section>
 
       <section className="wrap py-10 md:py-14">
-        <RecipeBrowser recipes={recipes} initialRegion={initialRegion} />
+        <RecipeBrowser
+          recipes={recipes}
+          initialRegion={initialRegion}
+          initialHeat={initialHeat}
+          initialQuery={initialQuery}
+        />
       </section>
 
       <section className="border-t border-line bg-card py-12">

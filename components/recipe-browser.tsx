@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { RecipeCard } from "@/components/recipe-card";
 import { heatLabel, type Heat, type Recipe } from "@/lib/recipes";
 
@@ -11,10 +12,25 @@ const heatFilters: { value: Heat | 0; label: string }[] = [
   { value: 3, label: heatLabel[3] },
 ];
 
-export function RecipeBrowser({ recipes, initialRegion = "All" }: { recipes: Recipe[]; initialRegion?: string }) {
+const isHeat = (value: number): value is Heat => value === 1 || value === 2 || value === 3;
+
+export function RecipeBrowser({
+  recipes,
+  initialRegion = "All",
+  initialHeat = 0,
+  initialQuery = "",
+}: {
+  recipes: Recipe[];
+  initialRegion?: string;
+  initialHeat?: Heat | 0;
+  initialQuery?: string;
+}) {
+  const router = useRouter();
+  const pathname = usePathname();
   const [region, setRegion] = useState(initialRegion);
-  const [heat, setHeat] = useState<Heat | 0>(0);
-  const [query, setQuery] = useState("");
+  const [heat, setHeat] = useState<Heat | 0>(initialHeat);
+  const [query, setQuery] = useState(initialQuery);
+  const firstRender = useRef(true);
 
   const regionNames = useMemo(() => ["All", ...Array.from(new Set(recipes.map((recipe) => recipe.region)))], [recipes]);
 
@@ -32,6 +48,42 @@ export function RecipeBrowser({ recipes, initialRegion = "All" }: { recipes: Rec
       return matchesRegion && matchesHeat && matchesQuery;
     });
   }, [recipes, region, heat, query]);
+
+  // Keep the address bar in step with the filters, so a filtered list can be shared.
+  useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+
+    const params = new URLSearchParams();
+    if (region !== "All") params.set("region", region);
+    if (heat !== 0) params.set("heat", String(heat));
+    if (query.trim()) params.set("q", query.trim());
+    const search = params.toString();
+
+    const timer = window.setTimeout(() => {
+      router.replace(search ? `${pathname}?${search}` : pathname, { scroll: false });
+    }, 250);
+
+    return () => window.clearTimeout(timer);
+  }, [region, heat, query, pathname, router]);
+
+  // Keep the filters in step with the URL when the browser's back button is used.
+  useEffect(() => {
+    const syncFromUrl = () => {
+      const params = new URLSearchParams(window.location.search);
+      const urlRegion = params.get("region");
+      const urlHeat = Number(params.get("heat"));
+
+      setRegion(urlRegion && regionNames.includes(urlRegion) ? urlRegion : "All");
+      setHeat(isHeat(urlHeat) ? urlHeat : 0);
+      setQuery(params.get("q") ?? "");
+    };
+
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
+  }, [regionNames]);
 
   return (
     <div>
