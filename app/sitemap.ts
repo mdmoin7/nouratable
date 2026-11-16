@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { recipes, regions, regionSlug } from "@/lib/recipes";
 
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.com").replace(/\/$/, "");
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\/$/, "");
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
