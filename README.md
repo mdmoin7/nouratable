@@ -33,7 +33,7 @@ string. Default values are left out of the URL, and a link with filters renders 
 
 ## Search engine optimisation
 
-The App Router metadata API provides page titles, descriptions, canonical URLs and social preview metadata. Recipe detail pages emit Schema.org `Recipe` JSON-LD with ingredients, instructions, yield and ISO 8601 durations. `/sitemap.xml` includes every recipe route and `/robots.txt` advertises the sitemap. Set `NEXT_PUBLIC_SITE_URL` to the production origin before deployment; the repository default is `https://nouratable.com`.
+The App Router metadata API provides page titles, descriptions, canonical URLs and social preview metadata. Recipe detail pages emit Schema.org `Recipe` JSON-LD with ingredients, instructions, yield and ISO 8601 durations. `/sitemap.xml` includes every recipe route and `/robots.txt` advertises the sitemap. Set `NEXT_PUBLIC_SITE_URL` to the production origin before deployment; the repository default is `https://nouratable.vercel.app`.
 
 ## Working with the content
 
