@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RecipePhoto } from "@/components/recipe-photo";
 import { RecipeTools } from "@/components/recipe-tools";
+import { RecipeReviews } from "@/components/recipe-reviews";
 import { IngredientList } from "@/components/ingredient-list";
 import { MethodSteps } from "@/components/method-steps";
 import { HeatDots, RecipeCard } from "@/components/recipe-card";
@@ -159,6 +160,10 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
             </p>
           </aside>
         </div>
+      </section>
+
+      <section className="wrap pb-12">
+        <RecipeReviews recipeSlug={recipe.slug} />
       </section>
 
       <section className="border-t border-line bg-card py-14 md:py-20">
