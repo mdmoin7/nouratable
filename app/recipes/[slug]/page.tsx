@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { DishArt } from "@/components/dish-art";
+import { RecipePhoto } from "@/components/recipe-photo";
 import { IngredientList } from "@/components/ingredient-list";
 import { HeatDots, RecipeCard } from "@/components/recipe-card";
 import { formatTime, getRecipe, heatLabel, recipes, regionSlug, totalTime } from "@/lib/recipes";
@@ -99,7 +99,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
         </div>
 
         <div className="art-frame aspect-[5/4] rounded-[8px] border border-line shadow-[0_24px_60px_rgba(27,25,23,0.10)]">
-          <DishArt slug={recipe.slug} variant={recipe.variant} palette={recipe.palette} />
+          <RecipePhoto slug={recipe.slug} priority />
         </div>
       </section>
 
