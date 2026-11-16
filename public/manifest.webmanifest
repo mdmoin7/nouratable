@@ -1,0 +1,11 @@
+{
+  "name": "Murgh — Indian Chicken Cookbook",
+  "short_name": "Murgh",
+  "description": "Regional Indian chicken recipes for home cooks.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f6f1e7",
+  "theme_color": "#2c4035",
+  "icons": []
+}
