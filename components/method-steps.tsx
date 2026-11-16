@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/components/language-provider";
 
 type Step = { title: string; body: string };
 const quickTimers = [1, 3, 5, 10, 15, 20];
@@ -12,6 +13,7 @@ function formatClock(seconds: number) {
 }
 
 export function MethodSteps({ steps, recipeSlug }: { steps: Step[]; recipeSlug: string }) {
+  const { t } = useLanguage();
   const [completed, setCompleted] = useState<number[]>([]);
   const [active, setActive] = useState(0);
   const [loaded, setLoaded] = useState(false);
@@ -87,17 +89,17 @@ export function MethodSteps({ steps, recipeSlug }: { steps: Step[]; recipeSlug: 
   }
   function controls() {
     return <div className="mt-7 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5">
-      <button type="button" onClick={() => setActive((value) => Math.max(0, value - 1))} disabled={active === 0} className="rounded-full border border-line px-4 py-2.5 text-[11px] font-medium text-ink disabled:opacity-30">← Previous</button>
+      <button type="button" onClick={() => setActive((value) => Math.max(0, value - 1))} disabled={active === 0} className="rounded-full border border-line px-4 py-2.5 text-[11px] font-medium text-ink disabled:opacity-30">← {t("previous")}</button>
       <div className="flex flex-wrap items-center gap-2">
-        <button type="button" onClick={() => setCompleted((current) => current.includes(active) ? current.filter((value) => value !== active) : [...current, active])} aria-pressed={isComplete} className={`rounded-full border px-4 py-2.5 text-[11px] font-medium ${isComplete ? "border-moss bg-moss-soft text-moss" : "border-line text-ink hover:border-ember"}`}>{isComplete ? "✓ Completed" : "Mark complete"}</button>
-        <button type="button" onClick={next} disabled={active === count - 1} className="rounded-full bg-ember px-5 py-2.5 text-[11px] font-semibold text-paper disabled:opacity-35">{isComplete ? "Next step →" : "Complete & continue →"}</button>
+        <button type="button" onClick={() => setCompleted((current) => current.includes(active) ? current.filter((value) => value !== active) : [...current, active])} aria-pressed={isComplete} className={`rounded-full border px-4 py-2.5 text-[11px] font-medium ${isComplete ? "border-moss bg-moss-soft text-moss" : "border-line text-ink hover:border-ember"}`}>{isComplete ? `✓ ${t("completed")}` : t("markComplete")}</button>
+        <button type="button" onClick={next} disabled={active === count - 1} className="rounded-full bg-ember px-5 py-2.5 text-[11px] font-semibold text-paper disabled:opacity-35">{isComplete ? `${t("nextStep")} →` : `${t("markComplete")} & ${t("nextStep")} →`}</button>
       </div>
     </div>;
   }
   function timerPanel() {
     return <div className="mt-6 rounded-[7px] border border-line bg-paper/70 p-4">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <div><p className="text-[11px] font-semibold text-ink">Step timer</p><p className="mt-0.5 text-[10px] text-ink-soft">Set a reminder for this cooking stage</p></div>
+        <div><p className="text-[11px] font-semibold text-ink">{t("stepTimer")}</p><p className="mt-0.5 text-[10px] text-ink-soft">Set a reminder for this cooking stage</p></div>
         <output aria-live="off" className="font-mono text-2xl tabular-nums text-ink">{formatClock(remaining)}</output>
       </div>
       <div className="mt-3 flex flex-wrap gap-1.5">
