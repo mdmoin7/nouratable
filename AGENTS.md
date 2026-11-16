@@ -4,7 +4,7 @@ Instructions for AI coding agents working on this repository. Read this before c
 
 ## What this project is
 
-**Murgh** — a modern Indian chicken cookbook website. Twelve regional chicken recipes, each with an illustrated plate.
+**Murgh** — a modern Indian chicken cookbook website. Regional chicken recipes, each with an illustrated plate.
 There is no backend, no database, no authentication, no API routes and no photography: all content is static data in
 `lib/recipes.ts`, and every dish image is an SVG drawn in `components/dish-art.tsx`.
 

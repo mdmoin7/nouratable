@@ -47,7 +47,7 @@ export default function AboutPage() {
               <em className="text-ember">one chicken.</em>
             </h1>
             <p className="mt-7 max-w-[52ch] text-[15px] leading-7 text-ink-soft">
-              Murgh has twelve recipes from eight regions, and one simple point: Indian chicken is not one dish. Every
+              Murgh brings together regional chicken recipes from across India, and one simple point: Indian chicken is not one dish. Every
               region has its own spices and its own method. Cook a few of these recipes and you will learn the method,
               not just the dish.
             </p>

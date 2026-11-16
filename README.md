@@ -1,6 +1,6 @@
 # Murgh
 
-A modern Indian chicken cookbook website — twelve recipes from eight regions, each with its own illustrated plate.
+A modern Indian chicken cookbook website — regional chicken recipes from across India, each with its own illustrated plate.
 
 Built with Next.js (App Router), React and Tailwind CSS v4. There is no backend: recipe content lives in
 `lib/recipes.ts`, and every dish illustration is a deterministic SVG in `components/dish-art.tsx`.
@@ -29,6 +29,10 @@ Filters are shareable and bookmarkable:
 
 `region` must match a region in `lib/recipes.ts`, `heat` is `1` (mild), `2` (medium) or `3` (hot), and `q` is a search
 string. Default values are left out of the URL, and a link with filters renders the filtered list on the server.
+
+## Search engine optimisation
+
+The App Router metadata API provides page titles, descriptions, canonical URLs and social preview metadata. Recipe detail pages emit Schema.org `Recipe` JSON-LD with ingredients, instructions, yield and ISO 8601 durations. `/sitemap.xml` includes every recipe route and `/robots.txt` advertises the sitemap. Set `NEXT_PUBLIC_SITE_URL` to the production origin before deployment; the repository default is `https://nouratable.com`.
 
 ## Working with the content
 

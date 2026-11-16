@@ -4,6 +4,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import "./globals.css";
 
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.com").replace(/\/$/, "");
+
 const outfit = Outfit({ variable: "--font-outfit", subsets: ["latin"] });
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -17,10 +19,16 @@ export const metadata: Metadata = {
     template: "%s · Murgh",
   },
   description:
-    "Twelve Indian chicken recipes, from Delhi's butter chicken to Chettinad pepper chicken. Marinades, masalas, methods and cook's notes for home kitchens.",
+    "Regional Indian chicken recipes, from Delhi's butter chicken to Chettinad pepper chicken. Marinades, masalas, methods and cook's notes for home kitchens.",
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
+  twitter: { card: "summary_large_image", title: "Murgh — Indian Chicken Cookbook", description: "Regional Indian chicken recipes for home cooks." },
   openGraph: {
+    siteName: "Murgh",
+    locale: "en_IN",
     title: "Murgh — a modern Indian chicken cookbook",
-    description: "Twelve recipes from eight regions, for one chicken.",
+    description: "Regional Indian chicken recipes for home kitchens.",
     type: "website",
   },
 };

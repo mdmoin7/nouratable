@@ -15,9 +15,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const recipe = getRecipe(slug);
   if (!recipe) return { title: "Recipe not found" };
 
+  const canonical = `/recipes/${recipe.slug}`;
+  const description = `${recipe.subtitle} Learn how to make ${recipe.name} (${recipe.native}) at home with measured ingredients, step-by-step instructions, cook’s notes and serving ideas.`;
   return {
     title: `${recipe.name} (${recipe.native})`,
-    description: recipe.subtitle,
+    description,
+    alternates: { canonical },
+    openGraph: { type: "article", url: canonical, title: `${recipe.name} | Murgh`, description, siteName: "Murgh" },
+    twitter: { card: "summary", title: `${recipe.name} | Murgh`, description },
   };
 }
 
@@ -34,8 +39,29 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
     ["Total", formatTime(totalTime(recipe))],
   ];
 
+  const recipeJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    name: recipe.name,
+    alternateName: recipe.native,
+    description: recipe.subtitle,
+    recipeCategory: recipe.variant === "rice" ? "Main course" : recipe.variant === "soup" ? "Soup" : "Chicken",
+    recipeCuisine: "Indian",
+    keywords: [recipe.name, recipe.native, recipe.region, "Indian chicken recipe", "chicken curry", ...recipe.tags].join(", "),
+    recipeYield: `${recipe.serves} servings`,
+    prepTime: `PT${recipe.prep}M`,
+    cookTime: `PT${recipe.cook}M`,
+    totalTime: `PT${recipe.prep + recipe.cook}M`,
+    recipeIngredient: recipe.ingredients.flatMap((group) => group.items),
+    recipeInstructions: recipe.steps.map((step, index) => ({ "@type": "HowToStep", position: index + 1, name: step.title, text: step.body })),
+    author: { "@type": "Organization", name: "Murgh" },
+    isAccessibleForFree: true,
+    inLanguage: "en-IN",
+  };
+
   return (
     <article>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeJsonLd).replace(/</g, "\\u003c") }} />
       <div className="wrap pt-8">
         <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-ink-soft/80">
           <Link href="/recipes" className="hover:text-ember">

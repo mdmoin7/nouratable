@@ -24,9 +24,7 @@ export default function HomePage() {
               way.
             </h1>
             <p className="mt-7 max-w-[48ch] text-[15px] leading-7 text-ink-soft">
-              One chicken, cooked in twelve ways, from eight regions. Delhi&apos;s butter chicken, Kerala&apos;s coconut
-              curry, Tamil Nadu&apos;s pepper chicken. Every recipe is written for a home kitchen, with weights in grams
-              and time in minutes.
+              Explore regional chicken cooking across India: from Delhi butter chicken and Hyderabadi biryani to Andhra kodi kura, Kerala coconut curries and Maharashtrian rassa. Each recipe is written for a home kitchen, with measured ingredients and clear steps.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <Link href="/recipes" className="btn btn-dark">
@@ -38,8 +36,8 @@ export default function HomePage() {
             </div>
             <dl className="mt-12 grid max-w-lg grid-cols-3 gap-4 border-t border-line pt-6">
               {[
-                ["12", "recipes"],
-                ["8", "regions"],
+                [String(recipes.length), "recipes"],
+                [String(regions.length), "regions"],
                 ["40", "minutes on average"],
               ].map(([value, label]) => (
                 <div key={label}>
@@ -92,7 +90,7 @@ export default function HomePage() {
             <div>
               <p className="eyebrow text-paper/60">By region</p>
               <h2 className="display mt-3 max-w-[24ch] text-[clamp(2rem,4vw,3rem)] leading-[1.02]">
-                Eight regions, one chicken, no fixed rules.
+                Regional kitchens, one chicken, many traditions.
               </h2>
             </div>
             <p className="max-w-[36ch] text-[13px] leading-6 text-paper/70">

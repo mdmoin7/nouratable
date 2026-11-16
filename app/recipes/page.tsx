@@ -4,7 +4,9 @@ import { recipes, regions, type Heat } from "@/lib/recipes";
 
 export const metadata: Metadata = {
   title: "The recipes",
-  description: "Twelve Indian chicken recipes, browsable by region and heat.",
+  description: "Browse regional Indian chicken recipes by cuisine, region and spice level. Find curries, biryanis, roasts, grills and home-style chicken dishes.",
+  alternates: { canonical: "/recipes" },
+  openGraph: { title: "Indian Chicken Recipes | Murgh", description: "Regional Indian chicken recipes for home cooks.", url: "/recipes", type: "website" },
 };
 
 const isHeat = (value: number): value is Heat => value === 1 || value === 2 || value === 3;
@@ -29,14 +31,13 @@ export default async function RecipesPage({
           <div>
             <p className="eyebrow text-ember">The recipes</p>
             <h1 className="display mt-4 text-[clamp(2.8rem,6vw,4.6rem)] leading-[0.94] text-ink">
-              Twelve ways to
+              Regional ways to
               <br />
               <em className="text-ember">cook chicken.</em>
             </h1>
           </div>
           <p className="max-w-[42ch] text-[13.5px] leading-7 text-ink-soft md:justify-self-end">
-            Pick a region, or choose how much heat you can take. Marinade time and cooking time are listed separately in
-            every recipe, so you know how long the dish will take.
+            Explore chicken dishes from across India, from coastal coconut curries and fiery Andhra masalas to gentle Kashmiri yakhni. Filter by region and heat, or search by dish name and ingredient. Each recipe includes measured ingredients, a clear method and serving ideas.
           </p>
         </div>
       </section>
