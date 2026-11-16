@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RecipePhoto } from "@/components/recipe-photo";
 import { IngredientList } from "@/components/ingredient-list";
+import { MethodSteps } from "@/components/method-steps";
 import { HeatDots, RecipeCard } from "@/components/recipe-card";
 import { formatTime, getRecipe, heatLabel, recipes, regionSlug, totalTime } from "@/lib/recipes";
 
@@ -120,7 +121,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
 
       <section className="wrap grid gap-12 py-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:py-16">
         <div className="md:sticky md:top-24 md:self-start">
-          <IngredientList groups={recipe.ingredients} />
+          <IngredientList groups={recipe.ingredients} baseServes={recipe.serves} />
 
           <div className="mt-8 border-t border-line pt-5">
             <h2 className="eyebrow text-ember">Serve with</h2>
@@ -135,22 +136,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
         </div>
 
         <div>
-          <div className="flex items-baseline justify-between gap-4 border-b border-line pb-3">
-            <h2 className="eyebrow text-ember">Method</h2>
-            <span className="text-[11px] text-ink-soft/70">{recipe.steps.length} steps</span>
-          </div>
-
-          <ol className="mt-2">
-            {recipe.steps.map((step, index) => (
-              <li key={step.title} className="grid grid-cols-[auto_1fr] gap-5 border-b border-line/70 py-6">
-                <span className="display text-[20px] leading-none text-ember/70">{String(index + 1).padStart(2, "0")}</span>
-                <div>
-                  <h3 className="display text-[21px] leading-snug text-ink">{step.title}</h3>
-                  <p className="mt-2 text-[13.5px] leading-7 text-ink-soft">{step.body}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
+          <MethodSteps steps={recipe.steps} />
 
           <aside className="mt-10 rounded-[6px] border border-line bg-card p-6 md:p-7">
             <h2 className="eyebrow text-ember">Cook&apos;s notes</h2>
