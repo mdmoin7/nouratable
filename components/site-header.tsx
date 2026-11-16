@@ -59,7 +59,7 @@ export function SiteHeader() {
                 </Link>
               ))}
               <Link href="/recipes" className="mt-1 block rounded-xl bg-ink px-3 py-2 text-sm font-medium text-paper">
-                Start cooking
+                {t("startCooking")}
               </Link>
             </div>
           </details>
