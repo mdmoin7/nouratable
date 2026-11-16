@@ -185,7 +185,7 @@ a {
 
 @media print {
   body { background: #fff !important; color: #000 !important; }
-  .print\\:hidden, header, footer, nav, button { display: none !important; }
+  header, footer, nav, button, [aria-label='Recipe actions'] { display: none !important; }
   .wrap { width: 100% !important; max-width: none !important; }
   article { color: #000 !important; }
   .art-frame { break-inside: avoid; box-shadow: none !important; }
