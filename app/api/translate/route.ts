@@ -3,6 +3,7 @@ import { languages, type LanguageCode } from "@/lib/i18n";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const maxDuration = 120;
 
 const supported = new Set<string>(languages.map(({ code }) => code));
 const MAX_ITEMS = 100;
