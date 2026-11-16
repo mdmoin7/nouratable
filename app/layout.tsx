@@ -24,6 +24,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Murgh" }],
   creator: "Murgh",
   publisher: "Murgh",
+  verification: { google: "nhkZsCiFNZhvZbCv_IZf7zqxKhv2UPhC91cRCxaFGmk" },
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
