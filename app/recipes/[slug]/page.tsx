@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { DishArt } from "@/components/dish-art";
 import { IngredientList } from "@/components/ingredient-list";
 import { HeatDots, RecipeCard } from "@/components/recipe-card";
-import { formatTime, getRecipe, heatLabel, recipes, totalTime } from "@/lib/recipes";
+import { formatTime, getRecipe, heatLabel, recipes, regionSlug, totalTime } from "@/lib/recipes";
 
 export function generateStaticParams() {
   return recipes.map((recipe) => ({ slug: recipe.slug }));
@@ -68,7 +68,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
             Recipes
           </Link>
           <span aria-hidden="true">/</span>
-          <Link href={`/recipes?region=${encodeURIComponent(recipe.region)}`} className="hover:text-ember">
+          <Link href={`/regions/${regionSlug(recipe.region)}`} className="hover:text-ember">
             {recipe.region}
           </Link>
           <span aria-hidden="true">/</span>

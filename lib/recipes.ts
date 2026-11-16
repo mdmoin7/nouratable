@@ -1076,7 +1076,7 @@ export const recipes: Recipe[] = [
       "Freeze the strained soup in small boxes. It is the base for many other dishes.",
     ],
     serveWith: ["Sheermal", "Khasta roti", "Green salad", "Biryani, as a first course"],
-  },,
+  },
   {
     "slug": "maharashtra-kombdi-rassa",
     "name": "Maharashtrian Chicken Rassa",

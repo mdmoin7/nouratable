@@ -54,7 +54,7 @@ Path alias: `@/*` maps to the repository root (`tsconfig.json`).
 `serves`, `variant` (`curry | dry | rice | grill | soup`), `palette` (6 hex colours), `story`, `tags` (3 short labels),
 `ingredients` (`{ title, items[] }[]`), `steps` (`{ title, body }[]`), `notes` (3 strings), `serveWith`.
 
-Everything else is derived, not duplicated: `regions` (unique regions, counts, `regionNotes`), `featured` (slugs),
+Everything else is derived, not duplicated: `regions` (unique regions, counts, `regionNotes`), `regionSlug`, `getRegionBySlug`, `featured` (slugs),
 `pantry`, `method`, `heatLabel`, `getRecipe`, `totalTime`, `formatTime`.
 
 ### Adding or editing a recipe

@@ -17,6 +17,7 @@ npm run lint
 - `/` — cover, featured recipes, regions, the method, the pantry
 - `/recipes` — filter by region and heat, search; filters are stored in the URL
 - `/recipes/[slug]` — recipe with ingredients, method and cook's notes
+- `/regions/[slug]` — regional collection pages with cuisine context and all recipes from that region
 - `/about` — how the book and the recipes work
 
 ## Filter links
@@ -36,6 +37,6 @@ The App Router metadata API provides page titles, descriptions, canonical URLs a
 
 ## Working with the content
 
-Add or edit recipes in `lib/recipes.ts`. Cards, the index, region counts and detail pages all derive from that data, and
+Add or edit recipes in `lib/recipes.ts`. Cards, the index, region counts, regional landing pages and detail pages all derive from that data, and
 `npm run build` generates a static page for each slug. Copy is written in simple Indian English for home cooks — see
 [AGENTS.md](AGENTS.md) for the full conventions and the development workflow.
