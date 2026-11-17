@@ -8,6 +8,7 @@ Murgh targets WCAG 2.2 Level AA. Accessibility is a release requirement for ever
 - The site uses a single main landmark with a stable `main-content` target.
 - Keyboard focus is visibly indicated on links, buttons, form controls, summaries and other tab stops.
 - Disabled form controls communicate their disabled cursor state.
+- Touch-first layouts give buttons, navigation links, disclosure controls and form controls a 44 CSS-pixel minimum height; rating controls receive a 44 × 44 CSS-pixel hit area.
 - Recipe region filters are grouped and named for assistive technology.
 - Recipe result counts are announced politely when filters change.
 - Reduced-motion preferences are respected by the global motion styles.
@@ -51,6 +52,10 @@ Run these checks on the home page, recipe listing, a recipe detail page, and the
 5. Reduced-motion preference enabled.
 6. Light/dark OS preferences if theme support is added.
 
+## Automated checks
+
+The GitHub Actions workflow in `.github/workflows/quality.yml` runs on pushes and pull requests. It installs the locked dependencies, runs ESLint, and performs a production Next.js build. These checks catch code-quality and build regressions; they do not replace axe-based page audits or manual assistive-technology testing.
+
 ## Current follow-up audit
 
-This foundation establishes shared navigation and announcement patterns. A full page-by-page WCAG audit remains necessary, especially for cooking-mode dialog focus management, mobile navigation behaviour, contrast of muted/opacity text, translated text direction, and touch-target sizing. Do not mark the application WCAG 2.2 AA conformant until those checks are completed and documented.
+This foundation establishes shared navigation and announcement patterns. A full page-by-page WCAG audit remains necessary, especially for page-by-page contrast of opacity-reduced text, translated text direction across every locale, touch-target measurements on physical devices, and automated browser-level accessibility scans. Do not mark the application WCAG 2.2 AA conformant until those checks are completed and documented.
