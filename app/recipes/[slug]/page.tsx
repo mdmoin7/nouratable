@@ -7,6 +7,7 @@ import { RecipeTools } from "@/components/recipe-tools";
 import { RecipeViewTracker } from "@/components/personal-recipe-library";
 import { AddToShoppingList } from "@/components/add-to-shopping-list";
 import { RecipeReviews } from "@/components/recipe-reviews";
+import { RecipeJournalWidget } from "@/components/cooking-journal";
 import { IngredientList } from "@/components/ingredient-list";
 import { MethodSteps } from "@/components/method-steps";
 import { HeatDots, RecipeCard } from "@/components/recipe-card";
