@@ -6,6 +6,7 @@ import { LanguageSelector, useLanguage } from "@/components/language-provider";
 
 const links = [
   { href: "/recipes", key: "recipes" },
+  { href: "/cooking-journal", label: "Cooking journal" },
   { href: "/saved", label: "Saved" },
   { href: "/recently-viewed", label: "Recently viewed" },
   { href: "/shopping-list", label: "Shopping list" },
