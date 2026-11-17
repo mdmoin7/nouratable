@@ -52,7 +52,7 @@ export function RecipeTools({ recipeSlug, recipeName, speechText }: Props) {
   function toggleSaved() {
     const next = !saved;
     setSaved(next);
-    try { localStorage.setItem(`murgh:saved:${recipeSlug}`, String(next)); } catch { /* Storage may be disabled. */ }
+    try { localStorage.setItem(`murgh:saved:${recipeSlug}`, String(next)); window.dispatchEvent(new Event("murgh:library-updated")); } catch { /* Storage may be disabled. */ }
   }
 
   return (
