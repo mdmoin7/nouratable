@@ -3,24 +3,20 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { RecipeCard } from "@/components/recipe-card";
-import { heatLabel, type Heat, type Recipe } from "@/lib/recipes";
-
-const heatFilters: { value: Heat | 0; label: string }[] = [
-  { value: 0, label: "Any heat" },
-  { value: 1, label: heatLabel[1] },
-  { value: 2, label: heatLabel[2] },
-  { value: 3, label: heatLabel[3] },
-];
+import { format, type Dictionary } from "@/lib/i18n";
+import type { Heat, Recipe } from "@/lib/recipes";
 
 const isHeat = (value: number): value is Heat => value === 1 || value === 2 || value === 3;
 
 export function RecipeBrowser({
   recipes,
+  t,
   initialRegion = "All",
   initialHeat = 0,
   initialQuery = "",
 }: {
   recipes: Recipe[];
+  t: Dictionary;
   initialRegion?: string;
   initialHeat?: Heat | 0;
   initialQuery?: string;
@@ -33,6 +29,13 @@ export function RecipeBrowser({
   const firstRender = useRef(true);
 
   const regionNames = useMemo(() => ["All", ...Array.from(new Set(recipes.map((recipe) => recipe.region)))], [recipes]);
+
+  const heatFilters: { value: Heat | 0; label: string }[] = [
+    { value: 0, label: t.heatAny },
+    { value: 1, label: t.heatMild },
+    { value: 2, label: t.heatMedium },
+    { value: 3, label: t.heatHot },
+  ];
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -101,13 +104,13 @@ export function RecipeBrowser({
                   : "border-line text-ink-soft hover:border-ink/40 hover:text-ink"
               }`}
             >
-              {name}
+              {name === "All" ? t.filterAll : name}
             </button>
           ))}
         </div>
 
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-          <div className="flex items-center gap-1" role="group" aria-label="Filter by heat">
+          <div className="flex items-center gap-1" role="group" aria-label={t.heatFilterLabel}>
             {heatFilters.map((option) => (
               <button
                 key={option.value}
@@ -132,8 +135,8 @@ export function RecipeBrowser({
               type="search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Search recipes"
-              aria-label="Search recipes"
+              placeholder={t.searchPlaceholder}
+              aria-label={t.searchPlaceholder}
               className="w-full bg-transparent text-[13px] text-ink placeholder:text-ink-soft/60 focus:outline-none sm:w-[170px]"
             />
           </label>
@@ -142,8 +145,9 @@ export function RecipeBrowser({
 
       <div className="mt-6 flex items-baseline justify-between">
         <p className="text-[12px] text-ink-soft">
-          <span className="font-semibold text-ink">{filtered.length}</span> {filtered.length === 1 ? "recipe" : "recipes"}
-          {region !== "All" && <> in {region}</>}
+          <span className="font-semibold text-ink">{filtered.length}</span>{" "}
+          {filtered.length === 1 ? t.countRecipe : t.countRecipes}
+          {region !== "All" && <> {format(t.inRegion, { region })}</>}
         </p>
         {(region !== "All" || heat !== 0 || query) && (
           <button
@@ -155,20 +159,20 @@ export function RecipeBrowser({
             }}
             className="text-[11px] font-medium uppercase tracking-[0.16em] text-ember hover:text-ember-deep"
           >
-            Clear filters
+            {t.clearFilters}
           </button>
         )}
       </div>
 
       {filtered.length === 0 ? (
         <div className="mt-10 rounded-[6px] border border-dashed border-line bg-card px-6 py-16 text-center">
-          <p className="display text-2xl text-ink">No recipes match these filters.</p>
-          <p className="mt-2 text-[13px] text-ink-soft">Try another region or a different heat level.</p>
+          <p className="display text-2xl text-ink">{t.emptyTitle}</p>
+          <p className="mt-2 text-[13px] text-ink-soft">{t.emptyBody}</p>
         </div>
       ) : (
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((recipe) => (
-            <RecipeCard key={recipe.slug} recipe={recipe} />
+            <RecipeCard key={recipe.slug} recipe={recipe} t={t} />
           ))}
         </div>
       )}

@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { format, type Dictionary } from "@/lib/i18n";
 
 type Group = { title: string; items: string[] };
 
-export function IngredientList({ groups }: { groups: Group[] }) {
+export function IngredientList({ groups, t }: { groups: Group[]; t: Dictionary }) {
   const [checked, setChecked] = useState<string[]>([]);
 
   const toggle = (key: string) =>
@@ -13,9 +14,9 @@ export function IngredientList({ groups }: { groups: Group[] }) {
   return (
     <div>
       <div className="flex items-baseline justify-between gap-4 border-b border-line pb-3">
-        <h2 className="eyebrow text-ember">Ingredients</h2>
+        <h2 className="eyebrow text-ember">{t.ingredients}</h2>
         <span className="text-[11px] text-ink-soft/70">
-          {checked.length ? `${checked.length} ticked` : "Tick what you have"}
+          {checked.length ? format(t.tickedCount, { count: checked.length }) : t.tickWhatYouHave}
         </span>
       </div>
 

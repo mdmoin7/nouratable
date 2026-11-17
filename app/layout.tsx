@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Fraunces, Outfit } from "next/font/google";
+import { Fraunces, Noto_Sans_Devanagari, Noto_Serif_Devanagari, Outfit } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { getLocaleAndDictionary } from "@/lib/locale";
 import "./globals.css";
 
 const outfit = Outfit({ variable: "--font-outfit", subsets: ["latin"] });
@@ -11,28 +12,48 @@ const fraunces = Fraunces({
   axes: ["SOFT", "WONK", "opsz"],
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Murgh — a modern Indian chicken cookbook",
-    template: "%s · Murgh",
-  },
-  description:
-    "Twelve Indian chicken recipes, from Delhi's butter chicken to Chettinad pepper chicken. Marinades, masalas, methods and cook's notes for home kitchens.",
-  openGraph: {
-    title: "Murgh — a modern Indian chicken cookbook",
-    description: "Twelve recipes from eight regions, for one chicken.",
-    type: "website",
-  },
-};
+// Devanagari companion faces so Hindi sits comfortably beside the Latin type.
+const devanagari = Noto_Sans_Devanagari({
+  variable: "--font-devanagari",
+  subsets: ["devanagari"],
+  weight: ["400", "500", "600"],
+});
+const devanagariDisplay = Noto_Serif_Devanagari({
+  variable: "--font-devanagari-display",
+  subsets: ["devanagari"],
+  weight: ["400", "500", "600"],
+});
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getLocaleAndDictionary();
+
+  return {
+    title: {
+      default: t.metaTitle,
+      template: "%s · Murgh",
+    },
+    description: t.metaDescription,
+    openGraph: {
+      title: t.metaTitle,
+      description: t.metaDescription,
+      type: "website",
+    },
+  };
+}
+
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const { locale, t } = await getLocaleAndDictionary();
+
   return (
-    <html lang="en" className={`${outfit.variable} ${fraunces.variable}`}>
+    <html
+      lang={locale}
+      className={`${outfit.variable} ${fraunces.variable} ${devanagari.variable} ${devanagariDisplay.variable}`}
+    >
       <body>
         <div className="flex min-h-screen flex-col">
-          <SiteHeader />
+          <SiteHeader locale={locale} t={t} />
           <main className="flex-1">{children}</main>
-          <SiteFooter />
+          <SiteFooter t={t} />
         </div>
       </body>
     </html>

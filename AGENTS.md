@@ -42,8 +42,12 @@ components/
   recipe-card.tsx         card + HeatDots indicator
   recipe-browser.tsx      region/heat/search filters, URL sync (client)
   ingredient-list.tsx     tickable ingredient checklist (client)
+  locale-switcher.tsx     language menu; writes the locale cookie (client)
   dish-art.tsx            deterministic SVG dish illustrator
 lib/recipes.ts            every recipe, region notes, pantry, method, helpers
+lib/locale.ts             server-only locale + dictionary reader
+lib/i18n/                 interface dictionaries (en complete, hi complete, five partial)
+lib/recipe-translations/  per-language recipe content (types + Hindi)
 ```
 
 Path alias: `@/*` maps to the repository root (`tsconfig.json`).
@@ -55,7 +59,8 @@ Path alias: `@/*` maps to the repository root (`tsconfig.json`).
 `ingredients` (`{ title, items[] }[]`), `steps` (`{ title, body }[]`), `notes` (3 strings), `serveWith`.
 
 Everything else is derived, not duplicated: `regions` (unique regions, counts, `regionNotes`), `featured` (slugs),
-`pantry`, `method`, `heatLabel`, `getRecipe`, `totalTime`, `formatTime`.
+`pantry`, `method`, `heatLabel`, `getRecipe`, `totalTime`, `recipeTranslations`, `hasRecipeTranslation`,
+`localizeRecipe`, `localizeRecipes`. Cooking times are formatted with `formatDuration()` from `lib/i18n`.
 
 ### Adding or editing a recipe
 
@@ -65,7 +70,8 @@ Everything else is derived, not duplicated: `regions` (unique regions, counts, `
 3. If you introduce a new `region`, add a one-line description to `regionNotes` — the region list and counts update
    automatically.
 4. Optionally add the slug to `featured` (three recipes on the home page).
-5. Run `npm run build`: the detail page is generated automatically from `generateStaticParams`.
+5. Add the Hindi content in `lib/recipe-translations/hi.ts` (see the translations section).
+6. Run `npm run build`: the detail page is generated automatically from `generateStaticParams`.
 
 Recipe cards, the index grid, filters, footer links and the home page all read from this data — no component edits are
 needed for ordinary content changes.
@@ -84,6 +90,27 @@ All copy (recipes, home, About, UI labels, metadata, README) is written in **sim
   aubergine, courgette, spring onion, plain flour, caster sugar, cupboard, one bird*. Prefer short, plain sentences
   over metaphors.
 - British spellings such as *colour*, *flavour* and *chilli* are Indian English and are fine to keep.
+
+## Translations (i18n)
+
+The site can be read in English, Hindi, Bengali, Marathi, Tamil, Telugu and Kannada.
+
+- `lib/i18n/en.ts` defines the `Dictionary` type and the English copy. Other complete locales must match that shape, so the build fails if a key is missing.
+- `lib/i18n/hindi.ts` is the complete Hindi translation.
+- `lib/i18n/partials.ts` holds Bengali, Marathi, Tamil, Telugu and Kannada. They are typed `Partial<Dictionary>`; any missing key falls back to English, so a language can ship with only navigation, filters and recipe labels translated.
+- `lib/i18n/index.ts` lists `locales` (code, English name, native name) and exposes `getDictionary(locale)`, `isLocale`, `localeName`, `format()` for `{placeholder}` strings and `formatDuration()` for localised cooking times.
+- `lib/locale.ts` reads the `murgh_locale` cookie on the server. `components/locale-switcher.tsx` writes that cookie and calls `router.refresh()`.
+- The root layout sets `<html lang={locale}>` and passes the dictionary down: server components receive it from `getLocaleAndDictionary()`, client components receive it as a `t` prop.
+
+To add a language: add an entry to `locales`, write a dictionary (complete or partial) and register it in the `overrides` map in `lib/i18n/index.ts`. To add a string: add the key and English value in `lib/i18n/en.ts`, then translate it where available.
+
+Recipe content is translated separately, in `lib/recipe-translations/`: `types.ts` defines `RecipeTranslation` (name, native name, subtitle, story, tags, ingredients, steps, notes, serveWith) and `hi.ts` holds the Hindi versions keyed by slug. `lib/recipes.ts` exposes `recipeTranslations`, `hasRecipeTranslation`, `localizeRecipe` and `localizeRecipes`; pages and cards render localised recipes, so search also matches translated dish names.
+
+Butter Chicken, Hyderabadi Chicken Biryani and Chettinad Pepper Chicken are fully translated. Any recipe without an entry stays in English, and its page shows the localised `instructionsEnglish` note, which disappears automatically once a translation exists.
+
+To translate a recipe, add an entry to `lib/recipe-translations/hi.ts` with every field, keeping quantities and units identical (grams, millilitres, inches, tablespoons). `lib/recipes.ts` stays the English source of truth; write the Hindi by hand rather than machine-translating.
+
+The locale lives in a cookie, so every route now renders dynamically (the build output shows `ƒ` for all routes). Do not add `export const dynamic = "force-static"` to pages that read the locale.
 
 ## Recipe filters and the URL contract
 
@@ -112,8 +139,8 @@ Tailwind v4 tokens live in the `@theme` block in `app/globals.css`:
 
 - Colours: `paper` (page background), `card`, `ink`, `ink-soft`, `line`, `ember` (accent), `ember-deep`, `saffron`,
   `moss` (dark section background), `moss-soft`.
-- Fonts: `--font-display` = Fraunces (serif headings), `--font-sans` = Outfit, both loaded with `next/font/google` in
-  `app/layout.tsx`.
+- Fonts: `--font-display` = Fraunces (serif headings), `--font-sans` = Outfit, plus Noto Sans/Serif Devanagari as
+  fallbacks for Hindi; all loaded with `next/font/google` in `app/layout.tsx`.
 - Utilities: `.wrap` (page width), `.eyebrow` (small uppercase label), `.display` (serif heading), `.btn` with
   `.btn-dark` / `.btn-ember` / `.btn-ghost` / `.btn-onDarkGhost`, `.link-underline`, `.card-lift`, `.art-frame`,
   `.text-balance`.
@@ -140,6 +167,9 @@ with photography or remote image URLs.
 - In the Cloud preview environment the proxy rejects the dev HMR websocket (502), so `next dev` may render without
   hydrating — clicks do nothing there. Verify interactive behaviour against a production build (`npm run build` then
   `npm start`) when the dev preview appears inert. Locally `npm run dev` hydrates normally.
+- A restored workspace does not include `node_modules`; run `npm ci` before building.
+- Language is stored in the `murgh_locale` cookie and read in the root layout, which makes all routes dynamic. Keep
+  dictionary values as plain strings/arrays so they can be passed from server to client components.
 - Images are all inline SVG; there is no `public/` directory.
 
 ## Definition of done
@@ -148,4 +178,6 @@ with photography or remote image URLs.
 - Changed recipe content renders on `/recipes`, its detail page, and the home page where relevant.
 - Filters and the URL params above still behave correctly.
 - Copy follows the simple Indian English rules, with inches instead of centimetres.
-- Update `README.md` and this file if scripts, routes, data fields or filter params change.
+- New or changed UI strings are added to `lib/i18n/en.ts` and translated where a locale exists; nothing is hard-coded
+  in components or pages.
+- Update `README.md` and this file if scripts, routes, data fields, filter params or languages change.

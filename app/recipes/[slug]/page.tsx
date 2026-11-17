@@ -4,7 +4,9 @@ import { notFound } from "next/navigation";
 import { DishArt } from "@/components/dish-art";
 import { IngredientList } from "@/components/ingredient-list";
 import { HeatDots, RecipeCard } from "@/components/recipe-card";
-import { formatTime, getRecipe, heatLabel, recipes, totalTime } from "@/lib/recipes";
+import { format, formatDuration, type Dictionary } from "@/lib/i18n";
+import { getLocaleAndDictionary } from "@/lib/locale";
+import { getRecipe, hasRecipeTranslation, localizeRecipe, recipes, totalTime } from "@/lib/recipes";
 
 export function generateStaticParams() {
   return recipes.map((recipe) => ({ slug: recipe.slug }));
@@ -15,23 +17,34 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const recipe = getRecipe(slug);
   if (!recipe) return { title: "Recipe not found" };
 
+  const { locale } = await getLocaleAndDictionary();
+  const localized = localizeRecipe(recipe, locale);
+
   return {
-    title: `${recipe.name} (${recipe.native})`,
-    description: recipe.subtitle,
+    title: `${localized.name} (${localized.native})`,
+    description: localized.subtitle,
   };
 }
 
+const heatWord = (heat: 1 | 2 | 3, t: Dictionary) =>
+  heat === 1 ? t.heatMild : heat === 2 ? t.heatMedium : t.heatHot;
+
 export default async function RecipePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const recipe = getRecipe(slug);
-  if (!recipe) notFound();
+  const original = getRecipe(slug);
+  if (!original) notFound();
 
-  const others = recipes.filter((item) => item.slug !== recipe.slug).slice(0, 3);
+  const { locale, t } = await getLocaleAndDictionary();
+  const recipe = localizeRecipe(original, locale);
+  const others = recipes
+    .filter((item) => item.slug !== recipe.slug)
+    .slice(0, 3)
+    .map((item) => localizeRecipe(item, locale));
   const meta = [
-    ["Prep", formatTime(recipe.prep)],
-    ["Cook", formatTime(recipe.cook)],
-    ["Serves", String(recipe.serves)],
-    ["Total", formatTime(totalTime(recipe))],
+    [t.prep, formatDuration(recipe.prep, t)],
+    [t.cookLabel, formatDuration(recipe.cook, t)],
+    [t.servesLabel, String(recipe.serves)],
+    [t.total, formatDuration(totalTime(recipe), t)],
   ];
 
   return (
@@ -39,7 +52,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
       <div className="wrap pt-8">
         <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-ink-soft/80">
           <Link href="/recipes" className="hover:text-ember">
-            Recipes
+            {t.crumbRecipes}
           </Link>
           <span aria-hidden="true">/</span>
           <Link href={`/recipes?region=${encodeURIComponent(recipe.region)}`} className="hover:text-ember">
@@ -67,9 +80,15 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
               </span>
             ))}
             <span className="ml-1">
-              <HeatDots heat={recipe.heat} />
+              <HeatDots heat={recipe.heat} t={t} />
             </span>
           </div>
+          {!hasRecipeTranslation(original, locale) && (
+            <p className="mt-4 flex items-start gap-2 text-[11.5px] leading-5 text-ink-soft/80">
+              <span aria-hidden="true" className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-ember/70" />
+              {t.instructionsEnglish}
+            </p>
+          )}
         </div>
 
         <div className="art-frame aspect-[5/4] rounded-[8px] border border-line shadow-[0_24px_60px_rgba(27,25,23,0.10)]">
@@ -94,10 +113,10 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
 
       <section className="wrap grid gap-12 py-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:py-16">
         <div className="md:sticky md:top-24 md:self-start">
-          <IngredientList groups={recipe.ingredients} />
+          <IngredientList groups={recipe.ingredients} t={t} />
 
           <div className="mt-8 border-t border-line pt-5">
-            <h2 className="eyebrow text-ember">Serve with</h2>
+            <h2 className="eyebrow text-ember">{t.serveWith}</h2>
             <ul className="mt-3 flex flex-wrap gap-2">
               {recipe.serveWith.map((item) => (
                 <li key={item} className="rounded-full bg-moss-soft px-3 py-1.5 text-[11.5px] text-moss">
@@ -110,8 +129,8 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
 
         <div>
           <div className="flex items-baseline justify-between gap-4 border-b border-line pb-3">
-            <h2 className="eyebrow text-ember">Method</h2>
-            <span className="text-[11px] text-ink-soft/70">{recipe.steps.length} steps</span>
+            <h2 className="eyebrow text-ember">{t.method}</h2>
+            <span className="text-[11px] text-ink-soft/70">{format(t.stepsCount, { count: recipe.steps.length })}</span>
           </div>
 
           <ol className="mt-2">
@@ -127,7 +146,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
           </ol>
 
           <aside className="mt-10 rounded-[6px] border border-line bg-card p-6 md:p-7">
-            <h2 className="eyebrow text-ember">Cook&apos;s notes</h2>
+            <h2 className="eyebrow text-ember">{t.cookNotes}</h2>
             <ul className="mt-4 space-y-3">
               {recipe.notes.map((note) => (
                 <li key={note} className="flex gap-3 text-[12.5px] leading-6 text-ink-soft">
@@ -137,7 +156,8 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
               ))}
             </ul>
             <p className="mt-5 border-t border-line/70 pt-4 text-[11px] uppercase tracking-[0.12em] text-ink-soft/70">
-              Heat: {heatLabel[recipe.heat]} · Prep {formatTime(recipe.prep)} · Cook {formatTime(recipe.cook)}
+              {format(t.heatTitle, { heat: heatWord(recipe.heat, t) })} · {t.prep} {formatDuration(recipe.prep, t)} ·{" "}
+              {t.cookLabel} {formatDuration(recipe.cook, t)}
             </p>
           </aside>
         </div>
@@ -147,16 +167,16 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
         <div className="wrap">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="eyebrow text-ember">Cook next</p>
-              <h2 className="display mt-3 text-[clamp(1.8rem,3.4vw,2.6rem)] leading-tight text-ink">Three more from the book.</h2>
+              <p className="eyebrow text-ember">{t.cookNext}</p>
+              <h2 className="display mt-3 text-[clamp(1.8rem,3.4vw,2.6rem)] leading-tight text-ink">{t.threeMore}</h2>
             </div>
             <Link href="/recipes" className="link-underline hidden text-[12px] font-medium text-ink sm:block">
-              All recipes <span aria-hidden="true">→</span>
+              {t.allRecipes} <span aria-hidden="true">→</span>
             </Link>
           </div>
           <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {others.map((item) => (
-              <RecipeCard key={item.slug} recipe={item} />
+              <RecipeCard key={item.slug} recipe={item} t={t} />
             ))}
           </div>
         </div>
