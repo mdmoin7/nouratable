@@ -18,11 +18,12 @@ const links = [
 export function SiteHeader() {
   const pathname = usePathname();
   const { t } = useLanguage();
+  const kitchenActive = kitchenLinks.some((link) => pathname === link.href);
 
   return (
     <header className="sticky top-0 z-30 border-b border-line/80 bg-paper/90 backdrop-blur-md">
-      <div className="wrap flex h-[76px] items-center justify-between gap-6">
-        <Link href="/" className="group flex items-baseline gap-3">
+      <div className="wrap flex h-[76px] items-center justify-between gap-4">
+        <Link href="/" className="group flex shrink-0 items-baseline gap-3">
           <span className="display text-[26px] leading-none tracking-[0.04em] text-ink uppercase">Murgh</span>
           <span className="hidden text-[9px] font-medium uppercase leading-[1.4] tracking-[0.22em] text-ink-soft sm:block">
             Indian chicken
@@ -44,17 +45,15 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-3">
           <LanguageSelector />
           <Link href="/recipes" className="btn btn-dark hidden sm:inline-flex">
             {t("startCooking")} <span aria-hidden="true">→</span>
           </Link>
-          <details className="relative md:hidden">
-            <summary aria-controls="mobile-primary-navigation" className="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-ink/20 text-ink">
+          <details className="relative lg:hidden">
+            <summary aria-controls="mobile-primary-navigation" className="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-ink/20 text-ink [&::-webkit-details-marker]:hidden">
               <span className="sr-only">Open menu</span>
-              <span aria-hidden="true" className="text-sm">
-                ☰
-              </span>
+              <span aria-hidden="true" className="text-sm">☰</span>
             </summary>
             <nav id="mobile-primary-navigation" aria-label="Mobile primary" className="absolute right-0 top-12 w-48 rounded-2xl border border-line bg-card p-2 shadow-xl">
               {links.map((link) => (
@@ -62,9 +61,10 @@ export function SiteHeader() {
                   {"label" in link ? link.label : t(link.key)}
                 </Link>
               ))}
-              <Link href="/recipes" className="mt-1 block rounded-xl bg-ink px-3 py-2 text-sm font-medium text-paper">
-                {t("startCooking")}
-              </Link>
+              <div className="my-1 border-t border-line" />
+              <Link href="/#method" className="block rounded-xl px-3 py-2.5 text-sm text-ink-soft hover:bg-paper hover:text-ink">{t("method")}</Link>
+              <Link href="/about" className="block rounded-xl px-3 py-2.5 text-sm text-ink-soft hover:bg-paper hover:text-ink">{t("about")}</Link>
+              <Link href="/recipes" className="mt-1 block rounded-xl bg-ink px-3 py-2.5 text-sm font-medium text-paper">{t("startCooking")}</Link>
             </nav>
           </details>
         </div>

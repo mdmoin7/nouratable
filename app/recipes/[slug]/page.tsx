@@ -128,6 +128,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
           recipeName={recipe.name}
           speechText={[recipe.name + ". " + recipe.subtitle, recipe.story, "Ingredients.", ...recipe.ingredients.flatMap((group) => [group.title, ...group.items]), "Method.", ...recipe.steps.map((step, index) => "Step " + (index + 1) + ". " + step.title + ". " + step.body)].join(" ")}
         />
+        <RecipeJournalWidget recipeSlug={recipe.slug} recipeName={recipe.name} />
       </section>
 
       <section className="wrap grid gap-12 py-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:py-16">
