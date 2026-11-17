@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PwaRegister } from "@/components/pwa-register";
 import { LanguageProvider } from "@/components/language-provider";
+import Link from "next/link";
 import "./globals.css";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\/$/, "");
@@ -78,8 +79,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
         <LanguageProvider>
           <div className="flex min-h-screen flex-col">
+            <Link href="#main-content" className="skip-link">Skip to main content</Link>
             <SiteHeader />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" tabIndex={-1} className="flex-1 outline-none">{children}</main>
             <SiteFooter />
           </div>
         </LanguageProvider>

@@ -114,7 +114,7 @@ export function RecipeBrowser({
         <div className="flex flex-col gap-5">
           <div>
             <p className="eyebrow mb-3 text-ink-soft/70">{t("browseByRegion")}</p>
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Filter recipes by region">
               {regionNames.map((name) => (
                 <button key={name} type="button" onClick={() => setRegion(name)} aria-pressed={region === name}
                   className={`rounded-full border px-4 py-[7px] text-[11.5px] font-medium tracking-[0.02em] transition-colors ${region === name ? "border-ink bg-ink text-paper" : "border-line text-ink-soft hover:border-ink/40 hover:text-ink"}`}>
@@ -140,7 +140,7 @@ export function RecipeBrowser({
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-ink-soft" aria-hidden="true">
                   <circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" />
                 </svg>
-                <input type="search" value={query} onChange={(event) => setQuery(event.target.value)}
+                <input id="recipe-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)}
                   placeholder={t("search")} aria-label={t("search")}
                   className="w-full bg-transparent text-[13px] text-ink placeholder:text-ink-soft/60 focus:outline-none sm:w-[205px]" />
               </label>
@@ -172,7 +172,7 @@ export function RecipeBrowser({
           <p className="mt-2 text-[13px] text-ink-soft">Try another region, ingredient or heat level.</p>
         </div>
       ) : (
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div id="recipe-results" className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((recipe) => <RecipeCard key={recipe.slug} recipe={recipe} />)}
         </div>
       )}
