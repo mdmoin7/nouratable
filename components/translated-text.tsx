@@ -96,7 +96,9 @@ export function TranslatedText({ text, as = "span", className }: {
     return () => { active = false; };
   }, [language, text]);
 
-  if (as === "p") return <p className={className}>{translated}</p>;
-  if (as === "div") return <div className={className}>{translated}</div>;
-  return <span className={className}>{translated}</span>;
+  const locale = language === "en" ? "en-IN" : language === "ur" ? "ur-IN" : language;
+  const direction = language === "ur" ? "rtl" : "auto";
+  if (as === "p") return <p className={className} lang={locale} dir={direction}>{translated}</p>;
+  if (as === "div") return <div className={className} lang={locale} dir={direction}>{translated}</div>;
+  return <span className={className} lang={locale} dir={direction}>{translated}</span>;
 }
