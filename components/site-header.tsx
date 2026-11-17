@@ -18,7 +18,6 @@ const links = [
 export function SiteHeader() {
   const pathname = usePathname();
   const { t } = useLanguage();
-  const kitchenActive = kitchenLinks.some((link) => pathname === link.href);
 
   return (
     <header className="sticky top-0 z-30 border-b border-line/80 bg-paper/90 backdrop-blur-md">
