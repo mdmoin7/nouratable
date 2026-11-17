@@ -6,8 +6,8 @@ import { LanguageSelector, useLanguage } from "@/components/language-provider";
 
 const links = [
   { href: "/recipes", key: "recipes" },
-  { href: "/saved", key: "saved" },
-  { href: "/recently-viewed", key: "recentlyViewed" },
+  { href: "/saved", label: "Saved" },
+  { href: "/recently-viewed", label: "Recently viewed" },
   { href: "/#method", key: "method" },
   { href: "/#pantry", key: "pantry" },
   { href: "/about", key: "about" },
@@ -37,7 +37,7 @@ export function SiteHeader() {
               data-active={pathname === link.href}
               className="link-underline text-[12.5px] font-medium text-ink-soft transition-colors hover:text-ink data-[active=true]:text-ink"
             >
-              {t(link.key)}
+              {"label" in link ? link.label : t(link.key)}
             </Link>
           ))}
         </nav>
