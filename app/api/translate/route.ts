@@ -10,7 +10,7 @@ const MAX_ITEMS = 100;
 const MAX_CHARACTERS = 30000;
 
 export async function POST(request: NextRequest) {
-  const serviceUrl = process.env.TRANSLATION_SERVICE_URL;
+  const serviceUrl = process.env.TRANSLATION_SERVICE_URL ?? "https://ecom-api-ochre.vercel.app/api/v1";
   const serviceToken = process.env.TRANSLATION_SERVICE_TOKEN;
   if (!serviceUrl || !serviceToken) {
     return NextResponse.json({ error: "Translation service is not configured." }, { status: 503 });
