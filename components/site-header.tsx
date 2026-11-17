@@ -4,13 +4,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { LanguageSelector, useLanguage } from "@/components/language-provider";
 
-const kitchenLinks = [
-  { href: "/cooking-journal", label: "Cooking journal" },
-  { href: "/saved", label: "Saved recipes" },
+const links = [
+  { href: "/recipes", key: "recipes" },
+  { href: "/saved", label: "Saved" },
   { href: "/recently-viewed", label: "Recently viewed" },
   { href: "/shopping-list", label: "Shopping list" },
   { href: "/meal-planner", label: "Meal planner" },
-  { href: "/pantry", label: "Pantry finder" },
+  { href: "/#method", key: "method" },
+  { href: "/#pantry", key: "pantry" },
+  { href: "/about", key: "about" },
 ] as const;
 
 export function SiteHeader() {
@@ -30,29 +32,17 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-7 lg:flex">
-          <Link href="/recipes" data-active={pathname === "/recipes"} className="link-underline text-[13px] font-medium text-ink-soft transition-colors hover:text-ink data-[active=true]:text-ink">
-            {t("recipes")}
-          </Link>
-          <details className="group relative">
-            <summary aria-haspopup="true" className="flex cursor-pointer list-none items-center gap-1.5 py-3 text-[13px] font-medium text-ink-soft transition-colors hover:text-ink [&::-webkit-details-marker]:hidden">
-              <span className={kitchenActive ? "text-ink" : ""}>My kitchen</span>
-              <span aria-hidden="true" className="text-[10px]">▾</span>
-            </summary>
-            <div className="absolute left-0 top-full z-40 mt-1 w-56 rounded-xl border border-line bg-card p-2 shadow-xl">
-              {kitchenLinks.map((link) => (
-                <Link key={link.href} href={link.href} data-active={pathname === link.href} className="block rounded-lg px-3 py-2.5 text-sm text-ink-soft transition-colors hover:bg-paper hover:text-ink data-[active=true]:bg-paper data-[active=true]:text-ink">
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </details>
-          <Link href="/#method" className="link-underline text-[13px] font-medium text-ink-soft transition-colors hover:text-ink">
-            {t("method")}
-          </Link>
-          <Link href="/about" data-active={pathname === "/about"} className="link-underline text-[13px] font-medium text-ink-soft transition-colors hover:text-ink data-[active=true]:text-ink">
-            {t("about")}
-          </Link>
+        <nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              data-active={pathname === link.href}
+              className="link-underline text-[12.5px] font-medium text-ink-soft transition-colors hover:text-ink data-[active=true]:text-ink"
+            >
+              {"label" in link ? link.label : t(link.key)}
+            </Link>
+          ))}
         </nav>
 
         <div className="flex shrink-0 items-center gap-3">
@@ -65,12 +55,10 @@ export function SiteHeader() {
               <span className="sr-only">Open menu</span>
               <span aria-hidden="true" className="text-sm">☰</span>
             </summary>
-            <nav id="mobile-primary-navigation" aria-label="Mobile primary" className="absolute right-0 top-12 z-40 w-64 rounded-2xl border border-line bg-card p-2 shadow-xl">
-              <Link href="/recipes" className="block rounded-xl px-3 py-2.5 text-sm text-ink-soft hover:bg-paper hover:text-ink">{t("recipes")}</Link>
-              <p className="px-3 pb-1 pt-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-ink-soft">My kitchen</p>
-              {kitchenLinks.map((link) => (
-                <Link key={link.href} href={link.href} data-active={pathname === link.href} className="block rounded-xl px-3 py-2.5 text-sm text-ink-soft hover:bg-paper hover:text-ink data-[active=true]:bg-paper data-[active=true]:text-ink">
-                  {link.label}
+            <nav id="mobile-primary-navigation" aria-label="Mobile primary" className="absolute right-0 top-12 w-48 rounded-2xl border border-line bg-card p-2 shadow-xl">
+              {links.map((link) => (
+                <Link key={link.href} href={link.href} className="block rounded-xl px-3 py-2 text-sm text-ink-soft hover:bg-paper hover:text-ink">
+                  {"label" in link ? link.label : t(link.key)}
                 </Link>
               ))}
               <div className="my-1 border-t border-line" />

@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { RecipePhoto } from "@/components/recipe-photo";
 import { TranslatedText } from "@/components/translated-text";
 import { RecipeTools } from "@/components/recipe-tools";
-import { RecipeJournalWidget } from "@/components/cooking-journal";
 import { RecipeViewTracker } from "@/components/personal-recipe-library";
 import { AddToShoppingList } from "@/components/add-to-shopping-list";
 import { RecipeReviews } from "@/components/recipe-reviews";
