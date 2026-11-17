@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { RecipePhoto } from "@/components/recipe-photo";
 import { TranslatedText } from "@/components/translated-text";
 import { RecipeTools } from "@/components/recipe-tools";
+import { RecipeViewTracker } from "@/components/personal-recipe-library";
+import { AddToShoppingList } from "@/components/add-to-shopping-list";
 import { RecipeReviews } from "@/components/recipe-reviews";
 import { IngredientList } from "@/components/ingredient-list";
 import { MethodSteps } from "@/components/method-steps";
@@ -65,6 +67,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
 
   return (
     <article>
+      <RecipeViewTracker recipeSlug={recipe.slug} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeJsonLd).replace(/</g, "\\u003c") }} />
       <div className="wrap pt-8">
         <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-ink-soft/80">
@@ -130,6 +133,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
       <section className="wrap grid gap-12 py-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:py-16">
         <div className="md:sticky md:top-24 md:self-start">
           <IngredientList groups={recipe.ingredients} baseServes={recipe.serves} recipeSlug={recipe.slug} />
+          <AddToShoppingList recipeSlug={recipe.slug} recipeName={recipe.name} groups={recipe.ingredients} />
 
           <div className="mt-8 border-t border-line pt-5">
             <h2 className="eyebrow text-ember">Serve with</h2>

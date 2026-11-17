@@ -6,6 +6,10 @@ import { LanguageSelector, useLanguage } from "@/components/language-provider";
 
 const links = [
   { href: "/recipes", key: "recipes" },
+  { href: "/saved", label: "Saved" },
+  { href: "/recently-viewed", label: "Recently viewed" },
+  { href: "/shopping-list", label: "Shopping list" },
+  { href: "/meal-planner", label: "Meal planner" },
   { href: "/#method", key: "method" },
   { href: "/#pantry", key: "pantry" },
   { href: "/about", key: "about" },
@@ -35,7 +39,7 @@ export function SiteHeader() {
               data-active={pathname === link.href}
               className="link-underline text-[12.5px] font-medium text-ink-soft transition-colors hover:text-ink data-[active=true]:text-ink"
             >
-              {t(link.key)}
+              {"label" in link ? link.label : t(link.key)}
             </Link>
           ))}
         </nav>
@@ -55,7 +59,7 @@ export function SiteHeader() {
             <nav id="mobile-primary-navigation" aria-label="Mobile primary" className="absolute right-0 top-12 w-48 rounded-2xl border border-line bg-card p-2 shadow-xl">
               {links.map((link) => (
                 <Link key={link.href} href={link.href} className="block rounded-xl px-3 py-2 text-sm text-ink-soft hover:bg-paper hover:text-ink">
-                  {t(link.key)}
+                  {"label" in link ? link.label : t(link.key)}
                 </Link>
               ))}
               <Link href="/recipes" className="mt-1 block rounded-xl bg-ink px-3 py-2 text-sm font-medium text-paper">
