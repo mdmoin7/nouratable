@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/components/language-provider";
 import { TranslatedText } from "@/components/translated-text";
 
@@ -23,6 +23,9 @@ export function MethodSteps({ steps, recipeSlug }: { steps: Step[]; recipeSlug: 
   const [remaining, setRemaining] = useState(300);
   const [running, setRunning] = useState(false);
   const [timerDone, setTimerDone] = useState(false);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
   const count = steps.length;
   const done = completed.length;
   const isComplete = completed.includes(active);
@@ -45,6 +48,46 @@ export function MethodSteps({ steps, recipeSlug }: { steps: Step[]; recipeSlug: 
       try { localStorage.setItem(`murgh:method:${recipeSlug}`, JSON.stringify({ active, completed })); } catch { /* Storage is optional. */ }
     }
   }, [active, completed, loaded, recipeSlug]);
+
+  useEffect(() => {
+    if (!cookingMode) return;
+    openerRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const dialog = dialogRef.current;
+    closeButtonRef.current?.focus();
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setCookingMode(false);
+        return;
+      }
+      if (event.key !== "Tab" || !dialog) return;
+      const focusable = Array.from(dialog.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      ));
+      if (!focusable.length) {
+        event.preventDefault();
+        dialog.focus();
+        return;
+      }
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      openerRef.current?.focus();
+      openerRef.current = null;
+    };
+  }, [cookingMode]);
 
   useEffect(() => {
     if (!running) return;
@@ -138,9 +181,9 @@ export function MethodSteps({ steps, recipeSlug }: { steps: Step[]; recipeSlug: 
       </div>
       {done === count && <p className="mt-4 rounded-[6px] bg-moss-soft px-4 py-3 text-[12px] font-medium text-moss">All steps completed. Your dish is ready to serve!</p>}
     </section>
-    {cookingMode && <div role="dialog" aria-modal="true" aria-label="Cooking mode" className="fixed inset-0 z-[100] overflow-y-auto bg-paper p-5 md:p-10">
+    {cookingMode && <div ref={dialogRef} role="dialog" aria-modal="true" aria-label="Cooking mode" tabIndex={-1} className="fixed inset-0 z-[100] overflow-y-auto bg-paper p-5 md:p-10 outline-none">
       <div className="mx-auto flex min-h-full w-full max-w-4xl flex-col">
-        <header className="flex items-center justify-between gap-4 border-b border-line pb-5"><div><p className="eyebrow text-ember">Murgh · Cooking mode</p><p className="mt-1 text-xs text-ink-soft">Keep your screen nearby and cook one step at a time.</p></div><button type="button" autoFocus onClick={() => setCookingMode(false)} className="rounded-full border border-line px-4 py-2 text-xs text-ink">Exit mode ✕</button></header>
+        <header className="flex items-center justify-between gap-4 border-b border-line pb-5"><div><p className="eyebrow text-ember">Murgh · Cooking mode</p><p className="mt-1 text-xs text-ink-soft">Keep your screen nearby and cook one step at a time.</p></div><button ref={closeButtonRef} type="button" onClick={() => setCookingMode(false)} className="rounded-full border border-line px-4 py-2 text-xs text-ink">Exit mode ✕</button></header>
         <div className="my-auto py-10">
           <div className="mb-8 flex items-center justify-between text-xs text-ink-soft"><span>Step {active + 1} of {count}</span><span>{done} completed</span></div>
           <div className="mb-10 h-2 overflow-hidden rounded-full bg-line"><div className="h-full bg-ember transition-all" style={{ width: `${progress}%` }}/></div>
