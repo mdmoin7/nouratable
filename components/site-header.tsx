@@ -46,13 +46,13 @@ export function SiteHeader() {
             {t("startCooking")} <span aria-hidden="true">→</span>
           </Link>
           <details className="relative md:hidden">
-            <summary className="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-ink/20 text-ink">
+            <summary aria-controls="mobile-primary-navigation" className="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-ink/20 text-ink">
               <span className="sr-only">Open menu</span>
               <span aria-hidden="true" className="text-sm">
                 ☰
               </span>
             </summary>
-            <div className="absolute right-0 top-12 w-48 rounded-2xl border border-line bg-card p-2 shadow-xl">
+            <nav id="mobile-primary-navigation" aria-label="Mobile primary" className="absolute right-0 top-12 w-48 rounded-2xl border border-line bg-card p-2 shadow-xl">
               {links.map((link) => (
                 <Link key={link.href} href={link.href} className="block rounded-xl px-3 py-2 text-sm text-ink-soft hover:bg-paper hover:text-ink">
                   {t(link.key)}
@@ -61,7 +61,7 @@ export function SiteHeader() {
               <Link href="/recipes" className="mt-1 block rounded-xl bg-ink px-3 py-2 text-sm font-medium text-paper">
                 {t("startCooking")}
               </Link>
-            </div>
+            </nav>
           </details>
         </div>
       </div>
