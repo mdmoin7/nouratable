@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { RecipePhoto } from "@/components/recipe-photo";
+import { TranslatedText } from "@/components/translated-text";
 import { RecipeTools } from "@/components/recipe-tools";
 import { RecipeReviews } from "@/components/recipe-reviews";
 import { IngredientList } from "@/components/ingredient-list";
@@ -88,7 +89,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
           </p>
           <h1 className="display mt-5 text-[clamp(2.7rem,6vw,4.4rem)] leading-[0.94] text-ink">{recipe.name}</h1>
           <p className="display mt-3 text-[19px] italic text-ink-soft">{recipe.native}</p>
-          <p className="mt-6 max-w-[46ch] text-[15px] leading-7 text-ink-soft">{recipe.subtitle}</p>
+          <p className="mt-6 max-w-[46ch] text-[15px] leading-7 text-ink-soft"><TranslatedText text={recipe.subtitle} /></p>
           <div className="mt-6 flex flex-wrap items-center gap-2">
             {recipe.tags.map((tag) => (
               <span key={tag} className="rounded-full border border-line px-3 py-1 text-[10.5px] uppercase tracking-[0.12em] text-ink-soft">

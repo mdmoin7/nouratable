@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useLanguage } from "@/components/language-provider";
+import { TranslatedText } from "@/components/translated-text";
 
 type Group = { title: string; items: string[] };
 type PrepState = 0 | 1 | 2;
@@ -27,7 +29,7 @@ function scaleIngredient(item: string, factor: number) {
   return `${leading}${formatAmount(amount * factor)}${spacing}${rest}`;
 }
 
-const prepLabels = ["To prepare", "Prepared", "Ready"];
+const prepLabels = ["toPrepare", "prepared", "ready"] as const;
 const prepStyles = [
   "border-line text-ink-soft hover:border-ember",
   "border-saffron bg-[#f5ead5] text-[#80551b]",
@@ -35,6 +37,7 @@ const prepStyles = [
 ];
 
 export function IngredientList({ groups, baseServes, recipeSlug }: { groups: Group[]; baseServes: number; recipeSlug: string }) {
+  const { t } = useLanguage();
   const [serves, setServes] = useState(baseServes);
   const [prep, setPrep] = useState<Record<string, PrepState>>({});
   const [loaded, setLoaded] = useState(false);
@@ -67,31 +70,31 @@ export function IngredientList({ groups, baseServes, recipeSlug }: { groups: Gro
   return (
     <div>
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line pb-3">
-        <h2 className="eyebrow text-ember">Ingredients</h2>
+        <h2 className="eyebrow text-ember">{t("ingredients")}</h2>
         <span className="text-[11px] text-ink-soft/70">{ready}/{total} ready</span>
       </div>
       <div className="mt-4 flex items-center justify-between gap-4 rounded-[6px] border border-line bg-card px-4 py-3">
-        <div><p className="text-[12px] font-semibold text-ink">Adjust servings</p><p className="mt-0.5 text-[11px] text-ink-soft">Quantities update automatically</p></div>
+        <div><p className="text-[12px] font-semibold text-ink">{t("adjustServings")}</p><p className="mt-0.5 text-[11px] text-ink-soft">{t("quantitiesUpdate")}</p></div>
         <div className="flex items-center gap-3">
           <button type="button" onClick={() => setServes((value) => Math.max(1, value - 1))} disabled={serves <= 1} aria-label="Decrease servings" className="grid h-8 w-8 place-items-center rounded-full border border-line text-lg text-ink disabled:opacity-30">−</button>
           <output aria-live="polite" className="min-w-6 text-center text-sm font-semibold tabular-nums text-ink">{serves}</output>
           <button type="button" onClick={() => setServes((value) => Math.min(20, value + 1))} disabled={serves >= 20} aria-label="Increase servings" className="grid h-8 w-8 place-items-center rounded-full border border-line text-lg text-ink disabled:opacity-30">+</button>
         </div>
       </div>
-      <p className="mt-3 text-[10px] text-ink-soft/70">Tap each ingredient to cycle through To prepare → Prepared → Ready.</p>
+      <p className="mt-3 text-[10px] text-ink-soft/70">{t("toPrepare")} → {t("prepared")} → {t("ready")}</p>
       <div className="mt-5 space-y-7">
         {groups.map((group) => (
           <div key={group.title}>
-            <h3 className="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-ink-soft/80">{group.title}</h3>
+            <h3 className="text-[10.5px] font-semibold uppercase tracking-[0.18em] text-ink-soft/80"><TranslatedText text={group.title} /></h3>
             <ul className="mt-3 space-y-2.5">
               {group.items.map((item) => {
                 const key = `${group.title}-${item}`;
                 const state = prep[key] ?? 0;
                 return <li key={key}>
-                  <button type="button" onClick={() => advance(key)} aria-label={`${item}: ${prepLabels[state]}. Tap to change status.`} aria-pressed={state === 2} className="group flex w-full items-start gap-3 text-left">
+                  <button type="button" onClick={() => advance(key)} aria-label={`${item}: ${t(prepLabels[state])}.`} aria-pressed={state === 2} className="group flex w-full items-start gap-3 text-left">
                     <span aria-hidden="true" className={`mt-0.5 grid h-5 min-w-5 place-items-center rounded-full border px-1 text-[9px] font-semibold ${prepStyles[state]}`}>{state === 2 ? "✓" : state === 1 ? "•" : "○"}</span>
-                    <span className={`flex-1 text-[13.5px] leading-6 ${state === 2 ? "text-ink-soft/55 line-through" : "text-ink"}`}>{scaleIngredient(item, factor)}</span>
-                    <span className={`pt-1 text-[9px] uppercase tracking-wide ${state === 0 ? "text-ink-soft/50" : state === 1 ? "text-[#80551b]" : "text-moss"}`}>{prepLabels[state]}</span>
+                    <span className={`flex-1 text-[13.5px] leading-6 ${state === 2 ? "text-ink-soft/55 line-through" : "text-ink"}`}><TranslatedText text={scaleIngredient(item, factor)} /></span>
+                    <span className={`pt-1 text-[9px] uppercase tracking-wide ${state === 0 ? "text-ink-soft/50" : state === 1 ? "text-[#80551b]" : "text-moss"}`}>{t(prepLabels[state])}</span>
                   </button>
                 </li>;
               })}

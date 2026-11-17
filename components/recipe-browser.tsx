@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { RecipeCard } from "@/components/recipe-card";
 import { heatLabel, type Heat, type Recipe } from "@/lib/recipes";
+import { useLanguage } from "@/components/language-provider";
 
 type SortOrder = "featured" | "name" | "quickest" | "longest";
 const sortOptions: { value: SortOrder; label: string }[] = [
@@ -37,6 +38,7 @@ export function RecipeBrowser({
 }) {
   const router = useRouter();
   const pathname = usePathname();
+  const { t } = useLanguage();
   const [region, setRegion] = useState(initialRegion);
   const [heat, setHeat] = useState<Heat | 0>(initialHeat);
   const [query, setQuery] = useState(initialQuery);
@@ -111,7 +113,7 @@ export function RecipeBrowser({
       <div className="border-y border-line py-6">
         <div className="flex flex-col gap-5">
           <div>
-            <p className="eyebrow mb-3 text-ink-soft/70">Browse by region</p>
+            <p className="eyebrow mb-3 text-ink-soft/70">{t("browseByRegion")}</p>
             <div className="flex flex-wrap items-center gap-2">
               {regionNames.map((name) => (
                 <button key={name} type="button" onClick={() => setRegion(name)} aria-pressed={region === name}
@@ -124,7 +126,7 @@ export function RecipeBrowser({
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div className="flex flex-wrap items-center gap-4">
               <div>
-                <p className="eyebrow mb-2 text-ink-soft/70">Spice level</p>
+                <p className="eyebrow mb-2 text-ink-soft/70">{t("filterHeat")}</p>
                 <div className="flex items-center gap-1" role="group" aria-label="Filter by heat">
                   {heatFilters.map((option) => (
                     <button key={option.value} type="button" onClick={() => setHeat(option.value)} aria-pressed={heat === option.value}
@@ -139,15 +141,15 @@ export function RecipeBrowser({
                   <circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" />
                 </svg>
                 <input type="search" value={query} onChange={(event) => setQuery(event.target.value)}
-                  placeholder="Dish, ingredient, spice…" aria-label="Search recipes by dish or ingredient"
+                  placeholder={t("search")} aria-label={t("search")}
                   className="w-full bg-transparent text-[13px] text-ink placeholder:text-ink-soft/60 focus:outline-none sm:w-[205px]" />
               </label>
             </div>
             <label className="flex items-center gap-2 text-[11px] text-ink-soft">
-              <span className="eyebrow text-ink-soft/70">Sort</span>
+              <span className="eyebrow text-ink-soft/70">{t("sortBy")}</span>
               <select value={sort} onChange={(event) => setSort(event.target.value as SortOrder)}
                 className="rounded border border-line bg-card px-3 py-2 text-[12px] text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-ember">
-                {sortOptions.map((option) => <option key={option.value} value={option.value}>{option.label}</option>)}
+                {sortOptions.map((option) => <option key={option.value} value={option.value}>{option.value === "featured" ? t("featured") : option.value === "quickest" ? t("quickest") : option.value === "longest" ? t("longest") : option.label}</option>)}
               </select>
             </label>
           </div>
@@ -156,17 +158,17 @@ export function RecipeBrowser({
 
       <div className="mt-6 flex items-baseline justify-between gap-4">
         <p className="text-[12px] text-ink-soft">
-          <span className="font-semibold text-ink">{filtered.length}</span> {filtered.length === 1 ? "recipe" : "recipes"}
+          <span className="font-semibold text-ink">{filtered.length}</span> {filtered.length === 1 ? t("recipe") : t("recipesCount")}
           {region !== "All" && ` in ${region}`}
           {query.trim() && <span> matching “{query.trim()}”</span>}
         </p>
         {hasFilters && <button type="button" onClick={() => { setRegion("All"); setHeat(0); setQuery(""); setSort("featured"); }}
-          className="shrink-0 text-[11px] font-medium uppercase tracking-[0.16em] text-ember hover:text-ember-deep">Reset filters</button>}
+          className="shrink-0 text-[11px] font-medium uppercase tracking-[0.16em] text-ember hover:text-ember-deep">{t("clearFilters")}</button>}
       </div>
 
       {filtered.length === 0 ? (
         <div className="mt-10 rounded-[6px] border border-dashed border-line bg-card px-6 py-16 text-center">
-          <p className="display text-2xl text-ink">No recipes match these filters.</p>
+          <p className="display text-2xl text-ink">{t("noResults")}</p>
           <p className="mt-2 text-[13px] text-ink-soft">Try another region, ingredient or heat level.</p>
         </div>
       ) : (

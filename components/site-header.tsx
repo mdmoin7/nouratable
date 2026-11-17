@@ -2,16 +2,18 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { LanguageSelector, useLanguage } from "@/components/language-provider";
 
 const links = [
-  { href: "/recipes", label: "Recipes" },
-  { href: "/#method", label: "The method" },
-  { href: "/#pantry", label: "Pantry" },
-  { href: "/about", label: "About" },
-];
+  { href: "/recipes", key: "recipes" },
+  { href: "/#method", key: "method" },
+  { href: "/#pantry", key: "pantry" },
+  { href: "/about", key: "about" },
+] as const;
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const { t } = useLanguage();
 
   return (
     <header className="sticky top-0 z-30 border-b border-line/80 bg-paper/90 backdrop-blur-md">
@@ -33,14 +35,15 @@ export function SiteHeader() {
               data-active={pathname === link.href}
               className="link-underline text-[12.5px] font-medium text-ink-soft transition-colors hover:text-ink data-[active=true]:text-ink"
             >
-              {link.label}
+              {t(link.key)}
             </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-3">
+          <LanguageSelector />
           <Link href="/recipes" className="btn btn-dark hidden sm:inline-flex">
-            Start cooking <span aria-hidden="true">→</span>
+            {t("startCooking")} <span aria-hidden="true">→</span>
           </Link>
           <details className="relative md:hidden">
             <summary className="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-ink/20 text-ink">
@@ -52,11 +55,11 @@ export function SiteHeader() {
             <div className="absolute right-0 top-12 w-48 rounded-2xl border border-line bg-card p-2 shadow-xl">
               {links.map((link) => (
                 <Link key={link.href} href={link.href} className="block rounded-xl px-3 py-2 text-sm text-ink-soft hover:bg-paper hover:text-ink">
-                  {link.label}
+                  {t(link.key)}
                 </Link>
               ))}
               <Link href="/recipes" className="mt-1 block rounded-xl bg-ink px-3 py-2 text-sm font-medium text-paper">
-                Start cooking
+                {t("startCooking")}
               </Link>
             </div>
           </details>

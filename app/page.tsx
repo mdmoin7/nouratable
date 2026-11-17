@@ -26,6 +26,37 @@ export default function HomePage() {
             <p className="mt-7 max-w-[48ch] text-[15px] leading-7 text-ink-soft">
               Explore regional chicken cooking across India: from Delhi butter chicken and Hyderabadi biryani to Andhra kodi kura, Kerala coconut curries and Maharashtrian rassa. Each recipe is written for a home kitchen, with measured ingredients and clear steps.
             </p>
+            <form action="/recipes" method="get" role="search" className="mt-8 max-w-[560px]">
+              <label htmlFor="home-recipe-search" className="eyebrow mb-3 block text-ink-soft">
+                Find your next favourite
+              </label>
+              <div className="flex items-center gap-2 rounded-full border border-line bg-card p-2 pl-4 shadow-[0_10px_30px_rgba(27,25,23,0.06)] transition-colors focus-within:border-ember">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className="shrink-0 text-ink-soft">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m20 20-3.5-3.5" />
+                </svg>
+                <input
+                  id="home-recipe-search"
+                  name="q"
+                  type="search"
+                  maxLength={80}
+                  placeholder="Search dishes, ingredients or regions..."
+                  autoComplete="off"
+                  className="min-w-0 flex-1 bg-transparent py-2 text-[13px] text-ink outline-none placeholder:text-ink-soft/60"
+                />
+                <button type="submit" className="btn btn-ember shrink-0 px-5 py-3">
+                  Search <span aria-hidden="true">→</span>
+                </button>
+              </div>
+              <p className="mt-3 text-[11px] text-ink-soft">
+                Try:{" "}
+                <Link href="/recipes?q=butter%20chicken" className="link-underline hover:text-ember">Butter chicken</Link>
+                <span className="mx-2 text-line">·</span>
+                <Link href="/recipes?q=biryani" className="link-underline hover:text-ember">Biryani</Link>
+                <span className="mx-2 text-line">·</span>
+                <Link href="/recipes?q=pepper" className="link-underline hover:text-ember">Pepper chicken</Link>
+              </p>
+            </form>
             <div className="mt-9 flex flex-wrap items-center gap-3">
               <Link href="/recipes" className="btn btn-dark">
                 See all recipes <span aria-hidden="true">→</span>

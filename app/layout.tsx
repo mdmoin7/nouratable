@@ -3,6 +3,7 @@ import { Fraunces, Outfit } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PwaRegister } from "@/components/pwa-register";
+import { LanguageProvider } from "@/components/language-provider";
 import "./globals.css";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\/$/, "");
@@ -75,11 +76,13 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             ]).replace(/</g, "\\u003c"),
           }}
         />
-        <div className="flex min-h-screen flex-col">
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-        </div>
+        <LanguageProvider>
+          <div className="flex min-h-screen flex-col">
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <SiteFooter />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   );
