@@ -107,6 +107,16 @@ export function RecipeBrowser({
   }, [regionNames]);
 
   const hasFilters = region !== "All" || heat !== 0 || query.trim() !== "" || sort !== "featured";
+  const searchSuggestions = useMemo(() => {
+    const values = new Set<string>();
+    for (const recipe of recipes) {
+      values.add(recipe.name);
+      if (recipe.native) values.add(recipe.native);
+      for (const tag of recipe.tags) values.add(tag);
+      for (const group of recipe.ingredients) for (const ingredient of group.items) values.add(ingredient);
+    }
+    return [...values].sort((a, b) => a.localeCompare(b));
+  }, [recipes]);
 
   return (
     <div>
@@ -156,8 +166,18 @@ export function RecipeBrowser({
         </div>
       </div>
 
+      {hasFilters && (
+        <div className="mt-4 flex flex-wrap items-center gap-2" aria-label="Active filters">
+          <span className="eyebrow text-ink-soft">Active</span>
+          {region !== "All" && <button type="button" onClick={() => setRegion("All")} className="rounded-full border border-line bg-card px-3 py-1.5 text-[11px] text-ink">{region} <span aria-hidden="true">×</span><span className="sr-only">, remove region filter</span></button>}
+          {heat !== 0 && <button type="button" onClick={() => setHeat(0)} className="rounded-full border border-line bg-card px-3 py-1.5 text-[11px] text-ink">{heatLabel[heat]} <span aria-hidden="true">×</span><span className="sr-only">, remove heat filter</span></button>}
+          {query.trim() && <button type="button" onClick={() => setQuery("")} className="rounded-full border border-line bg-card px-3 py-1.5 text-[11px] text-ink">“{query.trim()}” <span aria-hidden="true">×</span><span className="sr-only">, clear search</span></button>}
+          {sort !== "featured" && <button type="button" onClick={() => setSort("featured")} className="rounded-full border border-line bg-card px-3 py-1.5 text-[11px] text-ink">{sortOptions.find((option) => option.value === sort)?.label} <span aria-hidden="true">×</span><span className="sr-only">, reset sorting</span></button>}
+        </div>
+      )}
+
       <div className="mt-6 flex items-baseline justify-between gap-4">
-        <p className="text-[12px] text-ink-soft">
+        <p className="text-[12px] text-ink-soft" role="status" aria-live="polite" aria-atomic="true">
           <span className="font-semibold text-ink">{filtered.length}</span> {filtered.length === 1 ? t("recipe") : t("recipesCount")}
           {region !== "All" && ` in ${region}`}
           {query.trim() && <span> matching “{query.trim()}”</span>}
@@ -169,7 +189,9 @@ export function RecipeBrowser({
       {filtered.length === 0 ? (
         <div className="mt-10 rounded-[6px] border border-dashed border-line bg-card px-6 py-16 text-center">
           <p className="display text-2xl text-ink">{t("noResults")}</p>
-          <p className="mt-2 text-[13px] text-ink-soft">Try another region, ingredient or heat level.</p>
+          <p className="mt-2 text-[13px] text-ink-soft">Try a broader ingredient or remove one of the active filters.</p>
+          <button type="button" onClick={() => { setRegion("All"); setHeat(0); setQuery(""); setSort("featured"); }}
+            className="btn btn-dark mt-6">Show all recipes</button>
         </div>
       ) : (
         <div id="recipe-results" className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
