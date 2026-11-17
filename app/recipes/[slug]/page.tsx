@@ -72,31 +72,31 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
       <div className="wrap pt-8">
         <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-ink-soft/80">
           <Link href="/recipes" className="hover:text-ember">
-            Recipes
+            <TranslatedText text="Recipes" />
           </Link>
           <span aria-hidden="true">/</span>
           <Link href={`/regions/${regionSlug(recipe.region)}`} className="hover:text-ember">
-            {recipe.region}
+            <TranslatedText text={recipe.region} />
           </Link>
           <span aria-hidden="true">/</span>
-          <span className="text-ink">{recipe.name}</span>
+          <span className="text-ink"><TranslatedText text={recipe.name} /></span>
         </nav>
       </div>
 
       <section className="wrap grid items-end gap-10 py-10 md:grid-cols-[1.05fr_0.95fr] md:gap-14 md:py-14">
         <div>
           <p className="eyebrow flex flex-wrap items-center gap-3 text-ember">
-            {recipe.region}
+            <TranslatedText text={recipe.region} />
             <span className="h-px w-6 bg-ember/40" aria-hidden="true" />
-            <span className="text-ink-soft/80">{recipe.origin}</span>
+            <span className="text-ink-soft/80"><TranslatedText text={recipe.origin} /></span>
           </p>
-          <h1 className="display mt-5 text-[clamp(2.7rem,6vw,4.4rem)] leading-[0.94] text-ink">{recipe.name}</h1>
-          <p className="display mt-3 text-[19px] italic text-ink-soft">{recipe.native}</p>
+          <h1 className="display mt-5 text-[clamp(2.7rem,6vw,4.4rem)] leading-[0.94] text-ink"><TranslatedText text={recipe.name} /></h1>
+          <p className="display mt-3 text-[19px] italic text-ink-soft"><TranslatedText text={recipe.native} /></p>
           <p className="mt-6 max-w-[46ch] text-[15px] leading-7 text-ink-soft"><TranslatedText text={recipe.subtitle} /></p>
           <div className="mt-6 flex flex-wrap items-center gap-2">
             {recipe.tags.map((tag) => (
               <span key={tag} className="rounded-full border border-line px-3 py-1 text-[10.5px] uppercase tracking-[0.12em] text-ink-soft">
-                {tag}
+                <TranslatedText text={tag} />
               </span>
             ))}
             <span className="ml-1">
@@ -112,13 +112,13 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
 
       <section className="wrap">
         <p className="max-w-[74ch] border-t border-line pt-8 text-[15px] leading-8 text-ink-soft first-letter:float-left first-letter:mr-2 first-letter:text-[52px] first-letter:leading-[0.8] first-letter:text-ember first-letter:[font-family:var(--font-display)]">
-          {recipe.story}
+          <TranslatedText text={recipe.story} />
         </p>
 
         <dl className="mt-10 grid grid-cols-2 gap-y-6 border-y border-line py-6 sm:grid-cols-4">
           {meta.map(([label, value]) => (
             <div key={label}>
-              <dt className="eyebrow text-ink-soft/70">{label}</dt>
+              <dt className="eyebrow text-ink-soft/70"><TranslatedText text={label} /></dt>
               <dd className="mt-2 text-[15px] font-medium text-ink">{value}</dd>
             </div>
           ))}
@@ -137,11 +137,11 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
           <AddToShoppingList recipeSlug={recipe.slug} recipeName={recipe.name} groups={recipe.ingredients} />
 
           <div className="mt-8 border-t border-line pt-5">
-            <h2 className="eyebrow text-ember">Serve with</h2>
+            <h2 className="eyebrow text-ember"><TranslatedText text="Serve with" /></h2>
             <ul className="mt-3 flex flex-wrap gap-2">
               {recipe.serveWith.map((item) => (
                 <li key={item} className="rounded-full bg-moss-soft px-3 py-1.5 text-[11.5px] text-moss">
-                  {item}
+                  <TranslatedText text={item} />
                 </li>
               ))}
             </ul>
@@ -152,12 +152,12 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
           <MethodSteps steps={recipe.steps} recipeSlug={recipe.slug} />
 
           <aside className="mt-10 rounded-[6px] border border-line bg-card p-6 md:p-7">
-            <h2 className="eyebrow text-ember">Cook&apos;s notes</h2>
+            <h2 className="eyebrow text-ember"><TranslatedText text="Cook’s notes" /></h2>
             <ul className="mt-4 space-y-3">
               {recipe.notes.map((note) => (
                 <li key={note} className="flex gap-3 text-[12.5px] leading-6 text-ink-soft">
                   <span aria-hidden="true" className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-ember" />
-                  {note}
+                  <TranslatedText text={note} />
                 </li>
               ))}
             </ul>
@@ -176,11 +176,11 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
         <div className="wrap">
           <div className="flex items-end justify-between gap-4">
             <div>
-              <p className="eyebrow text-ember">Cook next</p>
-              <h2 className="display mt-3 text-[clamp(1.8rem,3.4vw,2.6rem)] leading-tight text-ink">Three more from the book.</h2>
+              <p className="eyebrow text-ember"><TranslatedText text="Cook next" /></p>
+              <h2 className="display mt-3 text-[clamp(1.8rem,3.4vw,2.6rem)] leading-tight text-ink"><TranslatedText text="Three more from the book." /></h2>
             </div>
             <Link href="/recipes" className="link-underline hidden text-[12px] font-medium text-ink sm:block">
-              All recipes <span aria-hidden="true">→</span>
+              <TranslatedText text="All recipes" /> <span aria-hidden="true">→</span>
             </Link>
           </div>
           <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
