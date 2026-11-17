@@ -11,6 +11,7 @@ const links = [
   { href: "/recently-viewed", label: "Recently viewed" },
   { href: "/shopping-list", label: "Shopping list" },
   { href: "/meal-planner", label: "Meal planner" },
+  { href: "/pantry", label: "Pantry finder" },
   { href: "/#method", key: "method" },
   { href: "/#pantry", key: "pantry" },
   { href: "/about", key: "about" },
