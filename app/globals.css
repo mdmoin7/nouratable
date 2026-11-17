@@ -197,6 +197,19 @@ a {
   }
 }
 
+/* Keep primary controls comfortably tappable on touch-first devices. */
+@media (pointer: coarse) {
+  :where(button, summary, input, select, textarea, .btn, nav a) {
+    min-height: 44px;
+  }
+
+  /* Rating stars are compact icon controls; preserve a generous hit area. */
+  [aria-label^="Rate "] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
