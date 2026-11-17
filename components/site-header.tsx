@@ -57,7 +57,7 @@ export function SiteHeader() {
             <div className="absolute right-0 top-12 w-48 rounded-2xl border border-line bg-card p-2 shadow-xl">
               {links.map((link) => (
                 <Link key={link.href} href={link.href} className="block rounded-xl px-3 py-2 text-sm text-ink-soft hover:bg-paper hover:text-ink">
-                  {t(link.key)}
+                  {"label" in link ? link.label : t(link.key)}
                 </Link>
               ))}
               <Link href="/recipes" className="mt-1 block rounded-xl bg-ink px-3 py-2 text-sm font-medium text-paper">
