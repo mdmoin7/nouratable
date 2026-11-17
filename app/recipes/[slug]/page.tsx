@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { RecipePhoto } from "@/components/recipe-photo";
 import { TranslatedText } from "@/components/translated-text";
 import { RecipeTools } from "@/components/recipe-tools";
+import { RecipeViewTracker } from "@/components/personal-recipe-library";
 import { RecipeReviews } from "@/components/recipe-reviews";
 import { IngredientList } from "@/components/ingredient-list";
 import { MethodSteps } from "@/components/method-steps";
@@ -65,6 +66,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
 
   return (
     <article>
+      <RecipeViewTracker recipeSlug={recipe.slug} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeJsonLd).replace(/</g, "\\u003c") }} />
       <div className="wrap pt-8">
         <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-ink-soft/80">
