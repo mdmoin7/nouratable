@@ -6,6 +6,7 @@ import { RecipeCard } from "@/components/recipe-card";
 import { format, type Dictionary } from "@/lib/i18n";
 import type { Heat, Recipe } from "@/lib/recipes";
 
+type SortOrder = "featured" | "name" | "quickest" | "longest";
 const isHeat = (value: number): value is Heat => value === 1 || value === 2 || value === 3;
 const isSortOrder = (value: string | null): value is SortOrder =>
   value === "featured" || value === "name" || value === "quickest" || value === "longest";
@@ -27,7 +28,6 @@ export function RecipeBrowser({
 }) {
   const router = useRouter();
   const pathname = usePathname();
-  const { t } = useLanguage();
   const [region, setRegion] = useState(initialRegion);
   const [heat, setHeat] = useState<Heat | 0>(initialHeat);
   const [query, setQuery] = useState(initialQuery);
