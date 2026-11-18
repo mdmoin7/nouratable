@@ -3,7 +3,7 @@ import { RecipePhoto } from "@/components/recipe-photo";
 import { RecipeCard } from "@/components/recipe-card";
 import { format } from "@/lib/i18n";
 import { getLocaleAndDictionary } from "@/lib/locale";
-import { featured, getRecipe, localizeRecipe, recipes, regions } from "@/lib/recipes";
+import { featured, getRecipe, localizeRecipe, recipes, regions, regionSlug } from "@/lib/recipes";
 
 export default async function HomePage() {
   const { locale, t } = await getLocaleAndDictionary();
