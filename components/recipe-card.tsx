@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { RecipePhoto } from "@/components/recipe-photo";
-import { format, formatDuration, type Dictionary } from "@/lib/i18n";
+import { defaultLocale, format, formatDuration, getDictionary, type Dictionary } from "@/lib/i18n";
 import { totalTime, type Recipe } from "@/lib/recipes";
 
 const heatWord = (heat: Recipe["heat"], t: Dictionary) =>
   heat === 1 ? t.heatMild : heat === 2 ? t.heatMedium : t.heatHot;
 
-export function HeatDots({ heat, t, className = "" }: { heat: Recipe["heat"]; t: Dictionary; className?: string }) {
+export function HeatDots({ heat, t = getDictionary(defaultLocale), className = "" }: { heat: Recipe["heat"]; t?: Dictionary; className?: string }) {
   return (
     <span
       className={`inline-flex items-center gap-[3px] ${className}`}
@@ -23,7 +23,7 @@ export function HeatDots({ heat, t, className = "" }: { heat: Recipe["heat"]; t:
   );
 }
 
-export function RecipeCard({ recipe, t }: { recipe: Recipe; t: Dictionary }) {
+export function RecipeCard({ recipe, t = getDictionary(defaultLocale) }: { recipe: Recipe; t?: Dictionary }) {
   return (
     <Link
       href={`/recipes/${recipe.slug}`}
