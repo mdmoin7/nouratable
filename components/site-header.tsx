@@ -7,7 +7,6 @@ import type { Dictionary, Locale } from "@/lib/i18n";
 
 export function SiteHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
   const pathname = usePathname();
-  const { t } = useLanguage();
 
   const links = [
     { href: "/recipes", label: t.navRecipes },
@@ -34,7 +33,7 @@ export function SiteHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
               data-active={pathname === link.href}
               className="link-underline text-[12.5px] font-medium text-ink-soft transition-colors hover:text-ink data-[active=true]:text-ink"
             >
-              {"label" in link ? link.label : t(link.key)}
+              {link.label}
             </Link>
           ))}
         </nav>
