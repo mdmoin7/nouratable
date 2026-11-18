@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Noto_Sans_Devanagari, Noto_Serif_Devanagari, Outfit } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { LanguageProvider } from "@/components/language-provider";
 import { getLocaleAndDictionary } from "@/lib/locale";
 import "./globals.css";
 
@@ -52,11 +53,13 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       className={`${outfit.variable} ${fraunces.variable} ${devanagari.variable} ${devanagariDisplay.variable}`}
     >
       <body>
+        <LanguageProvider initialLanguage={locale}>
         <div className="flex min-h-screen flex-col">
           <SiteHeader locale={locale} t={t} />
           <main className="flex-1">{children}</main>
           <SiteFooter t={t} />
         </div>
+      </LanguageProvider>
       </body>
     </html>
   );
