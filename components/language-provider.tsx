@@ -8,21 +8,16 @@ const LanguageContext = createContext<LanguageContextValue | null>(null);
 const storageKey = "murgh:language";
 const supported = new Set<string>(languages.map((item) => item.code));
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<LanguageCode>("en");
+export function LanguageProvider({ children, initialLanguage = "en" }: { children: React.ReactNode; initialLanguage?: LanguageCode }) {
+  const [language, setLanguageState] = useState<LanguageCode>(initialLanguage);
 
-  useEffect(() => {
-    try {
-      const saved = window.localStorage.getItem(storageKey);
-      if (saved && supported.has(saved)) setLanguageState(saved as LanguageCode);
-    } catch { /* Language preference storage is optional. */ }
-  }, []);
+  useEffect(() => { setLanguageState(initialLanguage); }, [initialLanguage]);
 
   useEffect(() => {
     const selected = languages.find((item) => item.code === language) ?? languages[0];
     document.documentElement.lang = language === "ur" ? "ur-IN" : language === "en" ? "en-IN" : language;
     document.documentElement.dir = selected.dir;
-    document.cookie = `murgh-language=${language}; Path=/; Max-Age=31536000; SameSite=Lax`;
+    document.cookie = `murgh_locale=${language}; Path=/; Max-Age=31536000; SameSite=Lax`;
     try { window.localStorage.setItem(storageKey, language); } catch { /* Storage is optional. */ }
   }, [language]);
 
