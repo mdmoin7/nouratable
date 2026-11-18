@@ -39,6 +39,6 @@ export function translate(language: LanguageCode, key: TranslationKey): string {
 
 
 // Server-rendered locale dictionaries used by the cookie-based locale system.
-export { defaultLocale, format, getDictionary, isLocale, localeName, locales } from "./i18n/index";
+export { defaultLocale, format, formatDuration, getDictionary, isLocale, localeName, locales } from "./i18n/index";
 export type { Dictionary, Locale } from "./i18n/index";
 export const LOCALE_COOKIE = "murgh_locale";
