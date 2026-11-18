@@ -1,3 +1,6 @@
+import { hiRecipeTranslations } from "./recipe-translations/hi";
+import type { RecipeTranslation } from "./recipe-translations/types";
+
 export type Heat = 1 | 2 | 3;
 export type Vessel = "curry" | "dry" | "rice" | "grill" | "soup";
 
@@ -6357,12 +6360,17 @@ export const getRecipe = (slug: string) => recipes.find((recipe) => recipe.slug 
 
 export const totalTime = (recipe: Recipe) => recipe.prep + recipe.cook;
 
-export const formatTime = (minutes: number) => {
-  if (minutes < 60) return `${minutes} min`;
-  const hours = Math.floor(minutes / 60);
-  const rest = minutes % 60;
-  return rest ? `${hours} hr ${rest} min` : `${hours} hr`;
+/** Translated recipe content, by language and then by slug. */
+export const recipeTranslations: Record<string, Record<string, RecipeTranslation>> = { hi: hiRecipeTranslations };
+
+export const hasRecipeTranslation = (recipe: Recipe, locale: string) => Boolean(recipeTranslations[locale]?.[recipe.slug]);
+
+export const localizeRecipe = (recipe: Recipe, locale: string): Recipe => {
+  const translation = recipeTranslations[locale]?.[recipe.slug];
+  return translation ? { ...recipe, ...translation } : recipe;
 };
+
+export const localizeRecipes = (locale: string) => recipes.map((recipe) => localizeRecipe(recipe, locale));
 
 export const regionNotes: Record<string, string> = {
   Delhi: "Tandoor, butter and tomato. Delhi's restaurant style.",

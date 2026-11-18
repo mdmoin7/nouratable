@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { useLanguage } from "@/components/language-provider";
-import { TranslatedText } from "@/components/translated-text";
+import { useState } from "react";
+import { format, type Dictionary } from "@/lib/i18n";
 
 type Group = { title: string; items: string[] };
 type PrepState = 0 | 1 | 2;
@@ -12,38 +11,8 @@ const fractions: Record<string, number> = {
 };
 const fractionGlyphs = Object.entries(fractions);
 
-function formatAmount(value: number) {
-  const whole = Math.floor(value);
-  const nearest = Math.round((value - whole) * 8) / 8;
-  if (nearest < 0.06) return String(whole || 0);
-  const glyph = fractionGlyphs.find(([, amount]) => Math.abs(amount - nearest) < 0.025)?.[0];
-  return glyph ? (whole ? `${whole}${glyph}` : glyph) : Number(value.toFixed(2)).toString();
-}
-
-function scaleIngredient(item: string, factor: number) {
-  if (factor === 1) return item;
-  const match = item.match(/^(\s*)(\d+(?:\.\d+)?|[¼½¾⅓⅔⅛⅜⅝⅞])(?:(\s*)([¼½¾⅓⅔⅛⅜⅝⅞]))?(\s+)(.*)$/);
-  if (!match) return item;
-  const [, leading, wholeOrFraction, , extraFraction, spacing, rest] = match;
-  const amount = (Number(wholeOrFraction) || fractions[wholeOrFraction]) + (extraFraction ? fractions[extraFraction] : 0);
-  return `${leading}${formatAmount(amount * factor)}${spacing}${rest}`;
-}
-
-const prepLabels = ["toPrepare", "prepared", "ready"] as const;
-const prepStyles = [
-  "border-line text-ink-soft hover:border-ember",
-  "border-saffron bg-[#f5ead5] text-[#80551b]",
-  "border-moss bg-moss-soft text-moss",
-];
-
-export function IngredientList({ groups, baseServes, recipeSlug }: { groups: Group[]; baseServes: number; recipeSlug: string }) {
-  const { t } = useLanguage();
-  const [serves, setServes] = useState(baseServes);
-  const [prep, setPrep] = useState<Record<string, PrepState>>({});
-  const [loaded, setLoaded] = useState(false);
-  const factor = serves / baseServes;
-  const total = useMemo(() => groups.reduce((sum, group) => sum + group.items.length, 0), [groups]);
-  const ready = Object.values(prep).filter((state) => state === 2).length;
+export function IngredientList({ groups, t }: { groups: Group[]; t: Dictionary }) {
+  const [checked, setChecked] = useState<string[]>([]);
 
   useEffect(() => {
     try {
@@ -69,9 +38,11 @@ export function IngredientList({ groups, baseServes, recipeSlug }: { groups: Gro
 
   return (
     <div>
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line pb-3">
-        <h2 className="eyebrow text-ember">{t("ingredients")}</h2>
-        <span className="text-[11px] text-ink-soft/70">{ready}/{total} ready</span>
+      <div className="flex items-baseline justify-between gap-4 border-b border-line pb-3">
+        <h2 className="eyebrow text-ember">{t.ingredients}</h2>
+        <span className="text-[11px] text-ink-soft/70">
+          {checked.length ? format(t.tickedCount, { count: checked.length }) : t.tickWhatYouHave}
+        </span>
       </div>
       <div className="mt-4 flex items-center justify-between gap-4 rounded-[6px] border border-line bg-card px-4 py-3">
         <div><p className="text-[12px] font-semibold text-ink">{t("adjustServings")}</p><p className="mt-0.5 text-[11px] text-ink-soft">{t("quantitiesUpdate")}</p></div>

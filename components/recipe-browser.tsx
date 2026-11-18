@@ -3,34 +3,23 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { RecipeCard } from "@/components/recipe-card";
-import { heatLabel, type Heat, type Recipe } from "@/lib/recipes";
-import { useLanguage } from "@/components/language-provider";
+import { format, type Dictionary } from "@/lib/i18n";
+import type { Heat, Recipe } from "@/lib/recipes";
 
-type SortOrder = "featured" | "name" | "quickest" | "longest";
-const sortOptions: { value: SortOrder; label: string }[] = [
-  { value: "featured", label: "Featured order" },
-  { value: "name", label: "Name: A–Z" },
-  { value: "quickest", label: "Quickest first" },
-  { value: "longest", label: "Longest first" },
-];
-const heatFilters: { value: Heat | 0; label: string }[] = [
-  { value: 0, label: "Any heat" },
-  { value: 1, label: heatLabel[1] },
-  { value: 2, label: heatLabel[2] },
-  { value: 3, label: heatLabel[3] },
-];
 const isHeat = (value: number): value is Heat => value === 1 || value === 2 || value === 3;
 const isSortOrder = (value: string | null): value is SortOrder =>
   value === "featured" || value === "name" || value === "quickest" || value === "longest";
 
 export function RecipeBrowser({
   recipes,
+  t,
   initialRegion = "All",
   initialHeat = 0,
   initialQuery = "",
   initialSort = "featured",
 }: {
   recipes: Recipe[];
+  t: Dictionary;
   initialRegion?: string;
   initialHeat?: Heat | 0;
   initialQuery?: string;
@@ -49,6 +38,13 @@ export function RecipeBrowser({
     () => ["All", ...Array.from(new Set(recipes.map((recipe) => recipe.region))).sort((a, b) => a.localeCompare(b))],
     [recipes],
   );
+
+  const heatFilters: { value: Heat | 0; label: string }[] = [
+    { value: 0, label: t.heatAny },
+    { value: 1, label: t.heatMild },
+    { value: 2, label: t.heatMedium },
+    { value: 3, label: t.heatHot },
+  ];
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLocaleLowerCase();
@@ -120,82 +116,90 @@ export function RecipeBrowser({
 
   return (
     <div>
-      <div className="border-y border-line py-6">
-        <div className="flex flex-col gap-5">
-          <div>
-            <p className="eyebrow mb-3 text-ink-soft/70">{t("browseByRegion")}</p>
-            <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Filter recipes by region">
-              {regionNames.map((name) => (
-                <button key={name} type="button" onClick={() => setRegion(name)} aria-pressed={region === name}
-                  className={`rounded-full border px-4 py-[7px] text-[11.5px] font-medium tracking-[0.02em] transition-colors ${region === name ? "border-ink bg-ink text-paper" : "border-line text-ink-soft hover:border-ink/40 hover:text-ink"}`}>
-                  {name}
-                </button>
-              ))}
-            </div>
+      <div className="flex flex-col gap-6 border-y border-line py-6 lg:flex-row lg:items-center lg:justify-between">
+        <div className="flex flex-wrap items-center gap-2">
+          {regionNames.map((name) => (
+            <button
+              key={name}
+              type="button"
+              onClick={() => setRegion(name)}
+              aria-pressed={region === name}
+              className={`rounded-full border px-4 py-[7px] text-[11.5px] font-medium tracking-[0.02em] transition-colors ${
+                region === name
+                  ? "border-ink bg-ink text-paper"
+                  : "border-line text-ink-soft hover:border-ink/40 hover:text-ink"
+              }`}
+            >
+              {name === "All" ? t.filterAll : name}
+            </button>
+          ))}
+        </div>
+
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+          <div className="flex items-center gap-1" role="group" aria-label={t.heatFilterLabel}>
+            {heatFilters.map((option) => (
+              <button
+                key={option.value}
+                type="button"
+                onClick={() => setHeat(option.value)}
+                aria-pressed={heat === option.value}
+                className={`rounded-full px-3 py-[6px] text-[11px] font-medium transition-colors ${
+                  heat === option.value ? "bg-ember/10 text-ember" : "text-ink-soft hover:text-ink"
+                }`}
+              >
+                {option.label}
+              </button>
+            ))}
           </div>
-          <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-            <div className="flex flex-wrap items-center gap-4">
-              <div>
-                <p className="eyebrow mb-2 text-ink-soft/70">{t("filterHeat")}</p>
-                <div className="flex items-center gap-1" role="group" aria-label="Filter by heat">
-                  {heatFilters.map((option) => (
-                    <button key={option.value} type="button" onClick={() => setHeat(option.value)} aria-pressed={heat === option.value}
-                      className={`rounded-full px-3 py-[6px] text-[11px] font-medium transition-colors ${heat === option.value ? "bg-ember/10 text-ember" : "text-ink-soft hover:text-ink"}`}>
-                      {option.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <label className="flex items-center gap-2 border-b border-line pb-1.5 focus-within:border-ink">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-ink-soft" aria-hidden="true">
-                  <circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" />
-                </svg>
-                <input id="recipe-search" type="search" value={query} onChange={(event) => setQuery(event.target.value)}
-                  placeholder={t("search")} aria-label={t("search")}
-                  className="w-full bg-transparent text-[13px] text-ink placeholder:text-ink-soft/60 focus:outline-none sm:w-[205px]" />
-              </label>
-            </div>
-            <label className="flex items-center gap-2 text-[11px] text-ink-soft">
-              <span className="eyebrow text-ink-soft/70">{t("sortBy")}</span>
-              <select value={sort} onChange={(event) => setSort(event.target.value as SortOrder)}
-                className="rounded border border-line bg-card px-3 py-2 text-[12px] text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-ember">
-                {sortOptions.map((option) => <option key={option.value} value={option.value}>{option.value === "featured" ? t("featured") : option.value === "quickest" ? t("quickest") : option.value === "longest" ? t("longest") : option.label}</option>)}
-              </select>
-            </label>
-          </div>
+
+          <label className="flex items-center gap-2 border-b border-line pb-1.5 focus-within:border-ink">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-ink-soft" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" />
+            </svg>
+            <input
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder={t.searchPlaceholder}
+              aria-label={t.searchPlaceholder}
+              className="w-full bg-transparent text-[13px] text-ink placeholder:text-ink-soft/60 focus:outline-none sm:w-[170px]"
+            />
+          </label>
         </div>
       </div>
 
-      {hasFilters && (
-        <div className="mt-4 flex flex-wrap items-center gap-2" aria-label="Active filters">
-          <span className="eyebrow text-ink-soft">Active</span>
-          {region !== "All" && <button type="button" onClick={() => setRegion("All")} className="rounded-full border border-line bg-card px-3 py-1.5 text-[11px] text-ink">{region} <span aria-hidden="true">×</span><span className="sr-only">, remove region filter</span></button>}
-          {heat !== 0 && <button type="button" onClick={() => setHeat(0)} className="rounded-full border border-line bg-card px-3 py-1.5 text-[11px] text-ink">{heatLabel[heat]} <span aria-hidden="true">×</span><span className="sr-only">, remove heat filter</span></button>}
-          {query.trim() && <button type="button" onClick={() => setQuery("")} className="rounded-full border border-line bg-card px-3 py-1.5 text-[11px] text-ink">“{query.trim()}” <span aria-hidden="true">×</span><span className="sr-only">, clear search</span></button>}
-          {sort !== "featured" && <button type="button" onClick={() => setSort("featured")} className="rounded-full border border-line bg-card px-3 py-1.5 text-[11px] text-ink">{sortOptions.find((option) => option.value === sort)?.label} <span aria-hidden="true">×</span><span className="sr-only">, reset sorting</span></button>}
-        </div>
-      )}
-
-      <div className="mt-6 flex items-baseline justify-between gap-4">
-        <p className="text-[12px] text-ink-soft" role="status" aria-live="polite" aria-atomic="true">
-          <span className="font-semibold text-ink">{filtered.length}</span> {filtered.length === 1 ? t("recipe") : t("recipesCount")}
-          {region !== "All" && ` in ${region}`}
-          {query.trim() && <span> matching “{query.trim()}”</span>}
+      <div className="mt-6 flex items-baseline justify-between">
+        <p className="text-[12px] text-ink-soft">
+          <span className="font-semibold text-ink">{filtered.length}</span>{" "}
+          {filtered.length === 1 ? t.countRecipe : t.countRecipes}
+          {region !== "All" && <> {format(t.inRegion, { region })}</>}
         </p>
-        {hasFilters && <button type="button" onClick={() => { setRegion("All"); setHeat(0); setQuery(""); setSort("featured"); }}
-          className="shrink-0 text-[11px] font-medium uppercase tracking-[0.16em] text-ember hover:text-ember-deep">{t("clearFilters")}</button>}
+        {(region !== "All" || heat !== 0 || query) && (
+          <button
+            type="button"
+            onClick={() => {
+              setRegion("All");
+              setHeat(0);
+              setQuery("");
+            }}
+            className="text-[11px] font-medium uppercase tracking-[0.16em] text-ember hover:text-ember-deep"
+          >
+            {t.clearFilters}
+          </button>
+        )}
       </div>
 
       {filtered.length === 0 ? (
         <div className="mt-10 rounded-[6px] border border-dashed border-line bg-card px-6 py-16 text-center">
-          <p className="display text-2xl text-ink">{t("noResults")}</p>
-          <p className="mt-2 text-[13px] text-ink-soft">Try a broader ingredient or remove one of the active filters.</p>
-          <button type="button" onClick={() => { setRegion("All"); setHeat(0); setQuery(""); setSort("featured"); }}
-            className="btn btn-dark mt-6">Show all recipes</button>
+          <p className="display text-2xl text-ink">{t.emptyTitle}</p>
+          <p className="mt-2 text-[13px] text-ink-soft">{t.emptyBody}</p>
         </div>
       ) : (
-        <div id="recipe-results" className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((recipe) => <RecipeCard key={recipe.slug} recipe={recipe} />)}
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((recipe) => (
+            <RecipeCard key={recipe.slug} recipe={recipe} t={t} />
+          ))}
         </div>
       )}
     </div>

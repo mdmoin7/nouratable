@@ -1,69 +1,45 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { DishArt } from "@/components/dish-art";
+import { format } from "@/lib/i18n";
+import { getLocaleAndDictionary } from "@/lib/locale";
 import { getRecipe, recipes, regions } from "@/lib/recipes";
 
-export const metadata: Metadata = {
-  title: "About this book",
-  description:
-    "Learn about Murgh, a modern Indian chicken cookbook: regional cooking traditions, practical methods, ingredients and how to cook chicken at home.",
-  alternates: { canonical: "/about" },
-  openGraph: {
-    title: "About Murgh | Indian Chicken Cookbook",
-    description: "The story and cooking philosophy behind Murgh's regional Indian chicken recipes.",
-    url: "/about",
-    type: "website",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getLocaleAndDictionary();
+  return { title: t.metaAboutTitle, description: t.metaAboutDescription };
+}
 
 const korma = getRecipe("awadhi-chicken-korma")!;
 
-const sections = [
-  {
-    number: "01",
-    title: "Why chicken",
-    body: "Chicken is the easiest meat to cook at home and the most common in Indian kitchens. But most restaurant menus serve the same red gravy and give it different names. This book keeps the regions separate: Goan vindalho, Lucknowi korma, Chettinad pepper chicken.",
-  },
-  {
-    number: "02",
-    title: "How the book works",
-    body: "Every recipe starts with the region and a short note, then the marinade, the masala and the method, in that order. Marinade time is listed separately from cooking time, so you know how long the dish will take.",
-  },
-  {
-    number: "03",
-    title: "Buying the chicken",
-    body: "Buy chicken with bone when the recipe allows it. Bone keeps the chicken soft and makes the gravy thicker. Thigh pieces are safer for beginners; breast dries out fast. Keep the chicken in the fridge till you cook it, pat it dry before frying, and do not put too many pieces in the pan at one time.",
-  },
-  {
-    number: "04",
-    title: "Spice and heat",
-    body: "Kashmiri chilli gives colour, dried red chilli gives heat, and black pepper gives slow heat. If a recipe says mild, it will be mild. Keep green chilli or chilli oil on the table for those who want more.",
-  },
-];
+export default async function AboutPage() {
+  const { t } = await getLocaleAndDictionary();
 
-export default function AboutPage() {
+  const sections = [
+    { number: "01", title: t.aboutS1Title, body: t.aboutS1Body },
+    { number: "02", title: t.aboutS2Title, body: t.aboutS2Body },
+    { number: "03", title: t.aboutS3Title, body: t.aboutS3Body },
+    { number: "04", title: t.aboutS4Title, body: t.aboutS4Body },
+  ];
+
   return (
     <div>
       <section className="border-b border-line">
         <div className="wrap grid gap-12 py-12 md:grid-cols-[1.1fr_0.9fr] md:items-center md:py-20">
           <div>
-            <p className="eyebrow text-ember">About this book</p>
+            <p className="eyebrow text-ember">{t.aboutEyebrow}</p>
             <h1 className="display mt-4 text-[clamp(2.8rem,6vw,4.6rem)] leading-[0.94] text-ink">
-              A small book about
+              {t.aboutTitleA}
               <br />
-              <em className="text-ember">one chicken.</em>
+              <em className="text-ember">{t.aboutTitleB}</em>
             </h1>
-            <p className="mt-7 max-w-[52ch] text-[15px] leading-7 text-ink-soft">
-              Murgh brings together regional chicken recipes from across India, and one simple point: Indian chicken is not one dish. Every
-              region has its own spices and its own method. Cook a few of these recipes and you will learn the method,
-              not just the dish.
-            </p>
+            <p className="mt-7 max-w-[52ch] text-[15px] leading-7 text-ink-soft">{t.aboutIntro}</p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link href="/recipes" className="btn btn-dark">
-                See the recipes <span aria-hidden="true">→</span>
+                {t.seeTheRecipes} <span aria-hidden="true">→</span>
               </Link>
               <Link href="/#method" className="btn btn-ghost">
-                The four habits
+                {t.fourHabits}
               </Link>
             </div>
           </div>
@@ -77,12 +53,10 @@ export default function AboutPage() {
       <section className="wrap py-16 md:py-24">
         <div className="grid gap-10 md:grid-cols-[0.7fr_1.3fr] md:gap-16">
           <div>
-            <p className="eyebrow text-ember">The basics</p>
-            <h2 className="display mt-3 text-[clamp(1.9rem,3.6vw,2.7rem)] leading-[1.05] text-ink">
-              What every recipe assumes.
-            </h2>
+            <p className="eyebrow text-ember">{t.aboutBasics}</p>
+            <h2 className="display mt-3 text-[clamp(1.9rem,3.6vw,2.7rem)] leading-[1.05] text-ink">{t.aboutAssumes}</h2>
             <p className="mt-4 max-w-[32ch] text-[13px] leading-6 text-ink-soft">
-              {recipes.length} recipes from {regions.length} regions. Most need one heavy pan. Two need an oven.
+              {format(t.aboutCountLine, { recipes: recipes.length, regions: regions.length })}
             </p>
           </div>
 
@@ -101,18 +75,13 @@ export default function AboutPage() {
       <section className="bg-moss text-paper">
         <div className="wrap grid gap-10 py-16 md:grid-cols-[1.2fr_0.8fr] md:items-center md:py-20">
           <div>
-            <p className="eyebrow text-paper/60">About the drawings</p>
-            <p className="display mt-4 max-w-[32ch] text-[clamp(1.8rem,3.6vw,2.6rem)] leading-[1.08]">
-              Every dish here is drawn, not photographed. So the page shows the food, not the styling.
-            </p>
+            <p className="eyebrow text-paper/60">{t.drawingsEyebrow}</p>
+            <p className="display mt-4 max-w-[32ch] text-[clamp(1.8rem,3.6vw,2.6rem)] leading-[1.08]">{t.drawingsTitle}</p>
           </div>
           <div className="justify-self-start md:justify-self-end">
-            <p className="max-w-[36ch] text-[13px] leading-6 text-paper/70">
-              Each plate has just three things: the dish, the masala and a garnish. If your pan looks different from the
-              drawing, it is probably right.
-            </p>
+            <p className="max-w-[36ch] text-[13px] leading-6 text-paper/70">{t.drawingsBody}</p>
             <Link href="/recipes" className="btn btn-onDarkGhost mt-6">
-              See all {recipes.length} recipes <span aria-hidden="true">→</span>
+              {format(t.drawingsCta, { count: recipes.length })} <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -120,11 +89,9 @@ export default function AboutPage() {
 
       <section className="border-b border-line py-14">
         <div className="wrap flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
-          <p className="display max-w-[30ch] text-[clamp(1.6rem,3vw,2.2rem)] leading-tight text-ink">
-            Cook it the way you like it, and change it to your taste.
-          </p>
+          <p className="display max-w-[30ch] text-[clamp(1.6rem,3vw,2.2rem)] leading-tight text-ink">{t.aboutClosing}</p>
           <Link href="/recipes/murgh-makhani" className="btn btn-ember">
-            Start with butter chicken <span aria-hidden="true">→</span>
+            {t.aboutClosingCta} <span aria-hidden="true">→</span>
           </Link>
         </div>
       </section>

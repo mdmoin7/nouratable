@@ -2,36 +2,31 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LanguageSelector, useLanguage } from "@/components/language-provider";
+import { LocaleSwitcher } from "@/components/locale-switcher";
+import type { Dictionary, Locale } from "@/lib/i18n";
 
-const links = [
-  { href: "/recipes", key: "recipes" },
-  { href: "/saved", label: "Saved" },
-  { href: "/recently-viewed", label: "Recently viewed" },
-  { href: "/shopping-list", label: "Shopping list" },
-  { href: "/meal-planner", label: "Meal planner" },
-  { href: "/#method", key: "method" },
-  { href: "/#pantry", key: "pantry" },
-  { href: "/about", key: "about" },
-] as const;
-
-export function SiteHeader() {
+export function SiteHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
   const pathname = usePathname();
   const { t } = useLanguage();
+
+  const links = [
+    { href: "/recipes", label: t.navRecipes },
+    { href: "/#method", label: t.navMethod },
+    { href: "/#pantry", label: t.navPantry },
+    { href: "/about", label: t.navAbout },
+  ];
 
   return (
     <header className="sticky top-0 z-30 border-b border-line/80 bg-paper/90 backdrop-blur-md">
       <div className="wrap flex h-[76px] items-center justify-between gap-4">
-        <Link href="/" className="group flex shrink-0 items-baseline gap-3">
+        <Link href="/" className="group flex items-baseline gap-3">
           <span className="display text-[26px] leading-none tracking-[0.04em] text-ink uppercase">Murgh</span>
           <span className="hidden text-[9px] font-medium uppercase leading-[1.4] tracking-[0.22em] text-ink-soft sm:block">
-            Indian chicken
-            <br />
-            cookbook
+            {t.tagline}
           </span>
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -44,27 +39,28 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-3">
-          <LanguageSelector />
-          <Link href="/recipes" className="btn btn-dark hidden sm:inline-flex">
-            {t("startCooking")} <span aria-hidden="true">→</span>
+        <div className="flex items-center gap-2.5">
+          <LocaleSwitcher locale={locale} label={t.languageLabel} />
+          <Link href="/recipes" className="btn btn-dark hidden lg:inline-flex">
+            {t.startCooking} <span aria-hidden="true">→</span>
           </Link>
-          <details className="relative lg:hidden">
-            <summary aria-controls="mobile-primary-navigation" className="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-ink/20 text-ink [&::-webkit-details-marker]:hidden">
-              <span className="sr-only">Open menu</span>
-              <span aria-hidden="true" className="text-sm">☰</span>
+          <details className="relative md:hidden">
+            <summary className="grid h-10 w-10 cursor-pointer list-none place-items-center rounded-full border border-ink/20 text-ink">
+              <span className="sr-only">{t.openMenu}</span>
+              <span aria-hidden="true" className="text-sm">
+                ☰
+              </span>
             </summary>
-            <nav id="mobile-primary-navigation" aria-label="Mobile primary" className="absolute right-0 top-12 w-48 rounded-2xl border border-line bg-card p-2 shadow-xl">
+            <div className="absolute right-0 top-12 w-52 rounded-2xl border border-line bg-card p-2 shadow-xl">
               {links.map((link) => (
                 <Link key={link.href} href={link.href} className="block rounded-xl px-3 py-2 text-sm text-ink-soft hover:bg-paper hover:text-ink">
                   {"label" in link ? link.label : t(link.key)}
                 </Link>
               ))}
-              <div className="my-1 border-t border-line" />
-              <Link href="/#method" className="block rounded-xl px-3 py-2.5 text-sm text-ink-soft hover:bg-paper hover:text-ink">{t("method")}</Link>
-              <Link href="/about" className="block rounded-xl px-3 py-2.5 text-sm text-ink-soft hover:bg-paper hover:text-ink">{t("about")}</Link>
-              <Link href="/recipes" className="mt-1 block rounded-xl bg-ink px-3 py-2.5 text-sm font-medium text-paper">{t("startCooking")}</Link>
-            </nav>
+              <Link href="/recipes" className="mt-1 block rounded-xl bg-ink px-3 py-2 text-sm font-medium text-paper">
+                {t.startCooking}
+              </Link>
+            </div>
           </details>
         </div>
       </div>

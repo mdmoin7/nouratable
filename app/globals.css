@@ -12,8 +12,8 @@
   --color-moss: #2c4035;
   --color-moss-soft: #e3e4d9;
 
-  --font-display: var(--font-fraunces), Georgia, "Times New Roman", serif;
-  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), var(--font-devanagari-display), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-outfit), var(--font-devanagari), ui-sans-serif, system-ui, sans-serif;
 }
 
 * {
@@ -92,6 +92,7 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  white-space: nowrap;
   border-radius: 999px;
   padding: 13px 22px;
   font-size: 13px;

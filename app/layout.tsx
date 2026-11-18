@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Fraunces, Outfit } from "next/font/google";
+import { Fraunces, Noto_Sans_Devanagari, Noto_Serif_Devanagari, Outfit } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { PwaRegister } from "@/components/pwa-register";
-import { LanguageProvider } from "@/components/language-provider";
-import Link from "next/link";
+import { getLocaleAndDictionary } from "@/lib/locale";
 import "./globals.css";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\/$/, "");
@@ -16,75 +14,49 @@ const fraunces = Fraunces({
   axes: ["SOFT", "WONK", "opsz"],
 });
 
-export const metadata: Metadata = {
-  manifest: "/manifest.webmanifest",
-  title: {
-    default: "Murgh — a modern Indian chicken cookbook",
-    template: "%s · Murgh",
-  },
-  description:
-    "Discover regional Indian chicken recipes from across India. Explore curries, biryanis, roasts and grills with measured ingredients and step-by-step cooking instructions.",
-  applicationName: "Murgh",
-  authors: [{ name: "Murgh" }],
-  creator: "Murgh",
-  publisher: "Murgh",
-  verification: { google: "5D7XakmY8WlTT2PYRQhGFV4xknOSXrAVAVOpUXkEor4" },
-  metadataBase: new URL(siteUrl),
-  alternates: { canonical: "/" },
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
-  twitter: { card: "summary_large_image", title: "Murgh — Indian Chicken Cookbook", description: "Regional Indian chicken recipes for home cooks." },
-  openGraph: {
-    siteName: "Murgh",
-    locale: "en_IN",
-    title: "Murgh — a modern Indian chicken cookbook",
-    description: "Regional Indian chicken recipes for home kitchens.",
-    type: "website",
-  },
-};
+// Devanagari companion faces so Hindi sits comfortably beside the Latin type.
+const devanagari = Noto_Sans_Devanagari({
+  variable: "--font-devanagari",
+  subsets: ["devanagari"],
+  weight: ["400", "500", "600"],
+});
+const devanagariDisplay = Noto_Serif_Devanagari({
+  variable: "--font-devanagari-display",
+  subsets: ["devanagari"],
+  weight: ["400", "500", "600"],
+});
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getLocaleAndDictionary();
+
+  return {
+    title: {
+      default: t.metaTitle,
+      template: "%s · Murgh",
+    },
+    description: t.metaDescription,
+    openGraph: {
+      title: t.metaTitle,
+      description: t.metaDescription,
+      type: "website",
+    },
+  };
+}
+
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const { locale, t } = await getLocaleAndDictionary();
+
   return (
-    <html lang="en" className={`${outfit.variable} ${fraunces.variable}`}>
+    <html
+      lang={locale}
+      className={`${outfit.variable} ${fraunces.variable} ${devanagari.variable} ${devanagariDisplay.variable}`}
+    >
       <body>
-        <PwaRegister />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                name: "Murgh",
-                url: siteUrl,
-                description: "A modern Indian chicken cookbook featuring regional recipes for home cooks.",
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "WebSite",
-                name: "Murgh",
-                url: siteUrl,
-                description: "Regional Indian chicken recipes, cooking methods and kitchen guides.",
-                inLanguage: "en-IN",
-                potentialAction: {
-                  "@type": "SearchAction",
-                  target: {
-                    "@type": "EntryPoint",
-                    urlTemplate: siteUrl + "/recipes?q={search_term_string}",
-                  },
-                  "query-input": "required name=search_term_string",
-                },
-              },
-            ]).replace(/</g, "\\u003c"),
-          }}
-        />
-        <LanguageProvider>
-          <div className="flex min-h-screen flex-col">
-            <Link href="#main-content" className="skip-link">Skip to main content</Link>
-            <SiteHeader />
-            <main id="main-content" tabIndex={-1} className="flex-1 outline-none">{children}</main>
-            <SiteFooter />
-          </div>
-        </LanguageProvider>
+        <div className="flex min-h-screen flex-col">
+          <SiteHeader locale={locale} t={t} />
+          <main className="flex-1">{children}</main>
+          <SiteFooter t={t} />
+        </div>
       </body>
     </html>
   );
