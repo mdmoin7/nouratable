@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { format, type Dictionary } from "@/lib/i18n";
 import { recipes, regions } from "@/lib/recipes";

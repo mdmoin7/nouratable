@@ -1080,6 +1080,5280 @@ export const recipes: Recipe[] = [
     ],
     serveWith: ["Sheermal", "Khasta roti", "Green salad", "Biryani, as a first course"],
   },
+  {
+    "slug": "maharashtra-kombdi-rassa",
+    "name": "Maharashtrian Chicken Rassa",
+    "native": "Kombdi Rassa",
+    "subtitle": "A fiery, thin village-style chicken curry with roasted coconut and goda masala.",
+    "region": "Maharashtra",
+    "origin": "Konkan and Western Maharashtra",
+    "heat": 3,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Kombdi rassa is a home-style chicken curry from Maharashtra. Roasted coconut, onion and regional goda masala give the gravy its earthy body. Keep it thinner than a restaurant curry and serve it with bhakri or rice.",
+    "tags": [
+      "Goda masala",
+      "Roasted coconut",
+      "Village style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, cut into medium pieces",
+          "1 tsp turmeric (haldi)",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp red chilli powder",
+          "1 tsp salt",
+          "1 tbsp lemon juice"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp oil",
+          "2 onions, sliced",
+          "½ cup grated coconut",
+          "2 tbsp goda masala",
+          "1 tomato, chopped",
+          "1 tsp coriander powder",
+          "250 ml hot water",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Roast the coconut",
+        "body": "Dry roast the coconut on low heat till golden. Keep aside."
+      },
+      {
+        "title": "Brown the onion",
+        "body": "Heat oil and fry onions till deep golden. Add ginger-garlic paste and cook for a minute."
+      },
+      {
+        "title": "Make the masala",
+        "body": "Grind the roasted coconut and onions with goda masala, coriander and a little water."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Fry chicken with turmeric, chilli and salt for 6 minutes. Add tomato and cook till soft."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add the ground masala and hot water. Cover and cook for 20–25 minutes till the chicken is fully cooked."
+      },
+      {
+        "title": "Finish",
+        "body": "Adjust salt, add coriander and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Roast coconut slowly; burnt coconut makes the gravy bitter.",
+      "Use a little more water for a rassa to eat with rice.",
+      "Goda masala varies by brand, so adjust salt after simmering."
+    ],
+    "serveWith": [
+      "Jowar bhakri",
+      "Steamed rice",
+      "Kanda bhaji"
+    ]
+  },
+  {
+    "slug": "kolhapuri-chicken",
+    "name": "Kolhapuri Chicken",
+    "native": "Kolhapuri Kombdi",
+    "subtitle": "A bold red curry built on roasted dry chilli, coconut and sesame masala.",
+    "region": "Maharashtra",
+    "origin": "Kolhapur, Maharashtra",
+    "heat": 3,
+    "prep": 25,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Kolhapuri chicken is known for a deep roasted masala and a strong chilli finish. This home version uses dry coconut, sesame and whole spices ground fresh. The colour should come from the masala, not only chilli powder.",
+    "tags": [
+      "Roasted masala",
+      "Sesame",
+      "Hot curry"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, bone-in pieces",
+          "1 tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp salt",
+          "1 tbsp lemon juice"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "2 tbsp oil",
+          "1 onion, sliced",
+          "¼ cup dry coconut",
+          "1 tbsp sesame seeds",
+          "2 tbsp coriander seeds",
+          "5 dried red chillies",
+          "1 tsp cumin seeds",
+          "4 cloves",
+          "1 cinnamon stick",
+          "1 tomato, chopped",
+          "300 ml hot water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Roast the spices",
+        "body": "Dry roast coriander, cumin, cloves, cinnamon and chillies till aromatic. Remove."
+      },
+      {
+        "title": "Roast coconut and sesame",
+        "body": "Roast coconut and sesame separately till golden. Cool everything."
+      },
+      {
+        "title": "Grind the masala",
+        "body": "Grind roasted ingredients with fried onion and a little water to a thick paste."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Heat oil, add ginger-garlic paste and chicken. Fry for 7 minutes with turmeric and salt."
+      },
+      {
+        "title": "Simmer the curry",
+        "body": "Add tomato and ground masala. Fry till oil shows at the edges. Add hot water, cover and cook for 25 minutes."
+      },
+      {
+        "title": "Serve",
+        "body": "Check the chicken is cooked through. Finish with coriander and serve hot."
+      }
+    ],
+    "notes": [
+      "Use Byadgi chillies for colour and hotter chillies for heat.",
+      "Roast each spice separately because they brown at different speeds.",
+      "Add water gradually to keep the curry thick."
+    ],
+    "serveWith": [
+      "Jowar bhakri",
+      "Steamed rice",
+      "Sliced onion"
+    ]
+  },
+  {
+    "slug": "andhra-kodi-kura",
+    "name": "Andhra Chicken Curry",
+    "native": "Andhra Kodi Kura",
+    "subtitle": "A spicy Andhra chicken curry with curry leaves, chilli and a tamarind lift.",
+    "region": "Andhra Pradesh",
+    "origin": "Andhra Pradesh",
+    "heat": 3,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Kodi kura changes across Andhra homes. This version balances chilli, curry leaves and a little tamarind for a lively gravy. Use bone-in chicken and let the masala fry properly before adding water.",
+    "tags": [
+      "Andhra style",
+      "Curry leaves",
+      "Tamarind"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, bone-in",
+          "1 tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1½ tsp chilli powder",
+          "1 tsp salt",
+          "Small lemon-sized tamarind, soaked"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp oil",
+          "1 tsp mustard seeds",
+          "1 tsp cumin seeds",
+          "2 onions, finely chopped",
+          "2 sprigs curry leaves",
+          "1 tomato, chopped",
+          "1 tbsp coriander powder",
+          "½ tsp cumin powder",
+          "1 green chilli",
+          "250 ml hot water",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Marinate",
+        "body": "Mix chicken with turmeric, ginger-garlic paste, chilli and salt. Keep aside for 20 minutes."
+      },
+      {
+        "title": "Temper",
+        "body": "Heat oil. Add mustard, cumin and curry leaves. Add onions and fry till golden."
+      },
+      {
+        "title": "Cook tomato",
+        "body": "Add tomato, coriander and cumin powders. Cook till the tomato softens and oil separates."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Add chicken and fry on medium-high heat for 8 minutes so the pieces are coated."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add strained tamarind water and hot water. Cover and cook for 20–25 minutes till tender."
+      },
+      {
+        "title": "Finish",
+        "body": "Add slit green chilli and coriander. Adjust tang and salt before serving."
+      }
+    ],
+    "notes": [
+      "Tamarind should add a gentle sourness, not dominate the chilli.",
+      "Use chilli powder to taste; Andhra varieties differ in heat.",
+      "Simmer gently until the chicken is cooked through."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Ragi sangati",
+      "Dosa"
+    ]
+  },
+  {
+    "slug": "gongura-chicken",
+    "name": "Gongura Chicken",
+    "native": "Gongura Kodi",
+    "subtitle": "A tangy Andhra chicken curry with sorrel leaves and a roasted spice paste.",
+    "region": "Andhra Pradesh",
+    "origin": "Coastal Andhra",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Gongura leaves have a sharp, lemony taste that gives this Andhra chicken its identity. The leaves are cooked down first, then blended into the masala so the sourness spreads through the gravy.",
+    "tags": [
+      "Gongura",
+      "Sorrel leaves",
+      "Tangy"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, medium pieces",
+          "1 tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp chilli powder",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "2 bunches gongura leaves, cleaned",
+          "3 tbsp oil",
+          "1 onion, sliced",
+          "4 dried red chillies",
+          "1 tsp cumin seeds",
+          "1 tbsp coriander seeds",
+          "½ tsp fenugreek seeds",
+          "200 ml hot water",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Cook the gongura",
+        "body": "Heat a little oil and cook gongura leaves till wilted and soft. Cool and grind to a coarse paste."
+      },
+      {
+        "title": "Roast spices",
+        "body": "Roast dried chillies, cumin, coriander and fenugreek briefly. Grind with the cooked leaves."
+      },
+      {
+        "title": "Fry onion",
+        "body": "Heat remaining oil and fry onion till golden. Add ginger-garlic paste and cook for a minute."
+      },
+      {
+        "title": "Cook chicken",
+        "body": "Add chicken, turmeric, chilli and salt. Fry for 7 minutes till coated."
+      },
+      {
+        "title": "Add gongura paste",
+        "body": "Stir in the paste and fry for 5 minutes. Add hot water and cover."
+      },
+      {
+        "title": "Simmer",
+        "body": "Cook for 20 minutes till chicken is fully cooked and gravy thickens. Finish with coriander."
+      }
+    ],
+    "notes": [
+      "Gongura is naturally sour; taste before adding lemon or tamarind.",
+      "Use tender leaves and remove thick stems.",
+      "A little sesame oil gives a traditional flavour."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Jonna roti",
+      "Pappu"
+    ]
+  },
+  {
+    "slug": "kerala-varutharachathu",
+    "name": "Kerala Roasted Coconut Chicken Curry",
+    "native": "Kozhi Varutharachathu",
+    "subtitle": "Chicken simmered in a freshly roasted coconut, coriander and spice gravy.",
+    "region": "Kerala",
+    "origin": "Central Kerala",
+    "heat": 2,
+    "prep": 25,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Varutharachathu means roasted and ground. Coconut, coriander and spices are browned carefully, ground smooth and simmered with chicken. The roasted paste makes this Kerala curry different from a simple coconut milk curry.",
+    "tags": [
+      "Roasted coconut",
+      "Kerala curry",
+      "Coconut oil"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, bone-in",
+          "½ tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "1 cup grated coconut",
+          "2 tbsp coriander seeds",
+          "4 dried red chillies",
+          "½ tsp fennel seeds",
+          "3 cloves",
+          "1 small cinnamon stick",
+          "3 tbsp coconut oil",
+          "2 onions, sliced",
+          "2 sprigs curry leaves",
+          "1 tomato, chopped",
+          "300 ml hot water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Roast coconut",
+        "body": "Dry roast coconut on low heat till evenly deep golden. Do not burn."
+      },
+      {
+        "title": "Roast spices",
+        "body": "Roast coriander, chillies, fennel, cloves and cinnamon briefly. Grind with coconut and water."
+      },
+      {
+        "title": "Start the curry",
+        "body": "Heat coconut oil. Fry onions and curry leaves till golden. Add ginger-garlic paste."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Add chicken, turmeric and salt. Fry till the outside changes colour."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add tomato and ground coconut paste. Add hot water, cover and cook for 25 minutes."
+      },
+      {
+        "title": "Finish",
+        "body": "Cook uncovered to thicken. Check chicken is fully cooked and serve hot."
+      }
+    ],
+    "notes": [
+      "The coconut should be golden brown, not black.",
+      "Add water in stages; the curry thickens as it rests.",
+      "Use fresh curry leaves for the best aroma."
+    ],
+    "serveWith": [
+      "Appam",
+      "Matta rice",
+      "Malabar parotta"
+    ]
+  },
+  {
+    "slug": "malabar-chicken-roast",
+    "name": "Malabar Chicken Roast",
+    "native": "Malabar Kozhi Roast",
+    "subtitle": "Peppery chicken roasted down with onions, curry leaves and coconut oil.",
+    "region": "Kerala",
+    "origin": "Malabar, Kerala",
+    "heat": 3,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Malabar chicken roast is a semi-dry preparation where onions cook down around the chicken. Pepper and curry leaves give warmth, while coconut oil adds the familiar coastal aroma.",
+    "tags": [
+      "Malabar",
+      "Pepper roast",
+      "Semi-dry"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, small pieces",
+          "1 tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp black pepper",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp coconut oil",
+          "3 onions, thinly sliced",
+          "2 sprigs curry leaves",
+          "2 tomatoes, chopped",
+          "1 tsp chilli powder",
+          "1 tsp coriander powder",
+          "½ tsp fennel powder",
+          "½ tsp garam masala",
+          "100 ml hot water",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Marinate",
+        "body": "Mix chicken with turmeric, pepper, ginger-garlic paste and salt. Keep aside for 20 minutes."
+      },
+      {
+        "title": "Fry onions",
+        "body": "Heat coconut oil. Add curry leaves and onions. Fry till deep golden and soft."
+      },
+      {
+        "title": "Build masala",
+        "body": "Add tomatoes, chilli and coriander powders. Cook till thick."
+      },
+      {
+        "title": "Cook chicken",
+        "body": "Add chicken and fry on medium heat for 7 minutes."
+      },
+      {
+        "title": "Cover",
+        "body": "Add hot water, cover and cook for 18–20 minutes till chicken is tender."
+      },
+      {
+        "title": "Roast down",
+        "body": "Remove lid and cook on high heat till the masala clings to chicken. Add fennel and garam masala."
+      }
+    ],
+    "notes": [
+      "Slice onions evenly so they cook at the same pace.",
+      "Keep stirring during the final roast to prevent sticking.",
+      "Use more pepper for a sharper finish."
+    ],
+    "serveWith": [
+      "Pathiri",
+      "Appam",
+      "Ghee rice"
+    ]
+  },
+  {
+    "slug": "goan-xacuti",
+    "name": "Goan Chicken Xacuti",
+    "native": "Galinha Xacuti",
+    "subtitle": "A fragrant Goan curry with toasted coconut, poppy seeds and a complex spice blend.",
+    "region": "Goa",
+    "origin": "Goa",
+    "heat": 3,
+    "prep": 30,
+    "cook": 50,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Xacuti is a Goan curry known for its roasted coconut and layered spice paste. The spices are toasted separately, then ground with coconut to make a thick, aromatic gravy. It differs from the vinegar-forward taste of vindaloo.",
+    "tags": [
+      "Goan",
+      "Roasted coconut",
+      "Spice paste"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, medium pieces",
+          "1 tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "1 cup grated coconut",
+          "2 tbsp coriander seeds",
+          "4 dried red chillies",
+          "1 tsp cumin seeds",
+          "½ tsp poppy seeds",
+          "4 cloves",
+          "1 cinnamon stick",
+          "½ tsp black peppercorns",
+          "3 tbsp oil",
+          "2 onions, sliced",
+          "1 tomato, chopped",
+          "300 ml hot water",
+          "Small ball tamarind"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Roast coconut",
+        "body": "Roast coconut slowly till golden brown. Keep aside."
+      },
+      {
+        "title": "Toast spices",
+        "body": "Toast coriander, cumin, poppy, cloves, cinnamon, pepper and chillies until fragrant."
+      },
+      {
+        "title": "Grind paste",
+        "body": "Grind toasted spices and coconut with a little water to a smooth paste."
+      },
+      {
+        "title": "Fry base",
+        "body": "Heat oil. Fry onions till golden, add ginger-garlic paste and tomato."
+      },
+      {
+        "title": "Cook chicken",
+        "body": "Add chicken and turmeric. Fry for 6–8 minutes."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add ground paste, tamarind and hot water. Cover and cook for 25–30 minutes till done. Adjust salt."
+      }
+    ],
+    "notes": [
+      "Tamarind should balance the roasted spices without making the curry too sour.",
+      "Do not rush the coconut roasting; pale coconut gives a lighter gravy.",
+      "Serve with plain rice to let the masala stand out."
+    ],
+    "serveWith": [
+      "Goan rice",
+      "Poi",
+      "Sanna"
+    ]
+  },
+  {
+    "slug": "kashmiri-chicken-yakhni",
+    "name": "Kashmiri Chicken Yakhni",
+    "native": "Kokur Yakhni",
+    "subtitle": "A gentle curd-based chicken curry scented with fennel, dry ginger and whole spices.",
+    "region": "Kashmir",
+    "origin": "Kashmir Valley",
+    "heat": 1,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Kashmiri yakhni is a delicate yoghurt gravy scented with fennel and dry ginger. Unlike many North Indian curries, it does not depend on tomato or a heavy onion base. Keep the heat gentle so the curd stays smooth.",
+    "tags": [
+      "Kashmiri",
+      "Fennel",
+      "Curd gravy"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, medium pieces",
+          "200 g thick curd, whisked",
+          "1 tsp salt",
+          "½ tsp dry ginger powder (saunth)",
+          "1 tbsp fennel powder"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp mustard oil",
+          "1 bay leaf",
+          "1 black cardamom",
+          "1 small cinnamon stick",
+          "4 green cardamom",
+          "½ tsp cumin seeds",
+          "½ tsp asafoetida (hing)",
+          "1 tsp fennel powder",
+          "½ tsp dry ginger powder",
+          "250 ml hot water",
+          "A few mint leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare curd",
+        "body": "Whisk curd till smooth. Keep it at room temperature while preparing the pan."
+      },
+      {
+        "title": "Temper spices",
+        "body": "Heat mustard oil. Add bay leaf, cardamom, cinnamon, cumin and hing."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Add chicken and salt. Fry till the outside changes colour."
+      },
+      {
+        "title": "Add curd",
+        "body": "Lower the flame. Add curd a spoon at a time, stirring continuously so it does not split."
+      },
+      {
+        "title": "Season",
+        "body": "Add fennel and dry ginger powder. Stir well and add hot water."
+      },
+      {
+        "title": "Simmer",
+        "body": "Cover and cook gently for 20–25 minutes till chicken is cooked through. Finish with mint."
+      }
+    ],
+    "notes": [
+      "Keep the flame low when adding curd.",
+      "Fennel is the main flavour; do not replace it with garam masala.",
+      "This is a light gravy, not a thick red curry."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Kashmiri girda",
+      "Jeera rice"
+    ]
+  },
+  {
+    "slug": "bihari-chicken-mustard",
+    "name": "Bihari Mustard Chicken",
+    "native": "Bihari Sarson Murgh",
+    "subtitle": "A mustard-oil chicken curry with pungent mustard, garlic and a bright chilli finish.",
+    "region": "Bihar",
+    "origin": "Bihar",
+    "heat": 3,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "This home-style Bihari chicken uses mustard oil and a freshly ground mustard paste for a sharp, pungent gravy. Use the mustard carefully and balance it with tomato and lemon. It pairs well with rice or sattu roti.",
+    "tags": [
+      "Mustard oil",
+      "Bihari home style",
+      "Pungent"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, medium pieces",
+          "1 tsp turmeric",
+          "1 tbsp garlic paste",
+          "1 tsp chilli powder",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp mustard oil",
+          "2 tbsp yellow mustard seeds, soaked",
+          "1 tsp cumin seeds",
+          "2 onions, sliced",
+          "2 tomatoes, chopped",
+          "1 tsp coriander powder",
+          "1 green chilli",
+          "250 ml hot water",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Soak mustard",
+        "body": "Soak mustard seeds for 20 minutes. Grind with a little water to a smooth paste."
+      },
+      {
+        "title": "Heat oil",
+        "body": "Heat mustard oil till it smokes lightly. Lower the flame and add cumin."
+      },
+      {
+        "title": "Fry onions",
+        "body": "Add onions and fry till golden. Add garlic paste and cook for a minute."
+      },
+      {
+        "title": "Cook chicken",
+        "body": "Add chicken, turmeric, chilli and salt. Fry for 7 minutes."
+      },
+      {
+        "title": "Add gravy",
+        "body": "Add tomatoes and coriander powder. Cook till soft, then add mustard paste and hot water."
+      },
+      {
+        "title": "Simmer",
+        "body": "Cover and cook for 20–25 minutes till the chicken is done. Finish with green chilli and coriander."
+      }
+    ],
+    "notes": [
+      "Soaked mustard paste can turn bitter if boiled hard; simmer gently.",
+      "Heat mustard oil till it smokes, then lower the flame.",
+      "Use a mix of yellow and black mustard for sharper flavour."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Sattu roti",
+      "Litti"
+    ]
+  },
+  {
+    "slug": "rajasthani-safed-murg",
+    "name": "Rajasthani Safed Chicken",
+    "native": "Safed Maas Style Murgh",
+    "subtitle": "A pale, mildly spiced chicken curry with curd, nuts, pepper and cardamom.",
+    "region": "Rajasthan",
+    "origin": "Rajasthan",
+    "heat": 1,
+    "prep": 25,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Inspired by the pale, nut-rich gravies of Rajasthan, this chicken version uses curd, cashew and pepper rather than a red chilli base. It is a mild festive curry for a slower meal.",
+    "tags": [
+      "Mild",
+      "Nut gravy",
+      "Festive"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken",
+          "150 g thick curd",
+          "1 tbsp ginger-garlic paste",
+          "½ tsp white pepper",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp ghee",
+          "1 onion, boiled and ground",
+          "40 g cashews, soaked",
+          "1 tbsp melon seeds",
+          "4 green cardamom",
+          "1 bay leaf",
+          "½ tsp black pepper",
+          "100 ml fresh cream",
+          "200 ml hot water",
+          "A pinch of saffron"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Make nut paste",
+        "body": "Grind soaked cashews and melon seeds with a little water."
+      },
+      {
+        "title": "Cook onion",
+        "body": "Heat ghee with cardamom and bay leaf. Add onion paste and cook on low till pale golden."
+      },
+      {
+        "title": "Add chicken",
+        "body": "Add ginger-garlic paste and chicken. Fry gently for 6 minutes."
+      },
+      {
+        "title": "Add curd",
+        "body": "Lower heat and stir in whisked curd gradually."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add nut paste, pepper, saffron and hot water. Cover and cook 22–25 minutes."
+      },
+      {
+        "title": "Finish",
+        "body": "Add cream on low heat, adjust salt and switch off before it boils."
+      }
+    ],
+    "notes": [
+      "Keep the gravy pale; do not brown the onions deeply.",
+      "Whisk curd well and add slowly over low heat.",
+      "Use fresh white pepper for a clean warmth."
+    ],
+    "serveWith": [
+      "Roomali roti",
+      "Pulao",
+      "Sheermal"
+    ]
+  },
+  {
+    "slug": "himachali-chicken-madra",
+    "name": "Himachali Chicken Madra",
+    "native": "Pahari Murgh Madra",
+    "subtitle": "A curd-rich hill-style chicken curry with whole spices and a slow simmer.",
+    "region": "Himachal Pradesh",
+    "origin": "Himachal Pradesh",
+    "heat": 2,
+    "prep": 20,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Madra is associated with Himachali cooking and is often made with pulses. This chicken adaptation borrows the region's yoghurt-rich, gently spiced gravy, with chickpeas adding texture. It is a Murgh variation rather than a claim that chicken madra is the sole traditional form.",
+    "tags": [
+      "Pahari inspired",
+      "Curd gravy",
+      "Chickpeas"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "700 g chicken",
+          "150 g curd, whisked",
+          "150 g cooked chickpeas",
+          "1 tsp ginger paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp ghee",
+          "1 tsp cumin seeds",
+          "3 cloves",
+          "1 cinnamon stick",
+          "1 black cardamom",
+          "½ tsp turmeric",
+          "1 tsp coriander powder",
+          "½ tsp fennel powder",
+          "250 ml hot water",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Temper",
+        "body": "Heat ghee and add cumin, cloves, cinnamon and black cardamom."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Add ginger and chicken. Fry for 6–7 minutes."
+      },
+      {
+        "title": "Season",
+        "body": "Add turmeric, coriander and fennel. Stir for a minute."
+      },
+      {
+        "title": "Add curd",
+        "body": "Lower the flame and add whisked curd gradually while stirring."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add chickpeas and hot water. Cover and cook for 22–25 minutes till chicken is cooked."
+      },
+      {
+        "title": "Finish",
+        "body": "Adjust salt and garnish with coriander."
+      }
+    ],
+    "notes": [
+      "This is a regional adaptation inspired by madra's curd-based style.",
+      "Use cooked chickpeas so they do not stay hard in the curry.",
+      "Keep the flame low after adding curd."
+    ],
+    "serveWith": [
+      "Chakki ki roti",
+      "Steamed rice",
+      "Cucumber salad"
+    ]
+  },
+  {
+    "slug": "assamese-chicken-khar",
+    "name": "Assamese Chicken Khar",
+    "native": "Kharir Logot Murgi",
+    "subtitle": "A light Assamese chicken preparation with raw papaya, ginger and a gentle alkaline note.",
+    "region": "Assam",
+    "origin": "Assam",
+    "heat": 1,
+    "prep": 20,
+    "cook": 35,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Khar is a distinctive Assamese alkaline preparation traditionally associated with banana-ash filtrate. This accessible chicken version uses a small amount of food-grade khar water where available; never substitute household cleaning soda. It is light and best eaten with rice.",
+    "tags": [
+      "Assamese",
+      "Khar",
+      "Raw papaya"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "700 g chicken, small pieces",
+          "150 g raw papaya, peeled and cubed",
+          "1 tsp ginger paste",
+          "½ tsp turmeric",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "2 tbsp mustard oil",
+          "1 potato, cubed",
+          "1 onion, sliced",
+          "1 tomato, chopped",
+          "½ tsp black pepper",
+          "100 ml water",
+          "1–2 tbsp food-grade khar water, optional",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare papaya",
+        "body": "Peel and cube raw papaya. Keep aside."
+      },
+      {
+        "title": "Fry base",
+        "body": "Heat mustard oil. Fry potato and onion till lightly golden."
+      },
+      {
+        "title": "Add chicken",
+        "body": "Add chicken, ginger, turmeric and salt. Fry for 6 minutes."
+      },
+      {
+        "title": "Cook vegetables",
+        "body": "Add tomato, papaya, pepper and water. Cover and cook 15–18 minutes."
+      },
+      {
+        "title": "Finish with khar",
+        "body": "Add food-grade khar water a little at a time, only if using. Simmer briefly and taste."
+      },
+      {
+        "title": "Serve",
+        "body": "Check chicken is fully cooked and serve with steamed rice."
+      }
+    ],
+    "notes": [
+      "Use only food-grade khar supplied for cooking; omit if unsure.",
+      "Do not use washing soda or an unmeasured alkaline substitute.",
+      "Raw papaya softens as it cooks and helps thicken the broth."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Khar",
+      "Lemon wedge"
+    ]
+  },
+  {
+    "slug": "nagaland-smoked-chicken",
+    "name": "Naga Smoked Chicken Curry",
+    "native": "Naga Smoked Murgh",
+    "subtitle": "A smoky chilli chicken curry inspired by Naga home cooking and smoked ingredients.",
+    "region": "Nagaland",
+    "origin": "Nagaland",
+    "heat": 3,
+    "prep": 20,
+    "cook": 35,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Smoking and dried chillies are used in several Naga food traditions. This home-kitchen chicken curry uses smoked chicken or smoked chilli as a flavour cue, with bamboo shoot optional. It is a practical adaptation, not a single canonical Naga recipe.",
+    "tags": [
+      "Northeast",
+      "Smoked flavour",
+      "Bamboo shoot"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "700 g chicken",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp chilli flakes",
+          "1 tsp salt",
+          "½ tsp turmeric"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "2 tbsp mustard oil",
+          "1 onion, sliced",
+          "2 tomatoes, chopped",
+          "2 dried smoked chillies",
+          "100 g cooked bamboo shoot, optional",
+          "½ tsp black pepper",
+          "200 ml hot water",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Temper",
+        "body": "Heat mustard oil and add crushed dried chillies."
+      },
+      {
+        "title": "Fry onion",
+        "body": "Add onion and fry till soft and lightly golden."
+      },
+      {
+        "title": "Add chicken",
+        "body": "Add ginger-garlic paste and chicken. Fry for 7 minutes."
+      },
+      {
+        "title": "Add tomato",
+        "body": "Add tomatoes, turmeric, pepper and salt. Cook till tomatoes soften."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add bamboo shoot if using and hot water. Cover and cook 20 minutes till chicken is done."
+      },
+      {
+        "title": "Finish",
+        "body": "Remove lid to reduce gravy. Taste for salt and serve."
+      }
+    ],
+    "notes": [
+      "Bamboo shoot has a strong aroma; rinse and cook it before adding.",
+      "Use smoked chilli if smoked chicken is not easy to source.",
+      "Naga food varies widely between communities and households."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Boiled greens",
+      "Chilli chutney"
+    ]
+  },
+  {
+    "slug": "manipuri-chicken-kangshoi",
+    "name": "Manipuri Chicken Kangshoi",
+    "native": "Yen Thongba Inspired",
+    "subtitle": "A light broth with chicken, seasonal vegetables, ginger and fresh herbs.",
+    "region": "Manipur",
+    "origin": "Manipur",
+    "heat": 1,
+    "prep": 15,
+    "cook": 30,
+    "serves": 4,
+    "variant": "soup",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Kangshoi is a light Manipuri vegetable stew. This chicken variation is inspired by its simple broth and seasonal vegetables; it is not presented as a canonical traditional meat recipe. Keep the seasoning clean and let the vegetables flavour the stock.",
+    "tags": [
+      "Northeast",
+      "Light broth",
+      "Vegetables"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "600 g chicken, bone-in small pieces",
+          "1 tsp ginger, crushed",
+          "1 tsp salt",
+          "½ tsp turmeric"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "1 potato, cubed",
+          "100 g pumpkin, cubed",
+          "100 g beans, cut",
+          "1 tomato, quartered",
+          "2 green chillies",
+          "1 litre water",
+          "Spring onion greens",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Start broth",
+        "body": "Add chicken, ginger, turmeric, salt and water to a pot. Bring to a simmer and skim foam."
+      },
+      {
+        "title": "Cook chicken",
+        "body": "Cover partly and simmer for 18 minutes."
+      },
+      {
+        "title": "Add vegetables",
+        "body": "Add potato, pumpkin, beans and tomato. Simmer till vegetables soften."
+      },
+      {
+        "title": "Season",
+        "body": "Add green chillies and adjust salt. Cook until chicken is thoroughly cooked."
+      },
+      {
+        "title": "Finish",
+        "body": "Switch off heat and add spring onion greens and coriander."
+      },
+      {
+        "title": "Serve",
+        "body": "Ladle into bowls with rice."
+      }
+    ],
+    "notes": [
+      "Keep broth at a gentle simmer for clarity.",
+      "Cut vegetables evenly so they cook at the same speed.",
+      "This is an inspired chicken variation on a vegetable stew tradition."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Herb chutney",
+      "Seasonal greens"
+    ]
+  },
+  {
+    "slug": "bihari-chicken-korma",
+    "name": "Bihari Chicken Korma",
+    "native": "Bihari Murgh Korma",
+    "subtitle": "A fragrant mustard-oil chicken korma with curd, fried onion and warm spices.",
+    "region": "Bihar",
+    "origin": "Bihar",
+    "heat": 2,
+    "prep": 25,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "This Bihari home-style korma uses mustard oil, curd and a freshly ground spice mix. It is less fiery than the mustard chicken and gets its flavour from a slow onion base.",
+    "tags": [
+      "Bihari",
+      "Korma",
+      "Mustard oil"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken",
+          "150 g curd",
+          "1 tbsp ginger-garlic paste",
+          "½ tsp turmeric",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp mustard oil",
+          "2 onions, sliced",
+          "1 tsp cumin",
+          "3 cloves",
+          "1 cinnamon stick",
+          "2 green cardamom",
+          "1 tsp coriander powder",
+          "½ tsp chilli powder",
+          "1 tomato, chopped",
+          "250 ml hot water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Brown onion",
+        "body": "Heat mustard oil and fry onions till golden brown. Remove half for garnish."
+      },
+      {
+        "title": "Fry spices",
+        "body": "Add whole spices and ginger-garlic paste. Cook for a minute."
+      },
+      {
+        "title": "Cook chicken",
+        "body": "Add chicken, turmeric and salt. Fry for 7 minutes."
+      },
+      {
+        "title": "Add curd",
+        "body": "Lower heat and add whisked curd gradually, stirring continuously."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add tomato, coriander, chilli and hot water. Cover and cook for 25 minutes."
+      },
+      {
+        "title": "Finish",
+        "body": "Reduce gravy uncovered. Add reserved onions and serve."
+      }
+    ],
+    "notes": [
+      "Use mustard oil for its characteristic aroma.",
+      "Keep stirring while adding curd to avoid splitting.",
+      "Adjust chilli after the curry has simmered."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Sattu roti",
+      "Paratha"
+    ]
+  },
+  {
+    "slug": "karnataka-kundapura-chicken",
+    "name": "Kundapura Chicken Curry",
+    "native": "Kundapura Kori Gassi",
+    "subtitle": "A coastal Karnataka chicken curry with Byadgi chilli, coconut and tamarind.",
+    "region": "Karnataka",
+    "origin": "Kundapura, coastal Karnataka",
+    "heat": 3,
+    "prep": 25,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Kori gassi is a coastal Karnataka chicken curry associated with Mangalorean kitchens. This Kundapura-style variation leans on Byadgi chillies, coconut and tamarind. The red masala should be aromatic, not only hot.",
+    "tags": [
+      "Coastal Karnataka",
+      "Coconut",
+      "Byadgi chilli"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, bone-in",
+          "1 tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "1 cup grated coconut",
+          "6 Byadgi chillies",
+          "1 tbsp coriander seeds",
+          "1 tsp cumin",
+          "½ tsp fenugreek seeds",
+          "4 cloves",
+          "1 cinnamon stick",
+          "3 tbsp coconut oil",
+          "2 onions, sliced",
+          "Small ball tamarind",
+          "300 ml hot water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Roast coconut",
+        "body": "Roast coconut till golden and fragrant."
+      },
+      {
+        "title": "Toast spices",
+        "body": "Toast chillies, coriander, cumin, fenugreek, cloves and cinnamon."
+      },
+      {
+        "title": "Grind masala",
+        "body": "Grind spices with coconut and soaked tamarind to a smooth paste."
+      },
+      {
+        "title": "Fry onion",
+        "body": "Heat coconut oil and fry onion till golden. Add ginger-garlic paste."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Add chicken and turmeric. Fry for 7 minutes."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add masala and hot water. Cover and cook 25 minutes till chicken is tender."
+      }
+    ],
+    "notes": [
+      "Byadgi chillies give deep colour with moderate heat.",
+      "Use tamarind sparingly and adjust after simmering.",
+      "Serve with neer dosa or rice."
+    ],
+    "serveWith": [
+      "Neer dosa",
+      "Steamed rice",
+      "Kori rotti"
+    ]
+  },
+  {
+    "slug": "mangalorean-chicken-sukka",
+    "name": "Mangalorean Chicken Sukka",
+    "native": "Kori Ajadina",
+    "subtitle": "A semi-dry chicken dish coated in roasted coconut, curry leaves and spice masala.",
+    "region": "Karnataka",
+    "origin": "Mangaluru, Karnataka",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Sukka is a dry or semi-dry coastal preparation. The chicken cooks in a roasted coconut masala with curry leaves and Byadgi chilli. Keep the masala thick and scrape the pan so it coats every piece.",
+    "tags": [
+      "Mangalorean",
+      "Semi-dry",
+      "Roasted coconut"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, small pieces",
+          "1 tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "¾ cup grated coconut",
+          "5 Byadgi chillies",
+          "1 tbsp coriander seeds",
+          "½ tsp cumin",
+          "4 cloves",
+          "1 cinnamon stick",
+          "3 tbsp coconut oil",
+          "2 onions, sliced",
+          "2 sprigs curry leaves",
+          "100 ml hot water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Roast coconut",
+        "body": "Roast coconut till golden. Keep aside."
+      },
+      {
+        "title": "Roast spices",
+        "body": "Toast chillies, coriander, cumin, cloves and cinnamon. Grind with coconut."
+      },
+      {
+        "title": "Fry onions",
+        "body": "Heat coconut oil. Fry onions and curry leaves till golden."
+      },
+      {
+        "title": "Cook chicken",
+        "body": "Add ginger-garlic paste and chicken. Fry for 8 minutes."
+      },
+      {
+        "title": "Add masala",
+        "body": "Add ground paste and hot water. Cover and cook for 20 minutes."
+      },
+      {
+        "title": "Roast dry",
+        "body": "Remove lid and cook, stirring, till masala clings to chicken."
+      }
+    ],
+    "notes": [
+      "Use fresh coconut for a softer texture.",
+      "Add a splash of water if the masala catches before chicken cooks.",
+      "Finish with curry leaves fried in coconut oil."
+    ],
+    "serveWith": [
+      "Neer dosa",
+      "Rice roti",
+      "Rasam"
+    ]
+  },
+  {
+    "slug": "punjabi-saag-chicken",
+    "name": "Punjabi Saag Chicken",
+    "native": "Saagwala Murgh",
+    "subtitle": "Chicken cooked in a spinach and mustard-greens gravy with garlic and garam masala.",
+    "region": "Punjab",
+    "origin": "Punjab",
+    "heat": 2,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Saagwala murgh pairs tender chicken with leafy greens. The greens are cooked and ground before being simmered with the chicken, keeping their colour and earthy taste.",
+    "tags": [
+      "Saagwala",
+      "Spinach",
+      "Greens"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "700 g chicken",
+          "1 tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "300 g spinach",
+          "100 g mustard greens, optional",
+          "3 tbsp ghee",
+          "1 onion, chopped",
+          "1 tomato, chopped",
+          "1 tsp cumin seeds",
+          "1 tsp chilli powder",
+          "1 tsp coriander powder",
+          "½ tsp garam masala",
+          "150 ml hot water",
+          "4 garlic cloves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Blanch greens",
+        "body": "Wash greens well. Blanch for 2 minutes, drain and grind coarsely."
+      },
+      {
+        "title": "Temper",
+        "body": "Heat ghee and cumin. Add chopped garlic and onion; fry till golden."
+      },
+      {
+        "title": "Cook tomato",
+        "body": "Add tomato, chilli and coriander powders. Cook till thick."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Add chicken and turmeric. Fry for 7 minutes."
+      },
+      {
+        "title": "Add greens",
+        "body": "Add ground greens and hot water. Cover and cook for 20–25 minutes till chicken is done."
+      },
+      {
+        "title": "Finish",
+        "body": "Add garam masala and adjust salt. Serve hot."
+      }
+    ],
+    "notes": [
+      "Spinach alone works when mustard greens are unavailable.",
+      "Do not overcook greens after grinding or the colour dulls.",
+      "Use bone-in pieces for a richer gravy."
+    ],
+    "serveWith": [
+      "Makki di roti",
+      "Steamed rice",
+      "Onion salad"
+    ]
+  },
+  {
+    "slug": "gujarati-sali-marghi",
+    "name": "Parsi Sali Marghi",
+    "native": "Sali Marghi",
+    "subtitle": "A gently spiced chicken gravy topped with crisp potato straws.",
+    "region": "Gujarat",
+    "origin": "Parsi community cuisine, Gujarat",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Sali marghi is a Parsi community dish popular in parts of Gujarat and Mumbai. It combines a gently spiced chicken gravy with crisp potato straws. This version keeps the gravy tangy and mildly sweet, with the sali added just before serving.",
+    "tags": [
+      "Parsi",
+      "Sali marghi",
+      "Crisp potato"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, medium pieces",
+          "1 tsp ginger-garlic paste",
+          "½ tsp turmeric",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp oil",
+          "2 onions, sliced",
+          "2 tomatoes, chopped",
+          "1 tsp cumin",
+          "1 tsp coriander powder",
+          "½ tsp chilli powder",
+          "1 tbsp vinegar",
+          "1 tsp jaggery",
+          "250 ml hot water",
+          "2 potatoes, cut into thin straws",
+          "Oil for frying",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare sali",
+        "body": "Wash potato straws, dry fully and fry in batches till crisp. Drain."
+      },
+      {
+        "title": "Fry onion",
+        "body": "Heat oil and fry onion till golden. Add cumin and ginger-garlic paste."
+      },
+      {
+        "title": "Cook tomato",
+        "body": "Add tomato, chilli, coriander and turmeric. Cook till oil shows at the edges."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Add chicken and salt. Fry for 7 minutes till coated."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add hot water and cover. Cook 22–25 minutes till chicken is cooked."
+      },
+      {
+        "title": "Balance and serve",
+        "body": "Stir in vinegar and jaggery. Top with crisp sali and coriander at the table."
+      }
+    ],
+    "notes": [
+      "Keep potato straws crisp by adding only at serving time.",
+      "Balance vinegar and jaggery gradually.",
+      "This is a Parsi community dish, not a generic Gujarati curry."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Bread rolls",
+      "Salad"
+    ]
+  },
+  {
+    "slug": "lucknowi-chicken-yakhni-pulao",
+    "name": "Lucknowi Chicken Yakhni Pulao",
+    "native": "Murgh Yakhni Pulao",
+    "subtitle": "Fragrant basmati rice cooked in a clear chicken stock with whole spices.",
+    "region": "Awadh",
+    "origin": "Lucknow, Uttar Pradesh",
+    "heat": 1,
+    "prep": 30,
+    "cook": 50,
+    "serves": 4,
+    "variant": "rice",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Yakhni pulao begins with a stock made by simmering chicken and whole spices. The rice is then cooked in the strained stock, taking on flavour without the layered masala of biryani.",
+    "tags": [
+      "Awadhi",
+      "Yakhni stock",
+      "Basmati"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "600 g chicken, bone-in",
+          "300 g basmati rice, rinsed",
+          "150 g curd",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "1 onion, sliced",
+          "1 tbsp ginger, sliced",
+          "6 garlic cloves",
+          "1 bay leaf",
+          "4 green cardamom",
+          "1 black cardamom",
+          "1 cinnamon stick",
+          "6 peppercorns",
+          "2 tbsp ghee",
+          "600 ml chicken stock",
+          "Mint leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Make yakhni",
+        "body": "Simmer chicken with ginger, garlic, whole spices and water for 25 minutes. Strain and keep 600 ml stock."
+      },
+      {
+        "title": "Marinate briefly",
+        "body": "Mix chicken with whisked curd and salt while the rice soaks."
+      },
+      {
+        "title": "Fry onion",
+        "body": "Heat ghee and fry onion till golden. Add chicken and cook for 5 minutes."
+      },
+      {
+        "title": "Add rice",
+        "body": "Add drained rice and stir gently for a minute."
+      },
+      {
+        "title": "Cook pulao",
+        "body": "Add hot stock. Cover and cook on low for 15–18 minutes till rice is done."
+      },
+      {
+        "title": "Rest",
+        "body": "Switch off heat and rest covered for 10 minutes. Fluff gently and garnish with mint."
+      }
+    ],
+    "notes": [
+      "Keep stock clear and strain out whole spices.",
+      "Use the stock-to-rice ratio suited to your basmati brand.",
+      "Do not stir repeatedly once rice is added."
+    ],
+    "serveWith": [
+      "Raita",
+      "Sheermal",
+      "Kachumber"
+    ]
+  },
+  {
+    "slug": "kolkata-chicken-chaap",
+    "name": "Kolkata Chicken Chaap",
+    "native": "Kolkata Murgh Chaap",
+    "subtitle": "Slow-cooked chicken leg in a rich poppy-seed, cashew and aromatic spice sauce.",
+    "region": "West Bengal",
+    "origin": "Kolkata, West Bengal",
+    "heat": 2,
+    "prep": 25,
+    "cook": 50,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Kolkata-style chicken chaap is inspired by the rich Mughlai restaurant preparation traditionally made with large cuts and a nutty, aromatic paste. This home version uses chicken leg quarters and a slow covered cook.",
+    "tags": [
+      "Kolkata",
+      "Mughlai",
+      "Poppy seed"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "4 chicken leg quarters, skin removed",
+          "150 g curd",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "2 tbsp poppy seeds",
+          "30 g cashews",
+          "1 onion, fried and ground",
+          "3 tbsp ghee",
+          "1 bay leaf",
+          "4 green cardamom",
+          "½ tsp mace powder",
+          "½ tsp chilli powder",
+          "200 ml hot water",
+          "1 tbsp fresh cream"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Marinate",
+        "body": "Mix chicken with curd, ginger-garlic paste and salt. Keep chilled for 1 hour."
+      },
+      {
+        "title": "Make paste",
+        "body": "Soak poppy seeds and cashews. Grind with fried onion to a smooth paste."
+      },
+      {
+        "title": "Fry spices",
+        "body": "Heat ghee. Add bay leaf and cardamom."
+      },
+      {
+        "title": "Brown chicken",
+        "body": "Add chicken and fry on medium heat till lightly golden."
+      },
+      {
+        "title": "Cook sauce",
+        "body": "Add nut paste, mace and chilli. Stir and add hot water."
+      },
+      {
+        "title": "Slow cook",
+        "body": "Cover and cook 30–35 minutes till chicken is tender. Finish with cream on low heat."
+      }
+    ],
+    "notes": [
+      "Soak poppy seeds long enough to grind smoothly.",
+      "Keep heat low after adding nut paste to prevent sticking.",
+      "Check the thickest part of the leg is fully cooked."
+    ],
+    "serveWith": [
+      "Roomali roti",
+      "Basmati pulao",
+      "Onion salad"
+    ]
+  },
+  {
+    "slug": "bengali-murgir-jhol",
+    "name": "Bengali Murgir Jhol",
+    "native": "Murgir Jhol",
+    "subtitle": "A light mustard-oil chicken curry with potatoes, ginger and a thin spiced broth.",
+    "region": "West Bengal",
+    "origin": "Bengal",
+    "heat": 2,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Murgir jhol is a lighter Bengali chicken curry, often made with potatoes and a thin, fragrant gravy. Unlike kosha, it is not fried down to a dark paste. Let the potatoes soften in the broth and keep the spices simple.",
+    "tags": [
+      "Bengali",
+      "Light gravy",
+      "Potato"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken",
+          "2 potatoes, quartered",
+          "1 tsp turmeric",
+          "1 tbsp ginger paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp mustard oil",
+          "1 bay leaf",
+          "2 green cardamom",
+          "1 tsp cumin seeds",
+          "2 onions, sliced",
+          "1 tomato, chopped",
+          "1 tsp cumin powder",
+          "1 tsp coriander powder",
+          "300 ml hot water",
+          "2 green chillies"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Marinate",
+        "body": "Mix chicken with turmeric, ginger and salt. Keep aside for 20 minutes."
+      },
+      {
+        "title": "Fry potatoes",
+        "body": "Heat mustard oil and fry potatoes till lightly golden. Remove."
+      },
+      {
+        "title": "Fry onion",
+        "body": "Add bay leaf, cardamom, cumin and onions. Fry till golden."
+      },
+      {
+        "title": "Add tomato",
+        "body": "Add tomato and powdered spices. Cook till soft."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Add chicken and fry for 6 minutes."
+      },
+      {
+        "title": "Simmer",
+        "body": "Return potatoes, add hot water and green chillies. Cover and cook 22–25 minutes. Finish with coriander."
+      }
+    ],
+    "notes": [
+      "Use waxy potatoes so they hold shape.",
+      "Keep the gravy thin; it is meant to be eaten with rice.",
+      "Do not confuse jhol with the darker kosha preparation."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Masoor dal",
+      "Lemon"
+    ]
+  },
+  {
+    "slug": "chhattisgarhi-chicken-saag",
+    "name": "Chhattisgarhi Chicken Saag",
+    "native": "Kukad Saag Inspired",
+    "subtitle": "A homestyle chicken and leafy greens curry with garlic and local-style tempering.",
+    "region": "Chhattisgarh",
+    "origin": "Chhattisgarh",
+    "heat": 2,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "This recipe is inspired by Chhattisgarhi greens-based home cooking, adapted with chicken. Use seasonal saag and a simple garlic masala. The result is a hearty curry that works with rice or millet roti.",
+    "tags": [
+      "Central India",
+      "Saag",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "700 g chicken",
+          "250 g seasonal leafy greens",
+          "1 tsp turmeric",
+          "1 tbsp garlic paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "2 tbsp oil",
+          "1 onion, chopped",
+          "2 tomatoes, chopped",
+          "1 tsp cumin seeds",
+          "1 tsp chilli powder",
+          "1 tsp coriander powder",
+          "200 ml hot water",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Wash greens",
+        "body": "Wash leaves thoroughly and chop. Blanch briefly if fibrous."
+      },
+      {
+        "title": "Temper",
+        "body": "Heat oil and cumin. Add onion and fry till soft."
+      },
+      {
+        "title": "Cook tomato",
+        "body": "Add garlic, tomato, chilli and coriander powder. Cook till thick."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Add chicken and turmeric. Fry for 7 minutes."
+      },
+      {
+        "title": "Simmer with greens",
+        "body": "Add greens and hot water. Cover and cook 22–25 minutes till chicken is done."
+      },
+      {
+        "title": "Finish",
+        "body": "Adjust salt and garnish with coriander."
+      }
+    ],
+    "notes": [
+      "Use seasonal greens available locally.",
+      "If greens are bitter, blanch and drain before adding.",
+      "This is a household-style adaptation, not a single fixed regional formula."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Millet roti",
+      "Cucumber salad"
+    ]
+  },
+  {
+    "slug": "bhojpuri-achari-chicken",
+    "name": "Bhojpuri Achari Chicken",
+    "native": "Achari Murgh",
+    "subtitle": "A sharp mustard-seed and fennel chicken curry with a pickle-style masala.",
+    "region": "Bihar",
+    "origin": "Eastern Uttar Pradesh and Bihar",
+    "heat": 3,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Achari chicken borrows the spice profile of Indian pickles: mustard, fennel, nigella and fenugreek. This home-style version is associated with North Indian cooking and can be adjusted to the pickle spices in your pantry.",
+    "tags": [
+      "Achari masala",
+      "Mustard",
+      "Tangy"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken",
+          "1 tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp mustard oil",
+          "1 tsp mustard seeds",
+          "1 tsp fennel seeds",
+          "½ tsp nigella seeds",
+          "¼ tsp fenugreek seeds",
+          "2 onions, sliced",
+          "2 tomatoes, chopped",
+          "1 tsp chilli powder",
+          "1 tsp coriander powder",
+          "1 tbsp lemon juice",
+          "250 ml hot water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Temper pickle spices",
+        "body": "Heat mustard oil and add mustard, fennel, nigella and fenugreek. Let them crackle without burning."
+      },
+      {
+        "title": "Fry onions",
+        "body": "Add onions and fry till golden. Add ginger-garlic paste."
+      },
+      {
+        "title": "Cook masala",
+        "body": "Add tomato, chilli and coriander. Cook till thick."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Add chicken and turmeric and fry for 7 minutes."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add hot water, cover and cook 22–25 minutes till chicken is done."
+      },
+      {
+        "title": "Finish",
+        "body": "Add lemon juice, adjust salt and serve."
+      }
+    ],
+    "notes": [
+      "Fenugreek turns bitter quickly; keep the heat moderate.",
+      "Add lemon at the end so the sourness stays fresh.",
+      "Use mustard oil for the sharp pickle aroma."
+    ],
+    "serveWith": [
+      "Paratha",
+      "Steamed rice",
+      "Onion salad"
+    ]
+  },
+  {
+    "slug": "pallipalayam-chicken",
+    "name": "Pallipalayam Chicken",
+    "native": "Pallipalayam Kozhi",
+    "subtitle": "A dry Tamil Nadu chicken fry with shallots, dried red chillies and coconut pieces.",
+    "region": "Tamil Nadu",
+    "origin": "Erode district, Tamil Nadu",
+    "heat": 3,
+    "prep": 20,
+    "cook": 35,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Pallipalayam chicken is a dry preparation known for its simple combination of shallots, dried red chillies and coconut pieces. It does not need a thick tomato gravy; the flavour comes from slow frying of small onions and spice.",
+    "tags": [
+      "Kongu region",
+      "Dry fry",
+      "Shallots"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, small pieces",
+          "1 tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "3 tbsp sesame oil",
+          "20 shallots, peeled",
+          "10 dried red chillies",
+          "½ cup fresh coconut pieces",
+          "2 sprigs curry leaves",
+          "½ tsp fennel seeds",
+          "100 ml water",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Crush chillies",
+        "body": "Break dried chillies into pieces and remove some seeds if you want less heat."
+      },
+      {
+        "title": "Fry shallots",
+        "body": "Heat sesame oil. Fry shallots till golden at the edges."
+      },
+      {
+        "title": "Temper",
+        "body": "Add fennel and curry leaves, then the dried chillies."
+      },
+      {
+        "title": "Add chicken",
+        "body": "Add ginger-garlic paste and chicken with turmeric and salt. Fry for 8 minutes."
+      },
+      {
+        "title": "Cook",
+        "body": "Add water, cover and cook 18 minutes till chicken is cooked through."
+      },
+      {
+        "title": "Roast",
+        "body": "Remove lid. Add coconut pieces and fry till the masala is dry and coats chicken."
+      }
+    ],
+    "notes": [
+      "Use small coconut pieces rather than grated coconut for the signature bite.",
+      "Keep the flame moderate after adding dried chillies.",
+      "Use chicken with bone for deeper flavour."
+    ],
+    "serveWith": [
+      "Rasam rice",
+      "Parotta",
+      "Curd rice"
+    ]
+  },
+  {
+    "slug": "coorgi-chicken-curry",
+    "name": "Coorgi Chicken Curry",
+    "native": "Koli Curry",
+    "subtitle": "A Kodava-style chicken curry with roasted spices, pepper and a tart tamarind finish.",
+    "region": "Karnataka",
+    "origin": "Kodagu, Karnataka",
+    "heat": 3,
+    "prep": 25,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Kodava chicken curry often combines roasted spices, pepper and local souring agents. This home version uses a measured tamarind finish, with the spice paste providing depth and a gentle roasted aroma.",
+    "tags": [
+      "Coorgi",
+      "Kodava",
+      "Pepper"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken, bone-in",
+          "1 tsp turmeric",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "2 tbsp oil",
+          "1 onion, sliced",
+          "1 tbsp coriander seeds",
+          "1 tsp cumin",
+          "1 tsp black pepper",
+          "4 dried red chillies",
+          "½ tsp mustard seeds",
+          "Small ball tamarind",
+          "250 ml hot water",
+          "Curry leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Roast spices",
+        "body": "Dry roast coriander, cumin, pepper and chillies till fragrant. Grind coarsely."
+      },
+      {
+        "title": "Fry onion",
+        "body": "Heat oil. Fry onion till golden and add mustard and curry leaves."
+      },
+      {
+        "title": "Fry chicken",
+        "body": "Add ginger-garlic paste and chicken. Fry for 7 minutes."
+      },
+      {
+        "title": "Add spices",
+        "body": "Add ground masala and turmeric. Fry till aromatic."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add tamarind water and hot water. Cover and cook for 25 minutes till tender."
+      },
+      {
+        "title": "Finish",
+        "body": "Reduce gravy as desired and adjust salt."
+      }
+    ],
+    "notes": [
+      "Tamarind quantity varies; add strained water gradually.",
+      "Use fresh black pepper for a warm finish.",
+      "Regional styles vary between Kodava homes."
+    ],
+    "serveWith": [
+      "Akki roti",
+      "Steamed rice",
+      "Kadambuttu"
+    ]
+  },
+  {
+    "slug": "rajasthani-laal-murgh",
+    "name": "Rajasthani Laal Maas Style Chicken",
+    "native": "Laal Murgh",
+    "subtitle": "A fiery red chicken curry inspired by Rajasthan's chilli-forward laal maas tradition.",
+    "region": "Rajasthan",
+    "origin": "Rajasthan",
+    "heat": 3,
+    "prep": 25,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Laal maas is traditionally a mutton dish. This is explicitly a chicken adaptation inspired by its Mathania chilli, yoghurt and garlic profile, rather than a claim that the classic is chicken-based.",
+    "tags": [
+      "Rajasthani inspired",
+      "Mathania chilli",
+      "Adaptation"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken",
+          "150 g curd",
+          "1 tbsp garlic paste",
+          "1 tsp salt",
+          "1 tsp turmeric"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "4 tbsp mustard oil",
+          "8 Mathania or dried red chillies",
+          "1 tsp cumin seeds",
+          "4 cloves",
+          "1 cinnamon stick",
+          "2 onions, sliced",
+          "200 ml hot water",
+          "Coriander leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Soak chillies",
+        "body": "Soak chillies in hot water for 15 minutes and grind to a paste."
+      },
+      {
+        "title": "Temper",
+        "body": "Heat mustard oil and add cumin, cloves and cinnamon."
+      },
+      {
+        "title": "Fry onions",
+        "body": "Add onions and fry till deep golden. Add garlic paste."
+      },
+      {
+        "title": "Cook chicken",
+        "body": "Add chicken, turmeric and salt. Fry till coated."
+      },
+      {
+        "title": "Add curd and chilli",
+        "body": "Lower heat, add whisked curd slowly, then chilli paste."
+      },
+      {
+        "title": "Simmer",
+        "body": "Add hot water and cover for 25 minutes till chicken is fully cooked. Adjust salt."
+      }
+    ],
+    "notes": [
+      "Use Mathania chillies when available for regional character.",
+      "Traditional laal maas is made with meat, commonly mutton; this is a chicken adaptation.",
+      "Adjust chilli quantity to your tolerance."
+    ],
+    "serveWith": [
+      "Bajra roti",
+      "Steamed rice",
+      "Lahsun chutney"
+    ]
+  },
+  {
+    "slug": "hyderabadi-dum-ka-murgh",
+    "name": "Hyderabadi Dum Ka Murgh",
+    "native": "Dum Ka Murgh",
+    "subtitle": "Yoghurt, browned onion, mint and whole spices.",
+    "region": "Telangana",
+    "origin": "Hyderabad",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Yoghurt, browned onion, mint and whole spices. This home-kitchen version uses accessible ingredients and a practical method. Cook until the thickest chicken piece is fully done.",
+    "tags": [
+      "Telangana",
+      "Indian chicken",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken",
+          "150 g curd",
+          "ginger-garlic paste",
+          "chilli powder",
+          "turmeric",
+          "salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "oil",
+          "fried onions",
+          "cardamom",
+          "black cardamom",
+          "cinnamon",
+          "cloves",
+          "mint",
+          "coriander",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Marinate chicken with curd, ginger-garlic, chilli, turmeric and salt for 30 minutes."
+      },
+      {
+        "title": "Cook",
+        "body": "Temper whole spices in oil; add chicken and marinade. Add fried onion, mint and coriander."
+      },
+      {
+        "title": "Finish",
+        "body": "Cover tightly and cook on low for 30–35 minutes, stirring once. Check chicken is fully cooked."
+      }
+    ],
+    "notes": [
+      "Use a heavy pot and low flame; dum cooking releases moisture.",
+      "Adjust chilli, salt and liquid to suit your ingredients and chicken cut.",
+      "Check the thickest piece is fully cooked before serving."
+    ],
+    "serveWith": [
+      "Bagara rice",
+      "Roomali roti"
+    ]
+  },
+  {
+    "slug": "telangana-natu-kodi-pulusu",
+    "name": "Telangana Natu Kodi Pulusu",
+    "native": "Natu Kodi Pulusu",
+    "subtitle": "Country chicken, tamarind and roasted sesame masala.",
+    "region": "Telangana",
+    "origin": "Telangana",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Country chicken, tamarind and roasted sesame masala. This home-kitchen version uses accessible ingredients and a practical method. Cook until the thickest chicken piece is fully done.",
+    "tags": [
+      "Telangana",
+      "Indian chicken",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g country chicken",
+          "turmeric",
+          "ginger-garlic paste",
+          "salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "oil",
+          "onion",
+          "sesame",
+          "coriander seeds",
+          "dried chillies",
+          "cumin",
+          "tamarind",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Roast sesame, coriander, cumin and chillies; grind to a paste. Soak tamarind in warm water."
+      },
+      {
+        "title": "Cook",
+        "body": "Fry onions till golden; add ginger-garlic and chicken. Fry for 8 minutes."
+      },
+      {
+        "title": "Finish",
+        "body": "Add spice paste, strained tamarind water and hot water. Cover and simmer 35–45 minutes till tender."
+      }
+    ],
+    "notes": [
+      "Country chicken needs longer cooking than broiler chicken.",
+      "Adjust chilli, salt and liquid to suit your ingredients and chicken cut.",
+      "Check the thickest piece is fully cooked before serving."
+    ],
+    "serveWith": [
+      "Rice",
+      "Jonna roti"
+    ]
+  },
+  {
+    "slug": "tamil-chettinad-kari",
+    "name": "Chettinad Chicken Curry",
+    "native": "Kozhi Kuzhambu",
+    "subtitle": "Roasted coconut, fennel, pepper and dried chilli.",
+    "region": "Tamil Nadu",
+    "origin": "Chettinad",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Roasted coconut, fennel, pepper and dried chilli. This home-kitchen version uses accessible ingredients and a practical method. Cook until the thickest chicken piece is fully done.",
+    "tags": [
+      "Tamil Nadu",
+      "Indian chicken",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken",
+          "turmeric",
+          "ginger-garlic paste",
+          "salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "oil",
+          "onion",
+          "tomato",
+          "coconut",
+          "coriander seeds",
+          "fennel",
+          "pepper",
+          "dried chillies",
+          "cloves",
+          "cinnamon",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Roast coconut, coriander, fennel, pepper, chillies and whole spices separately; grind with water."
+      },
+      {
+        "title": "Cook",
+        "body": "Fry onion, ginger-garlic and tomato. Add chicken, turmeric and salt; fry for 7 minutes."
+      },
+      {
+        "title": "Finish",
+        "body": "Add ground masala and water. Cover and simmer 22–25 minutes until chicken is cooked."
+      }
+    ],
+    "notes": [
+      "Roast spices without burning; freshly ground pepper is important.",
+      "Adjust chilli, salt and liquid to suit your ingredients and chicken cut.",
+      "Check the thickest piece is fully cooked before serving."
+    ],
+    "serveWith": [
+      "Idiyappam",
+      "Dosa"
+    ]
+  },
+  {
+    "slug": "tamil-milagu-kozhi",
+    "name": "Tamil Pepper Chicken",
+    "native": "Milagu Kozhi",
+    "subtitle": "Black pepper, shallots, curry leaves and fennel.",
+    "region": "Tamil Nadu",
+    "origin": "Tamil Nadu",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Black pepper, shallots, curry leaves and fennel. This home-kitchen version uses accessible ingredients and a practical method. Cook until the thickest chicken piece is fully done.",
+    "tags": [
+      "Tamil Nadu",
+      "Indian chicken",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "700 g chicken",
+          "ginger-garlic paste",
+          "turmeric",
+          "salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "sesame oil",
+          "shallots",
+          "curry leaves",
+          "crushed pepper",
+          "fennel",
+          "cumin",
+          "tomato",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Heat oil and temper fennel, cumin and curry leaves. Add shallots and fry till soft."
+      },
+      {
+        "title": "Cook",
+        "body": "Add ginger-garlic, tomato, chicken, turmeric and salt; fry for 6 minutes."
+      },
+      {
+        "title": "Finish",
+        "body": "Add a little water, cover and cook 18–20 minutes. Add pepper and roast till coated."
+      }
+    ],
+    "notes": [
+      "Crush pepper just before cooking and add near the end.",
+      "Adjust chilli, salt and liquid to suit your ingredients and chicken cut.",
+      "Check the thickest piece is fully cooked before serving."
+    ],
+    "serveWith": [
+      "Rasam rice",
+      "Dosa"
+    ]
+  },
+  {
+    "slug": "kerala-chicken-stew",
+    "name": "Kerala Chicken Stew",
+    "native": "Nadan Kozhi Ishtu",
+    "subtitle": "Coconut milk, potato, pepper and whole spices.",
+    "region": "Kerala",
+    "origin": "Kerala",
+    "heat": 1,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Coconut milk, potato, pepper and whole spices. This home-kitchen version uses accessible ingredients and a practical method. Cook until the thickest chicken piece is fully done.",
+    "tags": [
+      "Kerala",
+      "Indian chicken",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "700 g chicken",
+          "potato",
+          "carrot",
+          "ginger",
+          "salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "coconut oil",
+          "onion",
+          "green chillies",
+          "cinnamon",
+          "cloves",
+          "cardamom",
+          "curry leaves",
+          "thin coconut milk",
+          "thick coconut milk",
+          "pepper"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Temper whole spices in coconut oil. Add onion, ginger, chillies and curry leaves; cook till soft."
+      },
+      {
+        "title": "Cook",
+        "body": "Add chicken, potato, carrot and salt. Pour in thin coconut milk and simmer 20 minutes."
+      },
+      {
+        "title": "Finish",
+        "body": "Add thick coconut milk and pepper; warm gently without boiling."
+      }
+    ],
+    "notes": [
+      "Do not boil after adding thick coconut milk.",
+      "Adjust chilli, salt and liquid to suit your ingredients and chicken cut.",
+      "Check the thickest piece is fully cooked before serving."
+    ],
+    "serveWith": [
+      "Appam",
+      "Idiyappam"
+    ]
+  },
+  {
+    "slug": "goan-chicken-cafreal",
+    "name": "Goan Chicken Cafreal",
+    "native": "Galinha Cafreal",
+    "subtitle": "Green masala of coriander, mint, green chilli and warm spices.",
+    "region": "Goa",
+    "origin": "Goa",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "grill",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Green masala of coriander, mint, green chilli and warm spices. This home-kitchen version uses accessible ingredients and a practical method. Cook until the thickest chicken piece is fully done.",
+    "tags": [
+      "Goa",
+      "Indian chicken",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken legs or thighs",
+          "lemon juice",
+          "salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "coriander",
+          "mint",
+          "green chillies",
+          "ginger",
+          "garlic",
+          "cumin",
+          "pepper",
+          "cloves",
+          "cinnamon",
+          "vinegar",
+          "oil",
+          "turmeric"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Grind herbs, chillies, ginger, garlic, spices, vinegar and turmeric to a paste."
+      },
+      {
+        "title": "Cook",
+        "body": "Make shallow cuts in chicken and coat with paste, salt and lemon; marinate 2 hours."
+      },
+      {
+        "title": "Finish",
+        "body": "Sear chicken in oil; cover and cook on low, turning, till fully cooked. Remove lid and char lightly."
+      }
+    ],
+    "notes": [
+      "Drain herbs well so the marinade stays thick.",
+      "Adjust chilli, salt and liquid to suit your ingredients and chicken cut.",
+      "Check the thickest piece is fully cooked before serving."
+    ],
+    "serveWith": [
+      "Poi",
+      "Goan rice"
+    ]
+  },
+  {
+    "slug": "bengali-murgir-kosha",
+    "name": "Bengali Chicken Kosha",
+    "native": "Murgir Kosha",
+    "subtitle": "Mustard oil, deeply browned onion and slow-reduced masala.",
+    "region": "West Bengal",
+    "origin": "Bengal",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Mustard oil, deeply browned onion and slow-reduced masala. This home-kitchen version uses accessible ingredients and a practical method. Cook until the thickest chicken piece is fully done.",
+    "tags": [
+      "West Bengal",
+      "Indian chicken",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken",
+          "turmeric",
+          "ginger paste",
+          "salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "mustard oil",
+          "onion",
+          "tomato",
+          "cumin",
+          "coriander powder",
+          "chilli powder",
+          "bay leaf",
+          "cardamom",
+          "cinnamon",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Marinate chicken with turmeric, ginger and salt for 20 minutes."
+      },
+      {
+        "title": "Cook",
+        "body": "Temper whole spices in mustard oil; fry onions slowly till deep golden. Add tomato and powdered spices."
+      },
+      {
+        "title": "Finish",
+        "body": "Add chicken and fry for 8–10 minutes. Add water, cover and cook till tender, then reduce gravy."
+      }
+    ],
+    "notes": [
+      "Do not rush onion browning; kosha gravy should be thick.",
+      "Adjust chilli, salt and liquid to suit your ingredients and chicken cut.",
+      "Check the thickest piece is fully cooked before serving."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Luchi"
+    ]
+  },
+  {
+    "slug": "punjabi-dhaba-murgh",
+    "name": "Punjabi Dhaba Chicken Curry",
+    "native": "Dhaba Murgh",
+    "subtitle": "Browned onions, tomato, ginger and dhaba-style masala.",
+    "region": "Punjab",
+    "origin": "Punjab",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Browned onions, tomato, ginger and dhaba-style masala. This home-kitchen version uses accessible ingredients and a practical method. Cook until the thickest chicken piece is fully done.",
+    "tags": [
+      "Punjab",
+      "Indian chicken",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g bone-in chicken",
+          "turmeric",
+          "ginger-garlic paste",
+          "salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "oil",
+          "onions",
+          "tomatoes",
+          "cumin",
+          "coriander powder",
+          "chilli powder",
+          "cumin powder",
+          "garam masala",
+          "ginger",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Heat oil and cumin; fry onions till deep golden. Add ginger-garlic and tomatoes; cook till oil separates."
+      },
+      {
+        "title": "Cook",
+        "body": "Add powdered spices and chicken; fry for 8 minutes."
+      },
+      {
+        "title": "Finish",
+        "body": "Add water, cover and cook 22–25 minutes; finish with garam masala and ginger."
+      }
+    ],
+    "notes": [
+      "Use bone-in chicken and fry the masala patiently.",
+      "Adjust chilli, salt and liquid to suit your ingredients and chicken cut.",
+      "Check the thickest piece is fully cooked before serving."
+    ],
+    "serveWith": [
+      "Tandoori roti",
+      "Jeera rice"
+    ]
+  },
+  {
+    "slug": "awadhi-dum-korma",
+    "name": "Awadhi Chicken Korma",
+    "native": "Awadhi Murgh Korma",
+    "subtitle": "Fried onion, yoghurt, saffron and gentle whole spices.",
+    "region": "Uttar Pradesh",
+    "origin": "Lucknow",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Fried onion, yoghurt, saffron and gentle whole spices. This home-kitchen version uses accessible ingredients and a practical method. Cook until the thickest chicken piece is fully done.",
+    "tags": [
+      "Uttar Pradesh",
+      "Indian chicken",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken",
+          "curd",
+          "ginger-garlic paste",
+          "salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "ghee",
+          "fried onions",
+          "bay leaf",
+          "green cardamom",
+          "black cardamom",
+          "cinnamon",
+          "cloves",
+          "coriander powder",
+          "white pepper",
+          "saffron milk",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Marinate chicken with curd, ginger-garlic and salt for 30 minutes. Temper whole spices in ghee."
+      },
+      {
+        "title": "Cook",
+        "body": "Add chicken and marinade; fry gently. Add crushed fried onions, coriander and white pepper."
+      },
+      {
+        "title": "Finish",
+        "body": "Add water, cover and simmer 22–25 minutes; finish with saffron milk."
+      }
+    ],
+    "notes": [
+      "Add curd over low heat and avoid burning fried onions.",
+      "Adjust chilli, salt and liquid to suit your ingredients and chicken cut.",
+      "Check the thickest piece is fully cooked before serving."
+    ],
+    "serveWith": [
+      "Sheermal",
+      "Roomali roti"
+    ]
+  },
+  {
+    "slug": "odia-kukuda-kasa",
+    "name": "Odia Chicken Kasa",
+    "native": "Kukuda Kasa",
+    "subtitle": "Mustard oil, browned onions and roasted coriander.",
+    "region": "Odisha",
+    "origin": "Odisha",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Mustard oil, browned onions and roasted coriander. This home-kitchen version uses accessible ingredients and a practical method. Cook until the thickest chicken piece is fully done.",
+    "tags": [
+      "Odisha",
+      "Indian chicken",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken",
+          "turmeric",
+          "ginger-garlic paste",
+          "salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "mustard oil",
+          "onions",
+          "tomato",
+          "cumin",
+          "roasted coriander seeds",
+          "chilli powder",
+          "bay leaf",
+          "cloves",
+          "cinnamon",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Marinate chicken with turmeric, ginger-garlic and salt. Temper whole spices in mustard oil; fry onions till deep golden."
+      },
+      {
+        "title": "Cook",
+        "body": "Add tomato, ground coriander and chilli; cook till oil separates. Add chicken and fry for 8 minutes."
+      },
+      {
+        "title": "Finish",
+        "body": "Add water, cover and cook till tender; remove lid and reduce to thick kasa."
+      }
+    ],
+    "notes": [
+      "Reduce slowly; this home-style preparation varies across Odisha.",
+      "Adjust chilli, salt and liquid to suit your ingredients and chicken cut.",
+      "Check the thickest piece is fully cooked before serving."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Pakhala"
+    ]
+  },
+  {
+    "slug": "mangalorean-kori-ghee-roast",
+    "name": "Mangalorean Chicken Ghee Roast",
+    "native": "Kori Ghee Roast",
+    "subtitle": "Byadgi chilli, tamarind and roasted spices cooked in ghee.",
+    "region": "Karnataka",
+    "origin": "Mangaluru",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Byadgi chilli, tamarind and roasted spices cooked in ghee. This home-kitchen version uses accessible ingredients and a practical method. Cook until the thickest chicken piece is fully done.",
+    "tags": [
+      "Karnataka",
+      "Indian chicken",
+      "Home style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken",
+        "items": [
+          "800 g chicken",
+          "curd",
+          "ginger-garlic paste",
+          "salt"
+        ]
+      },
+      {
+        "title": "For the masala",
+        "items": [
+          "ghee",
+          "Byadgi chillies",
+          "cumin",
+          "coriander",
+          "fenugreek",
+          "cloves",
+          "cinnamon",
+          "tamarind",
+          "jaggery",
+          "curry leaves"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Marinate chicken with curd, ginger-garlic and salt for 30 minutes. Soak chillies; roast spices and grind with tamarind."
+      },
+      {
+        "title": "Cook",
+        "body": "Fry curry leaves in ghee, add masala and cook till fragrant. Add chicken and marinade."
+      },
+      {
+        "title": "Finish",
+        "body": "Cover and cook 20–25 minutes till cooked; add jaggery and roast uncovered till glossy."
+      }
+    ],
+    "notes": [
+      "Use Byadgi chillies for colour; stir during final roast.",
+      "Adjust chilli, salt and liquid to suit your ingredients and chicken cut.",
+      "Check the thickest piece is fully cooked before serving."
+    ],
+    "serveWith": [
+      "Neer dosa",
+      "Ghee rice"
+    ]
+  },
+  {
+    "slug": "rajasthani-laal-maas-style-chicken",
+    "name": "Rajasthani Laal Maas Chicken",
+    "native": "Laal Maas Murgh",
+    "subtitle": "Rajasthani Laal Maas Chicken — Mathania chilli, mustard oil and whole spices give this chicken adaptation a bold red gravy.",
+    "region": "Rajasthan",
+    "origin": "Rajasthan",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Mathania chilli, mustard oil and whole spices give this chicken adaptation a bold red gravy.",
+    "tags": [
+      "Mathania chilli",
+      "Mustard oil",
+      "Slow cooked"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "2 onions",
+          "6 dried red chillies",
+          "1 tbsp coriander seeds",
+          "1 tsp cumin"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "4 cloves",
+          "1 cinnamon",
+          "200 g curd",
+          "mustard oil",
+          "hot water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Roast chillies and spices, grind to a paste. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "fry onions until deep gold, add marinated chicken and brown. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "then simmer covered and reduce the gravy.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Bajra roti",
+      "Rice",
+      "Onion"
+    ]
+  },
+  {
+    "slug": "rajasthani-safed-maas-chicken",
+    "name": "Rajasthani Safed Maas Chicken",
+    "native": "Safed Murgh",
+    "subtitle": "Rajasthani Safed Maas Chicken — A pale, mild curry with cashew, curd, cardamom and white pepper.",
+    "region": "Rajasthan",
+    "origin": "Rajasthan",
+    "heat": 1,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A pale, mild curry with cashew, curd, cardamom and white pepper.",
+    "tags": [
+      "Mild",
+      "Cashew gravy",
+      "Festive"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "150 g curd",
+          "15 cashews",
+          "2 tbsp ghee",
+          "1 onion"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "4 cardamom",
+          "4 cloves",
+          "1 cinnamon",
+          "100 ml cream",
+          "milk"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Whisk curd with white pepper, grind soaked cashews. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "soften onion in ghee with whole spices, add chicken and curd on low heat. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "then simmer with nut paste and finish with milk and cream.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Roomali roti",
+      "Jeera rice",
+      "Cucumber salad"
+    ]
+  },
+  {
+    "slug": "kashmiri-murgh-yakhni",
+    "name": "Kashmiri Chicken Yakhni",
+    "native": "Murgh Yakhni",
+    "subtitle": "Kashmiri Chicken Yakhni — Chicken in a delicate curd broth scented with fennel and dry ginger.",
+    "region": "Kashmir",
+    "origin": "Kashmir",
+    "heat": 1,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "soup",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Chicken in a delicate curd broth scented with fennel and dry ginger.",
+    "tags": [
+      "Curd broth",
+      "Fennel",
+      "Gentle spice"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "250 g curd",
+          "1 tsp fennel powder",
+          "½ tsp dry ginger",
+          "1 black cardamom"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "4 green cardamom",
+          "1 cinnamon",
+          "3 cloves",
+          "asafoetida",
+          "mustard oil"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Whisk curd with fennel and dry ginger, temper whole spices in mustard oil. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "seal chicken briefly, simmer with water until nearly tender. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "then add curd gradually on low heat and warm without a hard boil.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Rice",
+      "Kashmiri naan",
+      "Turnip salad"
+    ]
+  },
+  {
+    "slug": "bihari-chicken-masala",
+    "name": "Bihari Chicken Masala",
+    "native": "Bihari Murgh Masala",
+    "subtitle": "Bihari Chicken Masala — A homestyle mustard-oil curry with garlic, cumin and roasted tomato.",
+    "region": "Bihar",
+    "origin": "Bihar",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A homestyle mustard-oil curry with garlic, cumin and roasted tomato.",
+    "tags": [
+      "Mustard oil",
+      "Garlic",
+      "Homestyle"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "1 tbsp garlic paste",
+          "2 onions",
+          "2 roasted tomatoes",
+          "1 tsp cumin"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "1 tbsp coriander powder",
+          "½ tsp pepper",
+          "mustard oil",
+          "hot water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Season chicken with garlic and turmeric, heat mustard oil and crackle cumin. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "fry onions till golden, cook roasted tomato and spices into a thick masala. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "add chicken and simmer until tender.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Litti",
+      "Rice",
+      "Onion and green chilli"
+    ]
+  },
+  {
+    "slug": "bengali-chicken-jhol",
+    "name": "Bengali Chicken Jhol",
+    "native": "Murgir Jhol",
+    "subtitle": "Bengali Chicken Jhol — A light Bengali curry with potatoes, whole garam masala and ginger.",
+    "region": "West Bengal",
+    "origin": "West Bengal",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A light Bengali curry with potatoes, whole garam masala and ginger.",
+    "tags": [
+      "Light gravy",
+      "Potato",
+      "Mustard oil"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "3 potatoes",
+          "150 g curd",
+          "2 onions",
+          "1 tomato"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "1 bay leaf",
+          "4 cardamom",
+          "1 cinnamon",
+          "mustard oil",
+          "hot water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Marinate chicken in curd and turmeric, fry potato halves in mustard oil. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "temper whole spices and fry onion and tomato, add chicken and coat well. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "return potatoes and simmer until cooked.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Gobindobhog rice",
+      "Cucumber salad",
+      "Lime"
+    ]
+  },
+  {
+    "slug": "bengali-doi-murgi",
+    "name": "Bengali Doi Chicken",
+    "native": "Doi Murgi",
+    "subtitle": "Bengali Doi Chicken — A gentle yoghurt-based curry with ginger, cardamom and mustard oil.",
+    "region": "West Bengal",
+    "origin": "West Bengal",
+    "heat": 1,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A gentle yoghurt-based curry with ginger, cardamom and mustard oil.",
+    "tags": [
+      "Curd based",
+      "Mild",
+      "Cardamom"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "250 g thick curd",
+          "1 tbsp ginger paste",
+          "2 onions",
+          "1 bay leaf"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "4 cardamom",
+          "1 cinnamon",
+          "mustard oil",
+          "ghee"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Whisk curd with ginger and white pepper, temper whole spices in mustard oil and ghee. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "soften onion paste without dark browning, add chicken and curd slowly while stirring. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "simmer gently until cooked.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Basanti pulao",
+      "Rice",
+      "Cucumber slices"
+    ]
+  },
+  {
+    "slug": "goan-chicken-xacuti",
+    "name": "Goan Chicken Xacuti",
+    "native": "Kombdi Xacuti",
+    "subtitle": "Goan Chicken Xacuti — A fragrant curry with roasted coconut, poppy seeds and layered Goan spices.",
+    "region": "Goa",
+    "origin": "Goa",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A fragrant curry with roasted coconut, poppy seeds and layered Goan spices.",
+    "tags": [
+      "Roasted coconut",
+      "Goan spices",
+      "Tamarind"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "½ cup coconut",
+          "2 tbsp coriander seeds",
+          "1 tsp cumin",
+          "1 tsp poppy seeds",
+          "6 dried red chillies"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "4 cloves",
+          "1 cinnamon",
+          "1 onion",
+          "tamarind",
+          "oil"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Marinate chicken with turmeric and vinegar, roast coconut and spices separately. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "fry onion and grind with roasted ingredients and tamarind, brown chicken in oil. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "then simmer with the xacuti paste until tender.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Goan poi",
+      "Rice",
+      "Kachumber"
+    ]
+  },
+  {
+    "slug": "kerala-nadan-kozhi-curry",
+    "name": "Kerala Nadan Chicken Curry",
+    "native": "Nadan Kozhi Curry",
+    "subtitle": "Kerala Nadan Chicken Curry — A home-style curry with coconut oil, curry leaves, pepper and coconut milk.",
+    "region": "Kerala",
+    "origin": "Kerala",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A home-style curry with coconut oil, curry leaves, pepper and coconut milk.",
+    "tags": [
+      "Coconut oil",
+      "Curry leaves",
+      "Coconut milk"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "1 tsp turmeric",
+          "ginger-garlic",
+          "2 onions",
+          "2 tomatoes"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "curry leaves",
+          "2 tbsp coriander powder",
+          "1 tsp black pepper",
+          "thin coconut milk",
+          "thick coconut milk"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Marinate chicken with turmeric and ginger-garlic, fry curry leaves and onions in coconut oil. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "cook tomatoes with coriander and pepper until oil separates, add chicken and thin coconut milk and simmer. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "then finish with thick coconut milk over low heat.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Appam",
+      "Matta rice",
+      "Idiyappam"
+    ]
+  },
+  {
+    "slug": "kongunadu-chicken-curry",
+    "name": "Kongunadu Chicken Curry",
+    "native": "Kongu Kozhi Kuzhambu",
+    "subtitle": "Kongunadu Chicken Curry — A pepper-forward curry with roasted coconut, fennel and shallots.",
+    "region": "Tamil Nadu",
+    "origin": "Tamil Nadu",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A pepper-forward curry with roasted coconut, fennel and shallots.",
+    "tags": [
+      "Pepper",
+      "Shallots",
+      "Roasted coconut"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "15 shallots",
+          "½ cup coconut",
+          "1 tbsp coriander seeds",
+          "1 tsp fennel"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "1 tsp black pepper",
+          "4 dried red chillies",
+          "1 tomato",
+          "curry leaves",
+          "sesame oil"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Roast coconut and spices separately, grind to a paste. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "fry shallots and curry leaves in sesame oil, add chicken and fry well. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "add tomato and ground masala, then simmer until tender.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Kambu kali",
+      "Rice",
+      "Dosa"
+    ]
+  },
+  {
+    "slug": "andhra-guntur-chicken-fry",
+    "name": "Guntur Chicken Fry",
+    "native": "Guntur Kodi Vepudu",
+    "subtitle": "Guntur Chicken Fry — A spicy semi-dry fry with curry leaves, crushed garlic and Guntur chilli.",
+    "region": "Andhra Pradesh",
+    "origin": "Andhra Pradesh",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A spicy semi-dry fry with curry leaves, crushed garlic and Guntur chilli.",
+    "tags": [
+      "Guntur chilli",
+      "Semi-dry",
+      "Curry leaves"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "ginger-garlic",
+          "Guntur chilli powder",
+          "turmeric",
+          "1 onion"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "1 tomato",
+          "curry leaves",
+          "4 garlic cloves",
+          "cumin",
+          "oil"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Marinate chicken with ginger-garlic and chilli, temper cumin and curry leaves. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "fry onion and tomato until thick, add chicken and cook covered with a little water. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "then uncover and roast with crushed garlic until dry.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Pesarattu",
+      "Rice",
+      "Onion rings"
+    ]
+  },
+  {
+    "slug": "punjabi-chicken-saagwala",
+    "name": "Punjabi Chicken Saagwala",
+    "native": "Murgh Saagwala",
+    "subtitle": "Punjabi Chicken Saagwala — Chicken simmered in spinach and mustard greens with garlic and warming spices.",
+    "region": "Punjab",
+    "origin": "Punjab",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Chicken simmered in spinach and mustard greens with garlic and warming spices.",
+    "tags": [
+      "Leafy greens",
+      "Garlic",
+      "Winter favourite"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "700 g chicken",
+          "300 g spinach",
+          "100 g mustard greens",
+          "5 garlic cloves",
+          "1 onion"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "1 tomato",
+          "cumin",
+          "garam masala",
+          "ghee"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Blanch spinach and mustard greens and grind coarsely, brown garlic and onion in ghee with cumin. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "add chicken and fry, stir in greens and water and simmer until chicken is cooked. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "finish with garam masala.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Makki di roti",
+      "Jeera rice",
+      "Pickled onion"
+    ]
+  },
+  {
+    "slug": "punjabi-achari-chicken",
+    "name": "Punjabi Achari Chicken",
+    "native": "Achari Murgh",
+    "subtitle": "Punjabi Achari Chicken — A tangy curry with mustard, fennel, nigella and pickle masala.",
+    "region": "Punjab",
+    "origin": "Punjab",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A tangy curry with mustard, fennel, nigella and pickle masala.",
+    "tags": [
+      "Pickle spices",
+      "Tangy",
+      "Mustard oil"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "150 g curd",
+          "mustard seeds",
+          "fennel seeds",
+          "nigella"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "fenugreek",
+          "2 onions",
+          "2 tomatoes",
+          "pickle masala",
+          "mustard oil"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Marinate chicken in curd and ginger-garlic, temper mustard fennel nigella and fenugreek. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "fry onion and tomato with pickle masala, add chicken and cook until coated. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "then simmer until tender.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Tandoori roti",
+      "Rice",
+      "Laccha onion"
+    ]
+  },
+  {
+    "slug": "kumaoni-pahadi-chicken",
+    "name": "Kumaoni Chicken Curry",
+    "native": "Pahadi Murgh",
+    "subtitle": "Kumaoni Chicken Curry — A hill-style curry with bhang jeera, coriander and restrained chilli heat.",
+    "region": "Uttarakhand",
+    "origin": "Uttarakhand",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A hill-style curry with bhang jeera, coriander and restrained chilli heat.",
+    "tags": [
+      "Hill cuisine",
+      "Local herbs",
+      "Rustic"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "1 onion",
+          "coriander seeds",
+          "bhang jeera or cumin",
+          "black pepper"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "dried red chillies",
+          "1 tomato",
+          "ginger-garlic",
+          "mustard oil"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Dry roast coriander, bhang jeera and chillies and grind coarsely. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "fry onion in mustard oil with ginger-garlic, add chicken and fry. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "stir in ground spices and tomato, then simmer with water until tender.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Mandua roti",
+      "Rice",
+      "Pahadi cucumber salad"
+    ]
+  },
+  {
+    "slug": "himachali-anardana-chicken",
+    "name": "Himachali Anardana Chicken",
+    "native": "Anardana Murgh",
+    "subtitle": "Himachali Anardana Chicken — A tangy hill-style curry with dried pomegranate, curd and whole spices.",
+    "region": "Himachal Pradesh",
+    "origin": "Himachal Pradesh",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A tangy hill-style curry with dried pomegranate, curd and whole spices.",
+    "tags": [
+      "Anardana",
+      "Tangy",
+      "Hill style"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "150 g curd",
+          "dried pomegranate seeds",
+          "coriander seeds",
+          "cumin"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "4 cloves",
+          "cinnamon",
+          "1 onion",
+          "1 tomato",
+          "mustard oil"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Marinate chicken with curd and ginger-garlic, roast pomegranate and whole spices and grind coarsely. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "fry onion and tomato, add chicken and ground spice paste and fry. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "then simmer until tender and adjust sourness.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Siddu",
+      "Rice",
+      "Plain roti"
+    ]
+  },
+  {
+    "slug": "parsi-salli-murghi",
+    "name": "Parsi Salli Murghi",
+    "native": "Salli Murghi",
+    "subtitle": "Parsi Salli Murghi — A sweet-sour Parsi curry finished with crisp potato straws and warm spices.",
+    "region": "Parsi",
+    "origin": "Parsi",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A sweet-sour Parsi curry finished with crisp potato straws and warm spices.",
+    "tags": [
+      "Parsi",
+      "Sweet sour",
+      "Crisp potato"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "2 onions",
+          "2 tomatoes",
+          "tomato purée",
+          "cumin powder"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "garam masala",
+          "vinegar",
+          "jaggery",
+          "potato salli",
+          "oil"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Fry onions with ginger-garlic, add tomato and spice powders and cook until thick. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "fry chicken in the masala, add water and simmer until fully cooked. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "stir in vinegar and jaggery and top with potato salli at serving.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Rice",
+      "Pav",
+      "Kachumber"
+    ]
+  },
+  {
+    "slug": "naga-bamboo-shoot-chicken",
+    "name": "Naga-style Chicken with Bamboo Shoot",
+    "native": "Smoked Chicken with Bamboo Shoot",
+    "subtitle": "Naga-style Chicken with Bamboo Shoot — A smoky chilli-led preparation with fermented bamboo shoot and ginger.",
+    "region": "Nagaland",
+    "origin": "Nagaland",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A smoky chilli-led preparation with fermented bamboo shoot and ginger.",
+    "tags": [
+      "Bamboo shoot",
+      "Smoky",
+      "Chilli"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "ginger",
+          "1 onion",
+          "2 green chillies",
+          "fermented bamboo shoot"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "1 tomato",
+          "black pepper",
+          "mustard oil",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Rinse and taste fermented bamboo shoot, brown chicken in mustard oil. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "add ginger onion and green chilli, stir in bamboo shoot tomato and pepper. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "simmer covered until cooked and reduce uncovered.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Rice",
+      "Boiled greens",
+      "Chilli chutney"
+    ]
+  },
+  {
+    "slug": "manipur-eromba-style-chicken",
+    "name": "Manipuri Chicken with Eromba-style Mash",
+    "native": "Eromba-style Murgh",
+    "subtitle": "Manipuri Chicken with Eromba-style Mash — A simple chicken broth served with a chilli and seasonal vegetable mash.",
+    "region": "Manipur",
+    "origin": "Manipur",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "soup",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A simple chicken broth served with a chilli and seasonal vegetable mash.",
+    "tags": [
+      "Eromba inspired",
+      "Vegetable mash",
+      "Light broth"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "700 g chicken",
+          "2 potatoes",
+          "1 raw banana",
+          "2 roasted green chillies",
+          "ngari optional"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "1 onion",
+          "ginger-garlic",
+          "water",
+          "coriander"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Boil potatoes and raw banana until soft, simmer chicken with ginger-garlic onion and water until cooked. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "pound roasted ngari if using with green chillies, mash vegetables with the chilli mixture. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "serve broth beside the mash.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Rice",
+      "Seasonal greens",
+      "Herb salad"
+    ]
+  },
+  {
+    "slug": "chhattisgarh-chicken-curry",
+    "name": "Chhattisgarhi Chicken Curry",
+    "native": "Chaulai Murga",
+    "subtitle": "Chhattisgarhi Chicken Curry — A simple rice-friendly curry with garlic, seasonal greens and light spices.",
+    "region": "Chhattisgarh",
+    "origin": "Chhattisgarh",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A simple rice-friendly curry with garlic, seasonal greens and light spices.",
+    "tags": [
+      "Seasonal greens",
+      "Garlic",
+      "Rice pairing"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "garlic paste",
+          "1 onion",
+          "1 tomato",
+          "amaranth leaves"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "mustard seeds",
+          "coriander powder",
+          "turmeric",
+          "oil",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Season chicken with garlic turmeric and salt, temper mustard seeds and fry onion. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "add tomato and coriander powder, add chicken and simmer with water until cooked. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "stir in amaranth leaves and cook until wilted.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Rice",
+      "Bore-basi",
+      "Seasonal greens"
+    ]
+  },
+  {
+    "slug": "konkani-kori-sukka",
+    "name": "Konkan Chicken Sukka",
+    "native": "Konkani Kori Sukka",
+    "subtitle": "Konkan Chicken Sukka — A semi-dry coastal preparation with roasted coconut, red chilli and curry leaves.",
+    "region": "Karnataka",
+    "origin": "Karnataka",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A semi-dry coastal preparation with roasted coconut, red chilli and curry leaves.",
+    "tags": [
+      "Coastal",
+      "Roasted coconut",
+      "Semi-dry"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "½ cup coconut",
+          "5 dried red chillies",
+          "coriander seeds",
+          "cumin"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "fennel",
+          "cloves",
+          "1 onion",
+          "curry leaves",
+          "coconut oil"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Roast coconut and whole spices separately and grind coarsely, fry onion and curry leaves in coconut oil. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "add chicken and brown, stir in ground masala with a little water and cover-cook. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "uncover and roast until nearly dry.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Neer dosa",
+      "Kori rotti",
+      "Rice"
+    ]
+  },
+  {
+    "slug": "sikkimese-chicken-thukpa",
+    "name": "Sikkimese Chicken Thukpa",
+    "native": "Chicken Thukpa",
+    "subtitle": "Sikkimese Chicken Thukpa — A warming noodle soup with chicken, ginger, vegetables and clear peppery broth.",
+    "region": "Sikkim",
+    "origin": "Sikkim",
+    "heat": 1,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "soup",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A warming noodle soup with chicken, ginger, vegetables and clear peppery broth.",
+    "tags": [
+      "Himalayan",
+      "Noodle soup",
+      "Clear broth"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "500 g chicken",
+          "1 litre water",
+          "ginger",
+          "4 garlic cloves",
+          "1 onion",
+          "black pepper"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "200 g noodles",
+          "1 carrot",
+          "cabbage",
+          "spring onion",
+          "soy sauce"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Simmer chicken with ginger garlic onion and pepper to make broth, strain and shred the meat. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "boil noodles separately, simmer carrot and cabbage briefly in broth. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "assemble bowls with noodles chicken broth and spring onion.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Chilli oil",
+      "Momos",
+      "Lemon"
+    ]
+  },
+  {
+    "slug": "awadhi-murgh-musallam",
+    "name": "Awadhi Murgh Musallam",
+    "native": "Murgh Musallam",
+    "subtitle": "Awadhi Murgh Musallam — A festive whole-chicken preparation with nut paste, saffron and browned onion.",
+    "region": "Uttar Pradesh",
+    "origin": "Uttar Pradesh",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A festive whole-chicken preparation with nut paste, saffron and browned onion.",
+    "tags": [
+      "Festive",
+      "Whole chicken",
+      "Saffron"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "1 small whole chicken",
+          "200 g curd",
+          "2 onions",
+          "15 almonds",
+          "10 cashews"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "coriander powder",
+          "saffron",
+          "ghee",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Slash chicken and marinate in curd and spices for 4 hours, grind browned onion and soaked nuts. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "brown chicken in ghee, add nut paste and water and cover-cook slowly. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "finish with saffron and verify 74°C / 165°F at the thickest part.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Sheermal",
+      "Zafrani pulao",
+      "Mint raita"
+    ]
+  },
+  {
+    "slug": "indori-lehsuni-murgh",
+    "name": "Indori Garlic Chicken",
+    "native": "Lehsuni Murgh",
+    "subtitle": "Indori Garlic Chicken — A bold garlic-forward curry with toasted cumin, chilli and fresh coriander.",
+    "region": "Madhya Pradesh",
+    "origin": "Madhya Pradesh",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A bold garlic-forward curry with toasted cumin, chilli and fresh coriander.",
+    "tags": [
+      "Garlic forward",
+      "Indori",
+      "Bold"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "12 garlic cloves",
+          "cumin seeds",
+          "2 onions",
+          "2 tomatoes"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "coriander powder",
+          "garam masala",
+          "ginger-garlic",
+          "oil",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Toast sliced garlic in oil until pale gold and reserve some, add cumin and onion and fry. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "add tomato and coriander powder, fry chicken in the masala and add water. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "simmer until tender and finish with garam masala and garlic.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Poha",
+      "Tandoori roti",
+      "Jeera rice"
+    ]
+  },
+  {
+    "slug": "kolkata-mughlai-chicken-chaap",
+    "name": "Kolkata Mughlai Chicken Chaap",
+    "native": "Murgh Chaap",
+    "subtitle": "Kolkata Mughlai Chicken Chaap — Chicken legs cooked in a rich poppy-seed, cashew and aromatic spice gravy.",
+    "region": "West Bengal",
+    "origin": "West Bengal",
+    "heat": 2,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "Chicken legs cooked in a rich poppy-seed, cashew and aromatic spice gravy.",
+    "tags": [
+      "Kolkata Mughlai",
+      "Poppy seed",
+      "Rich gravy"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "4 chicken leg quarters",
+          "150 g curd",
+          "1 fried onion",
+          "poppy seeds",
+          "12 cashews"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "bay leaf",
+          "cardamom",
+          "cinnamon",
+          "ghee",
+          "water"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Marinate chicken in curd and ginger-garlic, grind fried onion with soaked poppy seeds and cashews. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "temper whole spices in ghee, add chicken and marinade then nut paste. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "cover and simmer until fully cooked.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Roomali roti",
+      "Biryani",
+      "Onion salad"
+    ]
+  },
+  {
+    "slug": "nagpur-saoji-chicken",
+    "name": "Nagpur Saoji Chicken",
+    "native": "Saoji Kombdi",
+    "subtitle": "Nagpur Saoji Chicken — A fiery Vidarbha curry with roasted coconut, poppy seeds and dark spice paste.",
+    "region": "Maharashtra",
+    "origin": "Maharashtra",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A fiery Vidarbha curry with roasted coconut, poppy seeds and dark spice paste.",
+    "tags": [
+      "Vidarbha",
+      "Roasted masala",
+      "Very hot"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "dry coconut",
+          "poppy seeds",
+          "coriander seeds",
+          "cumin",
+          "6 dried red chillies"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "cloves",
+          "cinnamon",
+          "black cardamom",
+          "2 onions",
+          "oil"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Roast coconut and spices separately, fry onions until deep brown and grind with roasted ingredients. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "fry chicken with turmeric and ginger-garlic, add dark masala and cook until oil separates. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "add water and simmer until tender.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Jowar bhakri",
+      "Rice",
+      "Raw onion"
+    ]
+  },
+  {
+    "slug": "madurai-kozhi-chukka",
+    "name": "Madurai Chicken Chukka",
+    "native": "Madurai Kozhi Chukka",
+    "subtitle": "Madurai Chicken Chukka — A peppery dry roast with curry leaves, shallots and freshly crushed spices.",
+    "region": "Tamil Nadu",
+    "origin": "Tamil Nadu",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadbc9",
+      "curry": "#94411d",
+      "deep": "#602a16",
+      "piece": "#d29a6b",
+      "garnish": "#456141",
+      "accent": "#d9ad65"
+    },
+    "story": "A peppery dry roast with curry leaves, shallots and freshly crushed spices.",
+    "tags": [
+      "Dry roast",
+      "Black pepper",
+      "Shallots"
+    ],
+    "ingredients": [
+      {
+        "title": "For the chicken and base",
+        "items": [
+          "800 g chicken",
+          "15 shallots",
+          "fennel seeds",
+          "black pepper",
+          "1 tomato"
+        ]
+      },
+      {
+        "title": "For the masala and finish",
+        "items": [
+          "coriander powder",
+          "curry leaves",
+          "sesame oil",
+          "ginger-garlic"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare and season",
+        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
+      },
+      {
+        "title": "Prepare the regional masala",
+        "body": "Season chicken with ginger-garlic turmeric chilli and salt, fry fennel curry leaves and shallots in sesame oil. Prepare the remaining spices and vegetables before heating the pan."
+      },
+      {
+        "title": "Build the flavour base",
+        "body": "add chicken and brown on high heat, add tomato and a splash of water and cover until cooked. Cook the masala until fragrant and the oil begins to separate."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "uncover and roast dry with crushed pepper.. Cover and cook gently, adding hot water only as needed."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
+      "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
+      "Check the thickest piece reaches 74°C / 165°F before serving."
+    ],
+    "serveWith": [
+      "Parotta",
+      "Rasam rice",
+      "Onion raita"
+    ]
+  }
 ];
 
 export const getRecipe = (slug: string) => recipes.find((recipe) => recipe.slug === slug);
@@ -1107,6 +6381,29 @@ export const regionNotes: Record<string, string> = {
   Goa: "Vinegar, jaggery and Kashmiri chilli. Sour before hot.",
   Awadh: "Mild and rich. Nothing browned, no chilli powder.",
   Bengal: "Mustard oil and slow frying. Dark, thick and slightly sweet.",
+  Maharashtra: "Roasted coconut, goda masala and bold coastal and Deccan flavours.",
+  "Andhra Pradesh": "Chilli, tamarind and curry leaves. Sharp, lively and full of heat.",
+  Karnataka: "Coastal coconut masalas, Byadgi chillies and Kodava pepper.",
+  "Himachal Pradesh": "Gentle hill cooking, curd gravies and whole spices.",
+  Kashmir: "Fennel, dry ginger and delicate curd-based gravies.",
+  Bihar: "Mustard oil, garlic and homestyle spice blends.",
+  Rajasthan: "Robust spice, Mathania chilli and rich festive gravies.",
+  Assam: "Light broths, seasonal vegetables and distinctive khar flavours.",
+  Nagaland: "Smoked ingredients, chillies and bamboo shoot in varied home styles.",
+  Manipur: "Light seasonal stews, vegetables, herbs and gentle broth.",
+  Chhattisgarh: "Seasonal greens, garlic and rice-friendly home cooking.",
+  "West Bengal": "Light jhols, mustard oil and slow-cooked Mughlai favourites.",
+  Gujarat: "Parsi community cooking, sweet-sour gravies and crisp sali.",
+  Telangana: "Country chicken, tamarind, chilli and roasted sesame masalas.",
+  "Uttar Pradesh": "Awadhi slow cooking, fragrant whole spices, curd and saffron.",
+  Odisha: "Mustard oil, roasted spices and slow-cooked kasa-style gravies.",
+  Sindh: "Greens, lentils and balanced home-style spice blends.",
+  Parsi: "Community cooking with layered spices and sweet-sour balance.",
+  "North India": "Tandoor-style grills, herb marinades and warming spice blends.",
+  Uttarakhand: "Hill herbs, local seeds, simple broths and rustic chicken curries.",
+  "Madhya Pradesh": "Central Indian home cooking with garlic, nuts, roasted spices and regional masalas.",
+  Sikkim: "Himalayan noodle soups, ginger-rich broths and warming mountain flavours.",
+
 };
 
 export const regions = Array.from(new Set(recipes.map((recipe) => recipe.region))).map((name) => ({
@@ -1129,24 +6426,14 @@ export const pantry = [
 ];
 
 export const method = [
-  {
-    number: "01",
-    title: "Marinate for long enough",
-    body: "Curd and lemon carry the masala into the chicken. Four hours is the minimum; overnight is better. Take the chicken out of the fridge 30 minutes before cooking.",
-  },
-  {
-    number: "02",
-    title: "Fry the whole spices first",
-    body: "Whole spices need ghee and heat to release their smell. Fry them for 30–45 seconds, then add the powders. Burnt spices make the dish bitter and cannot be fixed.",
-  },
-  {
-    number: "03",
-    title: "Cook the masala till the oil separates",
-    body: "Every masala goes through a stage where it looks dry and the oil comes out at the sides. Only then add water, not before. Most of the taste is built here.",
-  },
-  {
-    number: "04",
-    title: "Keep aside before serving",
-    body: "Five minutes off the heat lets the gravy thicken and the masala settle into the chicken. Cover the pot and wait. It is the easiest way to improve any curry.",
-  },
+  { number: "01", title: "Marinate for long enough", body: "Curd and lemon carry the masala into the chicken. Four hours is the minimum; overnight is better. Take the chicken out of the fridge 30 minutes before cooking." },
+  { number: "02", title: "Fry the whole spices first", body: "Whole spices need ghee and heat to release their smell. Fry them for 30–45 seconds, then add the powders. Burnt spices make the dish bitter and cannot be fixed." },
+  { number: "03", title: "Cook the masala till the oil separates", body: "Every masala goes through a stage where it looks dry and the oil comes out at the sides. Only then add water, not before. Most of the taste is built here." },
+  { number: "04", title: "Keep aside before serving", body: "Five minutes off the heat lets the gravy thicken and the masala settle into the chicken. Cover the pot and wait. It is the easiest way to improve any curry." },
 ];
+
+export const regionSlug = (name: string) =>
+  name.toLowerCase().normalize("NFKD").replace(/[\\u0300-\\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+export const getRegionBySlug = (slug: string) =>
+  regions.find((region) => regionSlug(region.name) === slug);

@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { DishArt } from "@/components/dish-art";
+import { RecipePhoto } from "@/components/recipe-photo";
+import { TranslatedText } from "@/components/translated-text";
+import { RecipeTools } from "@/components/recipe-tools";
+import { RecipeViewTracker } from "@/components/personal-recipe-library";
+import { AddToShoppingList } from "@/components/add-to-shopping-list";
+import { RecipeReviews } from "@/components/recipe-reviews";
+import { RecipeJournalWidget } from "@/components/cooking-journal";
 import { IngredientList } from "@/components/ingredient-list";
+import { MethodSteps } from "@/components/method-steps";
 import { HeatDots, RecipeCard } from "@/components/recipe-card";
 import { format, formatDuration, type Dictionary } from "@/lib/i18n";
 import { getLocaleAndDictionary } from "@/lib/locale";
@@ -47,36 +54,58 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
     [t.total, formatDuration(totalTime(recipe), t)],
   ];
 
+  const recipeJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    name: recipe.name,
+    alternateName: recipe.native,
+    description: recipe.subtitle,
+    recipeCategory: recipe.variant === "rice" ? "Main course" : recipe.variant === "soup" ? "Soup" : "Chicken",
+    recipeCuisine: "Indian",
+    keywords: [recipe.name, recipe.native, recipe.region, "Indian chicken recipe", "chicken curry", ...recipe.tags].join(", "),
+    recipeYield: `${recipe.serves} servings`,
+    prepTime: `PT${recipe.prep}M`,
+    cookTime: `PT${recipe.cook}M`,
+    totalTime: `PT${recipe.prep + recipe.cook}M`,
+    recipeIngredient: recipe.ingredients.flatMap((group) => group.items),
+    recipeInstructions: recipe.steps.map((step, index) => ({ "@type": "HowToStep", position: index + 1, name: step.title, text: step.body })),
+    author: { "@type": "Organization", name: "Murgh" },
+    isAccessibleForFree: true,
+    inLanguage: "en-IN",
+  };
+
   return (
     <article>
+      <RecipeViewTracker recipeSlug={recipe.slug} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(recipeJsonLd).replace(/</g, "\\u003c") }} />
       <div className="wrap pt-8">
         <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-[0.14em] text-ink-soft/80">
           <Link href="/recipes" className="hover:text-ember">
             {t.crumbRecipes}
           </Link>
           <span aria-hidden="true">/</span>
-          <Link href={`/recipes?region=${encodeURIComponent(recipe.region)}`} className="hover:text-ember">
-            {recipe.region}
+          <Link href={`/regions/${regionSlug(recipe.region)}`} className="hover:text-ember">
+            <TranslatedText text={recipe.region} />
           </Link>
           <span aria-hidden="true">/</span>
-          <span className="text-ink">{recipe.name}</span>
+          <span className="text-ink"><TranslatedText text={recipe.name} /></span>
         </nav>
       </div>
 
       <section className="wrap grid items-end gap-10 py-10 md:grid-cols-[1.05fr_0.95fr] md:gap-14 md:py-14">
         <div>
           <p className="eyebrow flex flex-wrap items-center gap-3 text-ember">
-            {recipe.region}
+            <TranslatedText text={recipe.region} />
             <span className="h-px w-6 bg-ember/40" aria-hidden="true" />
-            <span className="text-ink-soft/80">{recipe.origin}</span>
+            <span className="text-ink-soft/80"><TranslatedText text={recipe.origin} /></span>
           </p>
-          <h1 className="display mt-5 text-[clamp(2.7rem,6vw,4.4rem)] leading-[0.94] text-ink">{recipe.name}</h1>
-          <p className="display mt-3 text-[19px] italic text-ink-soft">{recipe.native}</p>
-          <p className="mt-6 max-w-[46ch] text-[15px] leading-7 text-ink-soft">{recipe.subtitle}</p>
+          <h1 className="display mt-5 text-[clamp(2.7rem,6vw,4.4rem)] leading-[0.94] text-ink"><TranslatedText text={recipe.name} /></h1>
+          <p className="display mt-3 text-[19px] italic text-ink-soft"><TranslatedText text={recipe.native} /></p>
+          <p className="mt-6 max-w-[46ch] text-[15px] leading-7 text-ink-soft"><TranslatedText text={recipe.subtitle} /></p>
           <div className="mt-6 flex flex-wrap items-center gap-2">
             {recipe.tags.map((tag) => (
               <span key={tag} className="rounded-full border border-line px-3 py-1 text-[10.5px] uppercase tracking-[0.12em] text-ink-soft">
-                {tag}
+                <TranslatedText text={tag} />
               </span>
             ))}
             <span className="ml-1">
@@ -92,23 +121,29 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
         </div>
 
         <div className="art-frame aspect-[5/4] rounded-[8px] border border-line shadow-[0_24px_60px_rgba(27,25,23,0.10)]">
-          <DishArt slug={recipe.slug} variant={recipe.variant} palette={recipe.palette} />
+          <RecipePhoto slug={recipe.slug} priority />
         </div>
       </section>
 
       <section className="wrap">
         <p className="max-w-[74ch] border-t border-line pt-8 text-[15px] leading-8 text-ink-soft first-letter:float-left first-letter:mr-2 first-letter:text-[52px] first-letter:leading-[0.8] first-letter:text-ember first-letter:[font-family:var(--font-display)]">
-          {recipe.story}
+          <TranslatedText text={recipe.story} />
         </p>
 
         <dl className="mt-10 grid grid-cols-2 gap-y-6 border-y border-line py-6 sm:grid-cols-4">
           {meta.map(([label, value]) => (
             <div key={label}>
-              <dt className="eyebrow text-ink-soft/70">{label}</dt>
+              <dt className="eyebrow text-ink-soft/70"><TranslatedText text={label} /></dt>
               <dd className="mt-2 text-[15px] font-medium text-ink">{value}</dd>
             </div>
           ))}
         </dl>
+        <RecipeTools
+          recipeSlug={recipe.slug}
+          recipeName={recipe.name}
+          speechText={[recipe.name + ". " + recipe.subtitle, recipe.story, "Ingredients.", ...recipe.ingredients.flatMap((group) => [group.title, ...group.items]), "Method.", ...recipe.steps.map((step, index) => "Step " + (index + 1) + ". " + step.title + ". " + step.body)].join(" ")}
+        />
+        <RecipeJournalWidget recipeSlug={recipe.slug} recipeName={recipe.name} />
       </section>
 
       <section className="wrap grid gap-12 py-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16 md:py-16">
@@ -120,7 +155,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
             <ul className="mt-3 flex flex-wrap gap-2">
               {recipe.serveWith.map((item) => (
                 <li key={item} className="rounded-full bg-moss-soft px-3 py-1.5 text-[11.5px] text-moss">
-                  {item}
+                  <TranslatedText text={item} />
                 </li>
               ))}
             </ul>
@@ -151,7 +186,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
               {recipe.notes.map((note) => (
                 <li key={note} className="flex gap-3 text-[12.5px] leading-6 text-ink-soft">
                   <span aria-hidden="true" className="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-ember" />
-                  {note}
+                  <TranslatedText text={note} />
                 </li>
               ))}
             </ul>
@@ -161,6 +196,10 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
             </p>
           </aside>
         </div>
+      </section>
+
+      <section className="wrap pb-12">
+        <RecipeReviews recipeSlug={recipe.slug} />
       </section>
 
       <section className="border-t border-line bg-card py-14 md:py-20">

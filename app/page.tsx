@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DishArt } from "@/components/dish-art";
+import { RecipePhoto } from "@/components/recipe-photo";
 import { RecipeCard } from "@/components/recipe-card";
 import { format } from "@/lib/i18n";
 import { getLocaleAndDictionary } from "@/lib/locale";
@@ -51,7 +51,7 @@ export default async function HomePage() {
 
           <div className="relative">
             <div className="art-frame aspect-[4/5] rounded-[8px] border border-line shadow-[0_30px_70px_rgba(27,25,23,0.10)]">
-              <DishArt slug={hero.slug} variant={hero.variant} palette={hero.palette} />
+              <RecipePhoto slug={hero.slug} priority />
             </div>
             <div className="absolute inset-x-5 -bottom-5 flex items-center justify-between gap-3 rounded-[5px] border border-line bg-card px-4 py-3 text-[11px]">
               <span className="eyebrow text-ember">
@@ -103,7 +103,7 @@ export default async function HomePage() {
             {regions.map((region, index) => (
               <Link
                 key={region.name}
-                href={`/recipes?region=${encodeURIComponent(region.name)}`}
+                href={`/regions/${regionSlug(region.name)}`}
                 className="group flex items-start gap-5 border-t border-paper/15 py-5 transition-colors hover:border-paper/40"
               >
                 <span className="mt-1 w-6 text-[10px] font-medium tracking-[0.14em] text-paper/40">

@@ -7,6 +7,8 @@ import { format, type Dictionary } from "@/lib/i18n";
 import type { Heat, Recipe } from "@/lib/recipes";
 
 const isHeat = (value: number): value is Heat => value === 1 || value === 2 || value === 3;
+const isSortOrder = (value: string | null): value is SortOrder =>
+  value === "featured" || value === "name" || value === "quickest" || value === "longest";
 
 export function RecipeBrowser({
   recipes,
@@ -14,21 +16,28 @@ export function RecipeBrowser({
   initialRegion = "All",
   initialHeat = 0,
   initialQuery = "",
+  initialSort = "featured",
 }: {
   recipes: Recipe[];
   t: Dictionary;
   initialRegion?: string;
   initialHeat?: Heat | 0;
   initialQuery?: string;
+  initialSort?: SortOrder;
 }) {
   const router = useRouter();
   const pathname = usePathname();
+  const { t } = useLanguage();
   const [region, setRegion] = useState(initialRegion);
   const [heat, setHeat] = useState<Heat | 0>(initialHeat);
   const [query, setQuery] = useState(initialQuery);
+  const [sort, setSort] = useState<SortOrder>(initialSort);
   const firstRender = useRef(true);
 
-  const regionNames = useMemo(() => ["All", ...Array.from(new Set(recipes.map((recipe) => recipe.region)))], [recipes]);
+  const regionNames = useMemo(
+    () => ["All", ...Array.from(new Set(recipes.map((recipe) => recipe.region))).sort((a, b) => a.localeCompare(b))],
+    [recipes],
+  );
 
   const heatFilters: { value: Heat | 0; label: string }[] = [
     { value: 0, label: t.heatAny },
@@ -38,55 +47,72 @@ export function RecipeBrowser({
   ];
 
   const filtered = useMemo(() => {
-    const needle = query.trim().toLowerCase();
-    return recipes.filter((recipe) => {
+    const needle = query.trim().toLocaleLowerCase();
+    const matches = recipes.filter((recipe) => {
       const matchesRegion = region === "All" || recipe.region === region;
       const matchesHeat = heat === 0 || recipe.heat === heat;
-      const matchesQuery =
-        !needle ||
-        [recipe.name, recipe.native, recipe.region, recipe.subtitle, ...recipe.tags]
-          .join(" ")
-          .toLowerCase()
-          .includes(needle);
-      return matchesRegion && matchesHeat && matchesQuery;
+      const searchable = [
+        recipe.name,
+        recipe.native,
+        recipe.region,
+        recipe.origin,
+        recipe.subtitle,
+        ...recipe.tags,
+        ...recipe.ingredients.flatMap((group) => [group.title, ...group.items]),
+      ].join(" ").toLocaleLowerCase();
+      return matchesRegion && matchesHeat && (!needle || searchable.includes(needle));
     });
-  }, [recipes, region, heat, query]);
 
-  // Keep the address bar in step with the filters, so a filtered list can be shared.
+    return [...matches].sort((a, b) => {
+      if (sort === "name") return a.name.localeCompare(b.name);
+      if (sort === "quickest") return a.prep + a.cook - (b.prep + b.cook);
+      if (sort === "longest") return b.prep + b.cook - (a.prep + a.cook);
+      return recipes.indexOf(a) - recipes.indexOf(b);
+    });
+  }, [recipes, region, heat, query, sort]);
+
   useEffect(() => {
     if (firstRender.current) {
       firstRender.current = false;
       return;
     }
-
     const params = new URLSearchParams();
     if (region !== "All") params.set("region", region);
     if (heat !== 0) params.set("heat", String(heat));
     if (query.trim()) params.set("q", query.trim());
+    if (sort !== "featured") params.set("sort", sort);
     const search = params.toString();
-
     const timer = window.setTimeout(() => {
       router.replace(search ? `${pathname}?${search}` : pathname, { scroll: false });
     }, 250);
-
     return () => window.clearTimeout(timer);
-  }, [region, heat, query, pathname, router]);
+  }, [region, heat, query, sort, pathname, router]);
 
-  // Keep the filters in step with the URL when the browser's back button is used.
   useEffect(() => {
     const syncFromUrl = () => {
       const params = new URLSearchParams(window.location.search);
       const urlRegion = params.get("region");
       const urlHeat = Number(params.get("heat"));
-
       setRegion(urlRegion && regionNames.includes(urlRegion) ? urlRegion : "All");
       setHeat(isHeat(urlHeat) ? urlHeat : 0);
       setQuery(params.get("q") ?? "");
+      setSort(isSortOrder(params.get("sort")) ? params.get("sort") as SortOrder : "featured");
     };
-
     window.addEventListener("popstate", syncFromUrl);
     return () => window.removeEventListener("popstate", syncFromUrl);
   }, [regionNames]);
+
+  const hasFilters = region !== "All" || heat !== 0 || query.trim() !== "" || sort !== "featured";
+  const searchSuggestions = useMemo(() => {
+    const values = new Set<string>();
+    for (const recipe of recipes) {
+      values.add(recipe.name);
+      if (recipe.native) values.add(recipe.native);
+      for (const tag of recipe.tags) values.add(tag);
+      for (const group of recipe.ingredients) for (const ingredient of group.items) values.add(ingredient);
+    }
+    return [...values].sort((a, b) => a.localeCompare(b));
+  }, [recipes]);
 
   return (
     <div>

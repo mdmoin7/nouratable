@@ -7,6 +7,7 @@ import type { Dictionary, Locale } from "@/lib/i18n";
 
 export function SiteHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
   const pathname = usePathname();
+  const { t } = useLanguage();
 
   const links = [
     { href: "/recipes", label: t.navRecipes },
@@ -33,7 +34,7 @@ export function SiteHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
               data-active={pathname === link.href}
               className="link-underline text-[12.5px] font-medium text-ink-soft transition-colors hover:text-ink data-[active=true]:text-ink"
             >
-              {link.label}
+              {"label" in link ? link.label : t(link.key)}
             </Link>
           ))}
         </nav>
@@ -53,7 +54,7 @@ export function SiteHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
             <div className="absolute right-0 top-12 w-52 rounded-2xl border border-line bg-card p-2 shadow-xl">
               {links.map((link) => (
                 <Link key={link.href} href={link.href} className="block rounded-xl px-3 py-2 text-sm text-ink-soft hover:bg-paper hover:text-ink">
-                  {link.label}
+                  {"label" in link ? link.label : t(link.key)}
                 </Link>
               ))}
               <Link href="/recipes" className="mt-1 block rounded-xl bg-ink px-3 py-2 text-sm font-medium text-paper">

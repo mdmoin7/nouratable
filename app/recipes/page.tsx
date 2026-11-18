@@ -8,22 +8,25 @@ export async function generateMetadata(): Promise<Metadata> {
   return { title: t.metaIndexTitle, description: t.metaIndexDescription };
 }
 
+type SortOrder = "featured" | "name" | "quickest" | "longest";
 const isHeat = (value: number): value is Heat => value === 1 || value === 2 || value === 3;
+const isSortOrder = (value: string | undefined): value is SortOrder =>
+  value === "featured" || value === "name" || value === "quickest" || value === "longest";
 
 export default async function RecipesPage({
   searchParams,
 }: {
-  searchParams: Promise<{ region?: string; heat?: string; q?: string }>;
+  searchParams: Promise<{ region?: string; heat?: string; q?: string; sort?: string }>;
 }) {
   const params = await searchParams;
   const { locale, t } = await getLocaleAndDictionary();
 
   const requestedRegion = params.region;
   const requestedHeat = Number(params.heat);
-  const initialRegion =
-    requestedRegion && regions.some((region) => region.name === requestedRegion) ? requestedRegion : "All";
+  const initialRegion = requestedRegion && regions.some((region) => region.name === requestedRegion) ? requestedRegion : "All";
   const initialHeat: Heat | 0 = isHeat(requestedHeat) ? requestedHeat : 0;
   const initialQuery = params.q?.slice(0, 80) ?? "";
+  const initialSort: SortOrder = isSortOrder(params.sort) ? params.sort : "featured";
 
   return (
     <div>
@@ -40,7 +43,6 @@ export default async function RecipesPage({
           <p className="max-w-[42ch] text-[13.5px] leading-7 text-ink-soft md:justify-self-end">{t.indexIntro}</p>
         </div>
       </section>
-
       <section className="wrap py-10 md:py-14">
         <RecipeBrowser
           recipes={localizeRecipes(locale)}
@@ -50,7 +52,6 @@ export default async function RecipesPage({
           initialQuery={initialQuery}
         />
       </section>
-
       <section className="border-t border-line bg-card py-12">
         <div className="wrap grid gap-6 sm:grid-cols-3">
           {[
