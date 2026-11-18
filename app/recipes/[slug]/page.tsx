@@ -13,7 +13,7 @@ import { MethodSteps } from "@/components/method-steps";
 import { HeatDots, RecipeCard } from "@/components/recipe-card";
 import { format, formatDuration, type Dictionary } from "@/lib/i18n";
 import { getLocaleAndDictionary } from "@/lib/locale";
-import { getRecipe, hasRecipeTranslation, localizeRecipe, recipes, totalTime } from "@/lib/recipes";
+import { getRecipe, hasRecipeTranslation, localizeRecipe, recipes, regionSlug, totalTime } from "@/lib/recipes";
 
 export function generateStaticParams() {
   return recipes.map((recipe) => ({ slug: recipe.slug }));
