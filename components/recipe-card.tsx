@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { DishArt } from "@/components/dish-art";
+import { RecipePhoto } from "@/components/recipe-photo";
 import { format, formatDuration, type Dictionary } from "@/lib/i18n";
 import { totalTime, type Recipe } from "@/lib/recipes";
 
@@ -37,9 +37,9 @@ export function RecipeCard({ recipe, t }: { recipe: Recipe; t: Dictionary }) {
           <span className="eyebrow text-ember">{recipe.region}</span>
           <HeatDots heat={recipe.heat} t={t} />
         </div>
-        <h3 className="display mt-3 text-[24px] leading-[1.1] text-ink"><TranslatedText text={recipe.name} /></h3>
-        <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-ink-soft/70"><TranslatedText text={recipe.native} /></p>
-        <p className="mt-3 flex-1 text-[13px] leading-6 text-ink-soft"><TranslatedText text={recipe.subtitle} /></p>
+        <h3 className="display mt-3 text-[24px] leading-[1.1] text-ink">{recipe.name}</h3>
+        <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-ink-soft/70">{recipe.native}</p>
+        <p className="mt-3 flex-1 text-[13px] leading-6 text-ink-soft">{recipe.subtitle}</p>
         <div className="mt-5 flex items-center justify-between border-t border-line/70 pt-3 text-[11px] text-ink-soft">
           <span>{formatDuration(totalTime(recipe), t)}</span>
           <span>{format(t.servesCount, { count: recipe.serves })}</span>
