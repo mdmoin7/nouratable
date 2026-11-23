@@ -1,4 +1,4 @@
-# Murgh
+# Nouratable
 
 A modern Indian chicken cookbook website — regional chicken recipes from across India, each with its own illustrated plate.
 
@@ -21,9 +21,19 @@ npm run lint
 - `/masalas` — regional masala blend guide with ingredients, method, uses and storage
 - `/about` — how the book and recipes work
 
-## Search engine optimisation
+## Search, analytics and growth
 
-The App Router metadata API provides page titles, descriptions, canonical URLs and social preview metadata. Recipe detail pages emit Schema.org `Recipe` JSON-LD. Set `NEXT_PUBLIC_SITE_URL` to the production origin before deployment; the repository default is `https://nouratable.vercel.app`.
+The App Router metadata API provides page titles, descriptions, canonical URLs and Open Graph/Twitter metadata. The site emits Schema.org `Organization`, `WebSite`, `Recipe` and regional `CollectionPage` structured data. The XML sitemap includes the home page, recipe index, recipe details, regional collections, ingredient glossary, masala guide, About and image credits. `robots.txt` references the sitemap.
+
+Set these Vercel environment variables:
+
+- `NEXT_PUBLIC_SITE_URL` — canonical production origin, with no trailing slash. Use the verified custom domain if configured; otherwise use the production Vercel alias.
+- `NEXT_PUBLIC_GA_ID` — Google Analytics 4 measurement ID (`G-...`). Analytics scripts load only when this value is present.
+- `GOOGLE_SITE_VERIFICATION` — Google Search Console HTML verification token. Add the token value, not the full meta tag.
+
+After deployment, add the exact `NEXT_PUBLIC_SITE_URL` domain property in Google Search Console, verify ownership using the HTML tag token, and submit `/sitemap.xml`. Confirm the preferred host, HTTPS and indexed canonical URLs. Configure the GA4 data stream for the same domain and validate realtime events. Do not commit measurement IDs or verification tokens into source files.
+
+Analytics is optional until a valid GA4 measurement ID is configured. Search Console verification and submission require an owner with access to the Google property; code deployment alone cannot complete those external account steps.
 
 ## Languages
 
