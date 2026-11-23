@@ -183,3 +183,8 @@ with photography or remote image URLs.
 - New or changed UI strings are added to `lib/i18n/en.ts` and translated where a locale exists; nothing is hard-coded
   in components or pages.
 - Update `README.md` and this file if scripts, routes, data fields, filter params or languages change.
+
+
+## Recipe quality gate
+
+Before adding recipes, search existing slugs and dish names to avoid duplicates. Recipe entries must have measured ingredient quantities, regionally appropriate and distinct instructions, realistic preparation and cooking times, useful notes, serving suggestions, and a safe internal temperature check of 74°C / 165°F for chicken. For rice and other grains, account for local variety and absorption differences rather than assuming basmati ratios. Label adaptations honestly instead of presenting them as canonical traditional recipes. Do not use generic placeholder instructions.
