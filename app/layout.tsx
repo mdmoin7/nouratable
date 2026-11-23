@@ -31,8 +31,7 @@ const devanagariDisplay = Noto_Serif_Devanagari({
   weight: ["400", "500", "600"],
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  const { t } = await getLocaleAndDictionary();
+export function generateMetadata(): Metadata {
 
   return {
     metadataBase: new URL(siteUrl),
