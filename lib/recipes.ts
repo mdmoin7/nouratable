@@ -4383,27 +4383,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Roast chillies and spices, grind to a paste. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "fry onions until deep gold, add marinated chicken and brown. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "then simmer covered and reduce the gravy.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Toast the chillies",
+                  "body": "Soak the Mathania or Kashmiri chillies in hot water for 15 minutes. Drain and grind with garlic, cumin and a splash of water to a smooth red paste."
+            },
+            {
+                  "title": "Season the meat",
+                  "body": "Rub the chicken with yoghurt, turmeric and salt. Rest for 30 minutes while you prepare the onions and spices."
+            },
+            {
+                  "title": "Build the laal masala",
+                  "body": "Heat mustard oil until it just smokes, then cool slightly. Add bay leaf, cloves and cardamom. Fry sliced onions until deep golden, add the chilli-garlic paste and cook for 3–4 minutes."
+            },
+            {
+                  "title": "Braise the chicken",
+                  "body": "Add chicken and sear for 7–8 minutes, turning to coat every piece. Stir in coriander powder and yoghurt marinade, then add 250 ml hot water. Cover and simmer 20–25 minutes."
+            },
+            {
+                  "title": "Finish and check",
+                  "body": "Uncover and reduce the gravy until glossy. Check the thickest chicken piece reaches 74°C / 165°F; adjust salt and finish with a little ghee."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -4464,27 +4464,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Whisk curd with white pepper, grind soaked cashews. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "soften onion in ghee with whole spices, add chicken and curd on low heat. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "then simmer with nut paste and finish with milk and cream.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Marinate gently",
+                  "body": "Coat chicken with whisked yoghurt, ginger-garlic paste, white pepper and salt. Refrigerate for 30 minutes."
+            },
+            {
+                  "title": "Make the pale nut paste",
+                  "body": "Soak almonds and cashews in hot water for 15 minutes. Peel almonds, then grind both nuts with melon seeds and a little milk until completely smooth."
+            },
+            {
+                  "title": "Temper whole spices",
+                  "body": "Warm ghee in a heavy pot. Add green cardamom, cloves, cinnamon and bay leaf; fry for 30 seconds. Add sliced onions and cook until soft and translucent, not brown."
+            },
+            {
+                  "title": "Cook the chicken in yoghurt",
+                  "body": "Add chicken and marinade. Cook on medium-low heat for 8 minutes, stirring so the yoghurt does not catch. Add nut paste and green chillies."
+            },
+            {
+                  "title": "Simmer to tenderness",
+                  "body": "Add 150–200 ml hot water and simmer covered for 20–25 minutes. Check 74°C / 165°F at the thickest piece, then finish with cream and a pinch of mace."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -4545,27 +4545,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Whisk curd with fennel and dry ginger, temper whole spices in mustard oil. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "seal chicken briefly, simmer with water until nearly tender. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "then add curd gradually on low heat and warm without a hard boil.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Prepare the spice bundle",
+                  "body": "Tie fennel seeds, dry ginger, green cardamom, black cardamom, cloves and cinnamon in muslin. Whisk yoghurt with fennel powder, dry ginger powder and a pinch of asafoetida."
+            },
+            {
+                  "title": "Par-cook the chicken",
+                  "body": "Heat mustard oil in a deep pot until it just smokes, then lower the heat. Add chicken pieces and turn for 5–6 minutes until lightly sealed; remove and set aside."
+            },
+            {
+                  "title": "Infuse the stock",
+                  "body": "Add the spice bundle and 500 ml water to the pot. Simmer for 8 minutes, then return the chicken and cook gently for 12 minutes."
+            },
+            {
+                  "title": "Add the yoghurt mixture",
+                  "body": "Lower the flame. Whisk a ladle of hot stock into the yoghurt mixture, then pour it into the pot in a thin stream, stirring continuously. Keep below a hard boil."
+            },
+            {
+                  "title": "Finish the yakhni",
+                  "body": "Simmer uncovered until the chicken is tender, about 8–10 minutes more. Check 74°C / 165°F at the thickest piece, adjust salt and finish with crushed dried mint."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -4625,27 +4625,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Season chicken with garlic and turmeric, heat mustard oil and crackle cumin. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "fry onions till golden, cook roasted tomato and spices into a thick masala. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "add chicken and simmer until tender.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Season the chicken",
+                  "body": "Mix chicken with mustard oil, turmeric, chilli powder, crushed garlic, salt and a squeeze of lemon. Rest for 30 minutes."
+            },
+            {
+                  "title": "Prepare the mustard-garlic base",
+                  "body": "Pound garlic, ginger, cumin and coriander coarsely. Heat mustard oil until it just smokes, lower the flame and add the panch phoron."
+            },
+            {
+                  "title": "Brown the onions",
+                  "body": "Add sliced onions and fry until deep golden. Add the pounded spice mixture and cook for 2 minutes until aromatic."
+            },
+            {
+                  "title": "Cook the chicken",
+                  "body": "Add chicken and sear on high heat for 6–8 minutes. Add chopped tomatoes and cook until they collapse; sprinkle in coriander powder and a little hot water."
+            },
+            {
+                  "title": "Reduce and finish",
+                  "body": "Cover and simmer for 20–25 minutes, stirring occasionally. Reduce the gravy to a thick masala, check 74°C / 165°F internally and finish with green chilli and coriander."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -4706,27 +4706,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Marinate chicken in curd and turmeric, fry potato halves in mustard oil. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "temper whole spices and fry onion and tomato, add chicken and coat well. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "return potatoes and simmer until cooked.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Prepare the potatoes",
+                  "body": "Peel and halve the potatoes. Rub with turmeric and salt, then shallow-fry in mustard oil until golden on the outside; remove."
+            },
+            {
+                  "title": "Temper the oil",
+                  "body": "Heat the remaining mustard oil until it just smokes and cool slightly. Add bay leaf, cumin seeds, dried red chilli and green cardamom."
+            },
+            {
+                  "title": "Fry the chicken",
+                  "body": "Add chicken pieces and turmeric. Fry for 5–7 minutes until the surface changes colour, then remove briefly if the pan is crowded."
+            },
+            {
+                  "title": "Make the light jhol",
+                  "body": "Add ginger paste, cumin powder, coriander powder and chopped tomato. Cook for 3 minutes, return chicken and potatoes, then add 500 ml hot water."
+            },
+            {
+                  "title": "Simmer and serve",
+                  "body": "Cover and simmer 20–25 minutes until potatoes are tender and chicken reaches 74°C / 165°F. Keep the broth light; finish with slit green chillies and garam masala."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -4786,27 +4786,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Whisk curd with ginger and white pepper, temper whole spices in mustard oil and ghee. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "soften onion paste without dark browning, add chicken and curd slowly while stirring. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "simmer gently until cooked.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Marinate in yoghurt",
+                  "body": "Whisk yoghurt with ginger paste, garlic paste, turmeric, chilli powder and salt. Coat chicken and refrigerate for 45 minutes."
+            },
+            {
+                  "title": "Fry the onions",
+                  "body": "Heat mustard oil in a kadai. Add bay leaf, cardamom, cinnamon and cloves, followed by sliced onions. Fry until evenly golden."
+            },
+            {
+                  "title": "Cook the yoghurt masala",
+                  "body": "Lower the heat and add the marinated chicken in batches. Stir continuously for 5 minutes, then cook uncovered until the yoghurt releases oil at the edges."
+            },
+            {
+                  "title": "Braise until tender",
+                  "body": "Add a little hot water, cover and simmer for 20–25 minutes. Stir twice and add water only if the masala becomes too thick."
+            },
+            {
+                  "title": "Finish the doi murgi",
+                  "body": "Check that the thickest chicken piece reaches 74°C / 165°F. Add green chillies and a pinch of garam masala; rest covered for 5 minutes."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -4868,27 +4868,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Marinate chicken with turmeric and vinegar, roast coconut and spices separately. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "fry onion and grind with roasted ingredients and tamarind, brown chicken in oil. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "then simmer with the xacuti paste until tender.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Toast the xacuti spices",
+                  "body": "Dry-roast coriander seeds, poppy seeds, cumin, fennel, peppercorns, cloves, cinnamon and dried red chillies separately until fragrant. Do not let the poppy seeds darken."
+            },
+            {
+                  "title": "Roast coconut and aromatics",
+                  "body": "In the same pan, roast grated coconut until deep golden. Fry sliced onion with a little oil until brown. Cool everything completely."
+            },
+            {
+                  "title": "Grind the masala",
+                  "body": "Grind the roasted spices, coconut, onion, garlic, ginger and tamarind with water to a thick, smooth paste."
+            },
+            {
+                  "title": "Fry the chicken",
+                  "body": "Heat coconut oil in a heavy pot. Add chicken, turmeric and salt; sear for 6–8 minutes. Add the xacuti paste and fry on medium-low heat for 5 minutes."
+            },
+            {
+                  "title": "Simmer the curry",
+                  "body": "Add 300 ml hot water, cover and simmer for 20–25 minutes. Check 74°C / 165°F at the thickest piece, then balance salt and tamarind before serving."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -4949,27 +4949,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Marinate chicken with turmeric and ginger-garlic, fry curry leaves and onions in coconut oil. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "cook tomatoes with coriander and pepper until oil separates, add chicken and thin coconut milk and simmer. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "then finish with thick coconut milk over low heat.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Marinate the chicken",
+                  "body": "Mix chicken with turmeric, chilli powder, coriander powder, ginger-garlic paste and salt. Rest for 20 minutes."
+            },
+            {
+                  "title": "Temper coconut oil",
+                  "body": "Heat coconut oil in a clay pot or kadai. Add mustard seeds; when they splutter, add curry leaves, sliced shallots and green chillies."
+            },
+            {
+                  "title": "Cook the onion masala",
+                  "body": "Fry shallots until golden at the edges. Add crushed black pepper and coriander powder, then stir for 30 seconds so the spices bloom without burning."
+            },
+            {
+                  "title": "Braise the chicken",
+                  "body": "Add chicken and toss for 6–8 minutes. Add chopped tomato and 250 ml hot water, cover and simmer for 20 minutes."
+            },
+            {
+                  "title": "Finish with coconut",
+                  "body": "Stir in thick coconut milk and simmer gently for 3–4 minutes without boiling hard. Check 74°C / 165°F internally and finish with fresh curry leaves."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5030,27 +5030,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Roast coconut and spices separately, grind to a paste. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "fry shallots and curry leaves in sesame oil, add chicken and fry well. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "add tomato and ground masala, then simmer until tender.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Roast the Kongunadu masala",
+                  "body": "Dry-roast coriander seeds, fennel, cumin, black pepper, dried red chillies and a small piece of cinnamon. Cool and grind coarsely."
+            },
+            {
+                  "title": "Prepare the coconut paste",
+                  "body": "Grind fresh coconut with roasted gram and a little water to a smooth paste. Keep separate from the spice powder."
+            },
+            {
+                  "title": "Fry the aromatics",
+                  "body": "Heat sesame oil, add fennel seeds, curry leaves and chopped shallots. Fry until the shallots turn golden, then add ginger-garlic paste."
+            },
+            {
+                  "title": "Cook the chicken",
+                  "body": "Add chicken, turmeric and salt. Sear for 7 minutes, add the roasted spice powder and chopped tomato, and cook until the tomato softens."
+            },
+            {
+                  "title": "Simmer and finish",
+                  "body": "Add 300 ml hot water and simmer covered for 18 minutes. Stir in coconut paste and cook 6–8 minutes more; verify 74°C / 165°F at the thickest piece."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5111,27 +5111,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Marinate chicken with ginger-garlic and chilli, temper cumin and curry leaves. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "fry onion and tomato until thick, add chicken and cook covered with a little water. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "then uncover and roast with crushed garlic until dry.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Make the chilli-garlic marinade",
+                  "body": "Pound garlic, ginger, green chillies and Guntur chilli powder with lemon juice, turmeric and salt. Coat chicken and rest for 30 minutes."
+            },
+            {
+                  "title": "Temper the curry leaves",
+                  "body": "Heat oil in a wide kadai. Add mustard seeds, cumin, dried red chillies and a generous handful of curry leaves."
+            },
+            {
+                  "title": "Brown the chicken",
+                  "body": "Add marinated chicken in a single layer. Fry on medium-high heat for 8–10 minutes, turning often until the pieces are browned."
+            },
+            {
+                  "title": "Cook through without gravy",
+                  "body": "Lower the flame, add 80 ml water and cover for 12–15 minutes. Open and stir frequently as the liquid evaporates and the masala clings to the chicken."
+            },
+            {
+                  "title": "Roast to finish",
+                  "body": "Add crushed black pepper and coriander leaves. Continue tossing until dry and glossy; check 74°C / 165°F at the thickest piece."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5191,27 +5191,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Blanch spinach and mustard greens and grind coarsely, brown garlic and onion in ghee with cumin. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "add chicken and fry, stir in greens and water and simmer until chicken is cooked. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "finish with garam masala.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Blanch the greens",
+                  "body": "Wash spinach and mustard greens thoroughly. Blanch in boiling water for 2 minutes, transfer to cold water, drain and blend to a coarse purée."
+            },
+            {
+                  "title": "Season and sear chicken",
+                  "body": "Rub chicken with turmeric, chilli powder, ginger-garlic paste and salt. Heat ghee and sear in batches until lightly browned; remove."
+            },
+            {
+                  "title": "Build the onion base",
+                  "body": "Add cumin to the same pan, then chopped onion. Fry until golden, add ginger-garlic and tomato, and cook until the tomato breaks down."
+            },
+            {
+                  "title": "Combine greens and chicken",
+                  "body": "Stir in coriander powder and the greens purée. Return chicken, add 150 ml water, cover and simmer for 20–25 minutes."
+            },
+            {
+                  "title": "Finish the saag",
+                  "body": "Check 74°C / 165°F internally. Add garam masala, crushed kasuri methi and a spoon of butter; simmer uncovered until thick."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5272,27 +5272,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Marinate chicken in curd and ginger-garlic, temper mustard fennel nigella and fenugreek. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "fry onion and tomato with pickle masala, add chicken and cook until coated. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "then simmer until tender.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Prepare the achari spice",
+                  "body": "Lightly crush fennel, mustard, fenugreek, nigella and cumin seeds. Keep half whole for tempering and grind the rest coarsely."
+            },
+            {
+                  "title": "Marinate the chicken",
+                  "body": "Mix chicken with yoghurt, turmeric, chilli powder, ginger-garlic paste, ground achari spice and salt. Rest for 30 minutes."
+            },
+            {
+                  "title": "Temper the pickle spices",
+                  "body": "Heat mustard oil until it just smokes. Add the reserved whole seeds and dried red chilli; let them crackle briefly."
+            },
+            {
+                  "title": "Cook the masala",
+                  "body": "Add sliced onions and fry until golden. Add marinated chicken and cook for 8 minutes, stirring until the yoghurt thickens and oil appears."
+            },
+            {
+                  "title": "Simmer and balance",
+                  "body": "Add 150 ml hot water, cover and simmer 18–22 minutes. Check 74°C / 165°F, then finish with amchur or a little lemon for a bright pickle-like tang."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5352,27 +5352,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Dry roast coriander, bhang jeera and chillies and grind coarsely. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "fry onion in mustard oil with ginger-garlic, add chicken and fry. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "stir in ground spices and tomato, then simmer with water until tender.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Toast the local spice mix",
+                  "body": "Dry-roast cumin, coriander, black pepper and a little jakhya if available. Crush coarsely with garlic and green chilli."
+            },
+            {
+                  "title": "Prepare the simple base",
+                  "body": "Heat mustard oil in a heavy pan. Add jakhya or cumin, then sliced onion and cook until translucent rather than deeply browned."
+            },
+            {
+                  "title": "Season and sear",
+                  "body": "Add chicken, turmeric and salt. Turn over medium-high heat for 7 minutes until the pieces are lightly browned."
+            },
+            {
+                  "title": "Simmer with hill spices",
+                  "body": "Add the crushed spice mix, chopped tomato and 250 ml hot water. Cover and cook gently for 20–25 minutes, stirring once halfway."
+            },
+            {
+                  "title": "Finish with herbs",
+                  "body": "Check 74°C / 165°F at the thickest piece. Reduce the broth to the consistency you like and finish with coriander and a squeeze of lemon."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5433,27 +5433,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Marinate chicken with curd and ginger-garlic, roast pomegranate and whole spices and grind coarsely. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "fry onion and tomato, add chicken and ground spice paste and fry. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "then simmer until tender and adjust sourness.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Make the anardana masala",
+                  "body": "Dry-roast coriander seeds, cumin and dried pomegranate seeds until aromatic. Cool and grind coarsely with black pepper."
+            },
+            {
+                  "title": "Marinate the chicken",
+                  "body": "Coat chicken with yoghurt, ginger-garlic paste, turmeric, chilli powder and salt. Rest for 30 minutes."
+            },
+            {
+                  "title": "Brown the onions",
+                  "body": "Heat mustard oil or ghee. Add cinnamon and bay leaf, then sliced onions; fry until golden at the edges."
+            },
+            {
+                  "title": "Cook with the sour spice",
+                  "body": "Add chicken and marinade, sear for 7 minutes, then stir in the anardana powder. Add 200 ml hot water and simmer covered for 20 minutes."
+            },
+            {
+                  "title": "Reduce and check",
+                  "body": "Uncover and reduce until the gravy clings to the chicken. Verify 74°C / 165°F internally, adjust sourness with a little more anardana and finish with coriander."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5514,27 +5514,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Fry onions with ginger-garlic, add tomato and spice powders and cook until thick. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "fry chicken in the masala, add water and simmer until fully cooked. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "stir in vinegar and jaggery and top with potato salli at serving.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Prepare the chicken",
+                  "body": "Season chicken with ginger-garlic paste, turmeric, chilli powder and salt. Keep aside for 20 minutes."
+            },
+            {
+                  "title": "Make the sweet-sour tomato base",
+                  "body": "Heat oil in a wide pan. Fry sliced onions until golden, add ginger-garlic and chopped tomatoes, and cook until thick."
+            },
+            {
+                  "title": "Layer the Parsi spices",
+                  "body": "Add cumin, coriander, cinnamon and a small pinch of clove powder. Stir in vinegar and jaggery, tasting for a balanced sweet-sour flavour."
+            },
+            {
+                  "title": "Simmer the chicken",
+                  "body": "Add chicken and turn to coat in the masala. Pour in 150 ml hot water, cover and simmer for 20–25 minutes until tender."
+            },
+            {
+                  "title": "Finish with salli",
+                  "body": "Check 74°C / 165°F internally and reduce the sauce until glossy. Top with crisp potato salli just before serving so it stays crunchy."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5594,27 +5594,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Rinse and taste fermented bamboo shoot, brown chicken in mustard oil. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "add ginger onion and green chilli, stir in bamboo shoot tomato and pepper. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "simmer covered until cooked and reduce uncovered.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Prepare the bamboo shoot",
+                  "body": "If using fermented bamboo shoot, rinse lightly and drain; taste first because its salt and sourness vary. Slice fresh ginger and crush garlic."
+            },
+            {
+                  "title": "Smoke or brown the chicken",
+                  "body": "Rub chicken with salt and a little chilli. Brown in a heavy pan or over a grill until the skin and edges take on a light smoky colour."
+            },
+            {
+                  "title": "Cook the aromatics",
+                  "body": "Heat a little mustard oil, add crushed ginger and garlic, then add king chilli or bird's-eye chilli in a quantity suited to your heat tolerance."
+            },
+            {
+                  "title": "Braise with bamboo shoot",
+                  "body": "Add chicken and bamboo shoot, toss for 3 minutes and pour in 250 ml water. Cover and simmer for 20–25 minutes, stirring occasionally."
+            },
+            {
+                  "title": "Check and finish",
+                  "body": "Check 74°C / 165°F at the thickest piece. Adjust salt; keep the broth relatively light and finish with fresh herbs if available."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5674,27 +5674,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Boil potatoes and raw banana until soft, simmer chicken with ginger-garlic onion and water until cooked. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "pound roasted ngari if using with green chillies, mash vegetables with the chilli mixture. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "serve broth beside the mash.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Cook the vegetables",
+                  "body": "Boil potatoes and seasonal vegetables such as beans or cabbage until just tender. Drain, reserving a little cooking water."
+            },
+            {
+                  "title": "Prepare the chilli mash",
+                  "body": "Roast or boil dried red chillies, then pound with fermented fish (ngari) if used in your household version. Mash the cooked vegetables roughly into this mixture."
+            },
+            {
+                  "title": "Season the chicken",
+                  "body": "Rub chicken with turmeric and salt. Heat mustard oil and sear the pieces for 5–6 minutes."
+            },
+            {
+                  "title": "Simmer the chicken",
+                  "body": "Add sliced onion, ginger and 250 ml water. Cover and simmer 18–22 minutes, stirring once, until chicken is nearly tender."
+            },
+            {
+                  "title": "Combine and verify",
+                  "body": "Fold in the vegetable-chilli mash and simmer 5 minutes. Check 74°C / 165°F internally; adjust salt and keep the texture rustic rather than smooth."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5755,27 +5755,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Season chicken with garlic turmeric and salt, temper mustard seeds and fry onion. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "add tomato and coriander powder, add chicken and simmer with water until cooked. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "stir in amaranth leaves and cook until wilted.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Prepare the spice paste",
+                  "body": "Pound garlic, ginger, dried red chilli and coriander seeds with a splash of water. Keep the paste coarse for a homestyle texture."
+            },
+            {
+                  "title": "Fry the aromatics",
+                  "body": "Heat mustard oil in a kadai. Add cumin and sliced onions; cook until golden, then add the spice paste and fry for 2–3 minutes."
+            },
+            {
+                  "title": "Brown the chicken",
+                  "body": "Add chicken, turmeric and salt. Fry on medium-high heat for 7–8 minutes, turning so the masala coats all sides."
+            },
+            {
+                  "title": "Simmer the curry",
+                  "body": "Add chopped tomato and 300 ml hot water. Cover and simmer for 20–25 minutes, stirring once or twice."
+            },
+            {
+                  "title": "Finish with greens",
+                  "body": "Add chopped seasonal greens and cook uncovered until wilted. Check 74°C / 165°F at the thickest piece, adjust salt and serve with rice."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5836,27 +5836,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Roast coconut and whole spices separately and grind coarsely, fry onion and curry leaves in coconut oil. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "add chicken and brown, stir in ground masala with a little water and cover-cook. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "uncover and roast until nearly dry.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Roast the coconut masala",
+                  "body": "Dry-roast grated coconut until golden. Separately roast coriander seeds, dried red chillies, cumin, peppercorns and a little fenugreek."
+            },
+            {
+                  "title": "Grind the sukka paste",
+                  "body": "Grind the roasted coconut and spices with garlic, tamarind and a little water to a thick, coarse paste."
+            },
+            {
+                  "title": "Season the chicken",
+                  "body": "Mix chicken with turmeric and salt. Heat coconut oil, add curry leaves and sliced onion, and cook until the onion softens."
+            },
+            {
+                  "title": "Cook with the paste",
+                  "body": "Add chicken and sear for 6–8 minutes. Stir in the ground masala and cook on low heat for 5 minutes, scraping the pan so it does not catch."
+            },
+            {
+                  "title": "Roast until nearly dry",
+                  "body": "Add 100 ml hot water, cover and simmer 18–22 minutes. Uncover and toss until the masala clings; verify 74°C / 165°F internally."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5918,27 +5918,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Simmer chicken with ginger garlic onion and pepper to make broth, strain and shred the meat. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "boil noodles separately, simmer carrot and cabbage briefly in broth. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "assemble bowls with noodles chicken broth and spring onion.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Prepare the broth base",
+                  "body": "Bring 1.5 litres water or light chicken stock to a simmer with ginger slices, garlic, crushed peppercorns and a little salt."
+            },
+            {
+                  "title": "Cook the chicken",
+                  "body": "Add chicken thigh pieces and simmer gently for 15–18 minutes until cooked. Remove, shred or slice, and keep the broth hot; verify 74°C / 165°F."
+            },
+            {
+                  "title": "Prepare the vegetables",
+                  "body": "Heat a little oil in a separate pot. Briefly stir-fry sliced onion, carrot, cabbage and spring onion whites until just softened."
+            },
+            {
+                  "title": "Build the noodle soup",
+                  "body": "Pour in the hot broth and simmer vegetables for 4–5 minutes. Add wheat or egg noodles and cook according to the packet instructions."
+            },
+            {
+                  "title": "Assemble the bowls",
+                  "body": "Return sliced chicken to the broth to reheat. Taste for salt, add chilli oil or green chilli to taste, and finish with spring onion greens and coriander."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -5998,27 +5998,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Slash chicken and marinate in curd and spices for 4 hours, grind browned onion and soaked nuts. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "brown chicken in ghee, add nut paste and water and cover-cook slowly. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "finish with saffron and verify 74°C / 165°F at the thickest part.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Prepare the whole chicken",
+                  "body": "Use a 1.2–1.4 kg whole chicken. Make deep slashes in the legs and breast; rub inside and out with yoghurt, ginger-garlic paste, chilli, turmeric, salt and lemon. Marinate 4 hours."
+            },
+            {
+                  "title": "Make the stuffing",
+                  "body": "Mix boiled eggs (optional), fried onions, chopped nuts, raisins, mint and coriander. Fill the cavity loosely and secure the opening with skewers or kitchen twine."
+            },
+            {
+                  "title": "Prepare the korma masala",
+                  "body": "Grind soaked cashews and melon seeds to a smooth paste. Fry sliced onions in ghee until golden, then grind with a little water."
+            },
+            {
+                  "title": "Braise the chicken",
+                  "body": "Heat ghee with cardamom, cloves and cinnamon. Add onion paste, nut paste and coriander powder; cook 3 minutes. Place chicken breast-side down, turn to coat, add 250 ml stock and cover."
+            },
+            {
+                  "title": "Finish in oven and check",
+                  "body": "Transfer the covered pot to a 180°C oven for 45–55 minutes, turning once. Check the thickest breast and inner thigh reach 74°C / 165°F; rest 10 minutes before carving."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -6079,27 +6079,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Toast sliced garlic in oil until pale gold and reserve some, add cumin and onion and fry. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "add tomato and coriander powder, fry chicken in the masala and add water. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "simmer until tender and finish with garam masala and garlic.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Make the garlic marinade",
+                  "body": "Crush garlic with green chilli, lemon juice, turmeric, chilli powder and salt. Rub over chicken and rest for 30 minutes."
+            },
+            {
+                  "title": "Toast the Indori masala",
+                  "body": "Dry-roast coriander seeds, fennel, cumin and black pepper until fragrant. Cool and crush coarsely."
+            },
+            {
+                  "title": "Fry the garlic and onion",
+                  "body": "Heat oil or ghee in a kadai. Add sliced garlic and fry until pale gold, then add onions and cook until translucent."
+            },
+            {
+                  "title": "Cook the chicken",
+                  "body": "Add marinated chicken and sear for 8 minutes. Add the crushed spice mix and chopped tomato; stir until the tomato softens."
+            },
+            {
+                  "title": "Reduce to a thick roast",
+                  "body": "Add 100 ml hot water, cover for 15–18 minutes, then uncover and roast until the masala clings. Check 74°C / 165°F and finish with coriander and lemon."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -6160,27 +6160,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Marinate chicken in curd and ginger-garlic, grind fried onion with soaked poppy seeds and cashews. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "temper whole spices in ghee, add chicken and marinade then nut paste. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "cover and simmer until fully cooked.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Marinate the leg quarters",
+                  "body": "Make deep slashes in chicken leg quarters. Mix yoghurt, ginger-garlic paste, papaya paste (optional), chilli, garam masala, salt and lemon; coat chicken and refrigerate 2 hours."
+            },
+            {
+                  "title": "Prepare the rich paste",
+                  "body": "Soak cashews and poppy seeds in hot water for 20 minutes. Grind with fried onion and a little water to a smooth paste."
+            },
+            {
+                  "title": "Sear the chicken",
+                  "body": "Heat ghee and oil in a heavy pan. Add chicken pieces and brown on both sides, reserving the marinade."
+            },
+            {
+                  "title": "Braise in the Mughlai sauce",
+                  "body": "Add the nut paste, marinade, a pinch of sugar and 200 ml hot water. Cover and cook on low heat for 25–30 minutes, turning the pieces twice."
+            },
+            {
+                  "title": "Finish and verify",
+                  "body": "Uncover and reduce the sauce until thick and glossy. Check the thickest part reaches 74°C / 165°F; finish with kewra water sparingly and a little ghee."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -6242,27 +6242,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Roast coconut and spices separately, fry onions until deep brown and grind with roasted ingredients. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "fry chicken with turmeric and ginger-garlic, add dark masala and cook until oil separates. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "add water and simmer until tender.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Roast the Saoji masala",
+                  "body": "Dry-roast dry coconut, coriander seeds, cumin, poppy seeds, sesame, black pepper, cloves, cinnamon and dried red chillies separately until fragrant."
+            },
+            {
+                  "title": "Grind the dark paste",
+                  "body": "Fry sliced onions until deep brown. Grind them with the roasted spices and coconut, adding water gradually to make a thick paste."
+            },
+            {
+                  "title": "Sear the chicken",
+                  "body": "Heat oil in a kadai. Add chicken, turmeric and salt; sear for 7–8 minutes until the surface is lightly browned."
+            },
+            {
+                  "title": "Cook the Saoji gravy",
+                  "body": "Add the ground masala and fry on medium-low heat for 6–8 minutes, stirring often. Add 350 ml hot water and cover."
+            },
+            {
+                  "title": "Simmer and check",
+                  "body": "Cook 20–25 minutes until tender. Check 74°C / 165°F at the thickest piece; adjust salt and serve the dark, spicy gravy with bhakri."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
@@ -6322,27 +6322,27 @@ export const recipes: Recipe[] = [
       }
     ],
     "steps": [
-      {
-        "title": "Prepare and season",
-        "body": "Clean and cut the chicken into even pieces. Mix with the listed marinade ingredients and keep aside for 20–30 minutes."
-      },
-      {
-        "title": "Prepare the regional masala",
-        "body": "Season chicken with ginger-garlic turmeric chilli and salt, fry fennel curry leaves and shallots in sesame oil. Prepare the remaining spices and vegetables before heating the pan."
-      },
-      {
-        "title": "Build the flavour base",
-        "body": "add chicken and brown on high heat, add tomato and a splash of water and cover until cooked. Cook the masala until fragrant and the oil begins to separate."
-      },
-      {
-        "title": "Cook the chicken",
-        "body": "uncover and roast dry with crushed pepper.. Cover and cook gently, adding hot water only as needed."
-      },
-      {
-        "title": "Finish and check",
-        "body": "Adjust salt and chilli. Check that the thickest chicken piece reaches 74°C / 165°F, then finish with herbs or garnish and keep aside for 5 minutes."
-      }
-    ],
+            {
+                  "title": "Marinate briefly",
+                  "body": "Mix chicken with turmeric, chilli powder, ginger-garlic paste, salt and lemon. Rest for 20 minutes."
+            },
+            {
+                  "title": "Crush the chukka spices",
+                  "body": "Coarsely crush fennel seeds, black peppercorns and cumin. Keep some pepper coarse for texture."
+            },
+            {
+                  "title": "Fry shallots and curry leaves",
+                  "body": "Heat sesame oil in a wide kadai. Add fennel, curry leaves and shallots; fry until the shallots turn golden at the edges."
+            },
+            {
+                  "title": "Cook the chicken",
+                  "body": "Add chicken and sear on high heat for 7–8 minutes. Add chopped tomato and the crushed spice mix; cook until tomato softens."
+            },
+            {
+                  "title": "Roast dry and finish",
+                  "body": "Add 100 ml water, cover and cook 15–18 minutes. Uncover and roast, tossing often, until dry and dark at the edges. Check 74°C / 165°F internally."
+            }
+      ],
     "notes": [
       "Regional spice blends vary between households; add chilli, souring agents and salt gradually.",
       "Use bone-in chicken for a fuller gravy, or reduce the cooking time for small boneless pieces.",
