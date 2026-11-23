@@ -44,7 +44,7 @@ components/
   ingredient-list.tsx     tickable ingredient checklist (client)
   locale-switcher.tsx     retained language selector component; currently not mounted in the header
   dish-art.tsx            deterministic SVG dish illustrator
-lib/recipes.ts            every recipe, region notes, pantry, method, helpers
+lib/recipes.ts            every recipe, region notes, pantry, method, helpers\nlib/food-knowledge.ts     typed ingredient glossary and regional masala references\napp/ingredients/page.tsx ingredient glossary route\napp/masalas/page.tsx     masala guide route
 lib/locale.ts             server-only locale + dictionary reader
 lib/i18n/                 interface dictionaries (en complete, hi complete, five partial)
 lib/recipe-translations/  per-language recipe content (types + Hindi)
@@ -188,3 +188,4 @@ with photography or remote image URLs.
 ## Recipe quality gate
 
 Before adding recipes, search existing slugs and dish names to avoid duplicates. Recipe entries must have measured ingredient quantities, regionally appropriate and distinct instructions, realistic preparation and cooking times, useful notes, serving suggestions, and a safe internal temperature check of 74°C / 165°F for chicken. For rice and other grains, account for local variety and absorption differences rather than assuming basmati ratios. Label adaptations honestly instead of presenting them as canonical traditional recipes. Do not use generic placeholder instructions.
+\n\n## Ingredient and masala knowledge\n\nMaintain the structured glossary and masala guides in `lib/food-knowledge.ts`. Each ingredient entry should explain alternate names, flavour, culinary use, safe handling and realistic substitutions. Each masala entry should explain its regional context, variable household formulations, ingredients, roasting/grinding method, suitable dishes and storage limits. Do not present a household variation as a universal canonical formula, and do not describe a substitute as an exact match unless it is one. Keep all content in simple Indian English and validate regional claims before expanding the catalogue.\n
