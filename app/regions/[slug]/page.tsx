@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!region) return { title: "Region not found" };
   const title = `${region.name} Chicken Recipes`;
   const description = `Explore ${region.count} ${region.name} chicken recipes, regional cooking traditions, ingredients and step-by-step home-kitchen methods.`;
-  return { title, description, alternates: { canonical: `/regions/${slug}` }, openGraph: { title: `${title} | Murgh`, description, url: `/regions/${slug}`, type: "website" } };
+  return { title, description, alternates: { canonical: `/regions/${slug}` }, openGraph: { title: `${title} | Nouratable`, description, url: `/regions/${slug}`, siteName: "Nouratable", type: "website" }, twitter: { card: "summary", title: `${title} | Nouratable`, description } };
 }
 
 export default async function RegionPage({ params }: { params: Promise<{ slug: string }> }) {
