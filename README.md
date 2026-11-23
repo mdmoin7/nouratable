@@ -35,9 +35,9 @@ Interface translations live in `lib/i18n/`; recipe translations live in `lib/rec
 
 ## Working with the content
 
-The recipe catalogue currently contains 102 dishes. Add or edit recipes in `lib/recipes.ts`. The ingredient glossary and regional masala reference are maintained in `lib/food-knowledge.ts`; their pages are generated from this single typed source.
+The recipe catalogue currently contains 112 dishes. Add or edit recipes in `lib/recipes.ts`. The ingredient glossary and regional masala reference are maintained in `lib/food-knowledge.ts`; their pages are generated from this single typed source.
 
-The knowledge base currently includes 12 ingredient references and 8 masala guides. Treat regional recipes and blends as variable household traditions: identify adaptations honestly, avoid claiming one universal formula, and distinguish flavour substitutions from exact replacements. Do not present unsafe ingredient processing or storage advice. Chicken recipes must use measured quantities, clear timings and a safe internal temperature of 74°C / 165°F.
+The knowledge base currently includes 12 ingredient references and 8 masala guides, alongside 112 detailed chicken recipes. Treat regional recipes and blends as variable household traditions: identify adaptations honestly, avoid claiming one universal formula, and distinguish flavour substitutions from exact replacements. Do not present unsafe ingredient processing or storage advice. Chicken recipes must use measured quantities, clear timings and a safe internal temperature of 74°C / 165°F.
 
 Copy is written in simple Indian English for home cooks — see [AGENTS.md](AGENTS.md) for content conventions and development workflow.
 
