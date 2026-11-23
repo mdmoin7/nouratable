@@ -6353,7 +6353,273 @@ export const recipes: Recipe[] = [
       "Rasam rice",
       "Onion raita"
     ]
+  },
+  {
+    slug: "mughlai-chicken-rezala",
+    name: "Mughlai Chicken Rezala",
+    native: "Murgh Rezala",
+    subtitle: "A pale, fragrant Kolkata-style curry with curd, cashew, poppy seeds and gentle whole spices.",
+    region: "West Bengal",
+    origin: "Kolkata, West Bengal",
+    heat: 1,
+    prep: 25,
+    cook: 40,
+    serves: 4,
+    variant: "curry",
+    palette: { bg: "#eee5d8", curry: "#c5a77d", deep: "#8e704d", piece: "#e1c49e", garnish: "#65734d", accent: "#f1dfb9" },
+    story: "Rezala is known for its light colour and perfume rather than a red chilli-heavy gravy. Curd, a little nut paste and whole spices make a gently rich sauce. This home version keeps the technique manageable while retaining the characteristic pale finish.",
+    tags: ["Kolkata", "Mild", "Curd gravy"],
+    ingredients: [
+      { title: "For the chicken", items: ["800 g bone-in chicken, medium pieces", "150 g thick curd, whisked", "1 tbsp ginger paste", "1 tbsp garlic paste", "½ tsp white pepper powder", "¾ tsp salt"] },
+      { title: "For the rezala paste", items: ["2 tbsp poppy seeds, soaked for 20 minutes", "12 cashews, soaked", "2 tbsp warm water, as needed"] },
+      { title: "For the gravy", items: ["3 tbsp ghee", "1 tbsp neutral oil", "1 small onion, finely sliced", "4 green cardamom", "4 cloves", "1 small cinnamon stick", "1 bay leaf", "2 green chillies, slit", "½ tsp sugar", "150–200 ml hot water", "1 tsp kewra water, optional"] }
+    ],
+    steps: [
+      { title: "Marinate the chicken", body: "Mix the chicken with curd, ginger, garlic, white pepper and salt. Cover and refrigerate for at least 1 hour. Bring it out while you prepare the paste." },
+      { title: "Make the nut paste", body: "Drain the poppy seeds and cashews. Grind them with a little warm water to a very smooth paste. Keep aside; a smooth paste prevents a grainy gravy." },
+      { title: "Start the fragrant base", body: "Heat ghee and oil in a heavy kadai. Add cardamom, cloves, cinnamon and bay leaf. Fry for 30 seconds, then add the sliced onion and cook till soft and translucent without browning it deeply." },
+      { title: "Cook the chicken gently", body: "Add the marinated chicken and its curd mixture. Cook on medium heat for 8–10 minutes, turning the pieces so they lose their raw surface colour. Add the nut paste and green chillies; stir continuously for 2 minutes." },
+      { title: "Simmer and finish", body: "Add 150 ml hot water, cover and simmer on low heat for 20–25 minutes, stirring occasionally. Add a little more water if the gravy becomes too thick. Check the thickest chicken piece reaches 74°C / 165°F. Switch off the flame, add sugar and optional kewra water, then keep aside for 5 minutes." }
+    ],
+    notes: ["Keep the onion pale; deep browning changes both the colour and flavour of rezala.", "Grind the poppy seeds and cashews thoroughly, adding water a teaspoon at a time.", "Kewra is strong. Start with a few drops if you are unsure of its strength."],
+    serveWith: ["Roomali roti", "Naan", "Light pulao"]
+  },
+  {
+    slug: "methi-malai-murgh",
+    name: "Methi Malai Murgh",
+    native: "Methi Malai Chicken",
+    subtitle: "Tender chicken in a mild fresh-cream gravy with fenugreek leaves, cashew and green chilli.",
+    region: "Punjab",
+    origin: "North Indian restaurant kitchens",
+    heat: 1,
+    prep: 20,
+    cook: 30,
+    serves: 4,
+    variant: "curry",
+    palette: { bg: "#e9e8d8", curry: "#b6a978", deep: "#756b42", piece: "#dfc49b", garnish: "#55704a", accent: "#e9d9ad" },
+    story: "Methi malai murgh balances the slight bitterness of fenugreek with the sweetness of onion and the richness of cream. Fresh methi gives the best flavour, while a small amount of kasuri methi can deepen it when fresh leaves are out of season.",
+    tags: ["Mild", "Creamy", "Fenugreek"],
+    ingredients: [
+      { title: "For the chicken", items: ["750 g boneless chicken thigh, bite-sized pieces", "½ cup thick curd", "1 tbsp ginger-garlic paste", "½ tsp white pepper", "¾ tsp salt"] },
+      { title: "For the gravy", items: ["2 tbsp ghee", "1 tbsp oil", "2 medium onions, thinly sliced", "12 cashews, soaked for 15 minutes", "2 green chillies, slit", "1 tsp cumin seeds", "½ tsp coriander powder", "½ tsp garam masala", "2 packed cups fresh methi leaves, washed and chopped", "120 ml fresh cream", "100 ml hot water", "½ tsp sugar, optional"] }
+    ],
+    steps: [
+      { title: "Season the chicken", body: "Mix chicken with curd, ginger-garlic paste, white pepper and salt. Keep aside for 20–30 minutes while preparing the gravy ingredients." },
+      { title: "Prepare the onion-cashew base", body: "Heat 1 tbsp ghee and the oil. Cook the onions on medium-low heat till soft and lightly golden. Cool slightly, then grind with the drained cashews and a little water to a smooth paste." },
+      { title: "Cook the methi", body: "Heat the remaining ghee. Add cumin and green chillies. Add chopped methi and cook for 3–4 minutes till wilted and its moisture reduces." },
+      { title: "Simmer the chicken", body: "Add the onion-cashew paste, coriander powder and garam masala. Fry for 2 minutes, then add the chicken and marinade. Cook for 5–6 minutes, stirring so the paste does not catch. Add hot water, cover and simmer for 12–15 minutes." },
+      { title: "Finish with cream", body: "Check the thickest chicken piece reaches 74°C / 165°F. Lower the flame and stir in the cream. Warm gently without boiling hard. Taste for salt and add a little sugar only if the methi is particularly bitter. Rest for 5 minutes." }
+    ],
+    notes: ["Wash fresh methi well and remove thick stems before chopping.", "If using kasuri methi instead of fresh leaves, use 1½ tbsp crushed leaves and add them with the cream.", "Do not boil the gravy vigorously after adding cream, as it can split."],
+    serveWith: ["Butter naan", "Jeera rice", "Tandoori roti"]
+  },
+  {
+    slug: "amritsari-chicken-masala",
+    name: "Amritsari Chicken Masala",
+    native: "Amritsari Murgh",
+    subtitle: "A robust Punjabi chicken curry with browned onions, tomato, ginger and warming dhaba spices.",
+    region: "Punjab",
+    origin: "Amritsar, Punjab",
+    heat: 2,
+    prep: 20,
+    cook: 40,
+    serves: 4,
+    variant: "curry",
+    palette: { bg: "#eadfd0", curry: "#a94e28", deep: "#71301b", piece: "#d8a477", garnish: "#4c6b47", accent: "#e3bd83" },
+    story: "This homestyle Amritsari-style masala uses a deeply cooked onion and tomato base, with ginger, coriander and a final touch of kasuri methi. It is thicker than a light everyday curry and works well with naan or kulcha.",
+    tags: ["Punjabi", "Dhaba style", "Medium heat"],
+    ingredients: [
+      { title: "For the chicken", items: ["800 g bone-in chicken, medium pieces", "½ tsp turmeric", "1 tsp Kashmiri chilli powder", "1 tbsp ginger-garlic paste", "½ cup curd", "1 tsp salt"] },
+      { title: "For the masala", items: ["3 tbsp mustard oil or neutral oil", "2 large onions, finely chopped", "2 medium tomatoes, finely chopped", "1 tbsp ginger, cut into fine strips", "1 tsp cumin seeds", "2 tsp coriander powder", "½ tsp cumin powder", "½ tsp garam masala", "½ tsp black pepper powder", "1 tbsp kasuri methi, crushed", "2 green chillies, slit", "250 ml hot water", "2 tbsp chopped coriander leaves"] }
+    ],
+    steps: [
+      { title: "Marinate the chicken", body: "Mix chicken with turmeric, chilli powder, ginger-garlic paste, curd and salt. Keep aside for 30 minutes." },
+      { title: "Brown the onions", body: "Heat the oil in a heavy kadai. If using mustard oil, heat till it just begins to smoke, then lower the flame. Add cumin and onions. Cook for 10–12 minutes till evenly golden brown." },
+      { title: "Cook the tomato masala", body: "Add the chopped tomatoes and ginger strips. Cook till the tomatoes soften and the oil begins to show at the edges. Add coriander powder, cumin powder and black pepper; fry for 30 seconds." },
+      { title: "Cook the chicken", body: "Add the chicken and all its marinade. Fry on medium-high heat for 6–8 minutes, turning the pieces so they are coated in masala. Add hot water, cover and simmer for 20–25 minutes, stirring twice." },
+      { title: "Finish the curry", body: "Check that the thickest chicken piece reaches 74°C / 165°F. Add garam masala, kasuri methi and green chillies. Simmer uncovered for 2 minutes to thicken, then finish with coriander and rest for 5 minutes." }
+    ],
+    notes: ["Cook the onions patiently; pale onions will give a sweeter and thinner gravy.", "Use hot water when adjusting the consistency so the simmer does not stop.", "Bone-in pieces give the masala more flavour, but boneless thigh can be used with a shorter cooking time."],
+    serveWith: ["Amritsari kulcha", "Tandoori roti", "Onion rings"]
+  },
+  {
+    slug: "pahadi-hariyali-chicken",
+    name: "Pahadi Hariyali Chicken",
+    native: "Pahadi Hara Murgh",
+    subtitle: "A green hill-style chicken curry with coriander, mint, curd, green chilli and warming spices.",
+    region: "Uttarakhand",
+    origin: "Uttarakhand",
+    heat: 2,
+    prep: 25,
+    cook: 35,
+    serves: 4,
+    variant: "curry",
+    palette: { bg: "#e2e8d9", curry: "#718454", deep: "#405331", piece: "#d7b98c", garnish: "#315a3b", accent: "#c8d29c" },
+    story: "Green herb pastes are used in many north Indian home kitchens. This Pahadi-inspired version combines coriander, mint and green chilli with curd for a fresh, savoury curry that is different from tomato-heavy gravies.",
+    tags: ["Herb gravy", "Hill-style", "Medium heat"],
+    ingredients: [
+      { title: "For the chicken", items: ["800 g chicken, bone-in pieces", "½ cup thick curd", "1 tbsp ginger-garlic paste", "½ tsp turmeric", "¾ tsp salt"] },
+      { title: "For the green paste", items: ["1½ cups coriander leaves and tender stems", "½ cup mint leaves", "2–3 green chillies", "1 small onion, roughly chopped", "1 tbsp lemon juice", "2 tbsp water"] },
+      { title: "For cooking", items: ["2 tbsp mustard oil or ghee", "1 tsp cumin seeds", "1 small cinnamon stick", "3 green cardamom", "1 tsp coriander powder", "½ tsp roasted cumin powder", "150 ml hot water", "1 tbsp chopped coriander to finish"] }
+    ],
+    steps: [
+      { title: "Marinate the chicken", body: "Coat the chicken with curd, ginger-garlic paste, turmeric and salt. Keep aside for 30 minutes." },
+      { title: "Grind the herbs", body: "Grind coriander, mint, green chillies, onion and lemon juice to a smooth green paste. Add only enough water to help the blades move; too much water makes the curry thin." },
+      { title: "Temper the spices", body: "Heat oil in a kadai. Add cumin, cinnamon and cardamom. When fragrant, add the marinated chicken and fry for 6–8 minutes till the pieces turn opaque." },
+      { title: "Cook with the green masala", body: "Add coriander powder and roasted cumin. Stir in the green paste and cook on medium-low heat for 4–5 minutes. Do not fry it on high heat, as the herbs can lose their fresh colour." },
+      { title: "Simmer and serve", body: "Add hot water, cover and simmer for 18–22 minutes. Check that the thickest chicken piece reaches 74°C / 165°F. Adjust salt and lemon, finish with coriander and rest for 5 minutes." }
+    ],
+    notes: ["Use tender coriander stems; they add flavour and blend smoothly.", "Add mint in moderation so it does not overpower the coriander.", "The green colour naturally darkens a little during cooking; avoid prolonged high heat after adding the herb paste."],
+    serveWith: ["Mandua roti", "Steamed rice", "Cucumber raita"]
+  },
+  {
+    slug: "dahi-wala-chicken",
+    name: "Dahi Wala Chicken",
+    native: "Dahi Murgh",
+    subtitle: "A tangy, homestyle curd chicken curry with browned onions, cumin and coriander.",
+    region: "Uttar Pradesh",
+    origin: "North Indian home kitchens",
+    heat: 2,
+    prep: 20,
+    cook: 35,
+    serves: 4,
+    variant: "curry",
+    palette: { bg: "#e9e0d1", curry: "#b18b55", deep: "#72532f", piece: "#d9b78d", garnish: "#526d48", accent: "#e5cf9d" },
+    story: "Dahi wala chicken is a practical home-style curry where whisked curd forms much of the gravy. The key is to lower the heat before adding the curd and keep stirring until it blends with the onion masala.",
+    tags: ["Homestyle", "Curd-based", "Everyday curry"],
+    ingredients: [
+      { title: "For the chicken", items: ["800 g chicken, medium pieces", "200 g thick curd, whisked smooth", "1 tbsp ginger-garlic paste", "½ tsp turmeric", "1 tsp Kashmiri chilli powder", "1 tsp salt"] },
+      { title: "For the masala", items: ["3 tbsp oil", "2 medium onions, finely sliced", "1 tsp cumin seeds", "1 bay leaf", "1 small cinnamon stick", "3 cloves", "2 tsp coriander powder", "½ tsp cumin powder", "½ tsp garam masala", "2 green chillies, slit", "150 ml hot water", "2 tbsp chopped coriander leaves"] }
+    ],
+    steps: [
+      { title: "Marinate briefly", body: "Mix the chicken with ginger-garlic paste, turmeric, chilli powder and salt. Keep aside for 20 minutes. Whisk the curd until completely smooth." },
+      { title: "Cook the onions", body: "Heat oil in a kadai. Add cumin, bay leaf, cinnamon and cloves. Add onions and cook on medium heat till golden brown." },
+      { title: "Add the chicken", body: "Add chicken and fry for 6–7 minutes till the outside turns opaque. Add coriander and cumin powders and stir for 30 seconds." },
+      { title: "Blend in the curd", body: "Lower the flame. Add the whisked curd in 3 batches, stirring continuously after each addition. Once the curd blends into the masala, cook for 4–5 minutes till the oil starts to separate." },
+      { title: "Simmer until tender", body: "Add hot water and green chillies. Cover and simmer for 18–22 minutes, stirring once or twice. Check that the thickest chicken piece reaches 74°C / 165°F. Add garam masala and coriander, then rest for 5 minutes." }
+    ],
+    notes: ["Use full-fat, slightly sour curd for a balanced gravy.", "Whisk curd well and add it on low heat to reduce the chance of splitting.", "If the gravy becomes too sharp, balance it with a small pinch of sugar rather than extra cream."],
+    serveWith: ["Phulka", "Jeera rice", "Paratha"]
+  },
+  {
+    slug: "chicken-yakhni-pulao",
+    name: "Chicken Yakhni Pulao",
+    native: "Murgh Yakhni Pulao",
+    subtitle: "Fragrant basmati rice cooked in a whole-spice chicken stock with mint and fried onions.",
+    region: "Awadh",
+    origin: "Awadh, Uttar Pradesh",
+    heat: 1,
+    prep: 30,
+    cook: 50,
+    serves: 4,
+    variant: "rice",
+    palette: { bg: "#eee4d2", curry: "#c2a46c", deep: "#856b3f", piece: "#d7b88d", garnish: "#4d704d", accent: "#ead8a8" },
+    story: "Yakhni pulao gets its aroma from stock made by simmering chicken with whole spices. The rice is cooked in this strained stock, so the flavour reaches every grain without the heavy layering of biryani.",
+    tags: ["One-pot rice", "Awadhi", "Mild"],
+    ingredients: [
+      { title: "For the yakhni stock", items: ["700 g bone-in chicken", "1.2 litres water", "1 onion, quartered", "1 inch ginger, sliced", "6 garlic cloves", "1 tsp fennel seeds", "1 tsp coriander seeds", "1 bay leaf", "1 small cinnamon stick", "4 green cardamom", "5 cloves", "8 black peppercorns", "1 tsp salt"] },
+      { title: "For the pulao", items: ["300 g aged basmati rice, washed and soaked 25 minutes", "2 tbsp ghee", "1 tbsp oil", "1 large onion, thinly sliced", "1 tsp cumin seeds", "2 green chillies, slit", "½ cup thick curd, whisked", "2 tbsp mint leaves", "2 tbsp coriander leaves", "About 550–650 ml strained yakhni, as needed", "Salt to taste"] }
+    ],
+    steps: [
+      { title: "Make the stock", body: "Tie fennel, coriander, bay leaf, cinnamon, cardamom, cloves and peppercorns in a clean muslin cloth. Add to a pot with chicken, water, onion, ginger, garlic and salt. Simmer gently for 25–30 minutes, until chicken is cooked. Lift out the chicken and strain the stock." },
+      { title: "Prepare the rice", body: "Drain the soaked rice. Measure 550 ml stock to start; keep extra hot stock ready in case it is needed. Remove the chicken from the bones if you prefer, or keep the pieces whole." },
+      { title: "Fry the onion and chicken", body: "Heat ghee and oil in a heavy pot. Add cumin and sliced onion; fry till golden. Add green chillies and cooked chicken. Stir gently for 2 minutes." },
+      { title: "Coat with curd and herbs", body: "Lower the flame and add whisked curd, mint and coriander. Stir until the curd blends into the juices. Add drained rice and turn gently so the grains are coated." },
+      { title: "Cook the pulao", body: "Add the measured hot yakhni and check salt; the liquid should taste slightly saltier than you want the finished rice. Bring to a boil, cover tightly and cook on the lowest flame for 12–15 minutes. Switch off and keep covered for 10 minutes. Fluff gently and check the chicken is fully cooked through before serving." }
+    ],
+    notes: ["Stock yield varies with simmering; use the rice packet's absorption guidance and add hot stock gradually if needed.", "Do not stir the rice repeatedly after it begins cooking, or the grains may break.", "For a cleaner stock, skim the surface during simmering and strain through a fine sieve."],
+    serveWith: ["Burani raita", "Kachumber", "Mirchi ka salan"]
+  },
+  {
+    slug: "mangalorean-kori-gassi",
+    name: "Mangalorean Kori Gassi",
+    native: "Kori Gassi",
+    subtitle: "Coastal chicken curry with roasted coconut, Byadgi chillies, tamarind and a deep red masala.",
+    region: "Karnataka",
+    origin: "Tulu Nadu, coastal Karnataka",
+    heat: 2,
+    prep: 25,
+    cook: 45,
+    serves: 4,
+    variant: "curry",
+    palette: { bg: "#eadcc9", curry: "#a74725", deep: "#672b19", piece: "#d6a174", garnish: "#4c6b47", accent: "#dfb56e" },
+    story: "Kori gassi is a Tulu-style coastal chicken curry. Its signature comes from roasted coconut and a masala built with dried red chillies, coriander and tamarind. The curry is rich, tangy and usually served with rice-based accompaniments.",
+    tags: ["Coastal Karnataka", "Coconut", "Tamarind"],
+    ingredients: [
+      { title: "For the chicken", items: ["800 g chicken, bone-in pieces", "½ tsp turmeric", "1 tsp salt", "1 tbsp ginger-garlic paste"] },
+      { title: "For the roasted masala", items: ["1 cup freshly grated coconut", "6 Byadgi dried red chillies", "1 tsp coriander seeds", "½ tsp cumin seeds", "¼ tsp fenugreek seeds", "6 black peppercorns", "4 cloves", "1 small cinnamon stick", "1 small onion, sliced", "1 tsp tamarind paste"] },
+      { title: "For the curry", items: ["2 tbsp coconut oil", "1 medium onion, finely sliced", "10 curry leaves", "400–500 ml hot water", "Salt to taste"] }
+    ],
+    steps: [
+      { title: "Season the chicken", body: "Mix chicken with turmeric, salt and ginger-garlic paste. Keep aside for 20 minutes." },
+      { title: "Roast the masala ingredients", body: "In a dry pan, roast the coconut till golden in patches; transfer to a plate. Roast chillies, coriander, cumin, fenugreek, pepper, cloves and cinnamon briefly till fragrant. Fry the small onion in a little oil till soft." },
+      { title: "Grind the gassi paste", body: "Grind the roasted coconut, spices, fried onion and tamarind with enough water to make a smooth, thick paste. Taste the paste; it should be aromatic with a clear sour note." },
+      { title: "Cook the chicken", body: "Heat coconut oil in a heavy pot. Add sliced onion and curry leaves; cook till the onion softens. Add chicken and fry for 6–8 minutes. Add the ground masala and fry on medium-low heat for 4 minutes." },
+      { title: "Simmer the curry", body: "Add 400 ml hot water, cover and simmer for 20–25 minutes, stirring occasionally. Add more water for a thinner curry. Check the thickest chicken piece reaches 74°C / 165°F, adjust salt and rest for 5 minutes." }
+    ],
+    notes: ["Byadgi chillies give deep colour with moderate heat; use fewer if using a hotter variety.", "Roast coconut slowly. Burnt coconut makes the gravy bitter.", "Tamarind strength varies; start with the listed amount and adjust after simmering."],
+    serveWith: ["Neer dosa", "Kori rotti", "Steamed rice"]
+  },
+  {
+    slug: "andhra-gongura-chicken",
+    name: "Andhra Gongura Chicken",
+    native: "Gongura Kodi Kura",
+    subtitle: "A tangy Andhra chicken curry where sorrel leaves bring a sharp, savoury finish to chilli masala.",
+    region: "Andhra Pradesh",
+    origin: "Andhra Pradesh",
+    heat: 3,
+    prep: 20,
+    cook: 40,
+    serves: 4,
+    variant: "curry",
+    palette: { bg: "#e5e4d3", curry: "#78804a", deep: "#424b2d", piece: "#d4a47a", garnish: "#4c6b47", accent: "#c7c78a" },
+    story: "Gongura, or sorrel leaves, are prized in Andhra cooking for their strong sourness. In this curry the leaves are cooked down separately and folded into a chilli-forward chicken masala, giving the dish its distinctive tang.",
+    tags: ["Andhra", "Sour and spicy", "Gongura"],
+    ingredients: [
+      { title: "For the chicken", items: ["800 g chicken, medium pieces", "1 tbsp ginger-garlic paste", "½ tsp turmeric", "1 tsp chilli powder", "¾ tsp salt"] },
+      { title: "For the gongura", items: ["250 g gongura leaves, stems removed and washed", "1 tbsp oil", "3 green chillies"] },
+      { title: "For the masala", items: ["3 tbsp oil", "2 medium onions, finely chopped", "1 tsp mustard seeds", "½ tsp cumin seeds", "2 dried red chillies", "½ tsp coriander powder", "½ tsp roasted cumin powder", "½ tsp garam masala", "150 ml hot water", "8 curry leaves"] }
+    ],
+    steps: [
+      { title: "Season the chicken", body: "Mix chicken with ginger-garlic paste, turmeric, chilli powder and salt. Keep aside for 20 minutes." },
+      { title: "Cook the gongura", body: "Heat 1 tbsp oil in a pan. Add gongura leaves and green chillies. Cook till the leaves collapse and become soft, about 6–8 minutes. Cool and grind or mash to a coarse paste." },
+      { title: "Build the onion masala", body: "Heat oil in a kadai. Add mustard seeds, cumin, dried red chillies and curry leaves. When they crackle, add onions and cook till golden. Add coriander and roasted cumin powders." },
+      { title: "Cook the chicken", body: "Add chicken and fry on medium-high heat for 7–8 minutes till the outside turns opaque. Add hot water, cover and simmer for 18–20 minutes, stirring once or twice." },
+      { title: "Add gongura and finish", body: "Stir in the cooked gongura paste and garam masala. Simmer uncovered for 5–7 minutes so the sourness blends into the gravy. Check the thickest chicken piece reaches 74°C / 165°F, then adjust salt and rest for 5 minutes." }
+    ],
+    notes: ["Gongura is naturally sour; taste before adding lemon or tamarind.", "Red-stemmed gongura is often more sour than green-stemmed varieties.", "If fresh gongura is unavailable, do not replace it with spinach alone; the distinctive sour flavour will be missing."],
+    serveWith: ["Steamed rice", "Jonna roti", "Onion salad"]
+  },
+  {
+    slug: "chicken-cafreal",
+    name: "Goan Chicken Cafreal",
+    native: "Galinha Cafreal",
+    subtitle: "Chicken coated in a fresh coriander, mint, green chilli and vinegar masala, then pan-roasted till browned.",
+    region: "Goa",
+    origin: "Goa",
+    heat: 2,
+    prep: 30,
+    cook: 30,
+    serves: 4,
+    variant: "grill",
+    palette: { bg: "#e3e8d9", curry: "#647b4d", deep: "#394b31", piece: "#d4b087", garnish: "#456141", accent: "#c7d19a" },
+    story: "Cafreal is a Goan preparation with Portuguese-influenced roots. Chicken is coated in a vivid green masala with coriander, green chilli, garlic and vinegar, then cooked till the outside is browned and the inside stays juicy.",
+    tags: ["Goan", "Green masala", "Pan roast"],
+    ingredients: [
+      { title: "For the cafreal paste", items: ["1½ cups coriander leaves", "½ cup mint leaves", "6 garlic cloves", "1 inch ginger", "3–4 green chillies", "1 tsp cumin seeds", "6 peppercorns", "4 cloves", "½ tsp cinnamon powder", "2 tbsp vinegar", "1 tbsp lemon juice", "½ tsp sugar", "¾ tsp salt"] },
+      { title: "For the chicken", items: ["900 g chicken leg quarters or thighs, deep slashes made", "2 tbsp oil", "1 tbsp butter, optional", "2 medium potatoes, boiled and pan-fried, to serve", "Lime wedges and onion rings"] }
+    ],
+    steps: [
+      { title: "Make the green masala", body: "Grind coriander, mint, garlic, ginger, green chillies, cumin, pepper, cloves, cinnamon, vinegar, lemon juice, sugar and salt to a thick paste. Use only a little water if needed." },
+      { title: "Marinate the chicken", body: "Rub the paste into the chicken, working it into the slashes. Cover and refrigerate for at least 2 hours, preferably 4 hours. Keep a spoonful of clean paste aside before it touches raw chicken if you want extra sauce." },
+      { title: "Brown the chicken", body: "Heat oil in a heavy pan. Wipe off only excess marinade and reserve it in the bowl with the raw chicken; do not use it as a finishing sauce unless fully cooked. Brown the chicken on all sides over medium heat." },
+      { title: "Cook through", body: "Lower the flame, add 2–3 tbsp water and cover. Cook for 18–22 minutes, turning once or twice. Add a splash of water if the masala catches. Uncover and roast till the outside is well browned." },
+      { title: "Check and serve", body: "Check the thickest part reaches 74°C / 165°F. If using the reserved marinade, boil it thoroughly in the pan before serving. Finish with optional butter and serve with fried potatoes, onion and lime." }
+    ],
+    notes: ["The paste should be thick enough to cling to the chicken; excess water makes it difficult to brown.", "Use vinegar gradually because its sharpness varies by brand.", "Never use marinade that touched raw chicken as a cold dip or garnish."],
+    serveWith: ["Pan-fried potatoes", "Pao", "Green salad"]
   }
+
 ];
 
 export const getRecipe = (slug: string) => recipes.find((recipe) => recipe.slug === slug);
