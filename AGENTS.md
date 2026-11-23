@@ -42,7 +42,7 @@ components/
   recipe-card.tsx         card + HeatDots indicator
   recipe-browser.tsx      region/heat/search filters, URL sync (client)
   ingredient-list.tsx     tickable ingredient checklist (client)
-  locale-switcher.tsx     language menu; writes the locale cookie (client)
+  locale-switcher.tsx     retained language selector component; currently not mounted in the header
   dish-art.tsx            deterministic SVG dish illustrator
 lib/recipes.ts            every recipe, region notes, pantry, method, helpers
 lib/locale.ts             server-only locale + dictionary reader
@@ -73,6 +73,8 @@ Everything else is derived, not duplicated: `regions` (unique regions, counts, `
 5. Add the Hindi content in `lib/recipe-translations/hi.ts` (see the translations section).
 6. Run `npm run build`: the detail page is generated automatically from `generateStaticParams`.
 
+Recipe knowledge-base quality is more important than raw count. Every entry must have measured ingredient quantities, distinct recipe-specific steps (not reusable generic filler), realistic prep/cook times, useful regional context, three practical notes and serving suggestions. Use simple Indian English and include a check that the thickest chicken piece reaches 74°C / 165°F. Avoid duplicate dishes under alternate names unless the technique and ingredient profile are meaningfully different.
+
 Recipe cards, the index grid, filters, footer links and the home page all read from this data — no component edits are
 needed for ordinary content changes.
 
@@ -99,7 +101,7 @@ The site can be read in English, Hindi, Bengali, Marathi, Tamil, Telugu and Kann
 - `lib/i18n/hindi.ts` is the complete Hindi translation.
 - `lib/i18n/partials.ts` holds Bengali, Marathi, Tamil, Telugu and Kannada. They are typed `Partial<Dictionary>`; any missing key falls back to English, so a language can ship with only navigation, filters and recipe labels translated.
 - `lib/i18n/index.ts` lists `locales` (code, English name, native name) and exposes `getDictionary(locale)`, `isLocale`, `localeName`, `format()` for `{placeholder}` strings and `formatDuration()` for localised cooking times.
-- `lib/locale.ts` reads the `murgh_locale` cookie on the server. `components/locale-switcher.tsx` writes that cookie and calls `router.refresh()`.
+- `lib/locale.ts` reads the `murgh_locale` cookie on the server. `components/locale-switcher.tsx` writes that cookie and calls `router.refresh()`. The selector is currently hidden from `site-header.tsx`; keep the translation code intact.
 - The root layout sets `<html lang={locale}>` and passes the dictionary down: server components receive it from `getLocaleAndDictionary()`, client components receive it as a `t` prop.
 
 To add a language: add an entry to `locales`, write a dictionary (complete or partial) and register it in the `overrides` map in `lib/i18n/index.ts`. To add a string: add the key and English value in `lib/i18n/en.ts`, then translate it where available.
