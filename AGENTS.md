@@ -4,7 +4,7 @@ Instructions for AI coding agents working on this repository. Read this before c
 
 ## What this project is
 
-**Murgh** — a modern Indian chicken cookbook website. Regional chicken recipes, each with an illustrated plate.
+**Nouratable** — a modern Indian chicken cookbook website. Regional chicken recipes, each with an illustrated plate.
 There is no backend, no database, no authentication, no API routes and no photography: all content is static data in
 `lib/recipes.ts`, and every dish image is an SVG drawn in `components/dish-art.tsx`.
 
@@ -30,7 +30,7 @@ the dev server stops responding (connections hang until it is restarted). Stop d
 
 ```
 app/
-  layout.tsx              root shell: fonts, metadata, header + footer
+  layout.tsx              root shell: fonts, metadata, analytics and structured data, header + footer
   page.tsx                home: cover, featured recipes, regions, method, pantry
   recipes/page.tsx        recipe index; reads URL filters server-side
   recipes/[slug]/page.tsx recipe detail; generateStaticParams + generateMetadata
@@ -158,11 +158,18 @@ tokens; do not add a UI component library or new colour values without a reason.
 namespaced by slug, so keep that pattern if you add elements. Art is illustration-only by design: do not replace it
 with photography or remote image URLs.
 
+## SEO and analytics
+
+- Keep metadata brand naming consistent as Nouratable. Root metadata defines the canonical site origin via `NEXT_PUBLIC_SITE_URL`; never hard-code a deployment URL into page metadata or JSON-LD.
+- Every indexable page needs a unique title, useful description and canonical URL. Recipe pages must retain Recipe JSON-LD; region pages must retain CollectionPage/ItemList JSON-LD.
+- Keep `app/sitemap.ts` aligned with all public indexable routes and keep `app/robots.ts` pointing at the sitemap.
+- Google Analytics 4 is opt-in via `NEXT_PUBLIC_GA_ID`; never load the tracking script when unset. Search Console verification uses `GOOGLE_SITE_VERIFICATION`. Never commit secrets or verification tokens.
+- When adding content routes, update the sitemap and ensure contextual internal links exist. Avoid keyword stuffing, doorway pages, fabricated reviews and purchased backlinks.
+
 ## Constraints and gotchas
 
 - Next 16 App Router: route `params` and `searchParams` are Promises — always `await` them.
-- The project is deliberately small: no tests, no analytics, no auth, no database, no CMS, no deployments as part of
-  code changes. Don't introduce them unless explicitly asked.
+- The project is deliberately small: no tests, no analytics by default (GA4 is opt-in through environment configuration), no CMS. Avoid adding dependencies unless justified.
 - Keep `package.json` lean; dependencies should be justified and used.
 - Never commit `.next/`, `node_modules/`, `artifacts/` (review screenshots) or env files.
 - The `artifacts/` directory holds throwaway screenshots from visual checks — it is not part of the site.
