@@ -2,10 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LocaleSwitcher } from "@/components/locale-switcher";
-import type { Dictionary, Locale } from "@/lib/i18n";
+import type { Dictionary } from "@/lib/i18n";
 
-export function SiteHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
+export function SiteHeader({ t }: { t: Dictionary }) {
   const pathname = usePathname();
 
   const links = [
@@ -39,7 +38,6 @@ export function SiteHeader({ locale, t }: { locale: Locale; t: Dictionary }) {
         </nav>
 
         <div className="flex items-center gap-2.5">
-          <LocaleSwitcher locale={locale} label={t.languageLabel} />
           <Link href="/recipes" className="btn btn-dark hidden lg:inline-flex">
             {t.startCooking} <span aria-hidden="true">→</span>
           </Link>
