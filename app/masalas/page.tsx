@@ -3,9 +3,9 @@ import Link from "next/link";
 import { masalas } from "@/lib/food-knowledge";
 
 export const metadata: Metadata = {
-  title: "Indian masala blends | Murgh",
+  title: "Regional Indian Masala Blends: Ingredients & Methods | Nouratable",
   description: "Learn the ingredients, roasting methods and best uses of regional Indian masala blends.",
-  alternates: { canonical: "/masalas" },
+  alternates: { canonical: "/masalas" },\n  openGraph: { title: "Regional Indian Masala Blends | Nouratable", description: "Learn the ingredients, roasting methods and best uses of regional Indian masala blends.", url: "/masalas", siteName: "Nouratable", type: "article" },\n  twitter: { card: "summary", title: "Regional Indian Masala Blends | Nouratable" },
 };
 
 export default function MasalasPage() {
