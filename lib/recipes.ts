@@ -8006,6 +8006,96 @@ export const recipes: Recipe[] = [
       "Jowar bhakri",
       "Sliced onion"
     ]
+  },
+  {
+    slug:"bunt-chicken-ghee-roast", name:"Bunt-Style Chicken Ghee Roast", native:"Kori Ghee Roast",
+    subtitle:"A coastal Karnataka favourite built around a roasted chilli, tamarind and ghee masala. The paste is cooked patiently until glossy and clings to each piece.", region:"Karnataka", origin:"Coastal Karnataka",
+    heat:3, prep:25, cook:35, serves:4, variant:"dry",
+    palette:{"bg":"#eee3d4","curry":"#a85a32","deep":"#713a25","piece":"#d9ad7d","garnish":"#486347","accent":"#e6c47c"}, story:"A coastal Karnataka favourite built around a roasted chilli, tamarind and ghee masala. The paste is cooked patiently until glossy and clings to each piece.", tags:["Karnataka","Regional kitchen","Hot"],
+    ingredients:[{title:"Ingredients",items:["800 g chicken thigh pieces","8 dried Byadgi chillies","1 tbsp coriander seeds","1 tsp black pepper","1 tsp fennel","½ tsp fenugreek","5 garlic cloves","Small tamarind piece","3 tbsp ghee","10 curry leaves","Salt"]}],
+    steps:[{"title":"Roast spices","body":"Toast chillies, coriander, pepper, fennel and fenugreek separately on low heat. Cool fully."},{"title":"Grind paste","body":"Grind roasted spices with garlic, tamarind and a little water to a thick paste."},{"title":"Marinate chicken","body":"Season chicken with salt, turmeric and curd. Refrigerate for 30 minutes."},{"title":"Cook chicken","body":"Sear chicken in half the ghee until lightly coloured. Remove, then fry curry leaves and paste in remaining ghee until oil separates."},{"title":"Roast to finish","body":"Return chicken, add a splash of water and cover until cooked. Uncover and roast until masala clings; confirm 74°C / 165°F."}],
+    notes:["Byadgi chillies provide colour; add hotter chilli only if needed.","Keep the flame low while frying the paste.","The finished dish should be glossy, not swimming in gravy."], serveWith:["Neer dosa","Appam","Steamed rice"]
+  },
+  {
+    slug:"nagpur-saoji-rassa", name:"Nagpur Saoji Chicken Rassa", native:"Saoji Murgh Rassa",
+    subtitle:"Saoji cooking from Nagpur is known for robust spice blends. This version uses roasted coconut and sesame, with chilli heat adjusted to taste.", region:"Maharashtra", origin:"Nagpur, Vidarbha",
+    heat:3, prep:25, cook:45, serves:4, variant:"curry",
+    palette:{"bg":"#eee3d4","curry":"#a85a32","deep":"#713a25","piece":"#d9ad7d","garnish":"#486347","accent":"#e6c47c"}, story:"Saoji cooking from Nagpur is known for robust spice blends. This version uses roasted coconut and sesame, with chilli heat adjusted to taste.", tags:["Maharashtra","Regional kitchen","Hot"],
+    ingredients:[{title:"Ingredients",items:["900 g bone-in chicken","2 onions, sliced","1 tbsp ginger-garlic paste","8 dried red chillies","2 tbsp coriander seeds","1 tsp cumin","1 tsp black pepper","4 cloves","Cinnamon","2 tbsp sesame","3 tbsp dry coconut","2 tbsp oil","700 ml water","Salt"]}],
+    steps:[{"title":"Roast spices","body":"Roast chillies, coriander, cumin, pepper, cloves and cinnamon separately. Toast sesame and coconut until golden."},{"title":"Grind masala","body":"Cool and grind all roasted ingredients with a little water to a coarse paste."},{"title":"Brown onions","body":"Heat oil and brown onions deeply. Add ginger-garlic paste and fry until fragrant."},{"title":"Fry chicken","body":"Add chicken and salt; fry for 6–8 minutes. Mix in ground masala and cook until it darkens and releases oil."},{"title":"Simmer rassa","body":"Add water and simmer until chicken is tender and reaches 74°C / 165°F. Adjust to a pourable consistency."}],
+    notes:["Saoji blends vary widely; reduce chillies if their heat is unknown.","Roast coconut separately because it browns faster than whole spices.","Rest the curry for 10 minutes before serving."], serveWith:["Jowar bhakri","Steamed rice","Raw onion"]
+  },
+  {
+    slug:"odia-besara-chicken", name:"Odia Mustard Chicken Besara", native:"Kukuda Besara",
+    subtitle:"Besara is associated with Odia mustard-based cooking. This chicken adaptation is labelled as such rather than presented as a universal traditional preparation.", region:"Odisha", origin:"Odia mustard-gravy adaptation",
+    heat:2, prep:20, cook:35, serves:4, variant:"curry",
+    palette:{"bg":"#eee3d4","curry":"#a85a32","deep":"#713a25","piece":"#d9ad7d","garnish":"#486347","accent":"#e6c47c"}, story:"Besara is associated with Odia mustard-based cooking. This chicken adaptation is labelled as such rather than presented as a universal traditional preparation.", tags:["Odisha","Regional kitchen","Homestyle"],
+    ingredients:[{title:"Ingredients",items:["800 g chicken","2 tbsp mustard oil","2 tbsp mustard seeds","1 tsp cumin","4 garlic cloves","2 green chillies","1 potato, cubed","1 tomato","½ tsp turmeric","500 ml water","Salt"]}],
+    steps:[{"title":"Grind mustard","body":"Soak mustard and cumin for 15 minutes. Grind with garlic, chillies and water to a smooth paste."},{"title":"Fry potato","body":"Heat mustard oil until it just smokes, lower flame and fry potato until lightly golden; remove."},{"title":"Seal chicken","body":"Add chicken, turmeric and salt; fry for 6–7 minutes. Stir in tomato."},{"title":"Add mustard","body":"Lower heat, add mustard paste and cook gently for 2 minutes. Return potato and add water."},{"title":"Simmer","body":"Cook until chicken reaches 74°C / 165°F and potato is tender. Adjust salt."}],
+    notes:["Mustard paste can turn bitter if cooked hard on high heat.","Use food-grade mustard seeds and adjust chilli to taste.","Potato is optional but adds substance."], serveWith:["Steamed rice","Kachumber","Lemon"]
+  },
+  {
+    slug:"parsi-chicken-dhansak", name:"Parsi-Style Chicken Dhansak", native:"Murghi Dhansak",
+    subtitle:"Dhansak is a Parsi community dish with many family variations. This chicken version uses lentils and vegetables for its characteristic thick body.", region:"Parsi", origin:"Parsi community kitchens",
+    heat:2, prep:25, cook:55, serves:4, variant:"curry",
+    palette:{"bg":"#eee3d4","curry":"#a85a32","deep":"#713a25","piece":"#d9ad7d","garnish":"#486347","accent":"#e6c47c"}, story:"Dhansak is a Parsi community dish with many family variations. This chicken version uses lentils and vegetables for its characteristic thick body.", tags:["Parsi","Regional kitchen","Homestyle"],
+    ingredients:[{title:"Ingredients",items:["700 g chicken","100 g toor dal","50 g masoor dal","1 small aubergine","200 g pumpkin","1 tomato","2 tbsp oil","1 onion","1 tbsp ginger-garlic paste","1½ tbsp dhansak masala","1 tbsp tamarind water","1 tsp jaggery","Salt"]}],
+    steps:[{"title":"Cook lentils","body":"Wash dals and cook with aubergine, pumpkin, tomato and 700 ml water until soft."},{"title":"Blend base","body":"Mash or blend cooked lentils and vegetables into a thick, slightly textured purée."},{"title":"Build masala","body":"Heat oil, brown onion, add ginger-garlic and dhansak masala; fry for 1 minute."},{"title":"Cook chicken","body":"Add chicken and salt; fry for 5 minutes. Add lentil purée and simmer until cooked through."},{"title":"Balance","body":"Add tamarind and jaggery. Check chicken reaches 74°C / 165°F and adjust sweet-sour balance."}],
+    notes:["Dhansak masala recipes differ; check its salt and chilli before seasoning.","Keep some texture in the lentil base.","Cook lentils fully before blending."], serveWith:["Brown rice","Kachumber","Caramelised onion"]
+  },
+  {
+    slug:"sindhi-besan-chicken", name:"Sindhi Besan Chicken", native:"Besan Wari Murghi",
+    subtitle:"A homestyle Sindhi-inspired preparation using roasted gram flour as a thickener and flavour carrier. Household versions vary in sourness and spice.", region:"Sindh", origin:"Sindhi home-style adaptation",
+    heat:2, prep:15, cook:35, serves:4, variant:"curry",
+    palette:{"bg":"#eee3d4","curry":"#a85a32","deep":"#713a25","piece":"#d9ad7d","garnish":"#486347","accent":"#e6c47c"}, story:"A homestyle Sindhi-inspired preparation using roasted gram flour as a thickener and flavour carrier. Household versions vary in sourness and spice.", tags:["Sindh","Regional kitchen","Homestyle"],
+    ingredients:[{title:"Ingredients",items:["750 g chicken","3 tbsp besan","2 tbsp oil","1 onion","1 tbsp ginger-garlic paste","1 tomato","½ tsp turmeric","1 tsp coriander powder","½ tsp cumin powder","½ tsp chilli powder","650 ml water","Amchur or lemon","Salt"]}],
+    steps:[{"title":"Roast besan","body":"Dry-roast besan on low heat for 4–5 minutes, stirring until nutty and pale golden. Cool."},{"title":"Fry onion","body":"Heat oil and brown onion. Add ginger-garlic paste, then tomato and ground spices."},{"title":"Fry chicken","body":"Add chicken and salt; fry for 5 minutes until coated in masala."},{"title":"Add slurry","body":"Whisk roasted besan with cool water until smooth. Pour into the pan while stirring; add hot water gradually."},{"title":"Simmer","body":"Cook until chicken reaches 74°C / 165°F. Finish with amchur or lemon."}],
+    notes:["Whisk besan separately to avoid lumps.","Roasting besan removes its raw taste; do not let it become dark.","Add souring agent at the end and adjust gradually."], serveWith:["Sindhi koki","Steamed rice","Onion salad"]
+  },
+  {
+    slug:"bengali-aloo-murgir-jhol", name:"Bengali Aloo Murgir Jhol", native:"Aloo Diye Murgir Jhol",
+    subtitle:"A familiar Bengali home-style chicken curry. Potatoes are fried first and simmered in a light, fragrant gravy rather than a thick restaurant masala.", region:"Bengal", origin:"Bengali home cooking",
+    heat:2, prep:20, cook:40, serves:4, variant:"curry",
+    palette:{"bg":"#eee3d4","curry":"#a85a32","deep":"#713a25","piece":"#d9ad7d","garnish":"#486347","accent":"#e6c47c"}, story:"A familiar Bengali home-style chicken curry. Potatoes are fried first and simmered in a light, fragrant gravy rather than a thick restaurant masala.", tags:["Bengal","Regional kitchen","Homestyle"],
+    ingredients:[{title:"Ingredients",items:["800 g chicken","2 potatoes","3 tbsp mustard oil","1 onion","1 tbsp ginger-garlic paste","1 tomato","1 tsp cumin powder","1 tsp coriander powder","½ tsp turmeric","2 bay leaves","3 cardamom","Cinnamon","500 ml water","Salt"]}],
+    steps:[{"title":"Fry potatoes","body":"Heat mustard oil until it just smokes, lower flame and fry potato pieces until golden; remove."},{"title":"Temper spices","body":"Add bay leaves, cardamom and cinnamon. Add onion and cook until lightly golden."},{"title":"Cook masala","body":"Add ginger-garlic, tomato, cumin, coriander, turmeric and salt. Cook until tomato softens."},{"title":"Fry chicken","body":"Add chicken and fry for 7 minutes until coated and oil begins to separate."},{"title":"Simmer jhol","body":"Return potatoes, add hot water and simmer until chicken reaches 74°C / 165°F and potatoes are tender."}],
+    notes:["Mustard oil gives the characteristic aroma; lower heat after its initial smoke.","Keep gravy thin and pourable.","Use waxy potatoes if you want them to hold their shape."], serveWith:["Gobindobhog rice","Lemon","Green chilli"]
+  },
+  {
+    slug:"kerala-mappas-chicken", name:"Kerala Chicken Mappas", native:"Kozhi Mappas",
+    subtitle:"Mappas is a coconut milk-based preparation associated with Kerala Christian kitchens. Chicken versions are family favourites, often served with appam or bread.", region:"Kerala", origin:"Central Kerala Syrian Christian home cooking",
+    heat:1, prep:20, cook:35, serves:4, variant:"curry",
+    palette:{"bg":"#eee3d4","curry":"#a85a32","deep":"#713a25","piece":"#d9ad7d","garnish":"#486347","accent":"#e6c47c"}, story:"Mappas is a coconut milk-based preparation associated with Kerala Christian kitchens. Chicken versions are family favourites, often served with appam or bread.", tags:["Kerala","Regional kitchen","Mild"],
+    ingredients:[{title:"Ingredients",items:["800 g chicken","2 tbsp coconut oil","1 onion","1 tbsp ginger","5 garlic cloves","2 green chillies","1 tomato","3 cardamom","3 cloves","Cinnamon","½ tsp turmeric","200 ml thin coconut milk","150 ml thick coconut milk","Curry leaves","Salt"]}],
+    steps:[{"title":"Temper spices","body":"Heat coconut oil and add cardamom, cloves and cinnamon. Stir for 30 seconds."},{"title":"Cook aromatics","body":"Add onion, ginger, garlic, green chilli and curry leaves. Cook until onion softens."},{"title":"Add chicken","body":"Add turmeric, tomato, chicken and salt. Fry for 5 minutes."},{"title":"Simmer","body":"Add thin coconut milk and 100 ml water. Cover and simmer until chicken is almost tender."},{"title":"Finish","body":"Add thick coconut milk and warm gently without boiling hard. Check chicken reaches 74°C / 165°F."}],
+    notes:["Keep the curry pale; avoid browning onions heavily.","Dilute canned coconut milk for the thin portion.","A rolling boil after adding thick coconut milk can split the gravy."], serveWith:["Appam","Idiyappam","Soft bread"]
+  },
+  {
+    slug:"andhra-green-chilli-kodi", name:"Andhra Green Chilli Chicken Kura", native:"Pachi Mirapakaya Kodi Kura",
+    subtitle:"Andhra home cooking uses green chillies in many forms. This kura is a straightforward chilli-forward adaptation; choose chilli variety carefully because heat varies.", region:"Andhra Pradesh", origin:"Andhra home-style green chilli curry",
+    heat:3, prep:20, cook:35, serves:4, variant:"curry",
+    palette:{"bg":"#eee3d4","curry":"#a85a32","deep":"#713a25","piece":"#d9ad7d","garnish":"#486347","accent":"#e6c47c"}, story:"Andhra home cooking uses green chillies in many forms. This kura is a straightforward chilli-forward adaptation; choose chilli variety carefully because heat varies.", tags:["Andhra Pradesh","Regional kitchen","Hot"],
+    ingredients:[{title:"Ingredients",items:["800 g chicken","2 tbsp oil","1 onion","1 tbsp ginger-garlic paste","6 green chillies","½ cup coriander leaves","½ tsp cumin","½ tsp turmeric","150 g curd","250 ml water","Salt","Lemon"]}],
+    steps:[{"title":"Make green paste","body":"Grind green chillies and coriander leaves with a little water to a coarse paste."},{"title":"Fry onion","body":"Heat oil and crackle cumin. Add onion and cook until golden."},{"title":"Cook chicken","body":"Add ginger-garlic, turmeric, chicken and salt. Fry for 6 minutes."},{"title":"Simmer","body":"Lower heat; add whisked curd, green paste and water. Cover and simmer until tender."},{"title":"Finish","body":"Check chicken reaches 74°C / 165°F. Add lemon and reduce to medium-thick gravy."}],
+    notes:["Start with fewer chillies if using a very hot variety.","Coriander stems can go into the green paste.","Add curd on low heat to avoid splitting."], serveWith:["Ghee rice","Jonna roti","Onion and lemon"]
+  },
+  {
+    slug:"kongunadu-pepper-chicken", name:"Kongunadu Pepper Chicken", native:"Kongu Milagu Kozhi",
+    subtitle:"Kongunadu cooking is known for robust pepper and fresh-ground spice combinations. This dry-style chicken uses shallots and coconut for a rounded finish.", region:"Tamil Nadu", origin:"Kongunadu, western Tamil Nadu",
+    heat:3, prep:20, cook:35, serves:4, variant:"dry",
+    palette:{"bg":"#eee3d4","curry":"#a85a32","deep":"#713a25","piece":"#d9ad7d","garnish":"#486347","accent":"#e6c47c"}, story:"Kongunadu cooking is known for robust pepper and fresh-ground spice combinations. This dry-style chicken uses shallots and coconut for a rounded finish.", tags:["Tamil Nadu","Regional kitchen","Hot"],
+    ingredients:[{title:"Ingredients",items:["800 g chicken","2 tbsp sesame oil","150 g shallots","1 tbsp ginger-garlic paste","1 tsp black peppercorns","1 tsp fennel","½ tsp cumin","2 dried chillies","¼ tsp turmeric","10 curry leaves","3 tbsp grated coconut","Salt"]}],
+    steps:[{"title":"Roast spices","body":"Dry-roast pepper, fennel, cumin and chillies until fragrant; cool and grind coarsely."},{"title":"Brown shallots","body":"Heat sesame oil and cook shallots until golden. Add curry leaves and ginger-garlic."},{"title":"Fry chicken","body":"Add turmeric, chicken and salt. Fry on medium-high heat for 7–8 minutes."},{"title":"Cook covered","body":"Add ground spice and 100 ml water. Cover and cook on low until tender."},{"title":"Roast dry","body":"Add coconut and toss uncovered until liquid evaporates. Check chicken reaches 74°C / 165°F."}],
+    notes:["Use freshly ground pepper for best aroma.","Small shallots give a sweeter base than large onions.","Add water only as needed so the final dish remains dry."], serveWith:["Ragi mudde","Rice","Lemon"]
+  },
+  {
+    slug:"goan-recheado-chicken", name:"Goan Recheado Chicken", native:"Recheado Masala Chicken",
+    subtitle:"Recheado is a Goan red masala commonly associated with fish. This chicken preparation adapts the vinegar-based paste to chicken and is labelled as an adaptation.", region:"Goa", origin:"Goan Portuguese-influenced cooking adaptation",
+    heat:3, prep:25, cook:35, serves:4, variant:"dry",
+    palette:{"bg":"#eee3d4","curry":"#a85a32","deep":"#713a25","piece":"#d9ad7d","garnish":"#486347","accent":"#e6c47c"}, story:"Recheado is a Goan red masala commonly associated with fish. This chicken preparation adapts the vinegar-based paste to chicken and is labelled as an adaptation.", tags:["Goa","Regional kitchen","Hot"],
+    ingredients:[{title:"Ingredients",items:["800 g boneless chicken thigh","2 tbsp oil","1 onion","1 tomato","8 dried Kashmiri chillies","1 tsp cumin","1 tsp coriander seeds","½ tsp black pepper","4 cloves","Cinnamon","5 garlic cloves","1 inch ginger","2 tbsp vinegar","1 tsp sugar","Salt"]}],
+    steps:[{"title":"Soak chillies","body":"Remove chilli stems and soak in hot water for 15 minutes. Drain well."},{"title":"Grind paste","body":"Grind chillies with cumin, coriander, pepper, cloves, cinnamon, garlic, ginger, vinegar and sugar."},{"title":"Marinate","body":"Coat chicken in the paste and refrigerate for 45 minutes."},{"title":"Fry masala","body":"Heat oil and soften onion. Add tomato and cook until pulpy, then add marinated chicken."},{"title":"Cook through","body":"Fry for 8 minutes, add a splash of water and cover until chicken reaches 74°C / 165°F. Uncover and roast until masala clings."}],
+    notes:["Vinegar strength varies; taste before adding more.","Use Kashmiri chillies for colour and add hotter chilli only if required.","Keep chicken refrigerated during marination."], serveWith:["Goan pao","Poi","Steamed rice"]
   }
 ];
 
