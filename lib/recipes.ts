@@ -6619,7 +6619,1394 @@ export const recipes: Recipe[] = [
     notes: ["The paste should be thick enough to cling to the chicken; excess water makes it difficult to brown.", "Use vinegar gradually because its sharpness varies by brand.", "Never use marinade that touched raw chicken as a cold dip or garnish."],
     serveWith: ["Pan-fried potatoes", "Pao", "Green salad"]
   }
-
+,
+  {
+    "slug": "nagaland-axone-chicken",
+    "name": "Naga Axone Chicken",
+    "native": "Axone Chicken",
+    "subtitle": "Fermented soybean, smoked chilli and ginger create a pungent, savoury Naga-style curry.",
+    "region": "Nagaland",
+    "origin": "Nagaland",
+    "heat": 3,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "Fermented soybean, smoked chilli and ginger create a pungent, savoury Naga-style curry.",
+    "tags": [
+      "Nagaland",
+      "curry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "800 g bone-in chicken",
+          "2 tbsp axone (fermented soybean), mashed",
+          "1 onion, sliced",
+          "1 tomato, chopped",
+          "1 tbsp ginger, crushed",
+          "6 garlic cloves, crushed",
+          "2 smoked dried chillies",
+          "2 tbsp mustard oil",
+          "300 ml hot water",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Mash axone with warm water; taste first because its salt and pungency vary."
+      },
+      {
+        "title": "Build the base",
+        "body": "Heat mustard oil and sear chicken with salt for 7 minutes; remove."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Fry onion, ginger and garlic until soft, then add axone and cook gently for 3 minutes."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Return chicken, add tomato, smoked chilli and hot water. Cover and simmer 22–25 minutes."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Check the thickest piece reaches 74°C / 165°F; adjust seasoning and finish with spring onion."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Boiled greens"
+    ]
+  },
+  {
+    "slug": "assamese-chicken-tenga",
+    "name": "Assamese Chicken Tenga",
+    "native": "Chicken Tenga",
+    "subtitle": "A light sour broth with chicken, tomato, potato and lemon, inspired by Assamese tenga cooking.",
+    "region": "Assam",
+    "origin": "Assam",
+    "heat": 1,
+    "prep": 15,
+    "cook": 35,
+    "serves": 4,
+    "variant": "soup",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A light sour broth with chicken, tomato, potato and lemon, inspired by Assamese tenga cooking.",
+    "tags": [
+      "Assam",
+      "soup",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "700 g chicken, small bone-in pieces",
+          "1 potato, cubed",
+          "1 tomato, sliced",
+          "1 tsp ginger paste",
+          "1 tsp panch phoron",
+          "1 tbsp mustard oil",
+          "2 green chillies",
+          "700 ml water",
+          "1½ tbsp lemon juice",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Rub chicken with ginger and salt for 15 minutes; cut potato and tomato."
+      },
+      {
+        "title": "Build the base",
+        "body": "Heat mustard oil, add panch phoron and let it crackle briefly."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Add tomato, potato and chicken; turn for 5 minutes until chicken loses its raw surface colour."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Add water and green chillies; simmer gently for 20–25 minutes until potato is tender."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Verify chicken reaches 74°C / 165°F; turn off heat, add lemon gradually and finish with coriander."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Boiled vegetables"
+    ]
+  },
+  {
+    "slug": "tripura-chicken-mosdeng",
+    "name": "Tripuri Chilli-Garlic Chicken",
+    "native": "Wahan Mosdeng-inspired Chicken",
+    "subtitle": "A coarse, fiery chicken preparation with roasted chilli, garlic and tomato, inspired by Tripuri mosdeng flavours.",
+    "region": "Tripura",
+    "origin": "Tripura",
+    "heat": 3,
+    "prep": 20,
+    "cook": 30,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A coarse, fiery chicken preparation with roasted chilli, garlic and tomato, inspired by Tripuri mosdeng flavours.",
+    "tags": [
+      "Tripura",
+      "dry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "700 g boneless chicken thigh, diced",
+          "5 dried red chillies",
+          "8 garlic cloves",
+          "1 onion, chopped",
+          "2 tomatoes",
+          "1 tbsp mustard oil",
+          "½ tsp turmeric",
+          "¾ tsp salt",
+          "1 tbsp lemon juice"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Soak dried chillies in warm water for 10 minutes; pound with garlic to a coarse paste."
+      },
+      {
+        "title": "Build the base",
+        "body": "Heat mustard oil; add chicken, turmeric and salt, then brown for 7–8 minutes."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Add tomatoes and cook until softened; mash them into the chicken."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Add chilli-garlic paste and onion; cook 6–8 minutes, stirring so garlic cooks through."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Check chicken reaches 74°C / 165°F; finish with lemon and coriander, keeping the texture coarse."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Boiled greens"
+    ]
+  },
+  {
+    "slug": "meghalaya-herb-chicken",
+    "name": "Meghalaya Herb Chicken",
+    "native": "Khasi-style Herb Chicken",
+    "subtitle": "A peppery Khasi-inspired chicken stew with ginger, spring onion and a clean aromatic broth.",
+    "region": "Meghalaya",
+    "origin": "Meghalaya",
+    "heat": 2,
+    "prep": 15,
+    "cook": 35,
+    "serves": 4,
+    "variant": "soup",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A peppery Khasi-inspired chicken stew with ginger, spring onion and a clean aromatic broth.",
+    "tags": [
+      "Meghalaya",
+      "soup",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "800 g bone-in chicken",
+          "1 tbsp ginger, julienned",
+          "6 garlic cloves, crushed",
+          "1 tsp black pepper, crushed",
+          "1 onion, sliced",
+          "2 green chillies",
+          "750 ml chicken stock",
+          "1 cup cabbage, sliced",
+          "2 spring onions",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Season chicken with ginger, garlic, pepper and salt for 15 minutes."
+      },
+      {
+        "title": "Build the base",
+        "body": "Heat a little oil; soften onion and green chillies for 3 minutes."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Add chicken and turn for 5 minutes, then pour in stock and bring to a gentle boil."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Cover and simmer 20 minutes; add cabbage and cook another 5–7 minutes."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Check chicken reaches 74°C / 165°F; finish with spring onion and coriander."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Red rice",
+      "Steamed rice"
+    ]
+  },
+  {
+    "slug": "uttarakhand-chainsoo-chicken",
+    "name": "Uttarakhand Chainsoo Chicken",
+    "native": "Chainsoo-inspired Murgh",
+    "subtitle": "A Garhwali-inspired chicken curry thickened with roasted black urad dal, cumin and garlic.",
+    "region": "Uttarakhand",
+    "origin": "Uttarakhand",
+    "heat": 2,
+    "prep": 20,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A Garhwali-inspired chicken curry thickened with roasted black urad dal, cumin and garlic.",
+    "tags": [
+      "Uttarakhand",
+      "curry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "750 g bone-in chicken",
+          "70 g whole black urad dal",
+          "1 onion, chopped",
+          "1 tomato, chopped",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp cumin seeds",
+          "1 tsp coriander powder",
+          "½ tsp chilli powder",
+          "2 tbsp mustard oil",
+          "500 ml hot water",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Dry-roast urad dal over low heat for 8–10 minutes until aromatic; cool and grind coarsely."
+      },
+      {
+        "title": "Build the base",
+        "body": "Heat mustard oil, add cumin and onion, and fry until golden; add ginger-garlic."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Add chicken, turmeric and salt; sear for 6 minutes, then add tomato and coriander powder."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Whisk ground urad into the pot gradually and add hot water while stirring to prevent lumps."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Cover and simmer 25–30 minutes, stirring often; verify chicken reaches 74°C / 165°F and loosen with hot water if needed."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Mandua roti",
+      "Steamed rice"
+    ]
+  },
+  {
+    "slug": "sindhi-chicken-sai-bhaji",
+    "name": "Sindhi Chicken Sai Bhaji",
+    "native": "Sai Bhaji Murgh",
+    "subtitle": "A hearty one-pot combination of chicken, spinach, dill, chana dal and vegetables.",
+    "region": "Sindh",
+    "origin": "Sindh",
+    "heat": 1,
+    "prep": 25,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A hearty one-pot combination of chicken, spinach, dill, chana dal and vegetables.",
+    "tags": [
+      "Sindh",
+      "curry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "600 g boneless chicken thigh",
+          "150 g spinach, chopped",
+          "½ cup dill leaves",
+          "¼ cup chana dal, soaked",
+          "1 small brinjal, diced",
+          "1 tomato, chopped",
+          "1 onion, chopped",
+          "1 tbsp ginger-garlic paste",
+          "2 tbsp oil",
+          "500 ml water",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Drain soaked chana dal; wash spinach and dill thoroughly and chop the greens."
+      },
+      {
+        "title": "Build the base",
+        "body": "Heat oil; cook onion and ginger-garlic until fragrant, then add tomato."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Add dal, brinjal, spinach, dill and water; simmer 15 minutes until dal begins to soften."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Add chicken and salt; simmer uncovered for 12–15 minutes, stirring so greens do not stick."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Check chicken reaches 74°C / 165°F and dal is soft; mash some vegetables to thicken."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Sindhi koki",
+      "Steamed rice"
+    ]
+  },
+  {
+    "slug": "malvani-chicken-rassa",
+    "name": "Malvani Chicken Rassa",
+    "native": "Malvani Kombdi Rassa",
+    "subtitle": "A coastal curry with roasted coconut, Malvani spices and kokum for a deep, tangy gravy.",
+    "region": "Maharashtra",
+    "origin": "Maharashtra",
+    "heat": 3,
+    "prep": 25,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A coastal curry with roasted coconut, Malvani spices and kokum for a deep, tangy gravy.",
+    "tags": [
+      "Maharashtra",
+      "curry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "800 g bone-in chicken",
+          "¾ cup grated coconut",
+          "6 dried red chillies",
+          "1 tbsp coriander seeds",
+          "1 tsp cumin seeds",
+          "½ tsp fennel seeds",
+          "1 onion, sliced",
+          "2 tbsp coconut oil",
+          "3 kokum petals",
+          "500 ml hot water",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Dry-roast coconut until golden; separately roast chillies, coriander, cumin and fennel until fragrant."
+      },
+      {
+        "title": "Build the base",
+        "body": "Fry onion until golden, then grind with roasted coconut and spices to a smooth paste."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Heat coconut oil; sear chicken with salt for 7 minutes."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Add ground masala and fry 5 minutes; pour in hot water and add kokum."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Cover and simmer 22–25 minutes; check chicken reaches 74°C / 165°F and adjust sourness."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Vade",
+      "Steamed rice"
+    ]
+  },
+  {
+    "slug": "thalassery-chicken-biryani",
+    "name": "Thalassery Chicken Biryani",
+    "native": "Thalassery Kozhi Biriyani",
+    "subtitle": "Malabar biryani with jeerakasala rice, a separately cooked chicken masala and a short dum finish.",
+    "region": "Kerala",
+    "origin": "Kerala",
+    "heat": 2,
+    "prep": 40,
+    "cook": 55,
+    "serves": 4,
+    "variant": "rice",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "Malabar biryani with jeerakasala rice, a separately cooked chicken masala and a short dum finish.",
+    "tags": [
+      "Kerala",
+      "rice",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "900 g chicken",
+          "500 g jeerakasala rice",
+          "3 onions, sliced",
+          "2 tomatoes, chopped",
+          "2 tbsp ginger-garlic paste",
+          "½ cup curd",
+          "3 green chillies",
+          "½ cup mint and coriander",
+          "3 tbsp coconut oil",
+          "3 tbsp ghee",
+          "4 cardamom",
+          "4 cloves",
+          "1 cinnamon stick",
+          "850 ml water, adjust to rice",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Marinate chicken with curd, turmeric, coriander powder and salt for 30 minutes; wash rice."
+      },
+      {
+        "title": "Build the base",
+        "body": "Fry onions in coconut oil until golden; add ginger-garlic, chillies and tomatoes, cooking until soft."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Add chicken, garam masala and herbs; cover and cook 20–25 minutes until chicken reaches 74°C / 165°F. Reduce excess liquid."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "In another pot heat ghee and whole spices; add rice and measured water, then cook until just tender using the rice's absorption guidance."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Layer rice over chicken, seal and dum on the lowest flame for 8–10 minutes; rest sealed 10 minutes."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Cucumber raita",
+      "Coconut chammanthi"
+    ]
+  },
+  {
+    "slug": "arcot-chicken-kurma",
+    "name": "Arcot Chicken Kurma",
+    "native": "Arcot Kozhi Kurma",
+    "subtitle": "A mild kurma with coconut, poppy seeds, roasted gram, fennel and green chillies.",
+    "region": "Tamil Nadu",
+    "origin": "Tamil Nadu",
+    "heat": 1,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A mild kurma with coconut, poppy seeds, roasted gram, fennel and green chillies.",
+    "tags": [
+      "Tamil Nadu",
+      "curry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "800 g bone-in chicken",
+          "½ cup grated coconut",
+          "1 tbsp poppy seeds, soaked",
+          "1 tbsp roasted gram",
+          "1 tsp fennel seeds",
+          "3 green chillies",
+          "8 cashews, soaked",
+          "1 onion, sliced",
+          "1 tomato, chopped",
+          "2 tbsp oil",
+          "1 tbsp ghee",
+          "300 ml hot water",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Grind coconut, soaked poppy seeds, roasted gram, fennel, chillies and cashews with water until smooth."
+      },
+      {
+        "title": "Build the base",
+        "body": "Heat oil and ghee; temper cardamom and cinnamon, then soften onion."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Add tomato and chicken with salt; sear for 6–7 minutes."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Stir in the ground paste and hot water; cover and simmer 20–25 minutes, stirring occasionally."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Check chicken reaches 74°C / 165°F; adjust water for a creamy, pourable kurma and finish with coriander."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Parotta",
+      "Idiyappam"
+    ]
+  },
+  {
+    "slug": "telangana-chicken-pulusu",
+    "name": "Telangana Chicken Pulusu",
+    "native": "Kodi Pulusu",
+    "subtitle": "A tangy tamarind chicken curry balanced with roasted sesame, coriander and curry leaves.",
+    "region": "Telangana",
+    "origin": "Telangana",
+    "heat": 3,
+    "prep": 20,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A tangy tamarind chicken curry balanced with roasted sesame, coriander and curry leaves.",
+    "tags": [
+      "Telangana",
+      "curry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "800 g chicken",
+          "2 tbsp sesame seeds",
+          "1 tbsp coriander seeds",
+          "1 tsp cumin seeds",
+          "1 onion, chopped",
+          "1 tomato, chopped",
+          "2 tbsp tamarind pulp",
+          "8 curry leaves",
+          "2 tbsp oil",
+          "400 ml hot water",
+          "1 tsp jaggery, optional",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Dry-roast sesame, coriander and cumin separately; cool and grind finely."
+      },
+      {
+        "title": "Build the base",
+        "body": "Heat oil; add curry leaves and onion, cooking until golden. Add tomato and soften."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Add chicken and salt; sear for 7 minutes until the surface turns opaque."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Stir in ground sesame masala and tamarind pulp, add hot water and simmer covered for 20–25 minutes."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Check chicken reaches 74°C / 165°F; balance sourness with a little jaggery only if needed."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Steamed rice",
+      "Jowar roti"
+    ]
+  },
+  {
+    "slug": "bengali-chicken-rezala",
+    "name": "Bengali Chicken Rezala",
+    "native": "Murgh Rezala",
+    "subtitle": "A pale Kolkata-style chicken curry with yoghurt, poppy seeds, cashews and aromatic whole spices.",
+    "region": "West Bengal",
+    "origin": "West Bengal",
+    "heat": 1,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A pale Kolkata-style chicken curry with yoghurt, poppy seeds, cashews and aromatic whole spices.",
+    "tags": [
+      "West Bengal",
+      "curry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "800 g bone-in chicken",
+          "150 g thick yoghurt",
+          "1 tbsp ginger paste",
+          "1 tbsp garlic paste",
+          "2 tbsp poppy seeds, soaked",
+          "12 cashews, soaked",
+          "3 tbsp ghee",
+          "1 small onion, sliced",
+          "4 cardamom",
+          "4 cloves",
+          "1 cinnamon stick",
+          "2 green chillies",
+          "150 ml hot water",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Marinate chicken with yoghurt, ginger, garlic and salt for 1 hour."
+      },
+      {
+        "title": "Build the base",
+        "body": "Grind soaked poppy seeds and cashews with a little water to a completely smooth paste."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Heat ghee; add whole spices and onion, cooking until soft and translucent without deep browning."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Add chicken and marinade; cook 8 minutes, then stir in nut paste and green chillies."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Add hot water, cover and simmer 20–25 minutes; check chicken reaches 74°C / 165°F and finish with a few drops of kewra if desired."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Roomali roti",
+      "Light pulao"
+    ]
+  },
+  {
+    "slug": "lucknowi-chicken-korma",
+    "name": "Lucknowi Chicken Korma",
+    "native": "Awadhi Murgh Korma",
+    "subtitle": "A gentle Awadhi korma with browned onion, yoghurt, saffron and warm whole spices.",
+    "region": "Awadh",
+    "origin": "Awadh",
+    "heat": 1,
+    "prep": 25,
+    "cook": 45,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A gentle Awadhi korma with browned onion, yoghurt, saffron and warm whole spices.",
+    "tags": [
+      "Awadh",
+      "curry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "800 g bone-in chicken",
+          "180 g thick yoghurt",
+          "2 onions, sliced",
+          "10 cashews, soaked",
+          "3 tbsp ghee",
+          "4 cardamom",
+          "4 cloves",
+          "1 cinnamon stick",
+          "1 bay leaf",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp coriander powder",
+          "A pinch of saffron in 2 tbsp warm milk",
+          "250 ml hot water",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Marinate chicken with yoghurt, ginger-garlic paste and salt for 30 minutes."
+      },
+      {
+        "title": "Build the base",
+        "body": "Fry onions slowly in ghee until deep golden; grind half with soaked cashews and a little water."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Add whole spices to the remaining ghee; fry for 30 seconds."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Add chicken and marinade, cook 8 minutes, then stir in onion-cashew paste, coriander and hot water."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Cover and simmer 22–25 minutes; check chicken reaches 74°C / 165°F, add saffron milk and reserved onions."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Sheermal",
+      "Roomali roti"
+    ]
+  },
+  {
+    "slug": "punjabi-tandoori-chicken-legs",
+    "name": "Punjabi Tandoori Chicken Legs",
+    "native": "Tandoori Tangdi",
+    "subtitle": "Deep-slashed chicken legs roasted hot in a spiced yoghurt and mustard-oil marinade.",
+    "region": "Punjab",
+    "origin": "Punjab",
+    "heat": 2,
+    "prep": 30,
+    "cook": 40,
+    "serves": 4,
+    "variant": "grill",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "Deep-slashed chicken legs roasted hot in a spiced yoghurt and mustard-oil marinade.",
+    "tags": [
+      "Punjab",
+      "grill",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "4 chicken leg quarters, about 1.2 kg",
+          "180 g thick yoghurt",
+          "1 tbsp lemon juice",
+          "1 tbsp ginger-garlic paste",
+          "2 tsp Kashmiri chilli powder",
+          "1 tsp cumin powder",
+          "1 tsp coriander powder",
+          "½ tsp garam masala",
+          "½ tsp turmeric",
+          "1 tbsp mustard oil",
+          "1 tsp salt",
+          "1 tbsp melted butter"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Make deep slashes in the legs; rub with lemon, ginger-garlic and salt for 15 minutes."
+      },
+      {
+        "title": "Build the base",
+        "body": "Whisk yoghurt with chilli, cumin, coriander, garam masala, turmeric and mustard oil."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Coat chicken thoroughly and refrigerate at least 4 hours, preferably overnight."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Roast on a rack at 220°C for 30–35 minutes, turning once and brushing with butter."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Grill briefly for char; verify the thickest part reaches 74°C / 165°F and rest 5 minutes."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Mint chutney",
+      "Laccha onion"
+    ]
+  },
+  {
+    "slug": "bombay-chicken-keema",
+    "name": "Bombay Chicken Keema",
+    "native": "Mumbai Murgh Keema",
+    "subtitle": "A quick minced chicken masala with peas, tomato, pav-bhaji spices and fresh lime.",
+    "region": "Maharashtra",
+    "origin": "Maharashtra",
+    "heat": 2,
+    "prep": 15,
+    "cook": 25,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A quick minced chicken masala with peas, tomato, pav-bhaji spices and fresh lime.",
+    "tags": [
+      "Maharashtra",
+      "dry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "600 g chicken mince",
+          "2 tbsp oil",
+          "1 tsp cumin seeds",
+          "1 large onion, chopped",
+          "1 tbsp ginger-garlic paste",
+          "2 tomatoes, chopped",
+          "½ cup green peas",
+          "1 tsp pav bhaji masala",
+          "½ tsp chilli powder",
+          "½ tsp turmeric",
+          "100 ml water",
+          "¾ tsp salt",
+          "2 tbsp coriander leaves",
+          "1 tsp lemon juice"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Break up chicken mince with a fork; chop onion and tomato finely."
+      },
+      {
+        "title": "Build the base",
+        "body": "Heat oil, add cumin and onion, and cook until golden; add ginger-garlic paste."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Add tomato, turmeric, chilli and pav bhaji masala; cook until tomato softens."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Add mince, break up lumps and fry 6–8 minutes; add peas and water, cover 8–10 minutes."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Ensure mince reaches 74°C / 165°F throughout; reduce to a moist masala and finish with coriander and lemon."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Pav",
+      "Paratha"
+    ]
+  },
+  {
+    "slug": "kolkata-chicken-kathi-roll",
+    "name": "Kolkata Chicken Kathi Roll",
+    "native": "Chicken Kathi Roll",
+    "subtitle": "Kolkata street-style spiced chicken strips wrapped in paratha with onion, green chilli and lime.",
+    "region": "West Bengal",
+    "origin": "West Bengal",
+    "heat": 2,
+    "prep": 25,
+    "cook": 20,
+    "serves": 4,
+    "variant": "grill",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "Kolkata street-style spiced chicken strips wrapped in paratha with onion, green chilli and lime.",
+    "tags": [
+      "West Bengal",
+      "grill",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "600 g boneless chicken thigh, thin strips",
+          "100 g thick yoghurt",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp Kashmiri chilli powder",
+          "½ tsp cumin powder",
+          "½ tsp garam masala",
+          "1 tbsp mustard oil",
+          "4 parathas",
+          "1 onion, sliced",
+          "2 green chillies",
+          "1 lemon",
+          "1 tbsp chaat masala",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Mix chicken with yoghurt, ginger-garlic, chilli, cumin, garam masala, mustard oil and salt; rest 20 minutes."
+      },
+      {
+        "title": "Build the base",
+        "body": "Heat a wide skillet; sear chicken in a single layer for 3–4 minutes, then toss and cook through."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Lower heat and reduce the yoghurt coating until it clings; check chicken reaches 74°C / 165°F."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Cook parathas on a tawa until golden on both sides; keep warm."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Fill each paratha with chicken, onion, chilli, chaat masala and lemon; roll tightly and serve."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Mint chutney",
+      "Masala chai"
+    ]
+  },
+  {
+    "slug": "hyderabadi-chicken-65-boneless",
+    "name": "Hyderabadi Boneless Chicken 65",
+    "native": "Chicken 65",
+    "subtitle": "Crisp yoghurt-marinated chicken bites tossed with curry leaves, garlic and green chilli.",
+    "region": "Hyderabad",
+    "origin": "Hyderabad",
+    "heat": 3,
+    "prep": 30,
+    "cook": 20,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "Crisp yoghurt-marinated chicken bites tossed with curry leaves, garlic and green chilli.",
+    "tags": [
+      "Hyderabad",
+      "dry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "700 g boneless chicken thigh, 3 cm cubes",
+          "100 g thick yoghurt",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp chilli powder",
+          "½ tsp turmeric",
+          "2 tbsp cornflour",
+          "2 tbsp rice flour",
+          "1 tbsp lemon juice",
+          "Oil for deep frying",
+          "15 curry leaves",
+          "3 green chillies",
+          "4 garlic cloves, sliced",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Marinate chicken with yoghurt, ginger-garlic, chilli, turmeric, lemon and salt for 30 minutes."
+      },
+      {
+        "title": "Build the base",
+        "body": "Stir cornflour and rice flour into the chicken just before frying; coating should cling."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Fry in batches at 170–175°C for 5–7 minutes until golden and the thickest pieces reach 74°C / 165°F."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Heat 2 tbsp oil in a wok; fry garlic, curry leaves and green chillies until fragrant."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Toss fried chicken through the tempering and serve immediately."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Onion rings",
+      "Lemon wedges"
+    ]
+  },
+  {
+    "slug": "chicken-saag-korma",
+    "name": "Chicken Saag Korma",
+    "native": "Palak Murgh Korma",
+    "subtitle": "A mild spinach chicken curry enriched with yoghurt, cashew and warming whole spices.",
+    "region": "Punjab",
+    "origin": "Punjab",
+    "heat": 1,
+    "prep": 20,
+    "cook": 35,
+    "serves": 4,
+    "variant": "curry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A mild spinach chicken curry enriched with yoghurt, cashew and warming whole spices.",
+    "tags": [
+      "Punjab",
+      "curry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "750 g boneless chicken thigh",
+          "250 g spinach",
+          "½ cup yoghurt",
+          "10 cashews, soaked",
+          "1 onion, sliced",
+          "1 tbsp ginger-garlic paste",
+          "1 tsp cumin seeds",
+          "½ tsp coriander powder",
+          "½ tsp garam masala",
+          "1 tbsp oil",
+          "1 tbsp ghee",
+          "100 ml hot water",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Blanch spinach for 1 minute, cool in cold water, drain and blend to a smooth purée."
+      },
+      {
+        "title": "Build the base",
+        "body": "Grind soaked cashews with 2 tbsp water until smooth."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Heat oil and ghee; add cumin and onion, cooking until soft. Add ginger-garlic and coriander powder."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Add chicken and yoghurt; stir on medium-low heat for 5 minutes, then add water and simmer 12–15 minutes."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Stir in spinach and cashew paste; simmer gently, verify 74°C / 165°F and finish with garam masala."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Roomali roti",
+      "Jeera rice"
+    ]
+  },
+  {
+    "slug": "kolhapuri-chicken-sukka",
+    "name": "Kolhapuri Chicken Sukka",
+    "native": "Kolhapuri Kombdi Sukka",
+    "subtitle": "A dry-roasted chicken dish with Kolhapuri masala, coconut and bold red chilli.",
+    "region": "Maharashtra",
+    "origin": "Maharashtra",
+    "heat": 3,
+    "prep": 25,
+    "cook": 40,
+    "serves": 4,
+    "variant": "dry",
+    "palette": {
+      "bg": "#eadfd0",
+      "curry": "#a94b27",
+      "deep": "#652d1b",
+      "piece": "#d5a477",
+      "garnish": "#4d6b43",
+      "accent": "#dfb675"
+    },
+    "story": "A dry-roasted chicken dish with Kolhapuri masala, coconut and bold red chilli.",
+    "tags": [
+      "Maharashtra",
+      "dry",
+      "Regional"
+    ],
+    "ingredients": [
+      {
+        "title": "Ingredients",
+        "items": [
+          "800 g small bone-in chicken pieces",
+          "6 dried red chillies",
+          "2 tbsp coriander seeds",
+          "1 tsp cumin seeds",
+          "½ cup grated dry coconut",
+          "1 onion, sliced",
+          "4 cloves",
+          "1 cinnamon stick",
+          "3 tbsp oil",
+          "1 tbsp ginger-garlic paste",
+          "150 ml hot water",
+          "¾ tsp salt"
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "title": "Prepare",
+        "body": "Dry-roast chillies, coriander, cumin, cloves and cinnamon until fragrant; cool."
+      },
+      {
+        "title": "Build the base",
+        "body": "Roast coconut until golden; fry onion until deep brown, then grind with spices and coconut."
+      },
+      {
+        "title": "Cook the chicken",
+        "body": "Heat oil; sear chicken with ginger-garlic and salt for 8 minutes until lightly browned."
+      },
+      {
+        "title": "Simmer or roast",
+        "body": "Add ground masala and fry 5 minutes; add hot water, cover and simmer 20–25 minutes."
+      },
+      {
+        "title": "Finish and check",
+        "body": "Uncover and toss until liquid evaporates and masala clings; check chicken reaches 74°C / 165°F."
+      }
+    ],
+    "notes": [
+      "Regional seasoning and chilli strength vary; adjust gradually to taste.",
+      "Use a food thermometer to confirm the thickest chicken piece reaches 74°C / 165°F.",
+      "Keep raw chicken and its marinade separate from cooked food; wash hands and utensils after handling."
+    ],
+    "serveWith": [
+      "Jowar bhakri",
+      "Sliced onion"
+    ]
+  }
 ];
 
 export const getRecipe = (slug: string) => recipes.find((recipe) => recipe.slug === slug);
