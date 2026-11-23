@@ -25,8 +25,7 @@ The App Router metadata API provides page titles, descriptions, canonical URLs a
 
 ## Languages
 
-A language menu in the header switches the site between English, Hindi, Bengali, Marathi, Tamil, Telugu and Kannada.
-The choice is stored in the `murgh_locale` cookie, so pages are rendered in the chosen language on the server.
+The language selector is temporarily hidden from the header. The locale and translation infrastructure remains in place for a later relaunch; an existing `murgh_locale` cookie can still select a previously chosen language.
 
 Hindi is fully translated. Butter Chicken, Hyderabadi Chicken Biryani and Chettinad Pepper Chicken also have full Hindi
 recipe content — ingredients, steps and cook's notes — so their Hindi pages are entirely in Hindi. The other Indian
@@ -37,7 +36,7 @@ Hindi translation still show their ingredients and method in English, and the pa
 
 ## Working with the content
 
-Add or edit recipes in `lib/recipes.ts`. Copy is written in simple Indian English for home cooks — see [AGENTS.md](AGENTS.md) for content conventions and development workflow.
+The recipe knowledge base currently contains 83 recipes across regional Indian styles. Add or edit recipes in `lib/recipes.ts`; the home page, recipe index, region counts and detail routes derive from this source. Write complete, kitchen-tested-style instructions with measured ingredients, clear timings and a safe internal temperature of 74°C / 165°F for chicken. Avoid generic placeholder steps or unmeasured ingredients. Copy is written in simple Indian English for home cooks — see [AGENTS.md](AGENTS.md) for content conventions and development workflow.
 
 ## Platform capabilities
 
