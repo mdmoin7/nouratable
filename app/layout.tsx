@@ -55,7 +55,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       <body>
         <LanguageProvider initialLanguage={locale}>
         <div className="flex min-h-screen flex-col">
-          <SiteHeader locale={locale} t={t} />
+          <SiteHeader t={t} />
           <main className="flex-1">{children}</main>
           <SiteFooter t={t} />
         </div>
