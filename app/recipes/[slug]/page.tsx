@@ -54,7 +54,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
     [t.total, formatDuration(totalTime(recipe), t)],
   ];
 
-  const recipeJsonLd = {
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\/$/, "");\n\n  const recipeJsonLd = {
     "@context": "https://schema.org",
     "@type": "Recipe",
     name: recipe.name,
@@ -69,9 +69,9 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
     totalTime: `PT${recipe.prep + recipe.cook}M`,
     recipeIngredient: recipe.ingredients.flatMap((group) => group.items),
     recipeInstructions: recipe.steps.map((step, index) => ({ "@type": "HowToStep", position: index + 1, name: step.title, text: step.body })),
-    author: { "@type": "Organization", name: "Nouratable", url: "https://nouratable.vercel.app" },
+    author: { "@type": "Organization", name: "Nouratable", url: siteUrl },
     isAccessibleForFree: true,
-    inLanguage: "en-IN",\n    isPartOf: { "@type": "WebSite", name: "Nouratable", url: "https://nouratable.vercel.app" },
+    inLanguage: "en-IN",\n    isPartOf: { "@type": "WebSite", name: "Nouratable", url: siteUrl },
   };
 
   return (
