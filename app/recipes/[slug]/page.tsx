@@ -69,9 +69,9 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
     totalTime: `PT${recipe.prep + recipe.cook}M`,
     recipeIngredient: recipe.ingredients.flatMap((group) => group.items),
     recipeInstructions: recipe.steps.map((step, index) => ({ "@type": "HowToStep", position: index + 1, name: step.title, text: step.body })),
-    author: { "@type": "Organization", name: "Murgh" },
+    author: { "@type": "Organization", name: "Nouratable", url: "https://nouratable.vercel.app" },
     isAccessibleForFree: true,
-    inLanguage: "en-IN",
+    inLanguage: "en-IN",\n    isPartOf: { "@type": "WebSite", name: "Nouratable", url: "https://nouratable.vercel.app" },
   };
 
   return (
