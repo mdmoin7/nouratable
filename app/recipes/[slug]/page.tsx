@@ -29,7 +29,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   return {
     title: `${localized.name} (${localized.native})`,
-    description: localized.subtitle,
+    description: `${localized.subtitle} Step-by-step ${recipe.region} chicken recipe with measured ingredients, cooking timings and serving suggestions.`,
+    alternates: { canonical: `/recipes/${slug}` },
+    openGraph: { title: `${localized.name} — ${recipe.region} Chicken Recipe | Nouratable`, description: localized.subtitle, url: `/recipes/${slug}`, siteName: "Nouratable", type: "article" },
+    twitter: { card: "summary_large_image", title: `${localized.name} | Nouratable`, description: localized.subtitle },
   };
 }
 
@@ -54,7 +57,11 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
     [t.total, formatDuration(totalTime(recipe), t)],
   ];
 
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\/$/, "");\n\n  const recipeJsonLd = {
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\/$/, "");
+
+  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\/$/, "");
+
+  const recipeJsonLd = {
     "@context": "https://schema.org",
     "@type": "Recipe",
     name: recipe.name,
@@ -71,7 +78,9 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
     recipeInstructions: recipe.steps.map((step, index) => ({ "@type": "HowToStep", position: index + 1, name: step.title, text: step.body })),
     author: { "@type": "Organization", name: "Nouratable", url: siteUrl },
     isAccessibleForFree: true,
-    inLanguage: "en-IN",\n    isPartOf: { "@type": "WebSite", name: "Nouratable", url: siteUrl },
+    inLanguage: "en-IN",
+    isPartOf: { "@type": "WebSite", name: "Nouratable", url: siteUrl },
+    isPartOf: { "@type": "WebSite", name: "Nouratable", url: siteUrl },
   };
 
   return (
