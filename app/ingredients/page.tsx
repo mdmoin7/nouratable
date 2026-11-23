@@ -3,9 +3,9 @@ import Link from "next/link";
 import { ingredients } from "@/lib/food-knowledge";
 
 export const metadata: Metadata = {
-  title: "Indian cooking ingredients | Murgh",
+  title: "Indian Cooking Ingredients: A Regional Guide | Nouratable",
   description: "A practical guide to Indian regional cooking ingredients, their flavour, uses, handling and substitutions.",
-  alternates: { canonical: "/ingredients" },
+  alternates: { canonical: "/ingredients" },\n  openGraph: { title: "Indian Cooking Ingredients | Nouratable", description: "A practical guide to Indian regional cooking ingredients, flavour, uses, handling and substitutions.", url: "/ingredients", siteName: "Nouratable", type: "article" },\n  twitter: { card: "summary", title: "Indian Cooking Ingredients | Nouratable" },
 };
 
 export default function IngredientsPage() {
