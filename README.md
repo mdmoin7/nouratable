@@ -2,7 +2,7 @@
 
 A modern Indian chicken cookbook website — regional chicken recipes from across India, each with its own illustrated plate.
 
-Built with Next.js (App Router), React and Tailwind CSS v4. Recipe content lives in `lib/recipes.ts`, and dish illustrations are deterministic SVGs in `components/dish-art.tsx`.
+Built with Next.js (App Router), React and Tailwind CSS v4. Recipe content lives in `lib/recipes.ts`; structured pantry and masala reference content lives in `lib/food-knowledge.ts`.
 
 ```bash
 npm install
@@ -13,11 +13,13 @@ npm run lint
 
 ## Routes
 
-- `/` — cover, featured recipes, regions, the method, the pantry
+- `/` — cover, featured recipes, regions, the method and pantry
 - `/recipes` — filter by region and heat, search; filters are stored in the URL
 - `/recipes/[slug]` — recipe with ingredients, method and cook's notes
 - `/regions/[slug]` — regional collection pages
-- `/about` — how the book and the recipes work
+- `/ingredients` — ingredient glossary with flavour, use, handling and substitutions
+- `/masalas` — regional masala blend guide with ingredients, method, uses and storage
+- `/about` — how the book and recipes work
 
 ## Search engine optimisation
 
@@ -27,16 +29,17 @@ The App Router metadata API provides page titles, descriptions, canonical URLs a
 
 The language selector is temporarily hidden from the header. The locale and translation infrastructure remains in place for a later relaunch; an existing `murgh_locale` cookie can still select a previously chosen language.
 
-Hindi is fully translated. Butter Chicken, Hyderabadi Chicken Biryani and Chettinad Pepper Chicken also have full Hindi
-recipe content — ingredients, steps and cook's notes — so their Hindi pages are entirely in Hindi. The other Indian
-languages translate the navigation, filters and recipe labels, with English fallback for longer copy.
+Hindi is fully translated. Butter Chicken, Hyderabadi Chicken Biryani and Chettinad Pepper Chicken also have full Hindi recipe content. Other Indian languages translate the navigation, filters and recipe labels, with English fallback for longer copy.
 
-Interface translations live in `lib/i18n/`; recipe translations live in `lib/recipe-translations/`. Recipes without a
-Hindi translation still show their ingredients and method in English, and the page says so in the chosen language.
+Interface translations live in `lib/i18n/`; recipe translations live in `lib/recipe-translations/`.
 
 ## Working with the content
 
-The recipe knowledge base currently contains 102 recipes across regional Indian styles. Add or edit recipes in `lib/recipes.ts`; the home page, recipe index, region counts and detail routes derive from this source. Write complete, kitchen-tested-style instructions with measured ingredients, clear timings and a safe internal temperature of 74°C / 165°F for chicken. Avoid generic placeholder steps or unmeasured ingredients. Copy is written in simple Indian English for home cooks — see [AGENTS.md](AGENTS.md) for content conventions and development workflow.
+The recipe catalogue currently contains 102 dishes. Add or edit recipes in `lib/recipes.ts`. The ingredient glossary and regional masala reference are maintained in `lib/food-knowledge.ts`; their pages are generated from this single typed source.
+
+The knowledge base currently includes 12 ingredient references and 8 masala guides. Treat regional recipes and blends as variable household traditions: identify adaptations honestly, avoid claiming one universal formula, and distinguish flavour substitutions from exact replacements. Do not present unsafe ingredient processing or storage advice. Chicken recipes must use measured quantities, clear timings and a safe internal temperature of 74°C / 165°F.
+
+Copy is written in simple Indian English for home cooks — see [AGENTS.md](AGENTS.md) for content conventions and development workflow.
 
 ## Platform capabilities
 
@@ -66,27 +69,10 @@ Reviewed UI labels come from `lib/i18n.ts`. Recipe copy is translated on demand 
 
 The inference service lives in `services/translation` and runs separately from Vercel because loading a PyTorch translation model inside a serverless function is not suitable.
 
-1. Deploy the service on a persistent Python host with sufficient RAM (GPU recommended for throughput). The default distilled model is approximately 200M parameters.
+1. Deploy the service on a persistent Python host with sufficient RAM (GPU recommended for throughput).
 2. Set a long random `TRANSLATION_SERVICE_TOKEN` on the service and the same value in the Vercel project environment.
 3. Set `TRANSLATION_SERVICE_URL` in Vercel to the private/reachable base URL of the service (without `/translate`).
-4. Build and run from `services/translation`:
+4. Build and run from `services/translation` using its Dockerfile.
+5. Check `GET /health`; persist/cache the Hugging Face model directory between restarts.
 
-   ```bash
-   docker build -t murgh-translation .
-   docker run -p 8080:8080 \
-     -e TRANSLATION_SERVICE_TOKEN='your-long-random-secret' \
-     murgh-translation
-   ```
-
-5. Check `GET /health`; the first startup downloads model weights from Hugging Face and can take several minutes. Persist/cache the Hugging Face model directory between restarts.
-6. If Hugging Face requires model access approval, accept the model conditions and provide `HF_TOKEN` to the service runtime. Never put it in the browser or Vercel public variables.
-
-Default model: `ai4bharat/indictrans2-en-indic-dist-200M`. Override with `INDICTRANS_MODEL` only after validating the alternative checkpoint and its license. IndicTrans2 supports all 12 selected languages and is released under MIT; review the model card and dependencies when changing model versions. Machine translation is not editorial approval: review culinary terms, quantities, temperatures, and food-safety instructions with native speakers.
-
-### Translation behavior and limits
-
-- English is the source language; this service currently translates English copy to the selected Indian language.
-- The API accepts batches of up to 100 strings and 30,000 total characters.
-- Browser local storage caches translations by language and source text; clearing site data clears that cache.
-- Translation is generated at runtime. Search metadata and structured data remain English until locale-specific routes are implemented.
-- Preserve recipe measurements and timings during editorial review; do not rely on unreviewed translations for food-safety guidance.
+Default model: `ai4bharat/indictrans2-en-indic-dist-200M`. Machine translation is not editorial approval: review culinary terms, quantities, temperatures and food-safety instructions with native speakers.
