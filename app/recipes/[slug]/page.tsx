@@ -59,8 +59,6 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
 
   const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\/$/, "");
 
-  const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://nouratable.vercel.app").replace(/\/$/, "");
-
   const recipeJsonLd = {
     "@context": "https://schema.org",
     "@type": "Recipe",
@@ -79,7 +77,6 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
     author: { "@type": "Organization", name: "Nouratable", url: siteUrl },
     isAccessibleForFree: true,
     inLanguage: "en-IN",
-    isPartOf: { "@type": "WebSite", name: "Nouratable", url: siteUrl },
     isPartOf: { "@type": "WebSite", name: "Nouratable", url: siteUrl },
   };
 
