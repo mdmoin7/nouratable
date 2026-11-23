@@ -36,7 +36,7 @@ Hindi translation still show their ingredients and method in English, and the pa
 
 ## Working with the content
 
-The recipe knowledge base currently contains 84 recipes across regional Indian styles. Add or edit recipes in `lib/recipes.ts`; the home page, recipe index, region counts and detail routes derive from this source. Write complete, kitchen-tested-style instructions with measured ingredients, clear timings and a safe internal temperature of 74°C / 165°F for chicken. Avoid generic placeholder steps or unmeasured ingredients. Copy is written in simple Indian English for home cooks — see [AGENTS.md](AGENTS.md) for content conventions and development workflow.
+The recipe knowledge base currently contains 102 recipes across regional Indian styles. Add or edit recipes in `lib/recipes.ts`; the home page, recipe index, region counts and detail routes derive from this source. Write complete, kitchen-tested-style instructions with measured ingredients, clear timings and a safe internal temperature of 74°C / 165°F for chicken. Avoid generic placeholder steps or unmeasured ingredients. Copy is written in simple Indian English for home cooks — see [AGENTS.md](AGENTS.md) for content conventions and development workflow.
 
 ## Platform capabilities
 
